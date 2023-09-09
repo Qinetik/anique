@@ -17,8 +17,8 @@ const CommonResultColors: ResultColors = {
 }
 
 const CommonFont: Font = {
-    primary: 'Roboto, Helvetica, Arial, sans-serif',
-    secondary: 'Roboto, Helvetica, Arial, sans-serif', // could be "Quicksand, sans-serif"
+    primary: '"Helvetica Neue", Arial, sans-serif',
+    secondary: 'Roboto, Helvetica, Arial, sans-serif',
 }
 
 const CommonBorder: Border = {
@@ -42,7 +42,7 @@ export const darkTheme: AniqueTheme = {
     breakpoints: new DefaultThemeBreakpoints(),
     animation: CommonAnimation,
     colors: {
-        
+
         ...CommonResultColors,
 
         primary: "rgb(23,207,185)",

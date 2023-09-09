@@ -1,6 +1,7 @@
 import { Component, JSX } from 'solid-js'
 
 import isPropValid from '@emotion/is-prop-valid'
+import {DefaultTheme} from "./theme";
 
 export type RefCallback<T> = {
   bivarianceHack(instance: T | null): void
@@ -18,7 +19,7 @@ export type ElementType<P = any> =
     }[keyof JSX.IntrinsicElements]
   | Component<P>
 
-export type Interpolations<Props extends object> = Array<(object | ((props: Props & { theme: any }) => object))>;
+export type Interpolations<Props extends object> = Array<(object | ((props: Props & { theme: DefaultTheme }) => object))>;
 
 
 export type StyledElementType<Props> =

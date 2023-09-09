@@ -1,7 +1,7 @@
-import "solid-styled-components"
+import "@qinetik/emotion"
 import {AniqueTheme} from "./theme/Theme";
 
-declare module "solid-styled-components" {
+declare module "@qinetik/emotion" {
     interface DefaultTheme extends AniqueTheme {
 
     }

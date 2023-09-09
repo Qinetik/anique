@@ -5,7 +5,7 @@
     "scripts": {
     },
     "peerDependencies": {
-        "@qinetik/emotion": "workspace:*",
-        "@emotion/css": "^11.11.2"
+        "solid-js": "^1.7.11",
+        "@qinetik/emotion": "workspace:*"
     }
 }

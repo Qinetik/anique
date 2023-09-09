@@ -1,12 +1,16 @@
 import { useContext, createContext, Component } from 'solid-js';
 
-const ThemeContext = createContext(() => ({}));
+export interface DefaultTheme {
 
-export function useTheme(): any {
+}
+
+const ThemeContext = createContext<() => DefaultTheme>(() => ({}));
+
+export function useTheme(): DefaultTheme {
   return useContext(ThemeContext)();
 }
 
-export const ThemeProvider: Component<{theme: () => any}> = (props) => {
+export const ThemeProvider: Component<{theme: () => DefaultTheme, children : any }> = (props) => {
   return (
     <ThemeContext.Provider value={props.theme}>
       {props.children}

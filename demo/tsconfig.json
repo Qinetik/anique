@@ -10,6 +10,9 @@
         "paths": {
             "@qinetik/anique/*": [
                 "../lib/src/*"
+            ],
+            "@qinetik/emotion/*": [
+                "../styled/src/*"
             ]
         }
     }

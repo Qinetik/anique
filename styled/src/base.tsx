@@ -130,6 +130,8 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
 
         const rulesSerialized = getRules()
 
+        if(rulesSerialized == null) return ""
+
         className += `${cache?.key}-${rulesSerialized.serialized.name}`
         if (targetClassName !== undefined) {
           className += ` ${targetClassName}`
