@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "types": ["jest"],
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
+  },
+  "include": ["src"]
+}

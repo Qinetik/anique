@@ -1,0 +1,11 @@
+{
+  "name": "anique",
+  "version": "1.0.0",
+  "description": "UI Component Library Project",
+  "scripts": {
+    "start": "pnpm --filter anique-site start"
+  },
+  "dependencies": {
+    "vite": "^4.4.9"
+  }
+}

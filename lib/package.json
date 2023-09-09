@@ -1,0 +1,11 @@
+{
+    "name": "@qinetik/anique",
+    "version": "1.0.0",
+    "description": "SolidJS UI Component library",
+    "scripts": {
+    },
+    "peerDependencies": {
+        "@qinetik/emotion": "workspace:*",
+        "@emotion/css": "^11.11.2"
+    }
+}

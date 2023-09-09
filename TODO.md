@@ -1,0 +1,20 @@
+- [ ] Setup a development environment
+- [ ] Add bare minimum ui components
+    - [ ] Theming Solution
+    - [ ] AppBar
+    - [ ] Drawer
+    - [ ] Button
+    - [ ] TextField
+    - [ ] Circular Progress Indicator
+    - [ ] Backdrop
+    - [ ] Dialog
+    - [ ] Fab
+    - [ ] Checkbox
+    - [ ] Select
+    - [ ] Radio
+    - [ ] Text
+    - [ ] IconButton
+    - [ ] Headings -> H1,H2,H3,H4,H5,H6
+    - [ ] P1,P2,P3
+- [ ] Publish initial version
+- [ ] Publish initial docs website
