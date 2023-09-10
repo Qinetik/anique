@@ -1,6 +1,6 @@
 import {styled, ThemeProvider} from "@qinetik/emotion";
 import {A, Title} from "solid-start";
-import {ColorScheme, getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique/theme/useColorScheme";
+import {ColorScheme, getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique/theme/ColorScheme";
 import {Column} from "@qinetik/anique/column";
 import {AppBar} from "@qinetik/anique/appbar";
 import {IconButton, IconButtonSize} from "@qinetik/anique/icon-button";
@@ -10,6 +10,7 @@ import {createEffect, createSignal, JSX} from "solid-js";
 import {darkTheme, lightTheme} from "@qinetik/anique/theme/Default";
 import LightDarkIcon from "../icons/LightDarkIcon";
 import {Row} from "@qinetik/anique/row";
+import {getThemeValue, removeThemeValue, saveThemeValue} from "../utils/theme-value";
 
 const Link = styled(A)`
     text-decoration: none;
@@ -27,8 +28,13 @@ export function PageContainer(props: PageContainerProps) {
     const [colorScheme, setColorScheme] = createSignal(ColorScheme.Dark)
 
     createEffect(() => {
-        setColorScheme(getSystemColorScheme())
-        onSystemColorSchemeChange(setColorScheme)
+        const userScheme = getThemeValue()
+        if (userScheme != null) {
+            setColorScheme(userScheme)
+        } else {
+            setColorScheme(getSystemColorScheme)
+            onSystemColorSchemeChange(setColorScheme)
+        }
     })
 
     const theme = () => (colorScheme() == ColorScheme.Dark ? darkTheme : lightTheme)
@@ -63,7 +69,15 @@ export function PageContainer(props: PageContainerProps) {
                     actions={(
                         <Row>
                             <IconButton
-                                onClick={() => setColorScheme(colorScheme() == ColorScheme.Dark ? ColorScheme.Light : ColorScheme.Dark)}
+                                onClick={() => {
+                                    const newScheme = colorScheme() == ColorScheme.Dark ? ColorScheme.Light : ColorScheme.Dark
+                                    setColorScheme(newScheme)
+                                    if (newScheme == getSystemColorScheme()) {
+                                        removeThemeValue()
+                                    } else {
+                                        saveThemeValue(newScheme)
+                                    }
+                                }}
                                 size={IconButtonSize.Medium}
                             >
                                 <LightDarkIcon/>
