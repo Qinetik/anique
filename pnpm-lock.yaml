@@ -55,16 +55,16 @@ importers:
   styled:
     dependencies:
       '@emotion/cache':
-        specifier: ^11.4.0
+        specifier: ^11.11.0
         version: 11.11.0
       '@emotion/is-prop-valid':
-        specifier: ^1.1.0
+        specifier: ^1.2.1
         version: 1.2.1
       '@emotion/serialize':
-        specifier: ^1.0.2
+        specifier: ^1.1.2
         version: 1.1.2
       '@emotion/utils':
-        specifier: ^1.0.0
+        specifier: ^1.2.1
         version: 1.2.1
     devDependencies:
       '@babel/core':

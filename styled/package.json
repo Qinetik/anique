@@ -37,9 +37,9 @@
       "solid-js": "^1.7.11"
   },
   "dependencies": {
-    "@emotion/cache": "^11.4.0",
-    "@emotion/is-prop-valid": "^1.1.0",
-    "@emotion/serialize": "^1.0.2",
-    "@emotion/utils": "^1.0.0"
+    "@emotion/cache": "^11.11.0",
+    "@emotion/is-prop-valid": "^1.2.1",
+    "@emotion/serialize": "^1.1.2",
+    "@emotion/utils": "^1.2.1"
   }
 }

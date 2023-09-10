@@ -13,8 +13,6 @@ import {
     Title,
 } from "solid-start";
 import "./root.css";
-import {ThemeProvider} from "solid-styled-components";
-import {darkTheme} from "@qinetik/anique/theme/Default";
 
 export default function Root() {
     return (
