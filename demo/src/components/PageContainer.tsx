@@ -3,7 +3,7 @@ import {A, Title} from "solid-start";
 import {ColorScheme, getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique/theme/ColorScheme";
 import {Column} from "@qinetik/anique/column";
 import {AppBar} from "@qinetik/anique/appbar";
-import {IconButton, IconButtonSize} from "@qinetik/anique/icon-button";
+import {IconButton} from "@qinetik/anique/icon-button";
 import MenuIcon from "../icons/Menu";
 import {DrawerItem, DrawerSectionItem, ModalDrawer} from "@qinetik/anique/drawer";
 import {createEffect, createSignal, JSX} from "solid-js";
@@ -11,6 +11,7 @@ import {darkTheme, lightTheme} from "@qinetik/anique/theme/Default";
 import LightDarkIcon from "../icons/LightDarkIcon";
 import {Row} from "@qinetik/anique/row";
 import {getThemeValue, removeThemeValue, saveThemeValue} from "../utils/theme-value";
+import {Size} from "@qinetik/anique/theme/Size";
 
 const Link = styled(A)`
     text-decoration: none;
@@ -21,6 +22,19 @@ export interface PageContainerProps {
     children?: any
     style?: JSX.CSSProperties
 }
+
+const ContentContainer = styled("div")`
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0rem 6rem;
+
+`
 
 export function PageContainer(props: PageContainerProps) {
 
@@ -78,7 +92,7 @@ export function PageContainer(props: PageContainerProps) {
                                         saveThemeValue(newScheme)
                                     }
                                 }}
-                                size={IconButtonSize.Medium}
+                                size={Size.Medium}
                             >
                                 <LightDarkIcon/>
                             </IconButton>
@@ -142,12 +156,9 @@ export function PageContainer(props: PageContainerProps) {
 
                 </ModalDrawer>
 
-                <div style={{
-                    margin: "0rem 6rem",
-                    ...style
-                }}>
+                <ContentContainer style={style}>
                     {props.children}
-                </div>
+                </ContentContainer>
             </Column>
 
         </ThemeProvider>

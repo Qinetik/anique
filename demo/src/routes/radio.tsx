@@ -3,6 +3,7 @@ import {H1} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {Radio, LabeledRadio} from "@qinetik/anique/radio";
 import {createSignal} from "solid-js";
+import {Column} from "@qinetik/anique/column";
 
 function BasicRadioExample() {
     const [isChecked, setIsChecked] = createSignal(false)
@@ -47,12 +48,14 @@ export default function RadioPage() {
 
     return (
         <PageContainer>
-            <H1>Basic Radio</H1>
-            <BasicRadioExample/>
-            <H1>Radio with Label</H1>
-            <RadioWithLabel/>
-            <H1>Radio with Label & Description</H1>
-            <RadioWithLabelDescription/>
+            <Column>
+                <H1>Basic Radio</H1>
+                <BasicRadioExample/>
+                <H1>Radio with Label</H1>
+                <RadioWithLabel/>
+                <H1>Radio with Label & Description</H1>
+                <RadioWithLabelDescription/>
+            </Column>
         </PageContainer>
     )
 }
