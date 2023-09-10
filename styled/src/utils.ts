@@ -5,8 +5,7 @@ import {DefaultTheme} from "./theme";
 import {isServer} from "solid-js/web";
 
 export function isBrowser(){
-    // can use typeof document !== 'undefined'
-    return !isServer
+   return typeof document !== 'undefined'
 }
 
 export type RefCallback<T> = {

@@ -46,7 +46,7 @@ export function PageContainer(props: PageContainerProps) {
         if (userScheme != null) {
             setColorScheme(userScheme)
         } else {
-            setColorScheme(getSystemColorScheme)
+            setColorScheme(getSystemColorScheme())
             onSystemColorSchemeChange(setColorScheme)
         }
     })

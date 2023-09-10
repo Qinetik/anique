@@ -1,5 +1,25 @@
-import {Component, createMemo, ErrorBoundary, mergeProps} from 'solid-js'
-import {Dynamic} from 'solid-js/web'
+import {
+    $DEVCOMP,
+    Component,
+    createMemo,
+    ErrorBoundary,
+    JSX,
+    mergeProps,
+    sharedConfig,
+    splitProps,
+    ValidComponent
+} from 'solid-js'
+import {
+    Dynamic,
+    DynamicProps,
+    getHydrationKey,
+    getNextElement,
+    isServer,
+    spread,
+    ssrElement,
+    SVGElements,
+    untrack
+} from 'solid-js/web'
 
 import { serializeStyles } from '@emotion/serialize'
 import { getRegisteredStyles, insertStyles, RegisteredCache } from '@emotion/utils'
@@ -166,24 +186,24 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
 
 
 
-      const element = (
-          <ErrorBoundary fallback={(e) => {
-              console.log("error occurred", e, finalTag, newProps.children[2], props.class)
-              return (
-                  <Dynamic component={"div"}>
-                      There's an error baby {e}
-                  </Dynamic>
-              )
-          }}>
-        <Dynamic
-          component={finalTag}
-          {...newProps}
-          className={
-            props.class ? `${className()} ${props.class}` : className()
-          }
-        />
-          </ErrorBoundary>
-      )
+        const element = (
+            <ErrorBoundary fallback={(e,reset) => {
+                console.error("error making dynamic component in styled -> base " + isServer,e)
+                const span = document.createElement("span")
+                span.onclick = reset
+                span.innerHTML = e
+                return span
+            }}>
+                <Dynamic
+                    component={finalTag}
+                    {...newProps}
+                    className={
+                        props.class ? `${className()} ${props.class}` : className()
+                    }
+                />
+            </ErrorBoundary>
+        )
+
       if (!isBrowser() && getRules().rules !== undefined) {
         const rulesSerialized = getRules()
         let serializedNames = rulesSerialized.serialized.name

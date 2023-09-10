@@ -6,7 +6,7 @@ import {resolve} from "path";
 export default defineConfig({
     base: "/",
     // insert your github project name between slashes above
-    plugins: [solid({adapter: staticAdapter(), ssr: false})],
+    plugins: [solid({adapter: staticAdapter(), ssr: false })],
     resolve: {
         conditions: ["development", "browser"],
         alias: {
