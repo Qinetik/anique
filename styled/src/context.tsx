@@ -1,8 +1,7 @@
 import { createContext, useContext, JSX } from 'solid-js'
 import createCache from '@emotion/cache'
 import type { EmotionCache } from '@emotion/utils'
-
-const isBrowser = typeof document !== 'undefined'
+import {isBrowser} from "./utils";
 
 let EmotionCacheContext = /* #__PURE__ */ createContext(
   // we're doing this to avoid preconstruct's dead code elimination in this one case
@@ -29,7 +28,7 @@ let withEmotionCache = function withEmotionCache<Props>(
   }
 }
 
-if (!isBrowser) {
+if (!isBrowser()) {
   ;(withEmotionCache as any) = function withEmotionCache<Props>(
     func: (props: Props, cache: EmotionCache | null) => JSX.Element
   ) {

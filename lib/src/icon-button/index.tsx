@@ -1,17 +1,24 @@
 import {styled, useTheme} from "@qinetik/emotion";
-import {createRipple, createThemedRipple} from "../ripple";
+import {createThemedRipple} from "../ripple";
 import {rgbColorWithOpacity} from "../utils/color-utils";
+
+export enum IconButtonSize {
+    Small = 2,
+    Medium = 2.5,
+    Large = 3
+}
 
 interface IconButtonProps {
     children?: any
     disableAutoFill?: boolean
     onClick?: () => void
+    size ?: IconButtonSize
 }
 
 const IconButtonContainer = styled("div")<IconButtonProps>`
 
-    width: 2rem;
-    height: 2rem;
+    width: ${p => p.size || 2}rem;
+    height: ${p => p.size || 2}rem;
     border-radius: 50%;
 
     ${p => p.disableAutoFill ? "" : `fill:${p.theme.colors.onBg};`}
@@ -29,18 +36,18 @@ const IconButtonContainer = styled("div")<IconButtonProps>`
     &:hover {
         background: ${p => rgbColorWithOpacity(p.theme.colors.onBg, 0.2)};
     }
+    &:active {
+        background: ${p => rgbColorWithOpacity(p.theme.colors.onBg, 0.4)};
+    }
 
 `
 
 export function IconButton(props: IconButtonProps) {
-    const theme = useTheme()
     return (
         <IconButtonContainer
             children={props.children}
-            onClick={(e) => {
-                createThemedRipple(theme.colors.onBg, e)
-                props.onClick != null ? props.onClick() : null
-            }}
+            size={props.size}
+            onClick={props.onClick}
         />
     )
 }

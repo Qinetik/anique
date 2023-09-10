@@ -1,5 +1,5 @@
-import { Component, createMemo, mergeProps } from 'solid-js'
-import { Dynamic } from 'solid-js/web'
+import {Component, createMemo, ErrorBoundary, mergeProps} from 'solid-js'
+import {Dynamic} from 'solid-js/web'
 
 import { serializeStyles } from '@emotion/serialize'
 import { getRegisteredStyles, insertStyles, RegisteredCache } from '@emotion/utils'
@@ -7,12 +7,12 @@ import { getRegisteredStyles, insertStyles, RegisteredCache } from '@emotion/uti
 import { withEmotionCache } from './context'
 import { useTheme } from './theme'
 import {
-  getDefaultShouldForwardProp,
-  composeShouldForwardProps,
-  StyledOptions,
-  PrivateStyledComponent,
-  StyledElementType,
-  CreateStyledFunction,
+    getDefaultShouldForwardProp,
+    composeShouldForwardProps,
+    StyledOptions,
+    PrivateStyledComponent,
+    StyledElementType,
+    CreateStyledFunction, isBrowser,
 } from './utils'
 
 const ILLEGAL_ESCAPE_SEQUENCE_ERROR = `You have illegal escape sequence in your template literal, most likely inside content's property value.
@@ -20,10 +20,10 @@ Because you write your CSS inside a JavaScript string you actually have to do do
 You can read more about this here:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences`
 
-const isBrowser = typeof document !== 'undefined'
+const isDevelopment : () => boolean = ()=> process.env.NODE_ENV !== "production"
 
 const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (isDevelopment()) {
     if (tag === undefined) {
       throw new Error(
         'You are trying to create a styled element with an undefined component.\nYou may have forgotten to import it.'
@@ -58,7 +58,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       styles.push.apply(styles, args)
     } else {
       if (
-        process.env.NODE_ENV !== 'production' &&
+        isDevelopment() &&
         (args as any)[0][0] === undefined
       ) {
         console.error(ILLEGAL_ESCAPE_SEQUENCE_ERROR)
@@ -68,7 +68,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       let i = 1
       for (; i < len; i++) {
         if (
-          process.env.NODE_ENV !== 'production' &&
+          isDevelopment() &&
           (args as any)[0][i] === undefined
         ) {
           console.error(ILLEGAL_ESCAPE_SEQUENCE_ERROR)
@@ -164,7 +164,17 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       // newProps.className = className
       // newProps.ref = ref
 
+
+
       const element = (
+          <ErrorBoundary fallback={(e) => {
+              console.log("error occurred", e, finalTag, newProps.children[2], props.class)
+              return (
+                  <Dynamic component={"div"}>
+                      There's an error baby {e}
+                  </Dynamic>
+              )
+          }}>
         <Dynamic
           component={finalTag}
           {...newProps}
@@ -172,8 +182,9 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
             props.class ? `${className()} ${props.class}` : className()
           }
         />
+          </ErrorBoundary>
       )
-      if (!isBrowser && getRules().rules !== undefined) {
+      if (!isBrowser() && getRules().rules !== undefined) {
         const rulesSerialized = getRules()
         let serializedNames = rulesSerialized.serialized.name
         let next = rulesSerialized.serialized.next
@@ -217,7 +228,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       value() {
         if (
           targetClassName === undefined &&
-          process.env.NODE_ENV !== 'production'
+          isDevelopment()
         ) {
           return 'NO_COMPONENT_SELECTOR'
         }
