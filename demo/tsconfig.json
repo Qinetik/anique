@@ -13,6 +13,9 @@
             ],
             "@qinetik/emotion/*": [
                 "../styled/src/*"
+            ],
+            "@qinetik/emotion": [
+                "../styled/src"
             ]
         }
     }

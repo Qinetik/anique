@@ -1,20 +1,20 @@
-- [ ] Setup a development environment
+- [x] Setup a development environment
 - [ ] Add bare minimum ui components
-    - [ ] Theming Solution
-    - [ ] AppBar
-    - [ ] Drawer
-    - [ ] Button
+    - [x] Theming Solution
+    - [x] AppBar
+    - [x] ModalDrawer
+    - [x] Button
     - [ ] TextField
-    - [ ] Circular Progress Indicator
-    - [ ] Backdrop
-    - [ ] Dialog
-    - [ ] Fab
-    - [ ] Checkbox
+    - [x] Spinner
+    - [x] Backdrop
+    - [x] Dialog
+    - [x] Fab, Extended Fab
+    - [x] Checkbox, LabeledCheckbox
     - [ ] Select
-    - [ ] Radio
-    - [ ] Text
-    - [ ] IconButton
-    - [ ] Headings -> H1,H2,H3,H4,H5,H6
-    - [ ] P1,P2,P3
+    - [x] Radio, LabeledRadio
+    - [x] Text
+    - [x] IconButton
+    - [x] Headings -> H1,H2,H3,H4,H5,H6
+    - [x] P1,P2,P3
 - [ ] Publish initial version
 - [ ] Publish initial docs website

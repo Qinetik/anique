@@ -2,61 +2,61 @@ export type RGBColor = `rgb(${number},${number},${number})`;
 
 export type RGBAColor = `rgba(${number},${number},${number},${number})`
 
-export type Colors = RGBColor | RGBAColor
+export type Color = RGBColor | RGBAColor
 
-interface BrandColors {
+export interface BrandColors {
     /**
      * The primary brand color,
      * Variations can be brighter or darker,
      * Default Themes Variations : darker in light color scheme & brighter in dark color scheme
      */
-    primary: Colors
+    primary: Color
     /**
      * The primary brand color shade 100
      */
-    primary100: Colors
+    primary100: Color
     /**
      * The primary brand color shade 200
      */
-    primary200: Colors
+    primary200: Color
     /**
      * The primary brand color shade 300
      */
-    primary300: Colors
+    primary300: Color
     /**
      * The primary brand color shade 400
      */
-    primary400: Colors
+    primary400: Color
     /**
      * The primary brand color shade 500
      */
-    primary500: Colors
+    primary500: Color
     /**
      * The secondary brand color,
      * Variations can be brighter or darker,
      * Default Themes Variations : darker in light color scheme & brighter in dark color scheme
      */
-    accent: Colors
+    accent: Color
     /**
      * The secondary brand color shade 100
      */
-    accent100: Colors
+    accent100: Color
     /**
      * The secondary brand color shade 200
      */
-    accent200: Colors
+    accent200: Color
     /**
      * The secondary brand color shade 300
      */
-    accent300: Colors
+    accent300: Color
     /**
      * The secondary brand color shade 400
      */
-    accent400: Colors
+    accent400: Color
     /**
      * The secondary brand color shade 400
      */
-    accent500: Colors
+    accent500: Color
 }
 
 export interface ResultColors {
@@ -64,41 +64,41 @@ export interface ResultColors {
      * (text / background) color for success
      * must be always used over bg and onBg and their variations
      */
-    success: Colors
+    success: Color
     /**
      * The text color to be used over color success
      */
-    onSuccess: Colors
+    onSuccess: Color
     /**
      * (text / background) color for success
      * must be always used over bg and onBg and their variations
      */
-    error: Colors
+    error: Color
     /**
      * The text color to be used over color error
      */
-    onError: Colors
+    onError: Color
     /**
      * (text / background) color for success
      * must be always used over bg and onBg and their variations
      */
-    warning: Colors
+    warning: Color
     /**
      * The text color to be used over color warning
      */
-    onWarning: Colors
+    onWarning: Color
     /**
      * (text / background) color for success
      * must be always used over bg and onBg and their variations
      */
-    info: Colors
+    info: Color
     /**
      * The text color to be used over color info
      */
-    onInfo: Colors
+    onInfo: Color
 }
 
-export interface ThemeColors extends BrandColors, ResultColors {
+export interface BgColors {
     /**
      * bg is the main background color
      * Variations are brighter in dark mode and darker in light mode
@@ -108,23 +108,26 @@ export interface ThemeColors extends BrandColors, ResultColors {
     /**
      * brighter or darker shade of bg
      */
-    bg100: Colors
+    bg100: Color
     /**
      * brighter or darker shade of bg
      */
-    bg200: Colors
+    bg200: Color
     /**
      * brighter or darker shade of bg
      */
-    bg300: Colors
+    bg300: Color
     /**
      * brighter or darker shade of bg
      */
-    bg400: Colors
+    bg400: Color
     /**
      * brighter or darker shade of bg
      */
-    bg500: Colors
+    bg500: Color
+}
+
+export interface OnBgColors {
     /**
      * onBg is content color to be used on the bg color
      * Variations are darker in dark mode and brighter in light mode
@@ -134,25 +137,28 @@ export interface ThemeColors extends BrandColors, ResultColors {
     /**
      * brighter or darker shade of onBg
      */
-    onBg100: Colors
+    onBg100: Color
     /**
      * brighter or darker shade of onBg
      */
-    onBg200: Colors
+    onBg200: Color
     /**
      * brighter or darker shade of onBg
      */
-    onBg300: Colors
+    onBg300: Color
     /**
      * brighter or darker shade of onBg
      */
-    onBg400: Colors
+    onBg400: Color
     /**
      * brighter or darker shade of onBg
      */
-    onBg500: Colors
+    onBg500: Color
+}
+
+export interface ThemeColors extends BgColors, OnBgColors, BrandColors, ResultColors {
     /**
      * color being used for the backdrop or scrim
      */
-    backdrop: Colors
+    backdrop: Color
 }

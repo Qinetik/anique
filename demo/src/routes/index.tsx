@@ -1,67 +1,89 @@
-import {Title} from "solid-start";
-import {H1, H2} from "@qinetik/anique/headings";
-import {ThemeProvider} from "@qinetik/emotion/theme";
-import {P} from "@qinetik/anique/paragraphs";
-import {AppBar} from "@qinetik/anique/appbar/AppBar";
-import {createEffect, createSignal} from "solid-js";
-import {ColorScheme, getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique/theme/useColorScheme";
-import {darkTheme, lightTheme} from "@qinetik/anique/theme/Default";
+import {H1, H2, H4} from "@qinetik/anique/headings";
+import {P} from "@qinetik/anique/paragraph";
+import {PageContainer} from "../components/PageContainer";
+import {A} from "solid-start";
+import {Text} from "@qinetik/anique/text";
+
 
 export default function Home() {
 
-    const [colorScheme, setColorScheme] = createSignal(ColorScheme.Dark)
-
-    createEffect(()=> {
-        setColorScheme(getSystemColorScheme())
-        onSystemColorSchemeChange(setColorScheme)
-    })
-
     return (
-        <ThemeProvider theme={() => (colorScheme() == ColorScheme.Dark ? darkTheme : lightTheme)}>
-            <main>
+        <PageContainer>
+            <H1>Anique for SolidJS</H1>
 
-                <Title>Anique | UI</Title>
-                <AppBar
-                    title={"Anique"}
-                />
+            <H2>What ?</H2>
+            <P>
+                Anique is a UI component library for SolidJS, Several reasons why we love Anique
+            </P>
 
-                <div style={"margin: 8rem;"}>
-                    <H1>Our Website</H1>
-                    <H2>The standard Lorem Ipsum passage, used since the 1500s</H2>
-                    <P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</P>
+            <ul>
+                <li>
+                    <H4>Lightweight</H4>
+                    <P>Anique has no dependencies on external libraries except for a CSS in JS library, Its lightweight</P>
+                </li>
+                <li>
+                    <H4>Css in JS</H4>
+                    <P>Anique has its own CSS in JS library, which it depends on, The library makes use of <A href={"/"}>emotion</A> in the background, so it offers a similar API, We hope to make this library runtime free in the future, if we don't die of old age, It has following set of features, Its minimal as of now</P>
+                    <ul>
+                        <li>
+                            A styled function which takes a tag or a component
+                        </li>
+                        <li>
+                            shouldForwardProp function which determines whether a prop should be forwarded
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <H4>Typesafe</H4>
+                    <P>Anique uses typescript and is typesafe</P>
+                </li>
+                <li>
+                    <H4>Minimal & Performant</H4>
+                    <P>Anique has minimal set of components and is therefore performant, We plan make it more customizable without affecting the performance</P>
+                </li>
+            </ul>
 
-                    <H2>Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</H2>
-                    <P>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                        beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
-                        in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-                        quo voluptas nulla pariatur?"</P>
+            <H2>Why ?</H2>
+            <P>
+                There are many UI component libraries, They all have their pros and cons but these cons unfortunately
+                outweigh the pros.
+            </P>
 
-                    <H2>1914 translation by H. Rackham</H2>
-                    <P>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                        was born and I will give you a complete account of the system, and expound the actual teachings
-                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,
-                        dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know
-                        how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again
-                        is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain,
-                        but because occasionally circumstances occur in which toil and pain can procure him some great
-                        pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise,
-                        except to obtain some advantage from it? But who has any right to find fault with a man who
-                        chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that
-                        produces no resultant pleasure?"</P>
-                </div>
-
-            </main>
-
-        </ThemeProvider>
+            <ul>
+                <li>
+                    <H4>Not enough libraries</H4>
+                    <P>
+                        Wait, I just said there are many UI component libraries, Well, Although there's too many UI
+                        component libraries, There aren't enough libraries for SolidJS that are good.
+                    </P>
+                </li>
+                <li>
+                    <H4>Framework Independent Libraries</H4>
+                    <P>
+                        Framework independent libraries are good, since they don't tie you to a framework, but then
+                        why use a framework like Solid or React in the first place,
+                        Otherwise these libraries have their own learning curve apart from the framework and aren't
+                        easy to integrate or use for a beginner.
+                        Personally, if you enjoy writing UI in these libraries, go for it.
+                    </P>
+                </li>
+                <li>
+                    <H4>SUID (MUI)</H4>
+                    <P>
+                        There's a port of MUI for SolidJS which is good, The UI is amazing, The components work &
+                        everything. The cons are the legacy style system, complicated naming & components.We actually
+                        tried forking SUID, but we gave up since the code written was really hard to tinker with.
+                    </P>
+                </li>
+                <li>
+                    <H4>Other Libraries</H4>
+                    <P>
+                        There are other UI component libraries that use different set of technologies & then user
+                        must also adopt those technologies in order to write their UI.
+                        For me, I prefer <code>CSS in JS</code> which doesn't happen to be their choice.
+                    </P>
+                </li>
+            </ul>
+        </PageContainer>
     );
 }
