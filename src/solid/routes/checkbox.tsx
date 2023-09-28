@@ -77,17 +77,15 @@ function CheckboxWithLabelDescription() {
 export default function CheckboxPage() {
 
     return (
-        <PageContainer>
-            <Column>
-                <H2>Basic Checkbox</H2>
-                <BasicCheckboxExample/>
-                <H2>Size Variations</H2>
-                <SizeVariationsExample/>
-                <H2>Checkbox with Label</H2>
-                <CheckboxWithLabel/>
-                <H2>Checkbox with Label & Description</H2>
-                <CheckboxWithLabelDescription/>
-            </Column>
-        </PageContainer>
+        <Column>
+            <H2>Basic Checkbox</H2>
+            <BasicCheckboxExample/>
+            <H2>Size Variations</H2>
+            <SizeVariationsExample/>
+            <H2>Checkbox with Label</H2>
+            <CheckboxWithLabel/>
+            <H2>Checkbox with Label & Description</H2>
+            <CheckboxWithLabelDescription/>
+        </Column>
     )
 }

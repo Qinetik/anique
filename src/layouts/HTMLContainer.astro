@@ -1,3 +1,56 @@
+
 ---
-$END$
+import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique/theme/AniqueThemes";
+import {Anique} from "@qinetik/anique/theme/Theme";
+
+export interface Props {
+    initialTheme: string
+    title: string
+}
+
+const {
+    initialTheme,
+    title
+} = Astro.props
+
+const onBg = Anique.colors.onBg
+
 ---
+
+<html class={initialTheme}>
+    <head>
+        <title>{title}</title>
+        <AniqueThemeDark containerCssSelector={".dark"}/>
+        <AniqueThemeLight containerCssSelector={".light"}/>
+    </head>
+    <body>
+        <slot/>
+    </body>
+</html>
+
+<style define:vars={{onBg}} is:global>
+
+    :root.light {
+        color-scheme : light;
+    }
+
+    :root.dark {
+        color-scheme : dark;
+    }
+
+    :root {
+        font-size: 15px;
+        color: var(--onBg);
+        font-family: 'Roboto', 'Helvetica', sans-serif;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+
+</style>

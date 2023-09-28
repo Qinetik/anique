@@ -24,7 +24,7 @@ export type ElementType<P = any> =
     }[keyof JSX.IntrinsicElements]
   | Component<P>
 
-export type Interpolations<Props extends object> = Array<(object | ((props: Props & { theme: DefaultTheme }) => object))>;
+export type Interpolations<Props extends object> = Array<(string | number | object | ((props: Props & { theme: DefaultTheme }) => object))>;
 
 
 export type StyledElementType<Props> =

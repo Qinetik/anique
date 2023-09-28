@@ -1,5 +1,3 @@
-import {A, Title} from "solid-start";
-import {HttpStatusCode} from "solid-start/server";
 import {PageContainer} from "../components/PageContainer";
 import {H1, H2} from "@qinetik/anique/headings";
 import {Text} from "@qinetik/anique/text";
@@ -29,12 +27,11 @@ const paragraphStyles = {
 export default function NotFound() {
     return (
         <PageContainer style={pageStyles}>
-            <Title>Not Found</Title>
-            <HttpStatusCode code={404}/>
+            <title>Not Found</title>
             <H1 style={headingStyles}>Page not found</H1>
             <section style={paragraphStyles}>
                 <H2>Sorry 😔, we could not find what you were looking for<br/></H2>
-                <Text><A href="/">Go home</A></Text>
+                <Text><a href="/">Go home</a></Text>
             </section>
         </PageContainer>
     );

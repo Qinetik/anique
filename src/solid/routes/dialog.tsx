@@ -9,7 +9,7 @@ import {Centered} from "@qinetik/anique/utils/centered";
 export default function DialogPage() {
     const [isOpen, setIsOpen] = createSignal(false)
     return (
-        <PageContainer>
+        <>
             <H1>Dialog</H1>
             <Card>
                 <Button onClick={(e) => setIsOpen(!isOpen())}>Open Dialog</Button>
@@ -22,6 +22,6 @@ export default function DialogPage() {
                     </Centered>
                 </Dialog>
             ) : null}
-        </PageContainer>
+        </>
     )
 }

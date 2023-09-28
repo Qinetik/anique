@@ -1,26 +1,35 @@
 // Reference https://github.dev/emotion-js/emotion/blob/26ded6109fcd8ca9875cc2ce4564fee678a3f3c5/packages/react/src/keyframes.js#L24
-import { css } from './css'
-import { CSSInterpolation, Keyframes } from '@emotion/serialize'
+import {CSSInterpolation, Keyframes, serializeStyles} from '@emotion/serialize'
+import {JSX} from "solid-js";
+import {getNameSerializedStyles, MountedStyles} from "./Mounter";
+import hashFunc from "@emotion/hash"
+
+type KeyframesEle = (() => JSX.Element) & {
+    animationName: string
+}
 
 function keyframes(
     template: TemplateStringsArray,
     ...args: Array<CSSInterpolation>
-): Keyframes
+): KeyframesEle
 
-function keyframes(...args: Array<CSSInterpolation>): Keyframes
+function keyframes(...args: Array<CSSInterpolation>): KeyframesEle
 
-function keyframes(...args: any[]): Keyframes {
-    let insertable = css(...args)
-    const name = `animation-${insertable.name}`
-    // @ts-expect-error Keyframes type could never be fit as it unions string and object
-    return {
-        name,
-        styles: `@keyframes ${name}{${insertable.styles}}`,
-        anim: 1,
-        toString() {
-            return `_SOLID_EMOTION_${this.name}_${this.styles}_SOLID_EMOTION_`
-        },
+function keyframes(...args: any[]): KeyframesEle {
+    const styles = serializeStyles(args)
+    const hash = hashFunc(styles.styles)
+    const name = getNameSerializedStyles(hash, true)
+    const Styled = () => {
+        return (
+            <MountedStyles
+                styles={styles}
+                areKeyFrames={true}
+                name={name}
+            />
+        )
     }
+    Styled.animationName = name
+    return Styled
 }
 
-export { keyframes }
+export {keyframes}

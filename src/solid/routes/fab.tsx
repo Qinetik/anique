@@ -9,28 +9,26 @@ import {Column} from "@qinetik/anique/column";
 
 export default function FabPage() {
     return (
-        <PageContainer>
-            <Column>
-                <H1>Fab</H1>
-                <Card>
-                    <Fab>
-                        <Icon>
-                            <Menu/>
-                        </Icon>
-                    </Fab>
-                </Card>
-                <H1>Extended Fab</H1>
-                <Card>
-                    <ExtendedFab>
-                        <Icon>
-                            <Menu/>
-                        </Icon>
-                        <Text>
-                            Extended Me
-                        </Text>
-                    </ExtendedFab>
-                </Card>
-            </Column>
-        </PageContainer>
+        <Column>
+            <H1>Fab</H1>
+            <Card>
+                <Fab>
+                    <Icon>
+                        <Menu/>
+                    </Icon>
+                </Fab>
+            </Card>
+            <H1>Extended Fab</H1>
+            <Card>
+                <ExtendedFab>
+                    <Icon>
+                        <Menu/>
+                    </Icon>
+                    <Text>
+                        Extended Me
+                    </Text>
+                </ExtendedFab>
+            </Card>
+        </Column>
     )
 }

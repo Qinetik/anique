@@ -47,15 +47,13 @@ function RadioWithLabelDescription() {
 export default function RadioPage() {
 
     return (
-        <PageContainer>
-            <Column>
-                <H1>Basic Radio</H1>
-                <BasicRadioExample/>
-                <H1>Radio with Label</H1>
-                <RadioWithLabel/>
-                <H1>Radio with Label & Description</H1>
-                <RadioWithLabelDescription/>
-            </Column>
-        </PageContainer>
+        <Column>
+            <H1>Basic Radio</H1>
+            <BasicRadioExample/>
+            <H1>Radio with Label</H1>
+            <RadioWithLabel/>
+            <H1>Radio with Label & Description</H1>
+            <RadioWithLabelDescription/>
+        </Column>
     )
 }

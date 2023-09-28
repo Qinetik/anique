@@ -6,7 +6,7 @@ import {Button} from "@qinetik/anique/button";
 
 export default function ColumnPage() {
     return (
-        <PageContainer>
+        <>
             <H1>Column</H1>
             <Card>
                 <Column gap={"1em"}>
@@ -17,6 +17,6 @@ export default function ColumnPage() {
                     <Button>Fifth</Button>
                 </Column>
             </Card>
-        </PageContainer>
+        </>
     )
 }

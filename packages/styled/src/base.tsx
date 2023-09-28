@@ -40,7 +40,7 @@ Because you write your CSS inside a JavaScript string you actually have to do do
 You can read more about this here:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences`
 
-const isDevelopment : () => boolean = ()=> process.env.NODE_ENV !== "production"
+const isDevelopment : () => boolean = ()=> true
 
 const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) => {
   if (isDevelopment()) {
@@ -50,7 +50,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       )
     }
   }
-  const isReal = tag.__emotion_real === tag
+  const isReal = true //tag.__emotion_real === tag
   const baseTag = (isReal && tag.__emotion_base) || tag
 
   let identifierName: string | undefined
@@ -132,7 +132,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
         const [_, registeredStyles] = getClassNameAndRegisteredStyles()
         const serialized = serializeStyles(
           styles.concat(classInterpolations),
-          registeredStyles,
+          undefined,
           mergedProps
         )
 
@@ -189,10 +189,7 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
         const element = (
             <ErrorBoundary fallback={(e,reset) => {
                 console.error("error making dynamic component in styled -> base " + isServer,e)
-                const span = document.createElement("span")
-                span.onclick = reset
-                span.innerHTML = e
-                return span
+                return e + " isBrowser = " + isBrowser() + " tag = " + finalTag
             }}>
                 <Dynamic
                     component={finalTag}
@@ -217,10 +214,9 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
             <style
               {...{
                 [`data-emotion`]: `${cache?.key} ${serializedNames}`,
-                dangerouslySetInnerHTML: { __html: rulesSerialized.rules },
                 nonce: cache?.sheet.nonce,
               }}
-            />
+            >{`${rulesSerialized.rules}`}</style>
             {element}
           </>
         )

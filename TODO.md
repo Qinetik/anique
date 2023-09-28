@@ -2,7 +2,7 @@
 - [ ] Add bare minimum ui components
     - [x] Theming Solution
     - [x] AppBar
-    - [x] ModalDrawer
+    - [x] StaticDrawer
     - [x] Button
     - [ ] TextField
     - [x] Spinner
