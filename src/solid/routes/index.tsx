@@ -54,7 +54,7 @@ export default function Home() {
                         features, Its minimal as of now</P>
                     <ul>
                         <li>
-                            Its runtime free but If you use it with Astro, You get zero runtime overhead
+                            Its runtime free but only If you use it with Astro, You get zero runtime overhead
                         </li>
                         <li>
                             A styled function which takes a tag or a component
