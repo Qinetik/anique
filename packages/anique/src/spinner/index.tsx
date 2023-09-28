@@ -7,7 +7,7 @@ export interface SpinnerProps {
     color?: keyof OnBgColors | keyof ResultColors | keyof BrandColors
 }
 
-const SpinnerAnimation = keyframes`
+export const SpinnerAnimation = keyframes`
   from {
     transform: rotate(0deg);
   }
@@ -23,7 +23,6 @@ const AniqueStyledSpinner = styled("svg")`
 export const Spinner = (props: SpinnerProps) => {
     return (
         <div style={{width: "32px", height: "32px"}}>
-            <SpinnerAnimation />
             <AniqueStyledSpinner
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

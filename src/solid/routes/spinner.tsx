@@ -1,12 +1,12 @@
-import {PageContainer} from "../components/PageContainer";
 import {H2} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
-import {Spinner} from "@qinetik/anique/spinner";
+import {Spinner, SpinnerAnimation} from "@qinetik/anique/spinner";
 import {Column} from "@qinetik/anique/column";
 
 export default function SpinnerPage() {
     return (
         <Column>
+            <SpinnerAnimation/>
             <H2>Spinner</H2>
             <Card>
                 <Spinner/>

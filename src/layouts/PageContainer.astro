@@ -15,7 +15,7 @@ import {Size} from "@qinetik/anique/theme/Size";
 import {Link} from "../solid/components/Link"
 import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique/theme/AniqueThemes";
 import HTMLContainer from "./HTMLContainer.astro";
-import { AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
+import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
 import {WebAppBar} from "../solid/components/AppBar";
 ---
 
@@ -27,11 +27,14 @@ import {WebAppBar} from "../solid/components/AppBar";
     <Column>
 
         <WebAppBar
-            client:load
+                client:load
         />
 
-        <Row>
-            <StaticDrawer>
+        <Row class="bar-content-row">
+
+            <StaticDrawer
+                    class="static-drawer"
+            >
 
                 <Link href={"/"}>
                     <DrawerItem>Home</DrawerItem>
@@ -106,29 +109,44 @@ import {WebAppBar} from "../solid/components/AppBar";
 
             </StaticDrawer>
 
-            <div class="container">
-                <slot/>
+            <div class="content-container">
+                <div class="container">
+                    <slot/>
+                </div>
             </div>
         </Row>
 
     </Column>
 
     <AutoSystemColorScheme
-        client:load
+            client:load
     />
 
 </HTMLContainer>
 
 
 <style>
+    .content-container {
+        display: table-cell;
+        vertical-align: top;
+    }
     .container {
         display: flex;
         flex-direction: column;
         justify-content: start;
         justify-items: start;
         align-items: center;
-        flex:1;
+        flex: 1;
         box-sizing: border-box;
         padding: 4rem 4rem;
+    }
+
+    .bar-content-row {
+        display: table;
+    }
+
+    .static-drawer {
+        display: table-cell;
+        vertical-align: top;
     }
 </style>
