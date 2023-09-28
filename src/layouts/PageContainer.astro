@@ -7,7 +7,6 @@ import {IconButton} from "@qinetik/anique/icon-button";
 import {DrawerItem, DrawerSectionItem, StaticDrawer} from "@qinetik/anique/drawer";
 import {createEffect, createSignal, JSX} from "solid-js";
 import MenuIcon from "../solid/icons/Menu"
-import {darkTheme, lightTheme} from "@qinetik/anique/theme/Default";
 import LightDarkIcon from "../solid/icons/LightDarkIcon";
 import {Row} from "@qinetik/anique/row";
 import {getThemeValue, removeThemeValue, saveThemeValue} from "../solid/utils/theme-value";
@@ -17,6 +16,7 @@ import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique/theme/AniqueThe
 import HTMLContainer from "./HTMLContainer.astro";
 import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
 import {WebAppBar} from "../solid/components/AppBar";
+import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
 ---
 
 <HTMLContainer
@@ -36,76 +36,76 @@ import {WebAppBar} from "../solid/components/AppBar";
                     class="static-drawer"
             >
 
-                <Link href={"/"}>
-                    <DrawerItem>Home</DrawerItem>
-                </Link>
+                <div class="fixed-content">
 
-                <DrawerSectionItem title={"Components"} indent={false}>
+                    <Link href={"/"}>
+                        <DrawerItem>Home</DrawerItem>
+                    </Link>
 
-                    <DrawerSectionItem title={"Interactive"}>
-                        <Link href={"/components/fab"}>
-                            <DrawerItem>
-                                Floating Action Button
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/button"}>
-                            <DrawerItem>
-                                Button
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/checkbox"}>
-                            <DrawerItem>
-                                Checkbox
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/radio"}>
-                            <DrawerItem>
-                                Radio
-                            </DrawerItem>
-                        </Link>
-                    </DrawerSectionItem>
-                    <DrawerSectionItem title={"Layout"}>
-                        <Link href={"/components/column"}>
-                            <DrawerItem>
-                                Column
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/row"}>
-                            <DrawerItem>
-                                Row
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/dialog"}>
-                            <DrawerItem>
-                                Dialog
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/appbar"}>
-                            <DrawerItem>
-                                AppBar
-                            </DrawerItem>
-                        </Link>
-                    </DrawerSectionItem>
-                    <DrawerSectionItem title={"Text"}>
-                        <Link href={"/components/headings"}>
-                            <DrawerItem>
-                                Headings
-                            </DrawerItem>
-                        </Link>
-                        <Link href={"/components/paragraph"}>
-                            <DrawerItem>
-                                Paragraph
-                            </DrawerItem>
-                        </Link>
-                    </DrawerSectionItem>
-                    <DrawerSectionItem title={"Other"}>
-                        <Link href={"/components/spinner"}>
-                            <DrawerItem>
-                                Spinner
-                            </DrawerItem>
-                        </Link>
-                    </DrawerSectionItem>
-                </DrawerSectionItem>
+                    <DrawerSectionItem title={"Interactive Components"}/>
+
+                    <Link href={"/components/fab"}>
+                        <DrawerItem>
+                            Floating Action Button
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/button"}>
+                        <DrawerItem>
+                            Button
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/checkbox"}>
+                        <DrawerItem>
+                            Checkbox
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/radio"}>
+                        <DrawerItem>
+                            Radio
+                        </DrawerItem>
+                    </Link>
+
+                    <DrawerSectionItem title={"Layout"}/>
+                    <Link href={"/components/column"}>
+                        <DrawerItem>
+                            Column
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/row"}>
+                        <DrawerItem>
+                            Row
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/dialog"}>
+                        <DrawerItem>
+                            Dialog
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/appbar"}>
+                        <DrawerItem>
+                            AppBar
+                        </DrawerItem>
+                    </Link>
+
+                    <DrawerSectionItem title={"Text"}/>
+                    <Link href={"/components/headings"}>
+                        <DrawerItem>
+                            Headings
+                        </DrawerItem>
+                    </Link>
+                    <Link href={"/components/paragraph"}>
+                        <DrawerItem>
+                            Paragraph
+                        </DrawerItem>
+                    </Link>
+                    <DrawerSectionItem title={"Other"}/>
+                    <Link href={"/components/spinner"}>
+                        <DrawerItem>
+                            Spinner
+                        </DrawerItem>
+                    </Link>
+
+                </div>
 
             </StaticDrawer>
 
@@ -130,6 +130,7 @@ import {WebAppBar} from "../solid/components/AppBar";
         display: table-cell;
         vertical-align: top;
     }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -149,4 +150,10 @@ import {WebAppBar} from "../solid/components/AppBar";
         display: table-cell;
         vertical-align: top;
     }
+
+    .fixed-content {
+        position:sticky;
+        top:1em;
+    }
+
 </style>

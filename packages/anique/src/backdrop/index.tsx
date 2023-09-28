@@ -1,5 +1,6 @@
 import {styled} from "@qinetik/emotion";
 import {Accessor} from "solid-js";
+import {Anique} from "../theme/Theme";
 
 export interface BackdropProps {
     class?: string
@@ -9,31 +10,71 @@ export interface BackdropProps {
 }
 
 const BackdropContainer = styled("div")`
-    position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &:after {
+    content: "";
+    background: ${Anique.colors.bg};
+    opacity: 0.7;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .2);
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
 `
 
-const ContentContainer = styled("div")`
-    position: relative;
-    width: 100%;
-    height: 100%;
-`
-
-export function Backdrop(props: BackdropProps) {
+export function BackdropRoot(props: Omit<BackdropProps, "onClickOutside">) {
     return (
         <BackdropContainer
             style={{display: props.isVisible() ? "block" : "none"}}
             class={props.class}
-            onClick={(e) => {
-                if (e.target === e.currentTarget || e.target === e.currentTarget.firstElementChild) {
-                    props.onClickOutside()
-                }
-            }}>
-            {props.children}
-        </BackdropContainer>
+            children={props.children}
+        />
+    )
+}
+
+function onBackdropClick(props: Pick<BackdropProps, "onClickOutside">): (e: MouseEvent & { currentTarget: HTMLElement, target: Element }) => void {
+    return (e) => {
+        if (e.currentTarget === e.target || !e.currentTarget.contains(e.target)) {
+            props.onClickOutside()
+        }
+    }
+}
+
+const CenteredContent = styled("div")`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export function BackdropCenteredContent(props: Omit<BackdropProps, "isVisible"> & { direction: "row" | "column" }) {
+    return (
+        <CenteredContent
+            class={props.class}
+            children={props.children}
+            onClick={onBackdropClick(props)}
+            style={{"flex-direction": props.direction}}
+        />
+    )
+}
+
+export function Backdrop(props: BackdropProps) {
+    return (
+        <BackdropRoot {...props}>
+            <BackdropCenteredContent
+                children={props.children}
+                direction={"column"}
+                onClickOutside={props.onClickOutside}
+            />
+        </BackdropRoot>
     )
 }

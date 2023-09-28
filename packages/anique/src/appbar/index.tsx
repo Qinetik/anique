@@ -16,7 +16,6 @@ const AppBarContainer = styled('div')`
   box-sizing: border-box;
   padding: 0 1em;
   height: 4em;
-  background: ${Anique.colors.bg300};
 `
 
 const AppBarNavIcon = styled('div')`

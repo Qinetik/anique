@@ -4,28 +4,24 @@ import {JSX} from "solid-js";
 import {getNameSerializedStyles, MountedStyles} from "./Mounter";
 import hashFunc from "@emotion/hash"
 
-type KeyframesEle = (() => JSX.Element) & {
-    animationName: string
-}
+type MountedStylesComponent = (() => JSX.Element)
 
-function keyframes(
+function mountedStyles(
     template: TemplateStringsArray,
     ...args: Array<CSSInterpolation>
-): KeyframesEle
+): MountedStylesComponent
 
-function keyframes(...args: Array<CSSInterpolation>): KeyframesEle
+function mountedStyles(...args: Array<CSSInterpolation>): MountedStylesComponent
 
-function keyframes(...args: any[]): KeyframesEle {
+function mountedStyles(...args: any[]): MountedStylesComponent {
     const styles = serializeStyles(args)
     const hash = hashFunc(styles.styles)
-    const name = getNameSerializedStyles(hash, true)
-    const Styled = () => {
+    // const name = getNameSerializedStyles(hash, false)
+    return () => {
         return (
-            <style>{`@keyframes ${name}{${styles.styles}}`}</style>
+            <style>{styles.styles}</style>
         )
     }
-    Styled.animationName = name
-    return Styled
 }
 
-export {keyframes}
+export {mountedStyles}

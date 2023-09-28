@@ -1,11 +1,12 @@
 import {createMemo} from "solid-js";
 import {createThemeCSSVarsMappedStylesheet} from "./AniqueThemeCSSVarsMap";
-import {AniqueTheme} from "./Theme";
+import {Anique, AniqueTheme} from "./Theme";
 import {Border} from "./Border";
 import {Font} from "./Font";
 import {Color, ResultColors} from "./Colors";
 import {DefaultThemeBreakpoints} from "./Breakpoint";
 import {AniqueAnimation} from "./Animation";
+import {mountedStyles} from "@qinetik/emotion";
 
 const CommonResultColors: ResultColors<Color> = {
     success: "rgb(21,87,36)",
@@ -19,8 +20,8 @@ const CommonResultColors: ResultColors<Color> = {
 }
 
 const CommonFont: Font = {
-    primary: '"Helvetica Neue", Arial, sans-serif',
-    secondary: 'Roboto, Helvetica, Arial, sans-serif',
+    primary: '"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+    secondary: '"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
 }
 
 const CommonBorder: Border = {
@@ -61,12 +62,12 @@ const darkTheme: AniqueTheme = {
         accent400: "rgb(177,206,251)",
         accent500: "rgb(206,224,253)",
 
-        bg: "rgb(2,7,13)",
-        bg100: "rgb(7,24,44)",
-        bg200: "rgb(12,40,75)",
-        bg300: "rgb(17,57,106)",
-        bg400: "rgb(21,71,132)",
-        bg500: "rgb(25,87,163)",
+        bg: "#121212",
+        bg100: "#1e1e1e",
+        bg200: "#2c2c2c",
+        bg300: "#3a3a3a",
+        bg400: "#464646",
+        bg500: "#525252",
 
         onBg: "rgb(255,255,255)",
         onBg100: "rgb(237,237,237)",
@@ -118,17 +119,32 @@ const lightTheme: AniqueTheme = {
 };
 
 interface AniqueThemeMounterProps {
-    containerCssSelector : string
+    containerCssSelector: string
 }
 
-export function AniqueThemeDark(props : AniqueThemeMounterProps) {
+export const AniqueGlobalStyling = mountedStyles`
+    // still figuring out if this is useful
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    :root * {
+        font-family : ${Anique.font.secondary};
+        color : ${Anique.colors.onBg};
+    }
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+`
+
+export function AniqueThemeDark(props: AniqueThemeMounterProps) {
     const darkStyleSheet = createMemo(() => createThemeCSSVarsMappedStylesheet(darkTheme))
     return (
         <style>{`${props.containerCssSelector}{${darkStyleSheet()}}`}</style>
     )
 }
 
-export function AniqueThemeLight(props : AniqueThemeMounterProps) {
+export function AniqueThemeLight(props: AniqueThemeMounterProps) {
     const darkStyleSheet = createMemo(() => createThemeCSSVarsMappedStylesheet(lightTheme))
     return (
         <style>{`${props.containerCssSelector}{${darkStyleSheet()}}`}</style>

@@ -2,6 +2,7 @@
 ---
 import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique/theme/AniqueThemes";
 import {Anique} from "@qinetik/anique/theme/Theme";
+import {AniqueGlobalStyling} from "@qinetik/anique/theme/AniqueThemes";
 
 export interface Props {
     initialTheme: string
@@ -22,13 +23,14 @@ const onBg = Anique.colors.onBg
         <title>{title}</title>
         <AniqueThemeDark containerCssSelector={".dark"}/>
         <AniqueThemeLight containerCssSelector={".light"}/>
+        <AniqueGlobalStyling />
     </head>
     <body>
         <slot/>
     </body>
 </html>
 
-<style define:vars={{onBg}} is:global>
+<style is:global>
 
     :root.light {
         color-scheme : light;
@@ -38,19 +40,8 @@ const onBg = Anique.colors.onBg
         color-scheme : dark;
     }
 
-    :root {
-        font-size: 15px;
-        color: var(--onBg);
-        font-family: 'Roboto', 'Helvetica', sans-serif;
-    }
-
     body {
         margin: 0;
-    }
-
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
     }
 
 </style>

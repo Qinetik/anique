@@ -1,4 +1,16 @@
 - [x] Setup a development environment
+- [ ] Add onPrimary & onAccent with fixed variations rather than allowing user to have bright or dark
+- [ ] Use colorful variations for Card, Button, Checkbox, Radio, FAB, Spinner & (check if text field)
+- [ ] Add a bgColor property to app bar
+- [ ] Fix IconButton hover effect
+- [ ] Remove multiple heading components just use one
+- [ ] Remove paragraph components
+- [ ] Add more components TextField, Toast, Select, ExternalLink, Callout, Slider, Switch, TextArea, Table
+- [ ] In Demo Site Center the Middle Part
+- [ ] Have a right sidebar on the main page, with external links to View on Github & Checkout Examples
+- [ ] Have sizes for Button, IconButton, Spinner, FAB
+- [ ] A Scaffold Component that's response
+- [ ] Make all components response
 - [ ] Add bare minimum ui components
     - [x] Theming Solution
     - [x] AppBar
@@ -14,7 +26,6 @@
     - [x] Radio, LabeledRadio
     - [x] Text
     - [x] IconButton
-    - [x] Headings -> H1,H2,H3,H4,H5,H6
-    - [x] P1,P2,P3
+- [ ] Make library look better
 - [ ] Publish initial version
 - [ ] Publish initial docs website

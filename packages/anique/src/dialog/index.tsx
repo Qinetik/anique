@@ -14,6 +14,7 @@ const DialogContent = styled("div")`
     background: ${Anique.colors.bg400};
     box-sizing: border-box;
     padding: 2em;
+    position : absolute;
 `
 
 export function Dialog(props: DialogProps) {
@@ -23,11 +24,9 @@ export function Dialog(props: DialogProps) {
                 isVisible={() => true}
                 onClickOutside={props.onCloseRequest}
             >
-                <Centered>
-                    <DialogContent>
-                        {props.children}
-                    </DialogContent>
-                </Centered>
+                <DialogContent>
+                    {props.children}
+                </DialogContent>
             </Backdrop>
         </Portal>
     )
