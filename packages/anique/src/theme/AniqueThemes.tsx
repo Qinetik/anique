@@ -8,17 +8,6 @@ import {DefaultThemeBreakpoints} from "./Breakpoint";
 import {AniqueAnimation} from "./Animation";
 import {mountedStyles} from "@qinetik/emotion";
 
-const CommonResultColors: ResultColors<Color> = {
-    success: "rgb(21,87,36)",
-    onSuccess: 'rgb(255,255,255)',
-    warning: "rgb(133,100,4)",
-    onWarning: 'rgb(255,255,255)',
-    error: "rgb(239,68,68)",
-    onError: "rgb(189,189,189)",
-    info: "rgb(68,148,239)",
-    onInfo: "rgb(189,189,189)"
-}
-
 const CommonFont: Font = {
     primary: '"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
     secondary: '"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
@@ -46,7 +35,14 @@ const darkTheme: AniqueTheme = {
     animation: CommonAnimation,
     colors: {
 
-        ...CommonResultColors,
+        success: "#145222",
+        onSuccess: '#adebbb',
+        warning: "#624904",
+        onWarning: '#fbe29d',
+        error: "#640202",
+        onError: "#fdb4b4",
+        info: "#133353",
+        onInfo: "#99c9ff",
 
         primary: "#119c8c",
         primary100: "#14b8a5",
@@ -85,7 +81,16 @@ const lightTheme: AniqueTheme = {
     breakpoints: new DefaultThemeBreakpoints(),
     animation: CommonAnimation,
     colors: {
-        ...CommonResultColors,
+
+        // These result colors are same as the dark theme one, need to be changed
+        success: "#84e19a",
+        onSuccess: '#0a2911',
+        warning: "#f9d36c",
+        onWarning: '#312402',
+        error: "#fc6969",
+        onError: "#4b0202",
+        info: "#82b3e3",
+        onInfo: "#001833",
 
         primary: "rgb(23,207,185)",
         primary100: "rgb(18,161,144)",

@@ -4,22 +4,25 @@
 - [x] Fix IconButton hover effect
 - [x] Remove multiple heading components
 - [x] Add a headline component
+- [ ] Can give progress to spinner
 - [x] Remove paragraph components
 - [ ] More Components
   - [ ] TextField
+  - [x] Alert
   - [ ] Toast
-  - [ ] Select 
+  - [ ] Select
   - [ ] ExternalLink
-  - [ ] Callout
   - [ ] Switch
   - [ ] TextArea
   - [ ] Table
   - [ ] Chip
   - [ ] Tab Row
+  - [ ] Tooltip
 - [ ] Add even more components DropdownMenu, HoverBox
 - [ ] In Demo Site Center the Middle Part
 - [ ] Use Tab Row Component to arrange examples & usage
 - [x] Have size variations for Button, IconButton, Spinner, FAB
+- [ ] Have color variations for Button, IconButton, Spinner, FAB, Radio, Checkbox
 - [ ] A Scaffold Component that's responsive
 - [ ] Make all components responsive
 - [ ] Add onPrimary with fixed variations rather than allowing user to have bright or dark

@@ -3,33 +3,33 @@ import {ThemeBreakpoints} from "./Breakpoint";
 
 const ThemeMap: AniqueThemeAccessor = {
     border: {
-        smRadius: "a1",
-        mdRadius: "a2",
-        lgRadius: "a3"
+        smRadius: "a0",
+        mdRadius: "a1",
+        lgRadius: "a2"
     },
     font: {
-        primary: "a4",
-        secondary: "a5",
+        primary: "a3",
+        secondary: "a4",
     },
     animation: {
         timing: {
-            ease: "a6",
-            slider: "a7",
-            slideStop: "a8",
-            timingThrottle: "a9"
+            ease: "a5",
+            slider: "a6",
+            slideStop: "a7",
+            timingThrottle: "a8"
         }
     },
     colors: {
 
         // result colors
-        success: "b0",
-        onSuccess: "b1",
-        warning: "b2",
-        onWarning: "b3",
-        error: "b4",
-        onError: "b5",
-        info: "b6",
-        onInfo: "b7",
+        success: "a9",
+        onSuccess: "b0",
+        warning: "b1",
+        onWarning: "b2",
+        error: "b3",
+        onError: "b4",
+        info: "b5",
+        onInfo: "b6",
 
         primary: "b7",
         primary100: "b8",
@@ -43,22 +43,22 @@ const ThemeMap: AniqueThemeAccessor = {
         accent200: "c5",
         accent300: "c6",
         accent400: "c7",
-        accent500: "c7",
+        accent500: "c8",
 
-        bg: "c8",
-        bg100: "c9",
-        bg200: "d0",
-        bg300: "d1",
-        bg400: "d2",
-        bg500: "d3",
+        bg: "c9",
+        bg100: "d0",
+        bg200: "d1",
+        bg300: "d2",
+        bg400: "d3",
+        bg500: "d4",
 
-        onBg: "d4",
-        onBg100: "d5",
-        onBg200: "d6",
-        onBg300: "d7",
-        onBg400: "d8",
-        onBg500: "d9",
-        backdrop: "e0",
+        onBg: "d5",
+        onBg100: "d6",
+        onBg200: "d7",
+        onBg300: "d8",
+        onBg400: "d9",
+        onBg500: "e0",
+        backdrop: "e1",
     }
 }
 
