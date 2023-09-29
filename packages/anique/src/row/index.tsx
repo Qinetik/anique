@@ -6,8 +6,9 @@ export interface RowProps {
 }
 
 export const Row = styled("div")<RowProps>`
-  display: flex;
-  flex-direction: row;
-  ${p => p.alignment != null ? ("align-items:" + p.alignment + ";") : ""}
-  ${p => p.gap != null ? ("gap:" + p.gap + ";") : null}
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    ${p => p.alignment != null ? ("align-items:" + p.alignment + ";") : ""}
+    ${p => p.gap != null ? ("gap:" + p.gap + ";") : null}
 `

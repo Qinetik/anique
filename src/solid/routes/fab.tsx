@@ -1,5 +1,3 @@
-import {PageContainer} from "../components/PageContainer";
-import {H1} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {ExtendedFab, Fab} from "@qinetik/anique/fab";
 import Menu from "../icons/Menu";
@@ -10,7 +8,7 @@ import {Column} from "@qinetik/anique/column";
 export default function FabPage() {
     return (
         <Column>
-            <H1>Fab</H1>
+            <h1>Fab</h1>
             <Card>
                 <Fab>
                     <Icon>
@@ -18,7 +16,7 @@ export default function FabPage() {
                     </Icon>
                 </Fab>
             </Card>
-            <H1>Extended Fab</H1>
+            <h1>Extended Fab</h1>
             <Card>
                 <ExtendedFab>
                     <Icon>

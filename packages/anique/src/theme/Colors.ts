@@ -7,8 +7,7 @@ export type Color = RGBColor | RGBAColor
 export interface BrandColors<Color extends string = string> {
     /**
      * The primary brand color,
-     * Variations can be brighter or darker,
-     * Default Themes Variations : darker in light color scheme & brighter in dark color scheme
+     * Variations can be brighter in dark mode & darker in light mode,
      */
     primary: Color
     /**

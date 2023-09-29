@@ -1,11 +1,14 @@
 import {styled, useTheme} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
+import {Size} from "../theme/Size";
 
-const ButtonBase = styled("button")`
+const ButtonBase = styled("button")<{
+    size ?: Size
+}>`
 
     box-sizing: border-box;
-    padding: 0.8em 1em;
-    background: ${Anique.colors.bg400};
+    padding: ${p=> 0.8 + (p.size ? (p.size * 0.25) : 0)}em ${p=> 0.8 + (p.size ? (p.size * 0.5) : 0)}em;
+    background: ${Anique.colors.primary};
     border-radius: 8px;
     cursor: pointer;
 
@@ -14,11 +17,11 @@ const ButtonBase = styled("button")`
     overflow: hidden;
 
     &:hover {
-        background: ${Anique.colors.bg500};
+        background: ${Anique.colors.primary100};
     }
 
     &:active {
-        background: ${Anique.colors.bg400};
+        background: ${Anique.colors.primary200};
     }
 
 `

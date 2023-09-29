@@ -1,4 +1,3 @@
-import {H2} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {Spinner, SpinnerAnimation} from "@qinetik/anique/spinner";
 import {Column} from "@qinetik/anique/column";
@@ -7,19 +6,19 @@ export default function SpinnerPage() {
     return (
         <Column>
             <SpinnerAnimation/>
-            <H2>Spinner</H2>
+            <h2>Spinner</h2>
             <Card>
                 <Spinner/>
             </Card>
-            <H2>Primary Colored Spinner</H2>
+            <h2>Primary Colored Spinner</h2>
             <Card>
                 <Spinner color={"primary"}/>
             </Card>
-            <H2>Accent Colored Spinner</H2>
+            <h2>Accent Colored Spinner</h2>
             <Card>
                 <Spinner color={"accent"}/>
             </Card>
-            <H2>Error Colored Spinner</H2>
+            <h2>Error Colored Spinner</h2>
             <Card>
                 <Spinner color={"error"}/>
             </Card>

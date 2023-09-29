@@ -1,4 +1,3 @@
-import {H1} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {Button} from "@qinetik/anique/button";
 import {createSignal} from "solid-js";
@@ -9,7 +8,7 @@ export default function DialogPage() {
     const [isOpen, setIsOpen] = createSignal(false)
     return (
         <>
-            <H1>Dialog</H1>
+            <h1>Dialog</h1>
             <Card>
                 <Button onClick={(e) => setIsOpen(!isOpen())}>Open Dialog</Button>
             </Card>

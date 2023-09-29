@@ -1,4 +1,3 @@
-import {H1, H2, H3, H4} from "@qinetik/anique/headings";
 import {Column} from "@qinetik/anique/column";
 import {UL} from "@qinetik/anique/List";
 
@@ -7,9 +6,9 @@ export default function Home() {
 
     return (
         <Column>
-            <H1>Anique for SolidJS & Astro</H1>
+            <h1>Anique for SolidJS & Astro</h1>
 
-            <H2>What ?</H2>
+            <h2>What ?</h2>
             <p>
                 Anique is a UI component library for SolidJS, Its built to be used with Astro,
                 Several reasons why we love Anique
@@ -17,12 +16,12 @@ export default function Home() {
 
             <UL>
                 <li>
-                    <H3>Lightweight</H3>
+                    <h3>Lightweight</h3>
                     <p>Anique has no dependencies on external libraries except for its own CSS in JS library which is lightweight and feature rich</p>
                     <p>Paired with Astro, Anique delivers ready made components to the web</p>
                 </li>
                 <li>
-                    <H3>CSS Variables under the hood</H3>
+                    <h3>CSS Variables under the hood</h3>
                     <p>
                         Yes we do use CSS in JS but the theme interface provides css variables which are minified,  This has several benefits
                     </p>
@@ -47,7 +46,7 @@ export default function Home() {
                     </p>
                 </li>
                 <li>
-                    <H3>Css in JS</H3>
+                    <h3>Css in JS</h3>
                     <p>Anique has its own CSS in JS library, which it depends on, The library makes use of <a
                         href={"/"}>emotion</a> in the background, so it offers a similar API, It has following set of
                         features, Its minimal as of now</p>
@@ -70,21 +69,21 @@ export default function Home() {
                     </UL>
                 </li>
                 <li>
-                    <H3>Typesafe</H3>
+                    <h3>Typesafe</h3>
                     <p>Anique uses typescript and is typesafe</p>
                 </li>
                 <li>
-                    <H3>Minimal & Performant</H3>
+                    <h3>Minimal & Performant</h3>
                     <p>Anique is minimal, We don't want to introduce components that aren't needed.</p>
                 </li>
             </UL>
 
-            <H2>Inspiration</H2>
+            <h2>Inspiration</h2>
             <p>
                 We take inspiration from Radix-UI, We want to make something similar, only without React
             </p>
 
-            <H2>Why ?</H2>
+            <h2>Why ?</h2>
             <p>
                 There are many UI libraries but They all have their pros and cons & these cons unfortunately
                 outweigh the pros.
@@ -92,21 +91,21 @@ export default function Home() {
 
             <UL>
                 <li>
-                    <H4>Not enough libraries</H4>
+                    <h4>Not enough libraries</h4>
                     <p>
                         Wait, I just said there are many UI component libraries, Well, Although there's too many UI
                         component libraries, There aren't enough libraries for SolidJS that are good.
                     </p>
                 </li>
                 <li>
-                    <H4>SUID (MUI)</H4>
+                    <h4>SUID (MUI)</h4>
                     <p>
                         There's a port of MUI for SolidJS which is good, The UI is amazing, The components work &
                         everything. The cons are the legacy style system.
                     </p>
                 </li>
                 <li>
-                    <H4>Other Libraries</H4>
+                    <h4>Other Libraries</h4>
                     <p>
                         There are other UI component libraries that use different set of technologies & then user
                         must also adopt those technologies in order to write their UI.

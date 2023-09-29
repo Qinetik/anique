@@ -1,5 +1,3 @@
-import {PageContainer} from "../components/PageContainer";
-import {H2} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {Checkbox, LabeledCheckbox} from "@qinetik/anique/checkbox";
 import {createSignal} from "solid-js";
@@ -8,12 +6,10 @@ import {Row} from "@qinetik/anique/row";
 import {Column} from "@qinetik/anique/column";
 
 function BasicCheckboxExample() {
-    const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>
             <Checkbox
-                isChecked={isChecked}
-                onChange={setIsChecked}
+                type={"checkbox"}
             />
         </Card>
     )
@@ -47,7 +43,7 @@ function SizeVariationsExample() {
     )
 }
 
-function CheckboxWithLabel() {
+function DisabledCheckboxExample() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>
@@ -55,6 +51,8 @@ function CheckboxWithLabel() {
                 isChecked={isChecked}
                 onChange={setIsChecked}
                 label={"Terms & Services"}
+                disabled={true}
+                description={"I agree to terms & services of this company"}
             />
         </Card>
     )
@@ -64,12 +62,19 @@ function CheckboxWithLabelDescription() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>
-            <LabeledCheckbox
-                isChecked={isChecked}
-                onChange={setIsChecked}
-                label={"Terms & Services"}
-                description={"I agree to terms & services of this company"}
-            />
+            <Row gap={"2em"}>
+                <LabeledCheckbox
+                    isChecked={isChecked}
+                    onChange={setIsChecked}
+                    label={"Terms & Services"}
+                />
+                <LabeledCheckbox
+                    isChecked={isChecked}
+                    onChange={setIsChecked}
+                    label={"Terms & Services"}
+                    description={"I agree to terms & services of this company"}
+                />
+            </Row>
         </Card>
     )
 }
@@ -78,14 +83,14 @@ export default function CheckboxPage() {
 
     return (
         <Column>
-            <H2>Basic Checkbox</H2>
+            <h2>Basic Checkbox</h2>
             <BasicCheckboxExample/>
-            <H2>Size Variations</H2>
+            <h2>Size Variations</h2>
             <SizeVariationsExample/>
-            <H2>Checkbox with Label</H2>
-            <CheckboxWithLabel/>
-            <H2>Checkbox with Label & Description</H2>
+            <h2>Checkbox with Label & Description</h2>
             <CheckboxWithLabelDescription/>
+            <h2>Disabled Checkbox</h2>
+            <DisabledCheckboxExample />
         </Column>
     )
 }

@@ -1,5 +1,3 @@
-import {PageContainer} from "../components/PageContainer";
-import {H2} from "@qinetik/anique/headings";
 import {Card} from "@qinetik/anique/card";
 import {AppBar} from "@qinetik/anique/appbar";
 import Menu from "../icons/Menu";
@@ -11,13 +9,13 @@ import {Column} from "@qinetik/anique/column";
 export default function AppBarPage() {
     return (
         <Column style={{width: "100%"}}>
-            <H2>Basic App Bar</H2>
+            <h2>Basic App Bar</h2>
             <Card style={{width: "100%"}}>
                 <AppBar
                     title={"Demo"}
                 />
             </Card>
-            <H2>App Bar With Icon</H2>
+            <h2>App Bar With Icon</h2>
             <Card style={{width: "100%"}}>
                 <AppBar
                     title={"Demo"}
@@ -28,7 +26,7 @@ export default function AppBarPage() {
                     )}
                 />
             </Card>
-            <H2>App Bar With IconButton</H2>
+            <h2>App Bar With IconButton</h2>
             <Card style={{width: "100%"}}>
                 <AppBar
                     title={"Demo"}
@@ -39,7 +37,7 @@ export default function AppBarPage() {
                     )}
                 />
             </Card>
-            <H2>App Bar With Actions</H2>
+            <h2>App Bar With Actions</h2>
             <Card style={{width: "100%"}}>
                 <AppBar
                     title={"Demo"}

@@ -1,5 +1,5 @@
 import {PageContainer} from "../components/PageContainer";
-import {H1, H2} from "@qinetik/anique/headings";
+import {H1, H2} from "../../../packages/anique/src/headline";
 import {Text} from "@qinetik/anique/text";
 
 const pageStyles = {

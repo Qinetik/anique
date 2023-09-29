@@ -48,12 +48,12 @@ const darkTheme: AniqueTheme = {
 
         ...CommonResultColors,
 
-        primary: "rgb(23,207,185)",
-        primary100: "rgb(44,232,210)",
-        primary200: "rgb(85,236,219)",
-        primary300: "rgb(126,241,227)",
-        primary400: "rgb(168,245,236)",
-        primary500: "rgb(209,250,245)",
+        primary: "#119c8c",
+        primary100: "#14b8a5",
+        primary200: "#17d3bd",
+        primary300: "#23e7d0",
+        primary400: "#3fe9d5",
+        primary500: "#5aeddc",
 
         accent: "rgb(59,130,246)",
         accent100: "rgb(89,150,247)",
@@ -123,14 +123,12 @@ interface AniqueThemeMounterProps {
 }
 
 export const AniqueGlobalStyling = mountedStyles`
-    // still figuring out if this is useful
-    * {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
     :root * {
         font-family : ${Anique.font.secondary};
         color : ${Anique.colors.onBg};
+    }
+    h1,h2,h3,h4,h5,h6 {
+        font-family : ${Anique.font.primary};
     }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

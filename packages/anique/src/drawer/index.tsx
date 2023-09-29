@@ -26,7 +26,7 @@ export const DrawerItem = styled("div")`
   font-family:${Anique.font.secondary};
 
   &:hover {
-    background: ${Anique.colors.bg300};
+    background: ${Anique.colors.primary};
   }
 `
 

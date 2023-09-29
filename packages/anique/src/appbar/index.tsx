@@ -1,5 +1,5 @@
 import {styled} from "@qinetik/emotion";
-import {H3} from "../headings";
+import {H3} from "../headline";
 import {Anique} from "../theme/Theme";
 
 export interface AppBarProps {
@@ -22,7 +22,7 @@ const AppBarNavIcon = styled('div')`
   margin-right: 1rem;
 `
 
-const AppBarTitle = styled(H3)`
+const AppBarTitle = styled("h3")`
   flex : 1;
 `
 

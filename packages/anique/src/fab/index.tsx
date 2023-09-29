@@ -10,15 +10,15 @@ const FabBase = styled("div")`
     justify-content: center;
     align-items: center;
     height: 3em;
-    background: ${Anique.colors.bg300};
+    background: ${Anique.colors.primary};
     cursor: pointer;
 
     &:hover {
-        background: ${Anique.colors.bg400};
+        background: ${Anique.colors.primary100};
     }
 
     &:active {
-        background: ${Anique.colors.bg500};
+        background: ${Anique.colors.primary200};
     }
 `
 

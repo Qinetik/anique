@@ -1,13 +1,13 @@
-import {PageContainer} from "../components/PageContainer";
-import {H1} from "@qinetik/anique/headings";
 import {Column} from "@qinetik/anique/column";
 import {Card} from "@qinetik/anique/card";
 import {Button} from "@qinetik/anique/button";
+import {Headline} from "@qinetik/anique/headline";
 
 export default function ColumnPage() {
     return (
-        <>
-            <H1>Column</H1>
+        <Column>
+            <Headline>Column</Headline>
+            <h1>Same sized items</h1>
             <Card>
                 <Column gap={"1em"}>
                     <Button>First</Button>
@@ -17,6 +17,16 @@ export default function ColumnPage() {
                     <Button>Fifth</Button>
                 </Column>
             </Card>
-        </>
+            <h1>Different sized items</h1>
+            <Card>
+                <Column gap={"1em"}>
+                    <Button size={0}>First</Button>
+                    <Button size={1}>Second</Button>
+                    <Button size={2}>Third</Button>
+                    <Button size={3}>Fourth</Button>
+                    <Button size={4}>Fifth</Button>
+                </Column>
+            </Card>
+        </Column>
     )
 }
