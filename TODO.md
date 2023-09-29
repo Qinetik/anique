@@ -1,22 +1,21 @@
 - [x] Setup a development environment
 - [x] Use colorful variations for Button, Checkbox, Radio, FAB
-- [ ] Add a bgColor property to app bar
 - [x] Fix IconButton hover effect
 - [x] Remove multiple heading components
 - [x] Add a headline component
 - [ ] Can give progress to spinner
 - [x] Remove paragraph components
 - [ ] More Components
+  - [ ] Select
+  - [ ] Tooltip
+  - [ ] Table
+  - [ ] Chip  
+  - [ ] Switch
   - [x] BaseTextField
   - [x] Alert
-  - [ ] Toast
-  - [ ] Select
-  - [ ] Switch
   - [x] TextArea
-  - [ ] Table
-  - [ ] Chip
+  - [ ] Toast
   - [ ] Tab Row
-  - [ ] Tooltip
 - [ ] Add even more components DropdownMenu, HoverBox
 - [ ] In Demo Site Center the Middle Part
 - [ ] Use Tab Row Component to arrange examples & usage
