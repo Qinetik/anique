@@ -1,26 +1,38 @@
 import {Card} from "@qinetik/anique/card";
 import {Spinner, SpinnerAnimation} from "@qinetik/anique/spinner";
 import {Column} from "@qinetik/anique/column";
+import {Row} from "@qinetik/anique/row";
+import {Anique} from "@qinetik/anique/theme/Theme";
+import {Size} from "@qinetik/anique/theme/Size";
 
 export default function SpinnerPage() {
     return (
         <Column>
             <SpinnerAnimation/>
-            <h2>Spinner</h2>
+            <h1>Spinner</h1>
+            <h2>Size Variations</h2>
             <Card>
-                <Spinner/>
+                <Row gap={"2em"}>
+                    <Spinner size={Size.Small}/>
+                    <Spinner size={Size.Medium} />
+                    <Spinner size={Size.Large} />
+                    <Spinner size={3} />
+                    <Spinner size={4} />
+                </Row>
             </Card>
-            <h2>Primary Colored Spinner</h2>
+            <h2>Color Variations</h2>
+            <p style={{
+                color : Anique.colors.onBg300
+            }}>
+                These variations are normal, primary, accent and error colored
+            </p>
             <Card>
-                <Spinner color={"primary"}/>
-            </Card>
-            <h2>Accent Colored Spinner</h2>
-            <Card>
-                <Spinner color={"accent"}/>
-            </Card>
-            <h2>Error Colored Spinner</h2>
-            <Card>
-                <Spinner color={"error"}/>
+                <Row gap={"2em"}>
+                    <Spinner/>
+                    <Spinner color={"primary"}/>
+                    <Spinner color={"accent"}/>
+                    <Spinner color={"error"}/>
+                </Row>
             </Card>
         </Column>
     )

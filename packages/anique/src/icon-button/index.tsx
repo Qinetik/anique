@@ -6,11 +6,10 @@ import {Anique} from "../theme/Theme";
 interface IconButtonProps {
     children?: any
     disableAutoFill?: boolean
-    onClick?: () => void
     size?: Size
 }
 
-const IconButtonContainer = styled("div")<IconButtonProps>`
+export const IconButton = styled("div")<IconButtonProps>`
 
     width: ${p => 2 + 0.5 * (p.size || 0)}rem;
     height: ${p => 2 + 0.5 * (p.size || 0)}rem;
@@ -24,26 +23,16 @@ const IconButtonContainer = styled("div")<IconButtonProps>`
     align-items: center;
 
     & > * {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: ${p => 1.5 + (p.size || 0) * 0.3}rem;
+        height: ${p => 1.5 + (p.size || 0) * 0.3}rem;
     }
 
     &:hover {
-        background: ${Anique.colors.onBg500};
+        background: ${Anique.colors.primary};
     }
 
     &:active {
-        background: ${Anique.colors.onBg400};
+        background: ${Anique.colors.primary100};
     }
 
 `
-
-export function IconButton(props: IconButtonProps) {
-    return (
-        <IconButtonContainer
-            children={props.children}
-            size={props.size}
-            onClick={props.onClick}
-        />
-    )
-}

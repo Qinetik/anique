@@ -1,15 +1,15 @@
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
+import {Size} from "../theme/Size";
 
 export interface FabProps {
-
+    size ?: Size
 }
 
-const FabBase = styled("div")`
+const FabBase = styled("div")<FabProps>`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3em;
     background: ${Anique.colors.primary};
     cursor: pointer;
 
@@ -22,15 +22,17 @@ const FabBase = styled("div")`
     }
 `
 
-export const Fab = styled(FabBase)`
-    width: 3em;
+export const Fab = styled(FabBase)<FabProps>`
+    width: ${p=> 3 + (p.size || 0)}em;
+    height: ${p=> 3 + (p.size || 0)}em;
     border-radius: 50%;
 `
 
-export const ExtendedFab = styled(FabBase)`
+export const ExtendedFab = styled(FabBase)<FabProps>`
     gap: 0.4em;
     box-sizing: border-box;
-    padding: 0 1em;
+    padding: ${p=> (p.size || 0)}em ${p=> 1 + ((p.size || 0) * 0.5)}em;
     width: max-content;
-    border-radius: 1.5em;
+    height: ${p=> 3 + (p.size || 0) * 0.25}em;
+    border-radius: 99em;
 `

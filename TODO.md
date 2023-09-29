@@ -1,14 +1,25 @@
 - [x] Setup a development environment
 - [x] Use colorful variations for Button, Checkbox, Radio, FAB
 - [ ] Add a bgColor property to app bar
-- [ ] Fix IconButton hover effect
+- [x] Fix IconButton hover effect
 - [x] Remove multiple heading components
 - [x] Add a headline component
 - [x] Remove paragraph components
-- [ ] Add more components TextField, Toast, Select, ExternalLink, Callout, Slider, Switch, TextArea, Table
+- [ ] More Components
+  - [ ] TextField
+  - [ ] Toast
+  - [ ] Select 
+  - [ ] ExternalLink
+  - [ ] Callout
+  - [ ] Switch
+  - [ ] TextArea
+  - [ ] Table
+  - [ ] Chip
+  - [ ] Tab Row
+- [ ] Add even more components DropdownMenu, HoverBox
 - [ ] In Demo Site Center the Middle Part
-- [ ] Have a right sidebar on the main page, with external links to View on Github & Checkout Examples
-- [ ] Have sizes for Button, IconButton, Spinner, FAB
+- [ ] Use Tab Row Component to arrange examples & usage
+- [x] Have size variations for Button, IconButton, Spinner, FAB
 - [ ] A Scaffold Component that's responsive
 - [ ] Make all components responsive
 - [ ] Add onPrimary with fixed variations rather than allowing user to have bright or dark

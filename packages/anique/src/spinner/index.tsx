@@ -1,10 +1,12 @@
 import {keyframes, styled, useTheme} from "@qinetik/emotion";
 import {BrandColors, OnBgColors, ResultColors} from "../theme/Colors";
 import {Anique} from "../theme/Theme";
+import {Size} from "../theme/Size";
 
 export interface SpinnerProps {
     class?: string
     color?: keyof OnBgColors | keyof ResultColors | keyof BrandColors
+    size ?: Size
 }
 
 export const SpinnerAnimation = keyframes`
@@ -21,14 +23,15 @@ const AniqueStyledSpinner = styled("svg")`
 `;
 
 export const Spinner = (props: SpinnerProps) => {
+    const pixelSize = 32 + ((props.size || 0) * 8)
     return (
-        <div style={{width: "32px", height: "32px"}}>
+        <div style={{width: pixelSize + "px", height: pixelSize + "px"}}>
             <AniqueStyledSpinner
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
                 data-icon="spinner"
-                width={'32'}
-                height={'32'}
+                width={pixelSize}
+                height={pixelSize}
                 fill={Anique.colors[props.color || "onBg"]}
             >
                 <path
