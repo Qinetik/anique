@@ -7,13 +7,12 @@
 - [ ] Can give progress to spinner
 - [x] Remove paragraph components
 - [ ] More Components
-  - [ ] TextField
+  - [x] BaseTextField
   - [x] Alert
   - [ ] Toast
   - [ ] Select
-  - [ ] ExternalLink
   - [ ] Switch
-  - [ ] TextArea
+  - [x] TextArea
   - [ ] Table
   - [ ] Chip
   - [ ] Tab Row
@@ -31,7 +30,7 @@
     - [x] AppBar
     - [x] StaticDrawer
     - [x] Button
-    - [ ] TextField
+    - [x] BaseTextField
     - [x] Spinner
     - [x] Backdrop
     - [x] Dialog

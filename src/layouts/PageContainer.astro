@@ -11,7 +11,6 @@ import LightDarkIcon from "../solid/icons/LightDarkIcon";
 import {Row} from "@qinetik/anique/row";
 import {getThemeValue, removeThemeValue, saveThemeValue} from "../solid/utils/theme-value";
 import {Size} from "@qinetik/anique/theme/Size";
-import {Link} from "../solid/components/Link"
 import {AniqueThemeDark, AniqueThemeLight} from "@qinetik/anique/theme/AniqueThemes";
 import HTMLContainer from "./HTMLContainer.astro";
 import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
@@ -20,106 +19,110 @@ import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
 ---
 
 <HTMLContainer
-        initialTheme="dark"
-        title="Anique"
+    initialTheme="dark"
+    title="Anique"
 >
 
     <Column>
 
         <WebAppBar
-                client:load
+            client:load
         />
 
         <Row class="bar-content-row">
 
             <StaticDrawer
-                    class="static-drawer"
+                class="static-drawer"
             >
 
                 <div class="fixed-content">
 
-                    <Link href={"/"}>
+                    <a href={"/"}>
                         <DrawerItem>Home</DrawerItem>
-                    </Link>
+                    </a>
 
-                    <DrawerSectionItem title={"Interactive Components"}/>
-
-                    <Link href={"/components/fab"}>
+                    <DrawerSectionItem title={"Input"}/>
+                    <a href="/components/textfield">
+                        <DrawerItem>
+                            TextField
+                        </DrawerItem>
+                    </a>
+                    <a href={"/components/fab"}>
                         <DrawerItem>
                             Floating Action Button
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/button"}>
+                    </a>
+                    <a href={"/components/button"}>
                         <DrawerItem>
                             Button
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/icon-button"}>
+                    </a>
+                    <a href={"/components/icon-button"}>
                         <DrawerItem>
                             IconButton
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/checkbox"}>
+                    </a>
+                    <a href={"/components/checkbox"}>
                         <DrawerItem>
                             Checkbox
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/radio"}>
+                    </a>
+                    <a href={"/components/radio"}>
                         <DrawerItem>
                             Radio
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/slider"}>
+                    </a>
+                    <a href={"/components/slider"}>
                         <DrawerItem>
                             Slider
                         </DrawerItem>
-                    </Link>
+                    </a>
 
                     <DrawerSectionItem title={"Layout"}/>
-                    <Link href={"/components/column"}>
+                    <a href={"/components/column"}>
                         <DrawerItem>
                             Column
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/row"}>
+                    </a>
+                    <a href={"/components/row"}>
                         <DrawerItem>
                             Row
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/dialog"}>
+                    </a>
+                    <a href={"/components/dialog"}>
                         <DrawerItem>
                             Dialog
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/appbar"}>
+                    </a>
+                    <a href={"/components/appbar"}>
                         <DrawerItem>
                             AppBar
                         </DrawerItem>
-                    </Link>
+                    </a>
 
                     <DrawerSectionItem title={"Text"}/>
-                    <Link href={"/components/text"}>
+                    <a href={"/components/text"}>
                         <DrawerItem>
                             Native Text
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/headline"}>
+                    </a>
+                    <a href={"/components/headline"}>
                         <DrawerItem>
                             Headline
                         </DrawerItem>
-                    </Link>
+                    </a>
 
                     <DrawerSectionItem title={"Feedback"}/>
-                    <Link href={"/components/alert"}>
+                    <a href={"/components/alert"}>
                         <DrawerItem>
                             Alert
                         </DrawerItem>
-                    </Link>
-                    <Link href={"/components/spinner"}>
+                    </a>
+                    <a href={"/components/spinner"}>
                         <DrawerItem>
                             Spinner
                         </DrawerItem>
-                    </Link>
+                    </a>
 
                 </div>
 
@@ -135,7 +138,7 @@ import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
     </Column>
 
     <AutoSystemColorScheme
-            client:load
+        client:load
     />
 
 </HTMLContainer>
@@ -167,9 +170,13 @@ import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
         vertical-align: top;
     }
 
+    .static-drawer a {
+        text-decoration: none;
+    }
+
     .fixed-content {
-        position:sticky;
-        top:1em;
+        position: sticky;
+        top: 1em;
     }
 
 </style>

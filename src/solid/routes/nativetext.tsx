@@ -7,6 +7,10 @@ export default function NativeTextPage() {
     return (
         <Column>
             <Headline size={Size.Small}>Native Text Components</Headline>
+            <p>
+                You don't need to import native components, We are talking about <code>h1..h6, span, p, a</code>.<br />
+                However you do need to import the global styles for these components on the page once.
+            </p>
             <h1>Headings</h1>
             <Card>
                 <h1>The quick brown fox jumps over the lazy dog</h1>
@@ -26,6 +30,10 @@ export default function NativeTextPage() {
                     cupidatat
                     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+            </Card>
+            <h1>Links</h1>
+            <Card>
+                <a href={"https://example.com"}>Here's my link</a>
             </Card>
         </Column>
 

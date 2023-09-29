@@ -102,7 +102,24 @@ export type CreateStyled = {
 
 // The following code is inspired by create-emotion-styled
 
-export interface StyledOtherComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { as?: string; class?: string }> {}
+interface WithComponentFunction<Props extends object> {
+
+    <T extends keyof JSX.IntrinsicElements>(
+        nextTag: T,
+        nextOptions?: StyledOptions
+    ) : StyledOtherComponent<Props, JSX.IntrinsicElements[T]>
+
+    <NextElementProps>(
+        nextTag: StyledElementType<NextElementProps>,
+        nextOptions?: StyledOptions
+    ) : StyledComponent<NextElementProps>
+
+}
+
+export interface StyledOtherComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { as?: string; class?: string }> {
+
+    withComponent: WithComponentFunction<Props>
+}
 
 export interface CreateStyledFunction {
   <T extends keyof JSX.IntrinsicElements>(tag: T, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => StyledOtherComponent<Props, JSX.IntrinsicElements[T]>

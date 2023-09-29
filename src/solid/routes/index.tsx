@@ -38,7 +38,7 @@ export default function Home() {
                             By keeping everything free of javascript, Astro will render the HTML & CSS you provide, Theme changing would be handled by the browser
                         </li>
                         <li>
-                            <strong>Ease of Use</strong> : You already know the easy of use CSS in JS provides, but having no runtime overhead makes it even better
+                            <strong>Ease of Use</strong> : You already know the ease of use CSS in JS provides, but having no runtime overhead makes it even better
                         </li>
                     </UL>
                     <p>
@@ -47,8 +47,7 @@ export default function Home() {
                 </li>
                 <li>
                     <h3>Css in JS</h3>
-                    <p>Anique has its own CSS in JS library, which it depends on, The library makes use of <a
-                        href={"/"}>emotion</a> in the background, so it offers a similar API, It has following set of
+                    <p>Anique has its own CSS in JS library, which it depends on, The library makes use of emotion's serialization library in the background, so it offers a similar API, It has following set of
                         features, Its minimal as of now</p>
                     <UL>
                         <li>
@@ -70,11 +69,22 @@ export default function Home() {
                 </li>
                 <li>
                     <h3>Typesafe</h3>
-                    <p>Anique uses typescript and is typesafe</p>
+                    <p>Anique uses typescript and is typesafe, The theme object is a simple object named <code>Anique</code> containing references to all the variables you need, Anique doesn't rely on context passed through components, But you can still enforce a different theming at any level.</p>
                 </li>
                 <li>
-                    <h3>Minimal & Performant</h3>
-                    <p>Anique is minimal, We don't want to introduce components that aren't needed.</p>
+                    <h3>Simplistic</h3>
+                    <p>
+                        Anique is very simplistic, Anique does not introduce components like Paragraph, Text, Heading or Link
+                        You should use default <code>h1,h2,h3,h4,h5,h6</code> for headings & <code>a</code> for links.
+                        There are very minimal global styles that you can include in your page.
+                        The page you are reading now has been written using this approach and all the pages on this website.
+                    </p>
+                </li>
+                <li>
+                    <h3>Performant</h3>
+                    <p>
+                        Anique is as performant as CSS variables because that's what it depends on. There's no javascript magic. Just CSS
+                    </p>
                 </li>
             </UL>
 
@@ -98,18 +108,13 @@ export default function Home() {
                     </p>
                 </li>
                 <li>
-                    <h4>SUID (MUI)</h4>
-                    <p>
-                        There's a port of MUI for SolidJS which is good, The UI is amazing, The components work &
-                        everything. The cons are the legacy style system.
-                    </p>
-                </li>
-                <li>
                     <h4>Other Libraries</h4>
                     <p>
                         There are other UI component libraries that use different set of technologies & then user
                         must also adopt those technologies in order to write their UI.
                         For me, I prefer <code>CSS in JS</code> which doesn't happen to be their choice.
+                        You can use <code>Anique</code> without CSS in JS, Since the theme object is not passed through context.
+                        You can reference it directly using <code>Anique</code>.
                     </p>
                 </li>
             </UL>

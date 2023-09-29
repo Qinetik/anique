@@ -130,13 +130,22 @@ interface AniqueThemeMounterProps {
 export const AniqueGlobalStyling = mountedStyles`
     :root * {
         font-family : ${Anique.font.secondary};
-        color : ${Anique.colors.onBg};
+    }
+    a {
+        color : #0060FE;
+    }
+    a:hover {
+        color : #266bd9;
     }
     h1,h2,h3,h4,h5,h6 {
         font-family : ${Anique.font.primary};
     }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        background : ${Anique.colors.onBg500};
+        color : ${Anique.colors.bg100};
+        border-radius : ${Anique.border.smRadius};
+        padding : 1px 3px;
     }
 `
 

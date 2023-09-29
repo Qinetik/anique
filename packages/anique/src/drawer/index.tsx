@@ -24,7 +24,8 @@ export const DrawerItem = styled("div")`
   border-radius: 999px;
   cursor: pointer;
   font-family:${Anique.font.secondary};
-
+  color : ${Anique.colors.onBg};
+    
   &:hover {
     background: ${Anique.colors.primary};
   }
