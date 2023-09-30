@@ -115,7 +115,7 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                         <Dynamic
                             component={finalTag}
                             {...newProps}
-                            className={
+                            class={
                                 props.class ? `${className} ${props.class}` : className
                             }
                         />

@@ -6,7 +6,8 @@
 - [ ] Can give progress to spinner
 - [x] Remove paragraph components
 - [ ] More Components
-  - [ ] Select
+  - [x] Select
+  - [x] DropdownMenu
   - [ ] Tooltip
   - [ ] Table
   - [ ] Chip  
@@ -16,7 +17,7 @@
   - [x] TextArea
   - [ ] Toast
   - [ ] Tab Row
-- [ ] Add even more components DropdownMenu, HoverBox
+  - [ ] HoverBox
 - [ ] In Demo Site Center the Middle Part
 - [ ] Use Tab Row Component to arrange examples & usage
 - [x] Have size variations for Button, IconButton, Spinner, FAB
@@ -35,7 +36,7 @@
     - [x] Dialog
     - [x] Fab, Extended Fab
     - [x] Checkbox, LabeledCheckbox
-    - [ ] Select
+    - [x] Select
     - [x] Radio, LabeledRadio
     - [x] Text
     - [x] IconButton
