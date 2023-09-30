@@ -2,13 +2,24 @@
     "name": "@qinetik/anique",
     "version": "1.0.0",
     "description": "SolidJS UI Component library",
+    "repository": "git@github.com:qinetik/anique.git",
+    "files": [
+        "dist/**"
+    ],
+    "module": "dist/index.esm.js",
+    "scripts": {
+        "clean": "node -e \"if(require('fs').existsSync('./dist')) require('fs').rmSync('./dist', { recursive : true })\"",
+        "build": "yarn run clean && rollup -c"
+    },
     "peerDependencies": {
+        "@qinetik/emotion": "workspace:^",
         "solid-js": "^1.7.11"
     },
     "devDependencies": {
-        "postcss": "^8.4.30"
-    },
-    "dependencies": {
-        "@qinetik/emotion": "workspace:^"
+        "@rollup/plugin-multi-entry": "^6.0.0",
+        "postcss": "^8.4.30",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "tslib": "^2.6.2"
     }
 }

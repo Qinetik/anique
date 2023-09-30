@@ -1,6 +1,4 @@
 import {styled} from "@qinetik/emotion";
-import {H3} from "../headline";
-import {Anique} from "../theme/Theme";
 
 export interface AppBarProps {
     navIcon?: any

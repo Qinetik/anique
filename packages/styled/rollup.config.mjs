@@ -4,6 +4,7 @@ import dts from 'rollup-plugin-dts'
 import resolve from 'rollup-plugin-node-resolve'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import del from 'rollup-plugin-delete'
+import withSolid from "rollup-preset-solid";
 
 import pkg from './package.json'
 
@@ -12,7 +13,7 @@ const config = {
   extensions: ['.ts', '.tsx'],
 }
 
-export default [
+export default withSolid([
   {
     input: 'src/index.ts',
     output: [
@@ -45,4 +46,4 @@ export default [
     output: [{ file: pkg.types, format: 'es' }],
     plugins: [dts()],
   },
-]
+])
