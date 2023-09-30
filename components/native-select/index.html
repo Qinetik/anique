@@ -547,176 +547,136 @@ Spinner
   flex-direction: column;
   align-items: start;
   
-}</style><!--!$e0-0-1-0--><div data-hk="0-0-1-0-0" class="c1domoli "><h1 data-hk="0-0-1-0-1">Fab</h1><style data-hk="0-0-1-0-2-0-0">.cdpxs4m{
+}</style><!--!$e0-0-1-0--><div data-hk="0-0-1-0-0" class="c1domoli "><style data-hk="0-0-1-0-1-0-0">.c1ro6cqm{
+    font-weight: 100;
+    font-size : 3rem;
+}</style><!--!$e0-0-1-0-1-1-0--><h1 data-hk="0-0-1-0-1-1-0-0" class="c1ro6cqm ">Native Select</h1><!--!$/e0-0-1-0-1-1-0--><style data-hk="0-0-1-0-2-0-0">.cdpxs4m{
     border-radius: var(--a1);
     background: var(--d1);
     box-sizing: border-box;
     padding: 1em;
-}</style><!--!$e0-0-1-0-2-1-0--><div data-hk="0-0-1-0-2-1-0-0" class="cdpxs4m "><style data-hk="0-0-1-0-2-1-0-1-0-0">.cl9r5ly{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+}</style><!--!$e0-0-1-0-2-1-0--><div data-hk="0-0-1-0-2-1-0-0" class="cdpxs4m "><style data-hk="0-0-1-0-2-1-0-1-0-0">.cz6wqq8{
+    border: none;
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+
+    // Stack above custom arrow
+    z-index: 1;
+
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    &::-ms-expand {
+        display: none;
+    }
+
+    // Remove focus outline, will add on alternate element
+    outline: none;
     
-    gap:2em;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-0" gap="2em" class="cl9r5ly "><style data-hk="0-0-1-0-2-1-0-1-1-0-1-0-0">.c3b1r6i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
-
-    &:hover {
-        background: var(--b8);
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--d9);
+        background-image: linear-gradient(to top, var(--d8), var(--d9) 33%);
+        color : var(--d5);
     }
-
-    &:active {
-        background: var(--b9);
+    
+    &:not(:disabled){
+        background-color : var(--d0);
     }
+    
 
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-1-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-1-1-0-0" size="0" class="c3b1r6i "><style data-hk="0-0-1-0-2-1-0-1-1-0-1-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-1-1-0-1-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-2-1-0-1-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-2-1-0-1-1-0-1-1-0-1-1-0--></div><!--!$/e0-0-1-0-2-1-0-1-1-0-1-1-0--><style data-hk="0-0-1-0-2-1-0-1-1-0-2-0-0">.c1bahg6x{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
-
-    &:hover {
-        background: var(--b8);
-    }
-
-    &:active {
-        background: var(--b9);
-    }
-
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-2-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-2-1-0-0" size="1" class="c1bahg6x "><style data-hk="0-0-1-0-2-1-0-1-1-0-2-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-2-1-0-1-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-2-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-2-1-0-1-1-0-2-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-2-1-0-1-1-0-2-1-0-1-1-0--></div><!--!$/e0-0-1-0-2-1-0-1-1-0-2-1-0--><style data-hk="0-0-1-0-2-1-0-1-1-0-3-0-0">.ctptc87{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
-
-    &:hover {
-        background: var(--b8);
-    }
-
-    &:active {
-        background: var(--b9);
-    }
-
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-3-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-3-1-0-0" size="2" class="ctptc87 "><style data-hk="0-0-1-0-2-1-0-1-1-0-3-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-2-1-0-1-1-0-3-1-0-1-1-0--><div data-hk="0-0-1-0-2-1-0-1-1-0-3-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-2-1-0-1-1-0-3-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-2-1-0-1-1-0-3-1-0-1-1-0--></div><!--!$/e0-0-1-0-2-1-0-1-1-0-3-1-0--></div><!--!$/e0-0-1-0-2-1-0-1-1-0--></div><!--!$/e0-0-1-0-2-1-0--><h1 data-hk="0-0-1-0-3">Extended Fab</h1><style data-hk="0-0-1-0-4-0-0">.cdpxs4m{
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    border-radius: var(--a0);
+}</style><!--!$e0-0-1-0-2-1-0-1-1-0--><select data-hk="0-0-1-0-2-1-0-1-1-0-0" class="cz6wqq8 "><option data-hk="0-0-1-0-2-1-0-1-1-0-1">My option 1</option><option data-hk="0-0-1-0-2-1-0-1-1-0-2">My option 2</option><option data-hk="0-0-1-0-2-1-0-1-1-0-3">My option 3</option><option data-hk="0-0-1-0-2-1-0-1-1-0-4">My option 4</option></select><!--!$/e0-0-1-0-2-1-0-1-1-0--></div><!--!$/e0-0-1-0-2-1-0--><h1 data-hk="0-0-1-0-3">Disabled</h1><style data-hk="0-0-1-0-4-0-0">.cdpxs4m{
     border-radius: var(--a1);
     background: var(--d1);
     box-sizing: border-box;
     padding: 1em;
-}</style><!--!$e0-0-1-0-4-1-0--><div data-hk="0-0-1-0-4-1-0-0" class="cdpxs4m "><style data-hk="0-0-1-0-4-1-0-1-0-0">.cl9r5ly{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+}</style><!--!$e0-0-1-0-4-1-0--><div data-hk="0-0-1-0-4-1-0-0" class="cdpxs4m "><style data-hk="0-0-1-0-4-1-0-1-0-0">.cz6wqq8{
+    border: none;
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+
+    // Stack above custom arrow
+    z-index: 1;
+
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    &::-ms-expand {
+        display: none;
+    }
+
+    // Remove focus outline, will add on alternate element
+    outline: none;
     
-    gap:2em;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-0" gap="2em" class="cl9r5ly "><style data-hk="0-0-1-0-4-1-0-1-1-0-1-0-0">.ccc7mpj{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
-
-    &:hover {
-        background: var(--b8);
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--d9);
+        background-image: linear-gradient(to top, var(--d8), var(--d9) 33%);
+        color : var(--d5);
     }
-
-    &:active {
-        background: var(--b9);
+    
+    &:not(:disabled){
+        background-color : var(--d0);
     }
+    
 
-    gap: 0.4em;
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    border-radius: var(--a0);
+}</style><!--!$e0-0-1-0-4-1-0-1-1-0--><select data-hk="0-0-1-0-4-1-0-1-1-0-0" disabled class="cz6wqq8 "><option data-hk="0-0-1-0-4-1-0-1-1-0-1">My option 1</option><option data-hk="0-0-1-0-4-1-0-1-1-0-2">My option 2</option><option data-hk="0-0-1-0-4-1-0-1-1-0-3">My option 3</option><option data-hk="0-0-1-0-4-1-0-1-1-0-4">My option 4</option></select><!--!$/e0-0-1-0-4-1-0-1-1-0--></div><!--!$/e0-0-1-0-4-1-0--><h1 data-hk="0-0-1-0-5">Multiple</h1><style data-hk="0-0-1-0-6-0-0">.cdpxs4m{
+    border-radius: var(--a1);
+    background: var(--d1);
     box-sizing: border-box;
-    padding: 0em 1em;
-    width: max-content;
-    height: 3em;
-    border-radius: 99em;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-1-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-0" size="0" class="ccc7mpj "><style data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-1-1-0-1-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-4-1-0-1-1-0-1-1-0-1-1-0--><style data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-2-0-0">.ceic1vm{
-  font-family: var(--a4);
-  color: var(--d5);
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-1-1-0-2-1-0--><span data-hk="0-0-1-0-4-1-0-1-1-0-1-1-0-2-1-0-0" class="ceic1vm ">Extended Me</span><!--!$/e0-0-1-0-4-1-0-1-1-0-1-1-0-2-1-0--></div><!--!$/e0-0-1-0-4-1-0-1-1-0-1-1-0--><style data-hk="0-0-1-0-4-1-0-1-1-0-2-0-0">.c136946f{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
+    padding: 1em;
+}</style><!--!$e0-0-1-0-6-1-0--><div data-hk="0-0-1-0-6-1-0-0" class="cdpxs4m "><style data-hk="0-0-1-0-6-1-0-1-0-0">.cz6wqq8{
+    border: none;
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
 
-    &:hover {
-        background: var(--b8);
+    // Stack above custom arrow
+    z-index: 1;
+
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    &::-ms-expand {
+        display: none;
     }
 
-    &:active {
-        background: var(--b9);
+    // Remove focus outline, will add on alternate element
+    outline: none;
+    
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--d9);
+        background-image: linear-gradient(to top, var(--d8), var(--d9) 33%);
+        color : var(--d5);
     }
-
-    gap: 0.4em;
-    box-sizing: border-box;
-    padding: 1em 1.5em;
-    width: max-content;
-    height: 3.25em;
-    border-radius: 99em;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-2-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-0" size="1" class="c136946f "><style data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-2-1-0-1-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-4-1-0-1-1-0-2-1-0-1-1-0--><style data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-2-0-0">.ceic1vm{
-  font-family: var(--a4);
-  color: var(--d5);
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-2-1-0-2-1-0--><span data-hk="0-0-1-0-4-1-0-1-1-0-2-1-0-2-1-0-0" class="ceic1vm ">Extended Me</span><!--!$/e0-0-1-0-4-1-0-1-1-0-2-1-0-2-1-0--></div><!--!$/e0-0-1-0-4-1-0-1-1-0-2-1-0--><style data-hk="0-0-1-0-4-1-0-1-1-0-3-0-0">.czehvt0{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--b7);
-    cursor: pointer;
-
-    &:hover {
-        background: var(--b8);
+    
+    &:not(:disabled){
+        background-color : var(--d0);
     }
+    
 
-    &:active {
-        background: var(--b9);
-    }
-
-    gap: 0.4em;
-    box-sizing: border-box;
-    padding: 2em 2em;
-    width: max-content;
-    height: 3.5em;
-    border-radius: 99em;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-3-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-0" size="2" class="czehvt0 "><style data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-1-0-0">.cbhcz3u{
-    fill: var(--d5);
-    width: 1.5rem;
-    height: 1.5rem;
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-3-1-0-1-1-0--><div data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><!--!$/e0-0-1-0-4-1-0-1-1-0-3-1-0-1-1-0--><style data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-2-0-0">.ceic1vm{
-  font-family: var(--a4);
-  color: var(--d5);
-}</style><!--!$e0-0-1-0-4-1-0-1-1-0-3-1-0-2-1-0--><span data-hk="0-0-1-0-4-1-0-1-1-0-3-1-0-2-1-0-0" class="ceic1vm ">Extended Me</span><!--!$/e0-0-1-0-4-1-0-1-1-0-3-1-0-2-1-0--></div><!--!$/e0-0-1-0-4-1-0-1-1-0-3-1-0--></div><!--!$/e0-0-1-0-4-1-0-1-1-0--></div><!--!$/e0-0-1-0-4-1-0--></div><!--!$/e0-0-1-0--></div></div></div><!--!$/e0-1-0--></div><!--!$/e0-1-0--></body></html>
+    padding: 0.2em 0.8em 0.2em 0.2em;
+    border-radius: var(--a0);
+}</style><!--!$e0-0-1-0-6-1-0-1-1-0--><select data-hk="0-0-1-0-6-1-0-1-1-0-0" multiple class="cz6wqq8 "><option data-hk="0-0-1-0-6-1-0-1-1-0-1">My option 1</option><option data-hk="0-0-1-0-6-1-0-1-1-0-2">My option 2</option><option data-hk="0-0-1-0-6-1-0-1-1-0-3">My option 3</option><option data-hk="0-0-1-0-6-1-0-1-1-0-4">My option 4</option></select><!--!$/e0-0-1-0-6-1-0-1-1-0--></div><!--!$/e0-0-1-0-6-1-0--></div><!--!$/e0-0-1-0--></div></div></div><!--!$/e0-1-0--></div><!--!$/e0-1-0--></body></html>
