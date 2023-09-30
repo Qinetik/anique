@@ -3,9 +3,14 @@ import {getSystemColorScheme, onSystemColorSchemeChange} from "@qinetik/anique/t
 
 export function AutoSystemColorScheme() {
     createEffect(() => {
-        document.documentElement.className = getSystemColorScheme()
-        onSystemColorSchemeChange((scheme) => {
-            document.documentElement.className = scheme
-        })
+        const userScheme = localStorage.getItem("theme-key")
+        if(userScheme == null) {
+            document.documentElement.className = getSystemColorScheme()
+            onSystemColorSchemeChange((scheme) => {
+                document.documentElement.className = scheme
+            })
+        } else {
+            document.documentElement.className = userScheme
+        }
     })
 }

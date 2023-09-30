@@ -26,6 +26,10 @@ const path = Astro.url.pathname
     title="Anique"
 >
 
+    <AutoSystemColorScheme
+        client:load
+    />
+
     <Column>
 
         <WebAppBar
@@ -118,10 +122,6 @@ const path = Astro.url.pathname
         </Row>
 
     </Column>
-
-    <AutoSystemColorScheme
-        client:load
-    />
 
 </HTMLContainer>
 
