@@ -1,5 +1,5 @@
 import {Row} from "../row";
-import {Spacer} from "../spacer/Spacer";
+import {Spacer} from "../utils";
 import {Text} from "../text";
 import {Column} from "../column";
 import {Size} from "../theme/Size";

@@ -4,12 +4,19 @@
         "./src"
     ],
     "compilerOptions": {
+        "declarationDir": "dist",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "noEmitOnError": true,
         "paths": {
             "@qinetik/emotion": [
-                "../styled/src"
+                "../styled/dist"
             ],
             "@qinetik/emotion/*": [
-                "../styled/src/*"
+                "../styled/dist/*"
+            ],
+            "@qinetik/anique-icons": [
+                "../anique-icons/dist"
             ]
         }
     }

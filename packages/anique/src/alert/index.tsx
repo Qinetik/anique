@@ -2,9 +2,9 @@ import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
 import {Row} from "../row";
 import {Icon} from "../icon";
-import CheckCircleOutline from "../icons/CheckCircleOutline";
-import AlertIcon from "../icons/AlertIcon";
-import InformationBoxOutline from "../icons/InformationBoxOutline";
+import { CheckCircleOutline } from "@qinetik/anique-icons";
+import { AlertIcon } from "@qinetik/anique-icons";
+import { InformationBoxOutline } from "@qinetik/anique-icons";
 
 export enum AlertType {
     Info = "info",

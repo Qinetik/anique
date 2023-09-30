@@ -1,18 +1,17 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.1",
+    "version": "1.0.12",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
         "dist/**"
     ],
-    "exports": {
-        ".": "./dist"
-    },
-    "module": "dist/index.esm.js",
+    "type": "module",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "clean": "node -e \"if(require('fs').existsSync('./dist')) require('fs').rmSync('./dist', { recursive : true })\"",
-        "build": "yarn run clean && rollup -c"
+        "build": "yarn run clean && vite build && tsc"
     },
     "peerDependencies": {
         "@qinetik/emotion": "workspace:^",
@@ -20,9 +19,11 @@
     },
     "devDependencies": {
         "@rollup/plugin-multi-entry": "^6.0.0",
-        "postcss": "^8.4.30",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-typescript2": "^0.36.0",
-        "tslib": "^2.6.2"
+        "fast-glob": "^3.3.1",
+        "vite": "^4.4.9",
+        "vite-plugin-solid": "^2.7.0"
+    },
+    "dependencies": {
+        "@qinetik/anique-icons": "workspace:^"
     }
 }
