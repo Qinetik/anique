@@ -34,8 +34,16 @@ export default function Home() {
                             on every element that uses the theme, But changing just one class name to change your entire website is better because browser handles it.
                         </li>
                         <li>
-                            <strong>Supporting Astro</strong> : If you were to use javascript variables inside the elements, You would have to make all the elements client:only that depend on javascript to update them
-                            By keeping everything free of javascript, Astro will render the HTML & CSS you provide, Theme changing would be handled by the browser
+                            <strong>Supporting Astro</strong> : Most of the components Anique provides can be used without any client directive,
+                            Some components like DropdownMenu require some javascript which can be used with client:load
+                            <p>
+                                With anique, The promise is that you never have to use client:only
+                            </p>
+                            <p>
+                                If you were to use javascript variables inside the elements, You would have to make all the elements client:load that depend on javascript to update them
+                                By keeping everything free of javascript, Astro will render the HTML & CSS you provide, Theme changing would be handled by the browser.
+                                You would be able to build most of your website without javascript and minified css.
+                            </p>
                         </li>
                         <li>
                             <strong>Ease of Use</strong> : You already know the ease of use CSS in JS provides, but having no runtime overhead makes it even better

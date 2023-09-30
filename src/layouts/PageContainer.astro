@@ -16,6 +16,9 @@ import HTMLContainer from "./HTMLContainer.astro";
 import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
 import {WebAppBar} from "../solid/components/AppBar";
 import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
+import AnchorDrawerItem from "../solid/components/AnchorDrawerItem";
+
+const path = Astro.url.pathname
 ---
 
 <HTMLContainer
@@ -37,107 +40,71 @@ import {ScrollbarStyles} from "@qinetik/anique/scrollbar";
 
                 <div class="fixed-content">
 
-                    <a href={"/"}>
-                        <DrawerItem>Home</DrawerItem>
-                    </a>
+                    <AnchorDrawerItem href={"/"} current={path}>
+                        Home
+                    </AnchorDrawerItem>
 
                     <DrawerSectionItem title={"Input"}/>
-                    <a href="/components/textfield">
-                        <DrawerItem>
-                            TextField
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/fab"}>
-                        <DrawerItem>
-                            Floating Action Button
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/button"}>
-                        <DrawerItem>
-                            Button
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/icon-button"}>
-                        <DrawerItem>
-                            IconButton
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/checkbox"}>
-                        <DrawerItem>
-                            Checkbox
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/radio"}>
-                        <DrawerItem>
-                            Radio
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/slider"}>
-                        <DrawerItem>
-                            Slider
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/select"}>
-                        <DrawerItem>
-                            Select
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/dropdown"}>
-                        <DrawerItem>
-                            Dropdown
-                        </DrawerItem>
-                    </a>
+                    <AnchorDrawerItem href="/components/textfield" current={path}>
+                        TextField
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/fab"} current={path}>
+                        Floating Action Button
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/button"} current={path}>
+                        Button
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/icon-button"} current={path}>
+                        IconButton
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/checkbox"} current={path}>
+                        Checkbox
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/radio"} current={path}>
+                        Radio
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/slider"} current={path}>
+                        Slider
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/select"} current={path}>
+                        Select
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/dropdown"} current={path}>
+                        Dropdown
+                    </AnchorDrawerItem>
 
                     <DrawerSectionItem title={"Layout"}/>
-                    <a href={"/components/column"}>
-                        <DrawerItem>
-                            Column
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/row"}>
-                        <DrawerItem>
-                            Row
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/dialog"}>
-                        <DrawerItem>
-                            Dialog
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/appbar"}>
-                        <DrawerItem>
-                            AppBar
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/drawer"}>
-                        <DrawerItem>
-                            Drawer
-                        </DrawerItem>
-                    </a>
+                    <AnchorDrawerItem href={"/components/column"} current={path}>
+                        Column
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/row"} current={path}>
+                        Row
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/dialog"} current={path}>
+                        Dialog
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/appbar"} current={path}>
+                        AppBar
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/drawer"} current={path}>
+                        Drawer
+                    </AnchorDrawerItem>
 
                     <DrawerSectionItem title={"Text"}/>
-                    <a href={"/components/text"}>
-                        <DrawerItem>
-                            Native Text
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/headline"}>
-                        <DrawerItem>
-                            Headline
-                        </DrawerItem>
-                    </a>
+                    <AnchorDrawerItem href={"/components/text"} current={path}>
+                        Native Text
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/headline"} current={path}>
+                        Headline
+                    </AnchorDrawerItem>
 
                     <DrawerSectionItem title={"Feedback"}/>
-                    <a href={"/components/alert"}>
-                        <DrawerItem>
-                            Alert
-                        </DrawerItem>
-                    </a>
-                    <a href={"/components/spinner"}>
-                        <DrawerItem>
-                            Spinner
-                        </DrawerItem>
-                    </a>
+                    <AnchorDrawerItem href={"/components/alert"} current={path}>
+                        Alert
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={"/components/spinner"} current={path}>
+                        Spinner
+                    </AnchorDrawerItem>
 
                 </div>
 

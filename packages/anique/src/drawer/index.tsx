@@ -14,7 +14,11 @@ export const StaticDrawer = styled("div")`
   padding: 1.5em;
 `
 
-export const DrawerItem = styled("div")`
+export interface DrawerItemProps {
+    isActive ?: boolean
+}
+
+export const DrawerItem = styled("div")<DrawerItemProps>`
   width: 100%;
   box-sizing: border-box;
   padding: 0.6em 0.5em 0.6em 1em;
@@ -22,6 +26,7 @@ export const DrawerItem = styled("div")`
   cursor: pointer;
   font-family:${Anique.font.secondary};
   color : ${Anique.colors.onBg};
+  ${p => p.isActive && "background : " + Anique.colors.bg200 + ";"}
     
   &:hover {
     background: ${Anique.colors.primary};
