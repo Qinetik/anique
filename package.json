@@ -1,5 +1,5 @@
 {
-    "name": "hilarious-heliosphere",
+    "name": "qinetik-anique",
     "type": "module",
     "version": "0.0.1",
     "scripts": {
@@ -7,7 +7,8 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "deploy": "node ./scripts/deploy.js"
     },
     "workspaces": [
         "packages/*"
@@ -16,5 +17,8 @@
         "@astrojs/solid-js": "^3.0.1",
         "astro": "^3.1.4",
         "solid-js": "^1.4.3"
+    },
+    "devDependencies": {
+        "gh-pages": "^6.0.0"
     }
 }
