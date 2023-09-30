@@ -6,8 +6,8 @@
 - [ ] Can give progress to spinner
 - [x] Remove paragraph components
 - [ ] More Components
+  - [x] NativeSelect
   - [x] Select
-  - [x] DropdownMenu
   - [ ] Tooltip
   - [ ] Table
   - [ ] Chip  
@@ -36,7 +36,7 @@
     - [x] Dialog
     - [x] Fab, Extended Fab
     - [x] Checkbox, LabeledCheckbox
-    - [x] Select
+    - [x] NativeSelect
     - [x] Radio, LabeledRadio
     - [x] Text
     - [x] IconButton
