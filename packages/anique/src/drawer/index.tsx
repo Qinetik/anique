@@ -10,11 +10,8 @@ export const StaticDrawer = styled("div")`
   flex-direction: column;
   gap: 1em;
   width: 280px;
-  height: 100vh;
   box-sizing: border-box;
   padding: 1.5em;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 1em;
 `
 
 export const DrawerItem = styled("div")`
