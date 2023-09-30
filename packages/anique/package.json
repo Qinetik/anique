@@ -1,11 +1,14 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
         "dist/**"
     ],
+    "exports": {
+        ".": "./dist"
+    },
     "module": "dist/index.esm.js",
     "scripts": {
         "clean": "node -e \"if(require('fs').existsSync('./dist')) require('fs').rmSync('./dist', { recursive : true })\"",
