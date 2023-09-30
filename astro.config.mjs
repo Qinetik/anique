@@ -33,4 +33,8 @@ function integratePaths() {
 export default defineConfig({
     integrations: [solidJs(), integratePaths()],
     base: '/anique',
+    output : "static",
+    build : {
+        assets : "assets"
+    }
 });
