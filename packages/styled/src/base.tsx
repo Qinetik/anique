@@ -42,6 +42,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 
 const isDevelopment : () => boolean = ()=> true
 
+// TODO fix the type here
+// @ts-ignore
 const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) => {
   if (isDevelopment()) {
     if (tag === undefined) {
@@ -255,6 +257,8 @@ const createStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) =
       nextTag: StyledElementType<Props>,
       nextOptions?: StyledOptions
     ) => {
+        // TODO fix type here
+    // @ts-ignore
       return createStyled(nextTag, {
         ...options,
         ...nextOptions,

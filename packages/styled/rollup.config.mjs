@@ -1,15 +1,13 @@
 import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import dts from 'rollup-plugin-dts'
 import resolve from 'rollup-plugin-node-resolve'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import del from 'rollup-plugin-delete'
 import withSolid from "rollup-preset-solid";
+import typescript from 'rollup-plugin-typescript2';
 
-import pkg from './package.json'
+import pkg from './package.json' assert { type : "json" }
 
 const config = {
-  name: 'Launch UI',
+  name: 'qinetik-emotion',
   extensions: ['.ts', '.tsx'],
 }
 
@@ -18,32 +16,26 @@ export default withSolid([
     input: 'src/index.ts',
     output: [
       {
-        file: pkg.main,
-        format: 'cjs',
-        sourcemap: true,
-      },
-      {
         file: pkg.module,
         format: 'esm',
         sourcemap: true,
       },
     ],
     plugins: [
+      typescript(/*{ plugin options }*/),
       peerDepsExternal(),
       resolve({ extensions: config.extensions }),
-      commonjs(),
       babel({
         extensions: config.extensions,
         include: ['src/**/*'],
         exclude: 'node_modules/**',
-      }),
-      del({ targets: 'dist/*' }),
+      })
     ],
     external: ['solid-js/web'],
   },
-  {
-    input: 'src/index.ts',
-    output: [{ file: pkg.types, format: 'es' }],
-    plugins: [dts()],
-  },
+  // {
+  //   input: 'src/index.ts',
+  //   output: [{ file: pkg.types, format: 'es' }],
+  //   plugins: [typescript(/*{ plugin options }*/)],
+  // },
 ])

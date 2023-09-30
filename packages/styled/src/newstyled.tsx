@@ -14,6 +14,8 @@ import {getNameSerializedStyles, MountedStyles} from "./Mounter";
 
 const isDevelopment : () => boolean = ()=> true
 
+// TODO fix the type here
+// @ts-ignore
 export const createNewStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) => {
 
     const isReal = true //tag.__emotion_real === tag
@@ -72,6 +74,8 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
 
 
         // The Actual Component That User Will Use & It Will Emit HTML
+        // TODO fix the type here
+        // @ts-ignore
         const Styled : StyledComponent<StyledProps> = (props : StyledProps) => {
 
             // figure out the tag to use
@@ -149,6 +153,8 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
             nextTag: StyledElementType<Props>,
             nextOptions?: StyledOptions
         ) => {
+            // TODO fix the type here
+            // @ts-ignore
             return createNewStyled(nextTag, {
                 ...options,
                 ...nextOptions,

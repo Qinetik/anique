@@ -6,10 +6,6 @@ export interface DefaultTheme {
 
 let ThemeContextDefault = {}
 
-export function UpdateDefaultThemeContext(theme : DefaultTheme) {
-  ThemeContextDefault = theme
-}
-
 const ThemeContext = createContext<() => DefaultTheme>(() => (ThemeContextDefault));
 
 export function useTheme(): DefaultTheme {
