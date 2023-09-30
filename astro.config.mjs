@@ -32,4 +32,5 @@ function integratePaths() {
 // https://astro.build/config
 export default defineConfig({
     integrations: [solidJs(), integratePaths()],
+    base: '/anique',
 });
