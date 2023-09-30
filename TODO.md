@@ -1,45 +1,43 @@
-- [x] Setup a development environment
-- [x] Use colorful variations for Button, Checkbox, Radio, FAB
-- [x] Fix IconButton hover effect
-- [x] Remove multiple heading components
-- [x] Add a headline component
 - [ ] Can give progress to spinner
-- [x] Remove paragraph components
+
 - [ ] More Components
-  - [x] NativeSelect
-  - [x] Select
-  - [ ] Tooltip
-  - [ ] Table
-  - [ ] Chip  
-  - [ ] Switch
-  - [x] BaseTextField
-  - [x] Alert
-  - [x] TextArea
-  - [ ] Toast
-  - [ ] Tab Row
-  - [ ] HoverBox
-- [ ] In Demo Site Center the Middle Part
-- [ ] Use Tab Row Component to arrange examples & usage
-- [x] Have size variations for Button, IconButton, Spinner, FAB
+
+    - [ ] Tooltip
+
+    - [ ] Table
+
+    - [ ] Chip
+
+    - [ ] Switch
+
+    - [ ] Toast
+
+    - [ ] Tab Row
+
+    - [ ] HoverBox
+
+- [ ] A working MDX Page component workflow
+
+    - [ ] Create a directory for that component
+
+    - [ ] Create mdx pages : index.mdx, examples.mdx, variations.mdx in that directory
+
+    - Index is more like explanation of the component, usage with code & guidelines
+
+    - Example Page includes examples with code
+
+    - Variations Page displays all variations for that component with code
+
+    - [ ] Create a single display of the component in both examples and index with Code Highlighting
+
 - [ ] Have color variations for Button, IconButton, Spinner, FAB, Radio, Checkbox
-- [ ] A Scaffold Component that's responsive
+
 - [ ] Make all components responsive
-- [ ] Add onPrimary with fixed variations rather than allowing user to have bright or dark
-- [ ] Add bare minimum ui components
-    - [x] Theming Solution
-    - [x] AppBar
-    - [x] StaticDrawer
-    - [x] Button
-    - [x] BaseTextField
-    - [x] Spinner
-    - [x] Backdrop
-    - [x] Dialog
-    - [x] Fab, Extended Fab
-    - [x] Checkbox, LabeledCheckbox
-    - [x] NativeSelect
-    - [x] Radio, LabeledRadio
-    - [x] Text
-    - [x] IconButton
+
+- [ ] Add onPrimary & onAccent colors
+
 - [ ] Make library look better
+
+- [ ] A Scaffold Component that's responsive
+
 - [ ] Publish initial version
-- [ ] Publish initial docs website
