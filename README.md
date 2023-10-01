@@ -8,9 +8,10 @@ At the current moment, Anique is ready to be used in development mode. You won't
 #### Features
 
 - Built with support for Astro
-- CSS In JSS without runtime overhead
+- CSS In JSS without runtime overhead (if using Astro)
 - CSS Variables under the hood
 - Concise, Minimal, Beautiful & Performant
+- Ease of Use, Beautifully Typed
 
 #### Usage & Documentation
 
