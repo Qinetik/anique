@@ -1,8 +1,8 @@
-import styledImport from './base'
-import { keyframes } from './keyframes';
-import { css } from './css';
+import {keyframes} from './keyframes';
+import {css} from './css';
 import {createNewStyled} from "./newstyled";
-import { mountedStyles } from './mountedStyles';
+import {mountedStyles} from './mountedStyles';
+
 export { ThemeProvider, useTheme } from './theme';
 
 

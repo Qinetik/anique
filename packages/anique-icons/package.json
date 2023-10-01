@@ -1,13 +1,13 @@
 {
     "name": "@qinetik/anique-icons",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Emotion JS support for Solid JS projects.",
     "repository": "git@github.com:qinetik/anique.git",
     "author": "Qinetik",
     "license": "MIT",
-    "module": "dist/index.js",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "files": [
         "dist/**"
     ],

@@ -1,8 +1,7 @@
-import { Component, JSX } from 'solid-js'
+import {Component, JSX} from 'solid-js'
 
 import isPropValid from '@emotion/is-prop-valid'
 import {DefaultTheme} from "./theme";
-import {isServer} from "solid-js/web";
 
 export function isBrowser(){
    return typeof document !== 'undefined'

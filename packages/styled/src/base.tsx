@@ -1,38 +1,18 @@
-import {
-    $DEVCOMP,
-    Component,
-    createMemo,
-    ErrorBoundary,
-    JSX,
-    mergeProps,
-    sharedConfig,
-    splitProps,
-    ValidComponent
-} from 'solid-js'
-import {
-    Dynamic,
-    DynamicProps,
-    getHydrationKey,
-    getNextElement,
-    isServer,
-    spread,
-    ssrElement,
-    SVGElements,
-    untrack
-} from 'solid-js/web'
+import {Component, createMemo, ErrorBoundary, mergeProps} from 'solid-js'
+import {Dynamic, isServer} from 'solid-js/web'
 
-import { serializeStyles } from '@emotion/serialize'
-import { getRegisteredStyles, insertStyles, RegisteredCache } from '@emotion/utils'
+import {serializeStyles} from '@emotion/serialize'
+import {getRegisteredStyles, insertStyles, RegisteredCache} from '@emotion/utils'
 
-import { withEmotionCache } from './context'
-import { useTheme } from './theme'
+import {withEmotionCache} from './context'
+import {useTheme} from './theme'
 import {
-    getDefaultShouldForwardProp,
     composeShouldForwardProps,
-    StyledOptions,
-    PrivateStyledComponent,
+    CreateStyledFunction,
+    getDefaultShouldForwardProp,
+    isBrowser,
     StyledElementType,
-    CreateStyledFunction, isBrowser,
+    StyledOptions,
 } from './utils'
 
 const ILLEGAL_ESCAPE_SEQUENCE_ERROR = `You have illegal escape sequence in your template literal, most likely inside content's property value.

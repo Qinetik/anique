@@ -39,12 +39,13 @@ export default defineConfig({
         lib : {
             name : "anique",
             entry : "src/index.ts",
-            formats : ["es"]
+            formats : ["es", "cjs"],
+            fileName : (format, entryName) => `${entryName}.${format}.js`
         },
         rollupOptions: {
             input: entries,
             output : {
-                entryFileNames : ({ name }) => `${name}.js`,
+                // entryFileNames : ({ name }) => `${name}.js`,
                 inlineDynamicImports : false,
             },
             external: [

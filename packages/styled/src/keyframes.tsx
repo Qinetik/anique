@@ -1,7 +1,7 @@
 // Reference https://github.dev/emotion-js/emotion/blob/26ded6109fcd8ca9875cc2ce4564fee678a3f3c5/packages/react/src/keyframes.js#L24
-import {CSSInterpolation, Keyframes, serializeStyles} from '@emotion/serialize'
+import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
 import {JSX} from "solid-js";
-import {getNameSerializedStyles, MountedStyles} from "./Mounter";
+import {getNameSerializedStyles} from "./Mounter";
 import hashFunc from "@emotion/hash"
 
 type KeyframesEle = (() => JSX.Element) & {

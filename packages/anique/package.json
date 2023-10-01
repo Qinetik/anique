@@ -1,13 +1,13 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
         "dist/**"
     ],
-    "type": "module",
-    "module": "dist/index.js",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "clean": "node -e \"if(require('fs').existsSync('./dist')) require('fs').rmSync('./dist', { recursive : true })\"",

@@ -1,10 +1,12 @@
-import {CSSInterpolation, SerializedStyles, serializeStyles} from "@emotion/serialize";
-import {Component, createMemo, ErrorBoundary, JSXElement, mergeProps} from "solid-js";
+import {serializeStyles} from "@emotion/serialize";
+import {Component, createMemo, ErrorBoundary, mergeProps} from "solid-js";
 import {useTheme} from "./theme";
 import {
     composeShouldForwardProps,
     CreateStyledFunction,
-    getDefaultShouldForwardProp, isBrowser, StyledComponent,
+    getDefaultShouldForwardProp,
+    isBrowser,
+    StyledComponent,
     StyledElementType,
     StyledOptions
 } from "./utils";

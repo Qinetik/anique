@@ -1,4 +1,4 @@
-import { useContext, createContext, Component } from 'solid-js';
+import {Component, createContext, useContext} from 'solid-js';
 
 export interface DefaultTheme {
 

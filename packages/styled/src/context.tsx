@@ -1,6 +1,6 @@
-import { createContext, useContext, JSX } from 'solid-js'
+import {createContext, JSX, useContext} from 'solid-js'
 import createCache from '@emotion/cache'
-import type { EmotionCache } from '@emotion/utils'
+import type {EmotionCache} from '@emotion/utils'
 import {isBrowser} from "./utils";
 
 let EmotionCacheContext = /* #__PURE__ */ createContext(
