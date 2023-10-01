@@ -1,4 +1,5 @@
 import {SerializedStyles} from "@emotion/utils"
+import {Dynamic} from "solid-js/web";
 
 const MountCache = new Map<string, boolean>
 
@@ -11,12 +12,12 @@ export function getNameSerializedStyles(hash: string, areKeyFrames: boolean) {
 }
 
 interface MountedStylesProps {
-    name : string
+    name: string
     styles: SerializedStyles,
     areKeyFrames: boolean
 }
 
-export function MountedStyles(props : MountedStylesProps) {
+export function MountedStyles(props: MountedStylesProps) {
     let endCSS: string
     if (props.areKeyFrames) {
         endCSS = `@keyframes ${props.name}{${props.styles.styles}}`
@@ -25,6 +26,9 @@ export function MountedStyles(props : MountedStylesProps) {
     }
     // returning the component
     return (
-        <style>{`${endCSS}`}</style>
+        <Dynamic
+            component={"style"}
+            children={endCSS}
+        />
     )
 }

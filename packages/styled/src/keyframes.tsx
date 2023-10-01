@@ -3,6 +3,7 @@ import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
 import {JSX} from "solid-js";
 import {getNameSerializedStyles} from "./Mounter";
 import hashFunc from "@emotion/hash"
+import {Dynamic} from "solid-js/web";
 
 type KeyframesEle = (() => JSX.Element) & {
     animationName: string
@@ -21,7 +22,10 @@ function keyframes(...args: any[]): KeyframesEle {
     const name = getNameSerializedStyles(hash, true)
     const Styled = () => {
         return (
-            <style>{`@keyframes ${name}{${styles.styles}}`}</style>
+            <Dynamic
+                component={"style"}
+                children={`@keyframes ${name}{${styles.styles}}`}
+            />
         )
     }
     Styled.animationName = name

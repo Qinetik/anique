@@ -2,6 +2,7 @@
 import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
 import {JSX} from "solid-js";
 import hashFunc from "@emotion/hash"
+import {Dynamic} from "solid-js/web";
 
 type MountedStylesComponent = (() => JSX.Element)
 
@@ -18,7 +19,10 @@ function mountedStyles(...args: any[]): MountedStylesComponent {
     // const name = getNameSerializedStyles(hash, false)
     return () => {
         return (
-            <style>{styles.styles}</style>
+            <Dynamic
+                component={"style"}
+                children={styles.styles}
+            />
         )
     }
 }
