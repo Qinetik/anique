@@ -1,3 +1,5 @@
 export * from "./Spacer"
 export * from "./centered"
 export * from "./color-utils"
+export * from "./Paragraph"
+export * from "./UL"

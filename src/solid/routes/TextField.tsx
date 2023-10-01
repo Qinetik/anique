@@ -2,7 +2,7 @@ import {TextArea, BaseTextField, TextField} from "@qinetik/anique/textfield";
 import {Column} from "@qinetik/anique/column";
 import {Headline} from "@qinetik/anique/headline";
 import Menu from "../icons/Menu";
-import InformationBoxOutline from "@qinetik/anique/icons/InformationBoxOutline";
+import { InformationBoxOutline } from "@qinetik/anique-icons";
 import {Icon} from "@qinetik/anique/icon";
 import {IconButton} from "@qinetik/anique/icon-button";
 

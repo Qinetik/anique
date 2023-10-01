@@ -1,5 +1,5 @@
 import {Column} from "@qinetik/anique/column";
-import {UL} from "@qinetik/anique/List";
+import {UL} from "@qinetik/anique/utils";
 
 
 export default function Home() {

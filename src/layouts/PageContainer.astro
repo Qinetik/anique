@@ -20,6 +20,7 @@ import AnchorDrawerItem from "../solid/components/AnchorDrawerItem";
 
 const path = Astro.url.pathname
 let base = import.meta.env.BASE_URL || ""
+base = base == "/" ? "" : base
 
 ---
 
@@ -48,6 +49,9 @@ let base = import.meta.env.BASE_URL || ""
 
                     <AnchorDrawerItem href={base + "/"} current={path}>
                         Home
+                    </AnchorDrawerItem>
+                    <AnchorDrawerItem href={base + "/setup"} current={path}>
+                        Setup
                     </AnchorDrawerItem>
 
                     <DrawerSectionItem title={"Input"}/>
