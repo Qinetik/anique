@@ -1,0 +1,1 @@
+import{a as t}from"./solid.22849591.js";import{g as o,o as c}from"./ColorScheme.24fa71bf.js";function a(){t(()=>{const e=localStorage.getItem("theme-key");e==null?(document.documentElement.className=o(),c(m=>{document.documentElement.className=m})):document.documentElement.className=e})}export{a as AutoSystemColorScheme};

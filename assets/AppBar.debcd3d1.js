@@ -1,4 +1,4 @@
-import{s as n,A as o}from"./Theme.ee8a9c76.js";import{g as a,t as c}from"./web.024bccdc.js";import{R as g}from"./index.91a1f0ae.js";import{g as u,C as l}from"./ColorScheme.24fa71bf.js";import{S as h}from"./Size.fe6876e6.js";import{c as t,b as i}from"./solid.2f8a4028.js";const s=n("div")`
+import{s as n,A as o}from"./Theme.ad91f57f.js";import{g as a,t as c}from"./web.129196f5.js";import{R as g}from"./index.8faf4249.js";import{g as u,C as l}from"./ColorScheme.24fa71bf.js";import{S as h}from"./Size.fe6876e6.js";import{f as t,b as i}from"./solid.22849591.js";const s=n("div")`
 
     width: ${e=>2+.5*(e.size||0)}rem;
     height: ${e=>2+.5*(e.size||0)}rem;
