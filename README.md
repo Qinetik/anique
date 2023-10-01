@@ -1,4 +1,7 @@
-### Anique | A SolidJS UI Component Library
+### Anique | An Astro + SolidJS UI Component Library
+
+Anique is a SolidJS UI component library that which can also be used with Astro because which will strip extra javascript (not required) but it will provide extra performance boost. 
+At the current moment, Anique is ready to be used in development mode. You won't get any bugs during development or building. Anique works with SSR and is also very performant.
 
 #### Features
 
@@ -7,4 +10,8 @@
 - CSS Variables under the hood
 - Concise, Minimal, Beautiful & Performant
 
-Please go to https://qinetik.github.io/anique to learn more about Anique
+#### Usage & Documentation
+
+- Please go to https://qinetik.github.io/anique
+
+  
