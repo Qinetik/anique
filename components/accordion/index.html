@@ -628,29 +628,226 @@ Alert
   }
 }</style><!--!$e0-0-1-0-1-1-0--><div data-hk="0-0-1-0-1-1-0-0" isActive="false" class="c1x859cs ">
 Spinner
-</div><!--!$/e0-0-1-0-1-1-0--></a><!--!$/e0-0-1-0--></div></div><!--!$/e0-1-0--><div class="content-container" data-astro-cid-nl4a36i4><div class="container" data-astro-cid-nl4a36i4><astro-island uid="1CCazx" data-solid-render-id="s0" component-url="/anique/assets/dialog.7c0960f9.js" component-export="default" renderer-url="/anique/assets/client.2c29e99a.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;DialogPage&quot;,&quot;value&quot;:true}" await-children=""><h1 data-hk="s00-0">Dialog</h1><style data-hk="s00-1-0-0">.cdpxs4m{
-    border-radius: var(--a1);
+</div><!--!$/e0-0-1-0-1-1-0--></a><!--!$/e0-0-1-0--></div></div><!--!$/e0-1-0--><div class="content-container" data-astro-cid-nl4a36i4><div class="container" data-astro-cid-nl4a36i4><astro-island uid="ZT9nDF" data-solid-render-id="s0" component-url="/anique/assets/Accordion.44238ca4.js" component-export="AccordionPage" renderer-url="/anique/assets/client.2c29e99a.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;AccordionPage&quot;,&quot;value&quot;:true}" await-children=""><style data-hk="s00-0-0-0">.ci2uj9z{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:1em;
+}</style><!--!$es00-0-1-0--><div data-hk="s00-0-1-0-0" gap="1em" class="ci2uj9z "><style data-hk="s00-0-1-0-1-0-0">.c1ro6cqm{
+    font-weight: 100;
+    font-size : 3rem;
+}</style><!--!$es00-0-1-0-1-1-0--><h1 data-hk="s00-0-1-0-1-1-0-0" class="c1ro6cqm ">Accordion</h1><!--!$/es00-0-1-0-1-1-0--><style data-hk="s00-0-1-0-2-0-0-0">.cm6mmlp{
+
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows 500ms;
+    
     background: var(--d1);
+    padding: 1.25em;
+    gap : 0.5em;
     box-sizing: border-box;
-    padding: 1em;
-}</style><!--!$es00-1-1-0--><div data-hk="s00-1-1-0-0" class="cdpxs4m "><style data-hk="s00-1-1-0-1-0-0">.c6srzzl{
+    border-radius: var(--a0);
 
-    box-sizing: border-box;
-    padding: 0.8em 0.8em;
-    background: var(--b7);
-    border-radius: 8px;
+    &.expanded {
+        grid-template-rows: min-content 1fr;
+    }
+    
+    & .icon {
+        transition : rotate 500ms;
+    }
+    
+    &.expanded .icon {
+        rotate : 180deg;
+    }
+    
+}</style><!--!$es00-0-1-0-2-0-1-0--><div data-hk="s00-0-1-0-2-0-1-0-0" defaultExpanded="false" class="cm6mmlp " ><style data-hk="s00-0-1-0-2-0-1-0-1-0-0">.cuwj93f{
+    font-size: 1.2em;
+    font-weight: bold;
+    user-select: none;
     cursor: pointer;
-
-    border: 0;
-    outline: 0;
-    overflow: hidden;
-
-    &:hover {
-        background: var(--b8);
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    
+    & > :first-of-type {
+          flex : 1;
     }
+    
+}</style><!--!$es00-0-1-0-2-0-1-0-1-1-0--><div data-hk="s00-0-1-0-2-0-1-0-1-1-0-0" class="cuwj93f "><div data-hk="s00-0-1-0-2-0-1-0-1-1-0-1">Click me to open</div><style data-hk="s00-0-1-0-2-0-1-0-1-1-0-2-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-2-0-1-0-1-1-0-2-1-0--><div data-hk="s00-0-1-0-2-0-1-0-1-1-0-2-1-0-0" class="cbhcz3u icon " ><svg data-hk="s00-0-1-0-2-0-1-0-1-1-0-2-1-0-1-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"></path></svg></div><!--!$/es00-0-1-0-2-0-1-0-1-1-0-2-1-0--></div><!--!$/es00-0-1-0-2-0-1-0-1-1-0--><style data-hk="s00-0-1-0-2-0-1-0-2-0-0">.c11zhy3w{
+  overflow: hidden;
+}</style><!--!$es00-0-1-0-2-0-1-0-2-1-0--><div data-hk="s00-0-1-0-2-0-1-0-2-1-0-0" class="c11zhy3w ">Hi this is the internal content of this accordion</div><!--!$/es00-0-1-0-2-0-1-0-2-1-0--></div><!--!$/es00-0-1-0-2-0-1-0--><style data-hk="s00-0-1-0-3-0-0-0">.cm6mmlp{
 
-    &:active {
-        background: var(--b9);
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows 500ms;
+    
+    background: var(--d1);
+    padding: 1.25em;
+    gap : 0.5em;
+    box-sizing: border-box;
+    border-radius: var(--a0);
+
+    &.expanded {
+        grid-template-rows: min-content 1fr;
     }
+    
+    & .icon {
+        transition : rotate 500ms;
+    }
+    
+    &.expanded .icon {
+        rotate : 180deg;
+    }
+    
+}</style><!--!$es00-0-1-0-3-0-1-0--><div data-hk="s00-0-1-0-3-0-1-0-0" class="cm6mmlp expanded " ><style data-hk="s00-0-1-0-3-0-1-0-1-0-0">.cuwj93f{
+    font-size: 1.2em;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    
+    & > :first-of-type {
+          flex : 1;
+    }
+    
+}</style><!--!$es00-0-1-0-3-0-1-0-1-1-0--><div data-hk="s00-0-1-0-3-0-1-0-1-1-0-0" class="cuwj93f "><div data-hk="s00-0-1-0-3-0-1-0-1-1-0-1">I am already open</div><style data-hk="s00-0-1-0-3-0-1-0-1-1-0-2-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-3-0-1-0-1-1-0-2-1-0--><div data-hk="s00-0-1-0-3-0-1-0-1-1-0-2-1-0-0" class="cbhcz3u icon " ><svg data-hk="s00-0-1-0-3-0-1-0-1-1-0-2-1-0-1-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"></path></svg></div><!--!$/es00-0-1-0-3-0-1-0-1-1-0-2-1-0--></div><!--!$/es00-0-1-0-3-0-1-0-1-1-0--><style data-hk="s00-0-1-0-3-0-1-0-2-0-0">.c11zhy3w{
+  overflow: hidden;
+}</style><!--!$es00-0-1-0-3-0-1-0-2-1-0--><div data-hk="s00-0-1-0-3-0-1-0-2-1-0-0" class="c11zhy3w ">Hello guy ?</div><!--!$/es00-0-1-0-3-0-1-0-2-1-0--></div><!--!$/es00-0-1-0-3-0-1-0--><style data-hk="s00-0-1-0-4-0-0-0">.cm6mmlp{
 
-}</style><!--!$es00-1-1-0-1-1-0--><button data-hk="s00-1-1-0-1-1-0-0" class="c6srzzl ">Open Dialog</button><!--!$/es00-1-1-0-1-1-0--></div><!--!$/es00-1-1-0--></astro-island></div></div></div><!--!$/e0-1-0--></div><!--!$/e0-1-0--></body></html>
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows 500ms;
+    
+    background: var(--d1);
+    padding: 1.25em;
+    gap : 0.5em;
+    box-sizing: border-box;
+    border-radius: var(--a0);
+
+    &.expanded {
+        grid-template-rows: min-content 1fr;
+    }
+    
+    & .icon {
+        transition : rotate 500ms;
+    }
+    
+    &.expanded .icon {
+        rotate : 180deg;
+    }
+    
+}</style><!--!$es00-0-1-0-4-0-1-0--><div data-hk="s00-0-1-0-4-0-1-0-0" style="gap:1em" class="cm6mmlp expanded " ><style data-hk="s00-0-1-0-4-0-1-0-1-0-0">.cuwj93f{
+    font-size: 1.2em;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    
+    & > :first-of-type {
+          flex : 1;
+    }
+    
+}</style><!--!$es00-0-1-0-4-0-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-1-1-0-0" class="cuwj93f "><div data-hk="s00-0-1-0-4-0-1-0-1-1-0-1">Checkout my length</div><style data-hk="s00-0-1-0-4-0-1-0-1-1-0-2-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-4-0-1-0-1-1-0-2-1-0--><div data-hk="s00-0-1-0-4-0-1-0-1-1-0-2-1-0-0" class="cbhcz3u icon " ><svg data-hk="s00-0-1-0-4-0-1-0-1-1-0-2-1-0-1-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"></path></svg></div><!--!$/es00-0-1-0-4-0-1-0-1-1-0-2-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-1-1-0--><style data-hk="s00-0-1-0-4-0-1-0-2-0-0">.c11zhy3w{
+  overflow: hidden;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-0" class="c11zhy3w "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-0-0">.ci2uj9z{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:1em;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-0" gap="1em" class="ci2uj9z "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-0-0">.c5xljvx{
+    padding: 1em;
+    background: var(--a9);
+    border-radius: var(--a1);
+    color: var(--b0);
+
+    & * {
+        color: var(--b0);
+        fill: var(--b0);
+    }
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-0" class="c5xljvx "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-0-0">.c9wzy4a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:1em;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-0" gap="1em" class="c9wzy4a "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-1-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"></path></svg></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0-1-1-0-->Wise men say</div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0-1-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-1-0-1-0--><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-0-0">.c5xljvx{
+    padding: 1em;
+    background: var(--a9);
+    border-radius: var(--a1);
+    color: var(--b0);
+
+    & * {
+        color: var(--b0);
+        fill: var(--b0);
+    }
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-0" class="c5xljvx "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-0-0">.c9wzy4a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:1em;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-0" gap="1em" class="c9wzy4a "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-1-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"></path></svg></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0-1-1-0-->Only fools rush in</div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0-1-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-2-0-1-0--><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-0-0">.c5xljvx{
+    padding: 1em;
+    background: var(--a9);
+    border-radius: var(--a1);
+    color: var(--b0);
+
+    & * {
+        color: var(--b0);
+        fill: var(--b0);
+    }
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-0" class="c5xljvx "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-0-0">.c9wzy4a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:1em;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-0" gap="1em" class="c9wzy4a "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-1-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"></path></svg></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0-1-1-0-->But I can't help</div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0-1-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-3-0-1-0--><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-0-0">.c5xljvx{
+    padding: 1em;
+    background: var(--a9);
+    border-radius: var(--a1);
+    color: var(--b0);
+
+    & * {
+        color: var(--b0);
+        fill: var(--b0);
+    }
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-0" class="c5xljvx "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-0-0">.c9wzy4a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:1em;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-0" gap="1em" class="c9wzy4a "><style data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-1-0-0">.cbhcz3u{
+    fill: var(--d5);
+    width: 1.5rem;
+    height: 1.5rem;
+}</style><!--!$es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-1-1-0--><div data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-1-1-0-0" class="cbhcz3u "><svg data-hk="s00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-1-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"></path></svg></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0-1-1-0-->Falling in love with you</div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0-1-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0-4-0-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0-1-1-0--></div><!--!$/es00-0-1-0-4-0-1-0-2-1-0--></div><!--!$/es00-0-1-0-4-0-1-0--></div><!--!$/es00-0-1-0--></astro-island></div></div></div><!--!$/e0-1-0--></div><!--!$/e0-1-0--></body></html>

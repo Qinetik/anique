@@ -1,9 +1,9 @@
-import{s}from"./Theme.6779d63b.js";const l=s("div")`
+import{a as i}from"./Theme.e785dc72.js";const s=i("div")`
   display: flex;
   flex-direction: column;
   align-items: start;
   ${e=>e.gap!=null?"gap:"+e.gap+";":null}
-`,t=s("h1")`
+`,t=i("h1")`
     font-weight: 100;
     font-size : ${e=>3+(e.size?e.size:0)}rem;
-`;export{l as C,t as H};
+`;export{s as C,t as H};

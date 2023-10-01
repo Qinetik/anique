@@ -1,7 +1,7 @@
-import{s as n}from"./Theme.6779d63b.js";const i=n("div")`
+import{a as n}from"./Theme.e785dc72.js";const e=n("div")`
     display: flex;
     flex-direction: row;
     align-items: center;
     ${l=>l.alignment!=null?"align-items:"+l.alignment+";":""}
     ${l=>l.gap!=null?"gap:"+l.gap+";":null}
-`;export{i as R};
+`;export{e as R};
