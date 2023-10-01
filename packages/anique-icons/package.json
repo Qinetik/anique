@@ -13,11 +13,15 @@
     ],
     "scripts": {
         "clean": "node -e \"if(require('fs').existsSync('./dist')) require('fs').rmSync('./dist', { recursive : true })\"",
-        "build": "yarn run clean && vite build && tsc"
+        "build-es": "vite build -c viteconfigs.es.ts",
+        "build-cjs": "vite build -c viteconfigs.cjs.ts",
+        "build-types": "tsc",
+        "build": "yarn run clean && yarn run build-es && yarn run build-cjs && yarn run build-types"
     },
     "devDependencies": {
         "@types/node": "^15.12.5",
         "typescript": "^5.2.2",
+        "vike": "^0.4.142",
         "vite": "^4.4.9",
         "vite-plugin-solid": "^2.7.0"
     },
