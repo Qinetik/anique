@@ -1,12 +1,14 @@
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
 import {Size} from "../theme/Size";
+import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
+import {JSX} from "solid-js";
 
 export interface SliderProps {
     size?: Size
 }
 
-export const Slider = styled("input")<SliderProps>`
+export const Slider: StyledOtherComponent<SliderProps, JSX.IntrinsicElements["input"]> = styled("input")<SliderProps>`
 
     -webkit-appearance: none !important;
     width : 14em;

@@ -22,10 +22,7 @@ function keyframes(...args: any[]): KeyframesEle {
     const name = getNameSerializedStyles(hash, true)
     const Styled = () => {
         return (
-            <Dynamic
-                component={"style"}
-                children={`@keyframes ${name}{${styles.styles}}`}
-            />
+            <style>{`@keyframes ${name}{${styles.styles}}`}</style>
         )
     }
     Styled.animationName = name

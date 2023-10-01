@@ -5,12 +5,14 @@ import {Column} from "../column";
 import {styled} from "@qinetik/emotion";
 import {Size} from "../theme/Size";
 import {Anique} from "../theme/Theme";
+import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
+import {JSX} from "solid-js";
 
 export interface RadioProps {
     size?: Size
 }
 
-export const Radio = styled("input")<RadioProps>`
+export const Radio: StyledOtherComponent<RadioProps, JSX.IntrinsicElements["input"]> = styled("input")<RadioProps>`
 
     /* Add if not using autoprefixer */
     -webkit-appearance: none;

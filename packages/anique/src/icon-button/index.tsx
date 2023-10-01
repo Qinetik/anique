@@ -1,7 +1,8 @@
 import {styled} from "@qinetik/emotion";
-import {rgbColorWithOpacity} from "../utils/color-utils";
 import {Size} from "../theme/Size";
 import {Anique} from "../theme/Theme";
+import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
+import {JSX} from "solid-js";
 
 interface IconButtonProps {
     children?: any
@@ -9,7 +10,7 @@ interface IconButtonProps {
     size?: Size
 }
 
-export const IconButton = styled("div")<IconButtonProps>`
+export const IconButton: StyledOtherComponent<IconButtonProps, JSX.IntrinsicElements["div"]> = styled("div")<IconButtonProps>`
 
     width: ${p => 2 + 0.5 * (p.size || 0)}rem;
     height: ${p => 2 + 0.5 * (p.size || 0)}rem;

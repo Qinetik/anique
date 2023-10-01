@@ -19,10 +19,7 @@ function mountedStyles(...args: any[]): MountedStylesComponent {
     // const name = getNameSerializedStyles(hash, false)
     return () => {
         return (
-            <Dynamic
-                component={"style"}
-                children={styles.styles}
-            />
+            <style>{styles.styles}</style>
         )
     }
 }

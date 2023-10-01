@@ -26,9 +26,6 @@ export function MountedStyles(props: MountedStylesProps) {
     }
     // returning the component
     return (
-        <Dynamic
-            component={"style"}
-            children={endCSS}
-        />
+        <style>{`${endCSS}`}</style>
     )
 }

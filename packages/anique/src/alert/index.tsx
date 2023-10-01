@@ -5,6 +5,8 @@ import {Icon} from "../icon";
 import { CheckCircleOutline } from "@qinetik/anique-icons";
 import { AlertIcon } from "@qinetik/anique-icons";
 import { InformationBoxOutline } from "@qinetik/anique-icons";
+import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
+import {JSX} from "solid-js";
 
 export enum AlertType {
     Info = "info",
@@ -22,7 +24,7 @@ function color(type ?: AlertType): string {
     return Anique.colors["on" + (type || "s")[0].toUpperCase() + ((type || "success").substring(1))]
 }
 
-export const AlertRoot = styled("div")<AlertProps>`
+export const AlertRoot: StyledOtherComponent<AlertProps, JSX.IntrinsicElements["div"]> = styled("div")<AlertProps>`
     padding: 1em;
     background: ${p => Anique.colors[(p.type || "success")]};
     border-radius: ${Anique.border.mdRadius};

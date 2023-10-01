@@ -1,6 +1,8 @@
 import {styled} from "@qinetik/emotion";
+import {JSX} from "solid-js";
+import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
 
-export const Spacer = styled("div")<{
+export const Spacer: StyledOtherComponent<{ width?: string; height?: string }, JSX.IntrinsicElements["div"]> = styled("div")<{
     width?: string
     height?: string
 }>`
