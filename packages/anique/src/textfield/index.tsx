@@ -4,6 +4,7 @@ import {JSX, splitProps} from "solid-js";
 import {Row} from "../row";
 import {Column} from "../column";
 import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
+import {ThemeColors} from "../theme";
 
 const Input: StyledOtherComponent<object, JSX.IntrinsicElements["input"]> = styled("input")`
     width: 12em;
@@ -59,7 +60,7 @@ const UnstyledTextField = styled("input")`
 `
 
 const TextFieldLabel = styled("span")`
-    color : ${Anique.colors.primary};
+    color : ${Anique.colors.onBg200};
     font-size : 0.8rem;
     margin-left : 0.25em;
 `
@@ -68,15 +69,21 @@ export interface TextFieldProps extends JSX.InputHTMLAttributes<HTMLInputElement
     leadingIcon?: any
     trailingIcon?: any
     label?: string
+    background ?: string
 }
 
 export function TextField(props: TextFieldProps) {
+    const backgroundStyle = props.background || props.disabled == true ? ({
+        background : props.background || (Anique.colors.bg500)
+    }) : ({})
     return (
-        <TextFieldContainer>
+        <TextFieldContainer style={{
+            ...backgroundStyle,
+        }}>
             {props.label && <TextFieldLabel>{props.label}</TextFieldLabel>}
             <Row>
                 {props.leadingIcon}
-                <UnstyledTextField {...splitProps(props, ["leadingIcon", "trailingIcon", "label"])[1]}/>
+                <UnstyledTextField {...splitProps(props, ["leadingIcon", "trailingIcon", "label", "background"])[1]}/>
                 {props.trailingIcon}
             </Row>
         </TextFieldContainer>

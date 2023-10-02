@@ -140,6 +140,10 @@ export const AniqueGlobalStyling = mountedStyles`
     h1,h2,h3,h4,h5,h6 {
         font-family : ${Anique.font.primary};
     }
+    p {
+        line-height : 1.75rem;
+        letter-spacing : 0.05rem;
+    }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
         background : ${Anique.colors.onBg500};

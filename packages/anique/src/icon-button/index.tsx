@@ -7,7 +7,7 @@ import {JSX} from "solid-js";
 interface IconButtonProps {
     children?: any
     disableAutoFill?: boolean
-    size?: Size
+    size?: Size | number
 }
 
 export const IconButton: StyledOtherComponent<IconButtonProps, JSX.IntrinsicElements["div"]> = styled("div")<IconButtonProps>`

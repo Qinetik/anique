@@ -1,8 +1,9 @@
 import {styled} from "@qinetik/emotion";
+import {JSX, splitProps} from "solid-js";
 
-export interface AppBarProps {
+export interface AppBarProps extends JSX.HTMLAttributes<HTMLDivElement> {
     navIcon?: any
-    title: string
+    title: any
     actions?: any
 }
 
@@ -30,7 +31,7 @@ const AppBarActions = styled("div")`
 
 export function AppBar(props: AppBarProps) {
     return (
-        <AppBarContainer>
+        <AppBarContainer {...splitProps(props, ["navIcon", "title", "actions"])[1]}>
             {props.navIcon != null ? (
                 <AppBarNavIcon>
                     {props.navIcon}

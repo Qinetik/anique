@@ -3,8 +3,8 @@ import {Column} from "@qinetik/anique/column";
 import {Headline} from "@qinetik/anique/headline";
 import Menu from "../icons/Menu";
 import { InformationBoxOutline } from "@qinetik/anique-icons";
-import {Icon} from "@qinetik/anique/icon";
 import {IconButton} from "@qinetik/anique/icon-button";
+import {Anique} from "@qinetik/anique";
 
 export function TextFieldPage() {
     return (
@@ -75,6 +75,33 @@ export function TextFieldPage() {
                     </IconButton>
                 }
                 label={"Username"}
+                placeholder={"Type Here"}
+            />
+            <p>Background</p>
+            <TextField
+                leadingIcon={
+                    <IconButton size={-1}>
+                        <InformationBoxOutline />
+                    </IconButton>
+                }
+                trailingIcon={
+                    <IconButton size={-1}>
+                        <Menu />
+                    </IconButton>
+                }
+                background={Anique.colors.bg300}
+                label={"Username"}
+                placeholder={"Type Here"}
+            />
+            <p>Disabled</p>
+            <TextField
+                trailingIcon={
+                    <IconButton size={-1}>
+                        <Menu />
+                    </IconButton>
+                }
+                label={"Username"}
+                disabled
                 placeholder={"Type Here"}
             />
             <p>With Normal Sized Icons</p>
