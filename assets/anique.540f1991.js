@@ -1,30 +1,30 @@
-import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as I}from"./index.6123842c.js";import{g as a,i as f,t as l}from"./web.bb9df7e4.js";import{c as t,a as p,s as y,m as v,b as M}from"./solid.443b34c3.js";import"./index.08ebe212.js";import"./index.5457f4c0.js";import"./index.a4ea06e9.js";import"./index.be0ffe33.js";import{C as h,H as S}from"./index.f2d7ed09.js";import"./select.3cdbbdfe.js";import"./index.ce2145c7.js";const L=l("<style>");function A(...e){const n=x(e),s=w(n.styles),c=H(s,!0),i=()=>(()=>{const b=a(L);return f(b,()=>`@keyframes ${c}{${n.styles}}`),b})();return i.animationName=c,i}const R=l("<style>");function k(...e){const n=x(e);return w(n.styles),()=>(()=>{const s=a(R);return f(s,()=>n.styles),s})()}const z=r("div")`
-    fill: ${o.colors.onBg};
+import{a as f,m as h,g as z,s as r,A as o}from"./Theme.0d521bda.js";import{R as C}from"./index.47f2dfdf.js";import{g as a,i as g,t as l}from"./web.a1c2ce68.js";import{c as n,b as u,s as $,m as x,a as B}from"./solid.21af8d85.js";import"./index.d505cdbd.js";import"./index.0b3b4179.js";import"./index.6da48306.js";import"./index.bbf1184f.js";import{C as M}from"./index.4d07b058.js";import"./select.28ec84ea.js";import"./index.c3b60e77.js";const S=l("<style>");function H(...e){const t=f(e),s=h(t.styles),c=z(s,!0),i=()=>(()=>{const p=a(S);return g(p,()=>`@keyframes ${c}{${t.styles}}`),p})();return i.animationName=c,i}const L=l("<style>");function w(...e){const t=f(e);return h(t.styles),()=>(()=>{const s=a(L);return g(s,()=>t.styles),s})()}const y=r("div")`
+    fill: ${e=>e.fill||o.colors.onBg};
     width: ${e=>.5+(e.size||1)}rem;
     height: ${e=>.5+(e.size||1)}rem;
-`,E=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>alert</title><path d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z">'),V=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z">'),_=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>information-box-outline</title><path d="M13 9H11V7H13V9M13 17H11V11H13V17M5 3H19C20.1 3 21 3.89 21 5V19C21 19.53 20.79 20.04 20.41 20.41C20.04 20.79 19.53 21 19 21H5C4.47 21 3.96 20.79 3.59 20.41C3.21 20.04 3 19.53 3 19V5C3 3.89 3.89 3 5 3M19 19V5H5V19H19Z">');function $(){return a(E)}function N(){return a(V)}function F(){return a(_)}let m=function(e){return e.Info="info",e.Warning="warning",e.Error="error",e.Success="success",e}({});function u(e){return o.colors["on"+(e||"s")[0].toUpperCase()+(e||"success").substring(1)]}const W=r("div")`
+`,A=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>alert</title><path d="M13 14H11V9H13M13 18H11V16H13M1 21H23L12 2L1 21Z">'),R=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle-outline</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z">'),I=l('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>information-box-outline</title><path d="M13 9H11V7H13V9M13 17H11V11H13V17M5 3H19C20.1 3 21 3.89 21 5V19C21 19.53 20.79 20.04 20.41 20.41C20.04 20.79 19.53 21 19 21H5C4.47 21 3.96 20.79 3.59 20.41C3.21 20.04 3 19.53 3 19V5C3 3.89 3.89 3 5 3M19 19V5H5V19H19Z">'),E=l('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z">');function b(){return a(A)}function V(){return a(R)}function _(){return a(I)}function N(){return a(E)}let d=function(e){return e.Info="info",e.Warning="warning",e.Error="error",e.Success="success",e}({});function m(e){return o.colors["on"+(e||"s")[0].toUpperCase()+(e||"success").substring(1)]}const F=r("div")`
     padding: 1em;
     background: ${e=>o.colors[e.type||"success"]};
     border-radius: ${o.border.mdRadius};
-    color: ${e=>u(e.type)};
+    color: ${e=>m(e.type)};
 
     & * {
-        color: ${e=>u(e.type)};
-        fill: ${e=>u(e.type)};
+        color: ${e=>m(e.type)};
+        fill: ${e=>m(e.type)};
     }
-`;function Z(e){switch(e){case m.Info:return F;case m.Warning:return $;case m.Error:return $}return N}function d(e){const n=Z(e.type);return t(W,{get type(){return e.type},get children(){return t(I,{gap:"1em",get children(){return[t(z,{get children(){return t(n,{})}}),p(()=>e.children)]}})}})}r("div")`
+`;function O(e){switch(e){case d.Info:return _;case d.Warning:return b;case d.Error:return b}return V}function ie(e){const t=O(e.type);return n(F,{get type(){return e.type},get children(){return n(C,{gap:"1em",get children(){return[n(y,{get children(){return n(t,{})}}),u(()=>e.children)]}})}})}r("div")`
     width: ${e=>e.width||"100%"};
     height: ${e=>e.height||"100%"};
 `;r("p")`
-    
+
 `;r("ul")`
   display: flex;
   flex-direction: column;
   gap: 1em;
-`;const O=r("span")`
+`;const W=r("span")`
   font-family: ${o.font.secondary};
   color: ${e=>o.colors[e.color||"onBg"]};
-`;r(O)`
+`;r(W)`
   font-size: 0.8rem;
 `;r("input")`
     /* Add if not using autoprefixer */
@@ -97,14 +97,14 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
   &:hover {
     background: ${o.colors.primary};
   }
-`;const P=r("span")`
+`;const Z=r("span")`
   box-sizing: border-box;
   display:inline-block;
   padding: 0.6em 0.5em 0.6em 1em;
   margin : 1em 0 0.25em 0;
   font-family : ${o.font.primary};
-`;r(e=>{const n=y(e,["title"]);return t(P,v({color:"onBg100",as:"h4",get children(){return e.title}},()=>n[1]))})`
-`;k`
+`;r(e=>{const t=$(e,["title"]);return n(Z,x({color:"onBg100",as:"h4",get children(){return e.title}},()=>t[1]))})`
+`;w`
     :root * {
         font-family : ${o.font.secondary};
     }
@@ -117,6 +117,10 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
     h1,h2,h3,h4,h5,h6 {
         font-family : ${o.font.primary};
     }
+    p {
+        line-height : 1.75rem;
+        letter-spacing : 0.05rem;
+    }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
         background : ${o.colors.onBg500};
@@ -124,7 +128,7 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         border-radius : ${o.border.smRadius};
         padding : 1px 3px;
     }
-`;const U=l('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z">'),Y=l("<div>"),j=r("div")`
+`;const P=l("<div>"),U=r("div")`
 
     display: grid;
     grid-template-rows: min-content 0fr;
@@ -148,7 +152,7 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         rotate : 180deg;
     }
     
-`,q=r("div")`
+`,Y=r("div")`
     font-size: 1.2em;
     font-weight: bold;
     user-select: none;
@@ -161,9 +165,9 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
           flex : 1;
     }
     
-`,T=r("div")`
+`,j=r("div")`
   overflow: hidden;
-`;function D(){return a(U)}function g(e){let n=e.expanded,s=e.setExpanded;if(e.expanded==null||e.setExpanded==null){const i=M(e.defaultExpanded??!0);n=i[0],s=i[1]}const c=()=>e.class?e.class+(n()?" expanded":""):n()?"expanded":void 0;return t(j,v(()=>y(e,["title","children","class"])[1],{get class(){return c()},get children(){return[t(q,{onClick:()=>s(!n()),get children(){return[(()=>{const i=a(Y);return f(i,()=>e.title),i})(),p(()=>p(()=>!!(e.showIcon??!0))()&&t(z,{class:"icon",get children(){return t(D,{})}}))]}}),t(T,{get children(){return e.children}})]}}))}const C=r("div")`
+`;function se(e){let t=e.expanded,s=e.setExpanded;if(e.expanded==null||e.setExpanded==null){const i=B(e.defaultExpanded??!0);t=i[0],s=i[1]}const c=()=>e.class?e.class+(t()?" expanded":""):t()?"expanded":void 0;return n(U,x(()=>$(e,["title","children","class"])[1],{get class(){return c()},get children(){return[n(Y,{onClick:()=>s(!t()),get children(){return[(()=>{const i=a(P);return g(i,()=>e.title),i})(),u(()=>u(()=>!!(e.showIcon??!0))()&&n(y,{class:"icon",get children(){return n(N,{})}}))]}}),n(j,{get children(){return e.children}})]}}))}const v=r("div")`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,18 +181,18 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
     &:active {
         background: ${o.colors.primary200};
     }
-`;r(C)`
+`;r(v)`
     width: ${e=>3+(e.size||0)}em;
     height: ${e=>3+(e.size||0)}em;
     border-radius: 50%;
-`;r(C)`
+`;r(v)`
     gap: 0.4em;
     box-sizing: border-box;
     padding: ${e=>e.size||0}em ${e=>1+(e.size||0)*.5}em;
     width: max-content;
     height: ${e=>3+(e.size||0)*.25}em;
     border-radius: 99em;
-`;const G=r("select")`
+`;const q=r("select")`
     border: none;
     // A reset of styles, including removing the default dropdown arrow
     appearance: none;
@@ -223,7 +227,7 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         background-color : ${o.colors.bg100};
     }
     
-`;r(G)`
+`;r(q)`
     padding: 0.2em 0.8em 0.2em 0.2em;
     border-radius: ${o.border.smRadius};
 `;r("input")`
@@ -278,7 +282,14 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         cursor: pointer;
     }
 
-`;k`
+`;r("div")`
+    display: inline-block;
+    padding: 0.35rem;
+    font-size: 0.8rem;
+    color: ${o.colors.onBg100};
+    border-radius: ${o.border.mdRadius};
+    background : ${e=>o.colors[e.background||"bg100"]};
+`;w`
 
     :root::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -297,16 +308,16 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         border-radius: 10px;
     }
 
-`;const J=A`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+`;const T=H`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 `;r("svg")`
-  animation: ${J.animationName} 1s linear infinite;
-`;const B=r("input")`
+    animation: ${T.animationName} 1s linear infinite;
+`;const k=r("input")`
     width: 12em;
     font-size: max(16px, 1em);
     font-family: inherit;
@@ -325,10 +336,10 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
         background-color: #eee;
         cursor: not-allowed;
     }
-`;r(B)`
+`;r(k)`
     line-height: 1;
     height: 2rem;
-`;r(h)`
+`;r(M)`
 
     border: 2px solid ${o.colors.bg300};
     border-radius: 4px;
@@ -349,10 +360,10 @@ import{s as x,m as w,g as H,a as r,A as o}from"./Theme.e785dc72.js";import{R as 
     padding: 0.5em 0.5em;
     font-family: ${o.font.secondary};
 `;r("span")`
-    color : ${o.colors.primary};
+    color : ${o.colors.onBg200};
     font-size : 0.8rem;
     margin-left : 0.25em;
-`;r(B.withComponent("textarea"))`
+`;r(k.withComponent("textarea"))`
     resize: vertical;
     height: 6rem;
-`;function le(){return t(h,{gap:"1em",get children(){return[t(S,{children:"Accordion"}),t(g,{title:"Click me to open",defaultExpanded:!1,children:"Hi this is the internal content of this accordion"}),t(g,{title:"I am already open",children:"Hello guy ?"}),t(g,{title:"Checkout my length",style:{gap:"1em"},get children(){return t(h,{gap:"1em",get children(){return[t(d,{children:"Wise men say"}),t(d,{children:"Only fools rush in"}),t(d,{children:"But I can't help"}),t(d,{children:"Falling in love with you"})]}})}})]}})}export{le as AccordionPage};
+`;export{se as A,ie as a};

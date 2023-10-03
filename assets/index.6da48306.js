@@ -1,4 +1,4 @@
-import{a as e,A as r}from"./Theme.e785dc72.js";const i=e("button")`
+import{s as e,A as r}from"./Theme.0d521bda.js";const s=e("button")`
 
     box-sizing: border-box;
     padding: ${o=>.8+(o.size?o.size*.25:0)}em ${o=>.8+(o.size?o.size*.5:0)}em;
@@ -18,4 +18,4 @@ import{a as e,A as r}from"./Theme.e785dc72.js";const i=e("button")`
         background: ${r.colors.primary200};
     }
 
-`,a=i;export{a as B};
+`,n=s;export{n as B};
