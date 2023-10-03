@@ -1,0 +1,85 @@
+---
+title: Theming
+layout: ../layouts/MDXLayout.astro
+---
+import {Alert, AlertType} from "@qinetik/anique";
+
+# Theming
+
+Anique at the moment provides two themes, Dark & Light, Any theme you want to use in Anique
+you must include in your Page.
+
+It's recommended to import themes in your head element
+
+```typescript jsx
+import {AniqueGlobalStyling, AniqueThemeDark,AniqueThemeLight} from "@qinetik/anique";
+<head>
+    <AniqueThemeDark containerCssSelector={".dark"} />
+    <AniqueThemeLight containerCssSelector={".light"} />
+    <AniqueGlobalStyling />
+</head>
+```
+
+This will put two themes on your web page. As you can see you provide `containerCssSelector`
+This css selector is the element on which this theme is applied.
+
+<small>We'll add manual theming later</small>
+
+# Styling
+
+You'll find that Anique is very simple to use with CSS in JS
+
+Here's a very simple code snippet to create a `div` with styling
+
+```typescript jsx
+import {styled} from "@qinetik/emotion";
+import {Anique} from "@qinetik/anique";
+const MyContainer = styled("div")`
+    border-radius : 6px;
+    padding : 1rem;
+    background : ${Anique.colors.bg200};
+`
+
+// Let's use our created div
+export function Use() {
+    return (
+        <MyContainer>
+            Hello Mate! I am the container
+        </MyContainer>
+    )
+}
+```
+
+This was a very basic example ofcourse. All the theme styling is done using `Anique` object
+which uses css variables under the hood. You may not like the name, but this is THE WAY !
+
+## Animation
+
+Here we will create a keyframes animation, which gets assigned a name when you create it
+
+```typescript jsx
+import {keyframes,styled} from "@qinetik/emotion";
+const SpinnerAnimation = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`
+const AnimatedSpinnerSvg = styled("svg")`
+    animation: ${SpinnerAnimation.animationName} 1s linear infinite;
+`;
+
+
+export function Use() {
+    // You must put SpinnerAnimation somewhere on your page once !
+    return (
+        <>
+            <SpinnerAnimation />
+            <AnimatedSpinnerSvg />
+        </>
+    )
+}
+
+```

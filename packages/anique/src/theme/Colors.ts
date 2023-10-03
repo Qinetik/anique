@@ -97,7 +97,7 @@ export interface ResultColors<Color extends string = string> {
     onInfo: Color
 }
 
-export interface BgColors<RGBColor extends string, Color extends string> {
+export interface BgColors<RGBColor extends string = string, Color extends string = string> {
     /**
      * bg is the main background color
      * Variations are brighter in dark mode and darker in light mode

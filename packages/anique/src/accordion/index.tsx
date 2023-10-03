@@ -2,6 +2,7 @@ import {styled} from "@qinetik/emotion";
 import {Accessor, createSignal, JSX, Setter, splitProps} from "solid-js";
 import {Icon} from "../icon";
 import {Anique} from "../theme";
+import { ChevronUp } from "@qinetik/anique-icons";
 
 export interface AccordionProps extends JSX.HTMLAttributes<HTMLDivElement> {
     title: any
@@ -57,13 +58,6 @@ const AccordionContent = styled("div")`
   overflow: hidden;
 `
 
-// TODO put this component in anique-icons package
-function ChevronUpIcon() {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><title>chevron-up</title><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg>
-    )
-}
-
 export function Accordion(props: AccordionProps) {
 
     // @ts-ignore
@@ -88,7 +82,7 @@ export function Accordion(props: AccordionProps) {
                 onClick={() => setExpanded(!expanded())}
             >
                 <div>{props.title}</div>
-                {(props.showIcon ?? true) && <Icon class={"icon"}><ChevronUpIcon /></Icon>}
+                {(props.showIcon ?? true) && <Icon class={"icon"}><ChevronUp /></Icon>}
             </AccordionTitle>
             <AccordionContent>{props.children}</AccordionContent>
         </AccordionRoot>

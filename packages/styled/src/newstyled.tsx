@@ -76,9 +76,7 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
 
 
         // The Actual Component That User Will Use & It Will Emit HTML
-        // TODO fix the type here
-        // @ts-ignore
-        const Styled : StyledComponent<StyledProps> = (props : StyledProps) => {
+        const Styled = (props : StyledProps) => {
 
             // figure out the tag to use
             const finalTag = (shouldUseAs && props.as) || baseTag

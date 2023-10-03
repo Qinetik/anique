@@ -24,6 +24,7 @@ const onBg = Anique.colors.onBg
         <AniqueThemeDark containerCssSelector={".dark"}/>
         <AniqueThemeLight containerCssSelector={".light"}/>
         <AniqueGlobalStyling />
+        <slot name="head"></slot>
     </head>
     <body>
         <slot/>

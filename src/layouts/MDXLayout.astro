@@ -1,0 +1,38 @@
+---
+import UnstyledPageContainer from "./UnstyledPageContainer.astro";
+import {Anique} from "@qinetik/anique";
+const {frontmatter} = Astro.props
+---
+<UnstyledPageContainer title={frontmatter.title}>
+    <div class="container">
+        <slot/>
+    </div>
+</UnstyledPageContainer>
+
+<style is:global>
+
+    .container {
+        padding : 1rem 2.5rem;
+    }
+
+    pre.astro-code {
+        overflow-x: unset !important;
+        border-radius : 6px;
+        padding : 1em;
+    }
+
+    .light .astro-code {
+        background-color: rgba(255, 255, 255, .8) !important;
+    }
+
+    .dark .astro-code {
+        background-color: rgba(40, 40, 50, .8) !important;
+    }
+
+    pre.astro-code code {
+        padding: 0.5rem;
+        border-radius: 0.5em;
+        background-color : transparent;
+    }
+
+</style>

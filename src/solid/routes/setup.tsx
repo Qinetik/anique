@@ -1,5 +1,9 @@
 import {Alert, AlertType, Anique, Card, Column, Headline} from "@qinetik/anique";
 
+function Link(props : { href : string, children ?: any }) {
+    return <a href={props.href} target={"_blank"}>{props.children || props.href}</a>
+}
+
 export default function SetupPage() {
     return (
         <Column>
@@ -8,13 +12,13 @@ export default function SetupPage() {
             <h1>Solid Start + Anique Template</h1>
             <Card>
                 <span>Clone this repo</span><br/>
-                <a>https://github.com/Qinetik/anique-solid-start-template</a>
+                <Link href={"https://github.com/Qinetik/anique-solid-start-template"} />
             </Card>
             <h1>Astro + SolidJS + Anique Template</h1>
             <p>You must use our starter template, It includes working dependencies and everything</p>
             <Card>
                 <span>Clone this repo</span><br/>
-                <a>https://github.com/Qinetik/anique-astro-template</a>
+                <Link href={"https://github.com/Qinetik/anique-astro-template"} />
             </Card>
             <h1>Manual Setup</h1>
             <Alert type={AlertType.Success}>Use Vite for development</Alert>
@@ -23,10 +27,10 @@ export default function SetupPage() {
             <Card>
                 <Column gap={"0.5em"}>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        npm install <a href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</a>
+                        npm install <Link href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</Link>
                     </Card>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        npm install <a href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</a>
+                        npm install <Link href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</Link>
                     </Card>
                 </Column>
             </Card>
@@ -34,10 +38,10 @@ export default function SetupPage() {
             <Card>
                 <Column gap={"0.5em"}>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        yarn add <a href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</a>
+                        yarn add <Link href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</Link>
                     </Card>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        yarn add <a href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</a>
+                        yarn add <Link href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</Link>
                     </Card>
                 </Column>
             </Card>
@@ -45,10 +49,10 @@ export default function SetupPage() {
             <Card>
                 <Column gap={"0.5em"}>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        pnpm add <a href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</a>
+                        pnpm add <Link href={"https://www.npmjs.com/package/@qinetik/anique"}>@qinetik/anique</Link>
                     </Card>
                     <Card style={{"background-color": Anique.colors.bg300}}>
-                        pnpm add <a href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</a>
+                        pnpm add <Link href={"https://www.npmjs.com/package/@qinetik/emotion"}>@qinetik/emotion</Link>
                     </Card>
                 </Column>
             </Card>
@@ -63,13 +67,13 @@ export default function SetupPage() {
                 <Card>
                     <Column gap={"0.5em"}>
                         <Card style={{"background-color": Anique.colors.bg300}}>
-                            <a href={"https://github.com/Qinetik/anique/pkgs/npm/anique"}>@qinetik/anique</a>
+                            <Link href={"https://github.com/Qinetik/anique/pkgs/npm/anique"}>@qinetik/anique</Link>
                         </Card>
                         <Card style={{"background-color": Anique.colors.bg300}}>
-                            <a href={"https://github.com/Qinetik/anique/pkgs/npm/emotion"}>@qinetik/emotion</a>
+                            <Link href={"https://github.com/Qinetik/anique/pkgs/npm/emotion"}>@qinetik/emotion</Link>
                         </Card>
                         <Card style={{"background-color": Anique.colors.bg300}}>
-                            <a href={"https://github.com/Qinetik/anique/pkgs/npm/anique-icons"}>@qinetik/anique-icons</a>
+                            <Link href={"https://github.com/Qinetik/anique/pkgs/npm/anique-icons"}>@qinetik/anique-icons</Link>
                         </Card>
                     </Column>
                 </Card>
@@ -78,12 +82,16 @@ export default function SetupPage() {
             <Column gap={"0.5em"}>
                 <Alert type={AlertType.Success}>Use Vite for development</Alert>
                 <Alert type={AlertType.Success}>Use tsup with <a
-                    href={"https://github.com/solidjs-community/tsup-preset-solid"}>tsup-preset-solid</a> for bundling
+                    href={"https://github.com/solidjs-community/tsup-preset-solid"} target={"_blank"}>tsup-preset-solid</a> for bundling
                     the library</Alert>
                 <Alert type={AlertType.Info}>Make sure @qinetik/anique @qinetik/emotion are peerDependencies</Alert>
-                <Alert type={AlertType.Info}>At the moment, You may need to specify types explicitly for the components
-                    you create using @qinetik/emotion</Alert>
             </Column>
+            <h1>After Setup</h1>
+            <Card>
+                <p>
+                    Ensure it works, Import a component from @qinetik/emotion, Test development & Build a static site & then move on to theming
+                </p>
+            </Card>
         </Column>
     )
 }
