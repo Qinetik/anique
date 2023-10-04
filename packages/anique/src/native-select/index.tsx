@@ -1,7 +1,5 @@
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
-import {JSX} from "solid-js";
 
 const SelectBase = styled("select")`
     border: none;
@@ -40,10 +38,7 @@ const SelectBase = styled("select")`
     
 `
 
-export const NativeSelect: StyledOtherComponent<object, object & JSX.SelectHTMLAttributes<HTMLSelectElement> & {
-    as?: string;
-    class?: string
-}> = styled(SelectBase)`
+export const NativeSelect = styled(SelectBase)`
     padding: 0.2em 0.8em 0.2em 0.2em;
     border-radius: ${Anique.border.smRadius};
 `

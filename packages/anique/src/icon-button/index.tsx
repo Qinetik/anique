@@ -1,8 +1,6 @@
 import {styled} from "@qinetik/emotion";
 import {Size} from "../theme/Size";
 import {Anique} from "../theme/Theme";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
-import {JSX} from "solid-js";
 
 interface IconButtonProps {
     children?: any
@@ -10,7 +8,7 @@ interface IconButtonProps {
     size?: Size | number
 }
 
-export const IconButton: StyledOtherComponent<IconButtonProps, JSX.IntrinsicElements["div"]> = styled("div")<IconButtonProps>`
+export const IconButton = styled("div")<IconButtonProps>`
 
     width: ${p => 2 + 0.5 * (p.size || 0)}rem;
     height: ${p => 2 + 0.5 * (p.size || 0)}rem;

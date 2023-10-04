@@ -3,10 +3,9 @@ import {Anique} from "../theme/Theme";
 import {JSX, splitProps} from "solid-js";
 import {Row} from "../row";
 import {Column} from "../column";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
 import {ThemeColors} from "../theme";
 
-const Input: StyledOtherComponent<object, JSX.IntrinsicElements["input"]> = styled("input")`
+const Input = styled("input")`
     width: 12em;
     font-size: max(16px, 1em);
     font-family: inherit;
@@ -27,10 +26,7 @@ const Input: StyledOtherComponent<object, JSX.IntrinsicElements["input"]> = styl
     }
 `
 
-export const BaseTextField: StyledOtherComponent<object, object & JSX.InputHTMLAttributes<HTMLInputElement> & {
-    as?: string;
-    class?: string
-}> = styled(Input)`
+export const BaseTextField = styled(Input)`
     line-height: 1;
     height: 2rem;
 `
@@ -90,10 +86,7 @@ export function TextField(props: TextFieldProps) {
     )
 }
 
-export const TextArea: StyledOtherComponent<object, JSX.TextareaHTMLAttributes<HTMLTextAreaElement> & {
-    as?: string;
-    class?: string
-}> = styled(Input.withComponent("textarea"))`
+export const TextArea = styled(Input.withComponent("textarea"))`
     resize: vertical;
     height: 6rem;
 `

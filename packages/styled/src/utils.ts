@@ -106,7 +106,7 @@ interface WithComponentFunction<Props extends object> {
     <T extends keyof JSX.IntrinsicElements>(
         nextTag: T,
         nextOptions?: StyledOptions
-    ) : StyledOtherComponent<Props, JSX.IntrinsicElements[T]>
+    ) : EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
 
     <NextElementProps>(
         nextTag: StyledElementType<NextElementProps>,
@@ -115,11 +115,13 @@ interface WithComponentFunction<Props extends object> {
 
 }
 
-export interface StyledOtherComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { as?: string; class?: string }> {
+export interface EmotionStyledComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { as?: string; class?: string }> {
     withComponent: WithComponentFunction<Props>
 }
 
+export type StyledOtherComponent<Props extends object, InnerProps extends object> = EmotionStyledComponent<Props, InnerProps>
+
 export interface CreateStyledFunction {
-  <T extends keyof JSX.IntrinsicElements>(tag: T, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => StyledOtherComponent<Props, JSX.IntrinsicElements[T]>
-    <InnerProps extends object>(tag: Component<InnerProps>, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => StyledOtherComponent<Props, InnerProps>
+  <T extends keyof JSX.IntrinsicElements>(tag: T, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
+    <InnerProps extends object>(tag: Component<InnerProps>, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => EmotionStyledComponent<Props, InnerProps>
 }

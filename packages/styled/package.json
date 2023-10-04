@@ -1,6 +1,6 @@
 {
     "name": "@qinetik/emotion",
-    "version": "2.0.17",
+    "version": "2.0.18",
     "description": "Emotion JS support for Solid JS projects.",
     "repository": "git@github.com:qinetik/anique.git",
     "author": "Qinetik",

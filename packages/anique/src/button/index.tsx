@@ -1,7 +1,6 @@
 import {styled, useTheme} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
 import {Size} from "../theme/Size";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
 import {JSX} from "solid-js";
 
 const ButtonBase = styled("button")<{
@@ -28,4 +27,4 @@ const ButtonBase = styled("button")<{
 
 `
 
-export const Button: StyledOtherComponent<{ size?: Size }, JSX.IntrinsicElements["button"]> = ButtonBase
+export const Button = ButtonBase

@@ -1,12 +1,8 @@
 import {styled} from "@qinetik/emotion";
 import {Accessor, JSX, splitProps} from "solid-js";
-import {Backdrop} from "../backdrop";
-import {Text} from "../text";
-import {Portal} from "solid-js/web";
 import {Anique} from "../theme/Theme";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
 
-export const StaticDrawer: StyledOtherComponent<object, JSX.IntrinsicElements["div"]> = styled("div")`
+export const StaticDrawer = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -19,7 +15,7 @@ export interface DrawerItemProps {
     isActive ?: boolean
 }
 
-export const DrawerItem: StyledOtherComponent<DrawerItemProps, JSX.IntrinsicElements["div"]> = styled("div")<DrawerItemProps>`
+export const DrawerItem = styled("div")<DrawerItemProps>`
   width: 100%;
   box-sizing: border-box;
   padding: 0.6em 0.5em 0.6em 1em;
@@ -42,7 +38,7 @@ const StyledSectionText = styled("span")`
   font-family : ${Anique.font.primary};
 `
 
-export const DrawerSectionItem: StyledOtherComponent<object, { title: string }> = styled((props: { title: string }) => {
+export const DrawerSectionItem = styled((props: { title: string }) => {
     const split = splitProps(props, ["title"])
     return (
         <StyledSectionText color={"onBg100"} as={"h4"} children={props.title} {...split[1]}/>

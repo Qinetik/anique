@@ -1,13 +1,11 @@
 import {styled} from "@qinetik/emotion";
-import {JSX} from "solid-js";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
 
 export interface ColumnProps {
     gap?: string
     children ?: any
 }
 
-export const Column: StyledOtherComponent<ColumnProps, JSX.IntrinsicElements["div"]> = styled("div")<ColumnProps>`
+export const Column = styled("div")<ColumnProps>`
   display: flex;
   flex-direction: column;
   align-items: start;

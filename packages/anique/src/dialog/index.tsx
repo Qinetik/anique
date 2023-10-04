@@ -1,7 +1,6 @@
 import {Portal} from "solid-js/web";
 import {Backdrop} from "../backdrop";
 import {styled} from "@qinetik/emotion";
-import {Centered} from "../utils/centered";
 import {Anique} from "../theme/Theme";
 
 export interface DialogProps {

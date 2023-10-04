@@ -1,13 +1,11 @@
 import {styled} from "@qinetik/emotion";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
-import {JSX} from "solid-js";
 import {Anique, BgColors, BrandColors, ResultColors} from "../theme";
 
 export interface ChipProps {
     background ?: keyof BgColors | keyof ResultColors | keyof BrandColors
 }
 
-export const Chip: StyledOtherComponent<ChipProps, JSX.IntrinsicElements["div"]> = styled("div")`
+export const Chip = styled("div")<ChipProps>`
     display: inline-block;
     padding: 0.35rem;
     font-size: 0.8rem;

@@ -5,14 +5,12 @@ import {Column} from "../column";
 import {Size} from "../theme/Size";
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
-import {StyledOtherComponent} from "@qinetik/emotion/src/utils";
-import {JSX} from "solid-js";
 
 export interface CheckboxProps {
     size?: Size
 }
 
-export const Checkbox: StyledOtherComponent<CheckboxProps, JSX.IntrinsicElements["input"]> = styled("input")<CheckboxProps>`
+export const Checkbox = styled("input")<CheckboxProps>`
     /* Add if not using autoprefixer */
     -webkit-appearance: none;
     /* Remove most all native input styles */
