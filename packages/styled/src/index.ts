@@ -2,7 +2,6 @@ import {keyframes} from './keyframes';
 import {css} from './css';
 import {createNewStyled} from "./newstyled";
 import {mountedStyles} from './mountedStyles';
-import { EmotionStyledComponent } from './utils';
 
 export { ThemeProvider, useTheme } from './theme';
 
@@ -13,4 +12,5 @@ export type { DefaultTheme } from "./theme"
 // @ts-ignore
 const styled = createNewStyled.bind()
 
-export { styled, css, keyframes, mountedStyles, EmotionStyledComponent }
+export { styled, css, keyframes, mountedStyles }
+export * from "./utils"

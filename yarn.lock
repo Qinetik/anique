@@ -1024,7 +1024,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@qinetik/anique@workspace:packages/anique":
+"@qinetik/anique@workspace:^, @qinetik/anique@workspace:packages/anique":
   version: 0.0.0-use.local
   resolution: "@qinetik/anique@workspace:packages/anique"
   dependencies:
@@ -1039,7 +1039,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@qinetik/emotion@workspace:packages/styled":
+"@qinetik/emotion@workspace:^, @qinetik/emotion@workspace:packages/styled":
   version: 0.0.0-use.local
   resolution: "@qinetik/emotion@workspace:packages/styled"
   dependencies:
@@ -5127,6 +5127,8 @@ __metadata:
   dependencies:
     "@astrojs/mdx": ^1.1.0
     "@astrojs/solid-js": ^3.0.1
+    "@qinetik/anique": "workspace:^"
+    "@qinetik/emotion": "workspace:^"
     "@rollup/plugin-multi-entry": ^6.0.0
     astro: ^3.1.4
     gh-pages: ^6.0.0

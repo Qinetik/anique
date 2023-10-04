@@ -24,8 +24,8 @@
         "solid-js": "^1.7.11"
     },
     "browser": {
-        "./dist/server.js": "./dist/index.js",
-        "./dist/server.cjs": "./dist/index.cjs"
+        "./dist/server.cjs": "./dist/index.cjs",
+        "./dist/server.js": "./dist/index.js"
     },
     "typesVersions": {},
     "exports": {
