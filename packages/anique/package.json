@@ -1,84 +1,33 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.23",
+    "version": "1.0.24",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
         "dist/**"
     ],
-    "main": "./dist/server.cjs",
-    "module": "./dist/server.js",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsup"
+        "clean": "node -e \"if(require('fs').existsSync('dist')) require('fs').rmSync('dist', { recursive : true })\"",
+        "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
+        "build": "yarn run clean && rollup -c rollup.config.js && yarn run types"
     },
     "peerDependencies": {
         "@qinetik/emotion": "workspace:^",
         "solid-js": "^1.7.11"
     },
     "devDependencies": {
-        "@rollup/plugin-multi-entry": "^6.0.0",
-        "fast-glob": "^3.3.1",
-        "vite": "^4.4.9",
-        "vite-plugin-solid": "^2.7.0"
+        "@babel/preset-typescript": "^7.23.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-node-resolve": "^15.2.2",
+        "@rollup/plugin-terser": "^0.4.4",
+        "babel-preset-solid": "^1.7.12",
+        "rollup": "^4.0.0"
     },
     "dependencies": {
         "@qinetik/anique-icons": "workspace:^"
-    },
-    "browser": {
-        "./dist/server.cjs": "./dist/index.cjs",
-        "./dist/server.js": "./dist/index.js"
-    },
-    "exports": {
-        "worker": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "browser": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/index.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/index.cjs"
-            }
-        },
-        "deno": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "node": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "import": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        },
-        "require": {
-            "types": "./dist/index.d.cts",
-            "default": "./dist/index.cjs"
-        }
-    },
-    "typesVersions": {},
-    "type": "module"
+    }
 }

@@ -1,87 +1,33 @@
 {
     "name": "@qinetik/anique-icons",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Emotion JS support for Solid JS projects.",
     "repository": "git@github.com:qinetik/anique.git",
     "author": "Qinetik",
     "license": "MIT",
-    "main": "./dist/server.cjs",
-    "module": "./dist/server.js",
+    "type": "module",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "files": [
         "dist/**"
     ],
     "scripts": {
-        "build": "tsup"
+        "clean": "node -e \"if(require('fs').existsSync('dist')) require('fs').rmSync('dist', { recursive : true })\"",
+        "types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
+        "build": "yarn run clean && rollup -c rollup.config.js && yarn run types"
     },
     "devDependencies": {
+        "@babel/preset-typescript": "^7.23.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-node-resolve": "^15.2.2",
+        "@rollup/plugin-terser": "^0.4.4",
         "@types/node": "^15.12.5",
-        "tsup": "^7.2.0",
-        "tsup-preset-solid": "^2.1.0",
+        "babel-preset-solid": "^1.7.12",
+        "rollup": "^4.0.0",
         "typescript": "^5.2.2"
     },
     "peerDependencies": {
         "solid-js": "^1.7.11"
-    },
-    "browser": {
-        "./dist/server.cjs": "./dist/index.cjs",
-        "./dist/server.js": "./dist/index.js"
-    },
-    "typesVersions": {},
-    "exports": {
-        "worker": {
-            "solid": "./dist/server.jsx",
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "browser": {
-            "solid": "./dist/index.jsx",
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/index.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/index.cjs"
-            }
-        },
-        "deno": {
-            "solid": "./dist/server.jsx",
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "node": {
-            "solid": "./dist/server.jsx",
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/server.js"
-            },
-            "require": {
-                "types": "./dist/index.d.cts",
-                "default": "./dist/server.cjs"
-            }
-        },
-        "solid": "./dist/index.jsx",
-        "import": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        },
-        "require": {
-            "types": "./dist/index.d.cts",
-            "default": "./dist/index.cjs"
-        }
-    },
-    "type": "module"
+    }
 }
