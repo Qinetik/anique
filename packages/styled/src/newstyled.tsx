@@ -12,7 +12,6 @@ import {
 } from "./utils";
 import {Dynamic, isServer} from "solid-js/web";
 import hashFunc from "@emotion/hash"
-import {getNameSerializedStyles, MountedStyles} from "./Mounter";
 
 const isDevelopment : () => boolean = ()=> true
 
@@ -101,17 +100,17 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
             })
 
             // new props
-            const newProps: Record<string, any> = mergeProps(props)
+            const newProps: Record<string, any> = props
 
             const serStyles = serialized()
             const hashName = hashFunc(serStyles.styles)
-            const name = getNameSerializedStyles(hashName, false)
+            const name = "c" + hashName
             const className = name
 
             // returning the component
             return (
                 <>
-                    <MountedStyles name={name} styles={serStyles} areKeyFrames={false} />
+                    <style>{`.${name}{${serStyles.styles}}`}</style>
                     <ErrorBoundary fallback={(e,reset) => {
                         console.error("error making dynamic component in styled -> base " + isServer,e)
                         return e + " isBrowser = " + isBrowser() + " tag = " + finalTag

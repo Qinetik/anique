@@ -1,9 +1,7 @@
 // Reference https://github.dev/emotion-js/emotion/blob/26ded6109fcd8ca9875cc2ce4564fee678a3f3c5/packages/react/src/keyframes.js#L24
 import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
 import {JSX} from "solid-js";
-import {getNameSerializedStyles} from "./Mounter";
 import hashFunc from "@emotion/hash"
-import {Dynamic} from "solid-js/web";
 
 type KeyframesEle = (() => JSX.Element) & {
     animationName: string
@@ -19,7 +17,7 @@ function keyframes(...args: Array<CSSInterpolation>): KeyframesEle
 function keyframes(...args: any[]): KeyframesEle {
     const styles = serializeStyles(args)
     const hash = hashFunc(styles.styles)
-    const name = getNameSerializedStyles(hash, true)
+    const name = "k" + hash
     const Styled = () => {
         return (
             <style>{`@keyframes ${name}{${styles.styles}}`}</style>

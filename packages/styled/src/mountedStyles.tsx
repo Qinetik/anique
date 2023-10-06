@@ -2,7 +2,6 @@
 import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
 import {JSX} from "solid-js";
 import hashFunc from "@emotion/hash"
-import {Dynamic} from "solid-js/web";
 
 type MountedStylesComponent = (() => JSX.Element)
 
@@ -15,7 +14,7 @@ function mountedStyles(...args: Array<CSSInterpolation>): MountedStylesComponent
 
 function mountedStyles(...args: any[]): MountedStylesComponent {
     const styles = serializeStyles(args)
-    const hash = hashFunc(styles.styles)
+    // const hash = hashFunc(styles.styles)
     // const name = getNameSerializedStyles(hash, false)
     return () => {
         return (

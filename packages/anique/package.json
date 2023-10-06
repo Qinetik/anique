@@ -26,8 +26,8 @@
         "@qinetik/anique-icons": "workspace:^"
     },
     "browser": {
-        "./dist/server.js": "./dist/index.js",
-        "./dist/server.cjs": "./dist/index.cjs"
+        "./dist/server.cjs": "./dist/index.cjs",
+        "./dist/server.js": "./dist/index.js"
     },
     "exports": {
         "worker": {
