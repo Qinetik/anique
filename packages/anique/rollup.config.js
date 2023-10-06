@@ -36,5 +36,7 @@ function createConfiguration(solidGenerate, format, name, extension) {
 
 export default [
     createConfiguration("dom", "es", "index", "js"),
-    createConfiguration("ssr", "cjs", "index","cjs"),
+    createConfiguration("dom", "cjs", "index", "cjs"),
+    createConfiguration("ssr", "es", "server","js"),
+    createConfiguration("ssr", "cjs", "server","cjs"),
 ]

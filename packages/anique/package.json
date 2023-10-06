@@ -1,14 +1,14 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.24",
+    "version": "1.0.25",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
         "dist/**"
     ],
     "type": "module",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
+    "module": "./dist/server.js",
+    "main": "./dist/server.cjs",
     "types": "./dist/index.d.ts",
     "scripts": {
         "clean": "node -e \"if(require('fs').existsSync('dist')) require('fs').rmSync('dist', { recursive : true })\"",
@@ -29,5 +29,59 @@
     },
     "dependencies": {
         "@qinetik/anique-icons": "workspace:^"
+    },
+    "browser": {
+        "./dist/server.js": "./dist/index.js",
+        "./dist/server.cjs": "./dist/index.cjs"
+    },
+    "exports": {
+        "worker": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "browser": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "deno": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "node": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "require": {
+            "types": "./dist/index.d.cts",
+            "default": "./dist/index.cjs"
+        }
     }
 }

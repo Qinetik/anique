@@ -1,13 +1,13 @@
 {
     "name": "@qinetik/anique-icons",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Emotion JS support for Solid JS projects.",
     "repository": "git@github.com:qinetik/anique.git",
     "author": "Qinetik",
     "license": "MIT",
     "type": "module",
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
+    "module": "./dist/server.js",
+    "main": "./dist/server.cjs",
     "types": "./dist/index.d.ts",
     "files": [
         "dist/**"
@@ -29,5 +29,59 @@
     },
     "peerDependencies": {
         "solid-js": "^1.7.11"
+    },
+    "browser": {
+        "./dist/server.js": "./dist/index.js",
+        "./dist/server.cjs": "./dist/index.cjs"
+    },
+    "exports": {
+        "worker": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "browser": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
+        },
+        "deno": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "node": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/server.js"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/server.cjs"
+            }
+        },
+        "import": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+        },
+        "require": {
+            "types": "./dist/index.d.cts",
+            "default": "./dist/index.cjs"
+        }
     }
 }
