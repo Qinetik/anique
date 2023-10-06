@@ -4,10 +4,7 @@
         "./src"
     ],
     "compilerOptions": {
-        "declarationDir": "dist",
-        "declaration": true,
-        "emitDeclarationOnly": true,
-        "noEmitOnError": true,
+        "rootDir": "src",
         "paths": {
             "@qinetik/emotion": [
                 "../styled/dist"

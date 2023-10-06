@@ -22,14 +22,14 @@ function createConfiguration(solidGenerate, format, name, extension) {
                 babel({
                     presets: [
                         "@babel/preset-typescript",
-                        ["solid", {"generate": solidGenerate, "hydratable": true}]
+                        ["solid", { generate: solidGenerate, "hydratable": true}]
                     ],
                     extensions: extensions
                 }),
                 nodeResolve({extensions}),
                 terser()
             ],
-            external : ["solid-js", "solid-js/web", "solid-js/store", "@qinetik/emotion"]
+            external : ["solid-js", "solid-js/web", "solid-js/store", "@qinetik/emotion", "@qinetik/anique-icons"]
         }
     )
 }
