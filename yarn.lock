@@ -1048,7 +1048,6 @@ __metadata:
     "@rollup/plugin-node-resolve": ^15.2.2
     "@rollup/plugin-terser": ^0.4.4
     babel-preset-solid: ^1.7.12
-    fast-glob: ^3.3.1
     rollup: ^4.0.0
   peerDependencies:
     "@qinetik/emotion": "workspace:^"
