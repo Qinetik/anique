@@ -1,4 +1,9 @@
-import{s as e,A as o}from"./Theme.0d521bda.js";const t=e("input")`
+import{s as e,A as o}from"./index.a97c299c.js";const s=e("div")`
+    border-radius: ${o.border.mdRadius};
+    background: ${o.colors.bg200};
+    box-sizing: border-box;
+    padding: 1em;
+`,d=e("input")`
 
     -webkit-appearance: none !important;
     width : 14em;
@@ -29,4 +34,4 @@ import{s as e,A as o}from"./Theme.0d521bda.js";const t=e("input")`
         border-color : ${o.colors.primary};
     }
     
-`;export{t as S};
+`;export{s as C,d as S};

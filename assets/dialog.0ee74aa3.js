@@ -1,0 +1,7 @@
+import{P,g as n,t as s}from"./web.8723317b.js";import{C as g}from"./index.3180e705.js";import{B as u}from"./select.a2e4049b.js";import{c as e,a as o,f as i}from"./solid.1407e386.js";import{d as b,P as l,r as D}from"./anique.b9c53cf1.js";import{s as v,A as O}from"./index.a97c299c.js";import"./index.02309b8a.js";import{C as m}from"./index.76c28dc9.js";import{P as x}from"./PositionSelection.f2cd26f6.js";function p(t){return e(P,{get children(){return e(b,{isVisible:()=>!0,get onClickOutside(){return t.onCloseRequest},get children(){return t.children},get flex(){return t.flex},get relative(){return t.relative}})}})}const k=s("<h1>Dialog"),q=s("<h1>Centered Dialog"),$=s("<h1>Positioned Dialog"),f=v("div")`
+    border-radius: 1em;
+    background: ${O.colors.bg400};
+    box-sizing: border-box;
+    padding: 2em;
+    position : absolute;
+`;function E(){const[t,a]=o(!1),[c,d]=o(!1),[r,h]=o(l.TopLeft);return e(m,{get children(){return[n(k),n(q),e(g,{get children(){return e(u,{onClick:C=>a(!t()),children:"Open Dialog"})}}),i(()=>i(()=>!!t())()?e(p,{onCloseRequest:()=>a(!1),get children(){return e(f,{children:"This is a centered dialog"})}}):null),n($),e(m,{gap:"0.5em",get children(){return[e(x,{activePosition:r,setActivePosition:h}),e(g,{get children(){return e(u,{onClick:C=>d(!c()),children:"Open Dialog"})}})]}}),i(()=>i(()=>!!c())()?e(p,{onCloseRequest:()=>d(!1),relative:!0,get children(){return e(f,{get style(){return{...D(r(),r()!=l.Center?"1em":"0",r()!=l.Center?"1em":"0")}},children:"This is a positioned dialog"})}}):null)]}})}export{E as default};
