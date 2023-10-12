@@ -37,8 +37,8 @@
         "@emotion/utils": "^1.2.1"
     },
     "browser": {
-        "./dist/server.js": "./dist/index.js",
-        "./dist/server.cjs": "./dist/index.cjs"
+        "./dist/server.cjs": "./dist/index.cjs",
+        "./dist/server.js": "./dist/index.js"
     },
     "exports": {
         "worker": {

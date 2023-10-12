@@ -1,20 +1,10 @@
 import {Portal} from "solid-js/web";
-import {Backdrop} from "../backdrop";
-import {styled} from "@qinetik/emotion";
-import {Anique} from "../theme/Theme";
+import {Backdrop, BackdropContentPositionProps} from "../backdrop";
 
-export interface DialogProps {
+export interface DialogProps extends BackdropContentPositionProps {
     children?: any
     onCloseRequest: () => void
 }
-
-const DialogContent = styled("div")`
-    border-radius: 1em;
-    background: ${Anique.colors.bg400};
-    box-sizing: border-box;
-    padding: 2em;
-    position : absolute;
-`
 
 export function Dialog(props: DialogProps) {
     return (
@@ -22,11 +12,10 @@ export function Dialog(props: DialogProps) {
             <Backdrop
                 isVisible={() => true}
                 onClickOutside={props.onCloseRequest}
-            >
-                <DialogContent>
-                    {props.children}
-                </DialogContent>
-            </Backdrop>
+                children={props.children}
+                flex={props.flex}
+                relative={props.relative}
+             />
         </Portal>
     )
 }
