@@ -75,6 +75,7 @@ export interface LabeledCheckboxProps extends CheckboxProps {
 export function LabeledCheckbox(props: LabeledCheckboxProps) {
 
     const checkboxProps: JSX.HTMLAttributes<HTMLInputElement> = {
+        // @ts-ignore
         checked: props.isChecked ? props.isChecked() : undefined,
         onChange: props.onChange ? ((e) => props.onChange!!(e.currentTarget.checked)) : undefined
     }
