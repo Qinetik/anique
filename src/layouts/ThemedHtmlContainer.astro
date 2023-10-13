@@ -1,0 +1,15 @@
+---
+import HTMLContainer from "./HTMLContainer.astro";
+import {AutoSystemColorScheme} from "../solid/components/AutoSystemColorScheme";
+---
+
+<HTMLContainer>
+
+    <slot name="head" slot="head"/>
+
+    <AutoSystemColorScheme
+            client:load
+    />
+
+    <slot/>
+</HTMLContainer>
