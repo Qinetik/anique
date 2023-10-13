@@ -17,3 +17,4 @@ const styled = createNewStyled.bind()
 
 export {styled, css, keyframes, baseStyled, mountedStyles, createStyled as oldStyled}
 export * from "./utils"
+export * from "./cache"

@@ -5,15 +5,14 @@ import {
     composeShouldForwardProps,
     CreateStyledFunction,
     getDefaultShouldForwardProp,
-    isBrowser,
+    isBrowser, isDevelopment,
     StyledComponent,
     StyledElementType,
     StyledOptions
 } from "./utils";
 import {Dynamic, isServer} from "solid-js/web";
 import hashFunc from "@emotion/hash"
-
-const isDevelopment : () => boolean = ()=> true
+import {CacheMountChildren, EmotionCacheProvider} from "./cache";
 
 // TODO fix the type here
 // @ts-ignore
@@ -109,8 +108,10 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
 
             // returning the component
             return (
-                <>
-                    <style>{`.${name}{${serStyles.styles}}`}</style>
+                <EmotionCacheProvider>
+                    <CacheMountChildren uniqueKey={hashName} >
+                        <style>{`.${name}{${serStyles.styles}}`}</style>
+                    </CacheMountChildren>
                     <ErrorBoundary fallback={(e,reset) => {
                         console.error("error making dynamic component in styled -> base " + isServer,e)
                         return e + " isBrowser = " + isBrowser() + " tag = " + finalTag
@@ -123,7 +124,7 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                             }
                         />
                     </ErrorBoundary>
-                </>
+                </EmotionCacheProvider>
             )
 
 

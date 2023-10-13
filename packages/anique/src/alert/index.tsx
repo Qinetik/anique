@@ -5,6 +5,7 @@ import {Icon} from "../icon";
 import { CheckCircleOutline } from "@qinetik/anique-icons";
 import { AlertIcon } from "@qinetik/anique-icons";
 import { InformationBoxOutline } from "@qinetik/anique-icons";
+import {JSX, ParentProps, splitProps} from "solid-js";
 
 export enum AlertType {
     Info = "info",
@@ -46,10 +47,10 @@ function icon(type ?: AlertType) {
     return CheckCircleOutline
 }
 
-export function Alert(props: { type?: AlertType, children?: any }) {
+export function Alert(props: ParentProps<AlertProps> & JSX.HTMLAttributes<HTMLDivElement>) {
     const AlertIcon = icon(props.type)
     return (
-        <AlertRoot type={props.type}>
+        <AlertRoot type={props.type} {...splitProps(props, ["type", "children"])[1]}>
             <Row gap={"1em"}>
                 <Icon>
                     <AlertIcon />

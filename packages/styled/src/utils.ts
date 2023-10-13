@@ -7,6 +7,11 @@ export function isBrowser(){
    return typeof document !== 'undefined'
 }
 
+export function isDevelopment() {
+    // @ts-ignore
+    return process.env.NODE_ENV === "development"
+}
+
 export type RefCallback<T> = {
   bivarianceHack(instance: T | null): void
 }['bivarianceHack']

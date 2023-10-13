@@ -55,10 +55,10 @@ export function BackdropRoot(props: BackdropRootProps) {
     )
 }
 
-export function onBackdropClick(props: BackdropOutsideClickProp): (e: MouseEvent & { currentTarget: HTMLElement, target: Element }) => void {
+export function onBackdropClick(onClickOutside : () => void): (e: MouseEvent & { currentTarget: HTMLElement, target: Element }) => void {
     return (e) => {
         if (e.currentTarget === e.target || !e.currentTarget.contains(e.target)) {
-            props.onClickOutside()
+            onClickOutside()
         }
     }
 }
@@ -77,7 +77,7 @@ export function BackdropContent(props: BackdropContentProps) {
     return (
         <div
             children={props.children}
-            onClick={onBackdropClick(props)}
+            onClick={onBackdropClick(props.onClickOutside)}
             style={{
                 width : "100%",
                 height : "100%",
