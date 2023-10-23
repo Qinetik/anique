@@ -21,6 +21,10 @@ export default function ButtonPage() {
                     <Button size={Size.Large}>Large Button</Button>
                 </Row>
             </Card>
+            <h1>Disabled</h1>
+            <Card>
+                <Button disabled>Home</Button>
+            </Card>
         </Column>
     )
 }

@@ -10,18 +10,22 @@ const ButtonBase = styled("button")<{
     box-sizing: border-box;
     padding: ${p=> 0.8 + (p.size ? (p.size * 0.25) : 0)}em ${p=> 0.8 + (p.size ? (p.size * 0.5) : 0)}em;
     background: ${Anique.colors.primary};
-    border-radius: 8px;
+    border-radius: ${Anique.border.lgRadius};
     cursor: pointer;
 
     border: 0;
     outline: 0;
     overflow: hidden;
 
-    &:hover {
+    &:disabled {
+        background : ${Anique.colors.bg500};
+    }
+    
+    &:hover:not(&:disabled) {
         background: ${Anique.colors.primary100};
     }
 
-    &:active {
+    &:active:not(&:disabled) {
         background: ${Anique.colors.primary200};
     }
 

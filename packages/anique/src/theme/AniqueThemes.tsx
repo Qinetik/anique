@@ -16,7 +16,7 @@ const CommonFont: Font = {
 const CommonBorder: Border = {
     smRadius: "0.25em",
     mdRadius: "0.5em",
-    lgRadius: "1em"
+    lgRadius: "0.75em"
 }
 
 const CommonAnimation: AniqueAnimation = {
