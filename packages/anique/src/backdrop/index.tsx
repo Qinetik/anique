@@ -66,15 +66,8 @@ export function BackdropRoot(props: BackdropRootProps) {
     )
 }
 
-export function onBackdropClick(onClickOutside: () => void): (e: MouseEvent & {
-    currentTarget: HTMLElement,
-    target: Element
-}) => void {
-    return (e) => {
-        if (e.currentTarget === e.target || !e.currentTarget.contains(e.target)) {
-            onClickOutside()
-        }
-    }
+function isEventOutside(e: MouseEvent & { currentTarget: HTMLElement, target: Element }) {
+    return e.currentTarget === e.target || !e.currentTarget.contains(e.target);
 }
 
 export function BackdropContent(props: BackdropContentProps) {
@@ -88,10 +81,24 @@ export function BackdropContent(props: BackdropContentProps) {
         position: "relative"
     }) : ({}))
 
+    let isDownOutside: boolean = false
+
     return (
         <div
             children={props.children}
-            onClick={onBackdropClick(props.onClickOutside)}
+            onMouseDown={(e) => {
+                isDownOutside = isEventOutside(e)
+            }}
+            onMouseUp={(e) => {
+                const isUpOutside = isEventOutside(e)
+                if (isDownOutside && isUpOutside) {
+                    props.onClickOutside()
+                }
+                // if(isUpOutside && !isDownOutside) {
+                // console.log("Avoided dialog on click outside because the mousedown target is not inside")
+                // }
+                isDownOutside = false
+            }}
             style={{
                 width: "100%",
                 height: "100%",
