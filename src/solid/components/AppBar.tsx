@@ -5,6 +5,8 @@ import {ThemeSwitcher} from "./ThemeSwitcher";
 import {AppBar} from "@qinetik/anique/appbar";
 import {GithubIconBlack, GithubIconWhite} from "../icons/GithubIcons.tsx";
 
+const LinkIconButton = IconButton.withComponent("a")
+
 export function WebAppBar(props: { title?: string }) {
     return (
         <AppBar
@@ -18,12 +20,12 @@ export function WebAppBar(props: { title?: string }) {
             title={props.title || "Anique"}
             actions={(
                 <Row gap={"1em"}>
-                    <IconButton as={"a"} target={"_blank"} href={"https://github.com/qinetik/anique"} class={"display-in-dark"}>
+                    <LinkIconButton target={"_blank"} href={"https://github.com/qinetik/anique"} class={"display-in-dark"}>
                         <GithubIconWhite/>
-                    </IconButton>
-                    <IconButton as={"a"} target={"_blank"} href={"https://github.com/qinetik/anique"} class={"display-in-light"}>
+                    </LinkIconButton>
+                    <LinkIconButton target={"_blank"} href={"https://github.com/qinetik/anique"} class={"display-in-light"}>
                         <GithubIconBlack/>
-                    </IconButton>
+                    </LinkIconButton>
                     <ThemeSwitcher/>
                 </Row>
             )}
