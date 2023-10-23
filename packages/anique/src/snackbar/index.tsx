@@ -31,7 +31,7 @@ export function SnackbarHost(props: {
     )
 }
 
-interface Snackbars {
+export interface Snackbars {
 
     snackbars : Accessor<Snackbar[]>
 
