@@ -53,14 +53,14 @@ export default function ChipPage() {
             <h1>Clickable Chip</h1>
             <Card>
                 <Row gap={"1em"}>
-                    <ClickableChip background={"primary"}>
+                    <ClickableChip>
                         <span>My First Chip</span>
                     </ClickableChip>
                     <ClickableChip variation={"primary"}>
-                        <span>My First Chip</span>
+                        <span>My Second Chip</span>
                     </ClickableChip>
                     <ClickableChip variation={"accent"}>
-                        <span>My First Chip</span>
+                        <span>My Third Chip</span>
                     </ClickableChip>
                     <ClickableChip>
                         <IconButton size={-0.5}>
