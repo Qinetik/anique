@@ -1,8 +1,10 @@
 import {styled} from "@qinetik/emotion";
 import {createSignal, Show} from "solid-js";
-import {Anique, AppBar, DrawerItem, IconButton, LabeledCheckbox, Row, StaticDrawer} from "@qinetik/anique";
+import {Anique, AppBar, DrawerItem, IconButton, LabeledCheckbox, MenuItem, Row, StaticDrawer} from "@qinetik/anique";
 import {Scaffold} from "@qinetik/anique/scaffold";
 import Menu from "../../icons/Menu";
+import {MoreVertIcon} from "@qinetik/anique-icons";
+import {DropdownMenu} from "@qinetik/anique/dropdown";
 
 const MobileIconButton = styled(IconButton)`
   ${Anique.breakpoints.up("md")} {
@@ -21,6 +23,7 @@ export default function ScaffoldTestingPage() {
     const [hasTopBar, setHasTopBar] = createSignal(true)
     const [hasLeftSidebar, setHasLeftSidebar] = createSignal(true)
     const [hasRightSidebar, setHasRightSidebar] = createSignal(true)
+    const [dropdown, setDropdown] = createSignal(false)
 
     return (
         <Scaffold
@@ -51,6 +54,16 @@ export default function ScaffoldTestingPage() {
                                 isChecked={hasRightSidebar}
                                 onChange={(e) => setHasRightSidebar(e)}
                             />
+                            <div style={{ position : "relative" }}>
+                                <IconButton onClick={() => setDropdown((e)=> !e)}>
+                                    <MoreVertIcon />
+                                </IconButton>
+                                <Show when={dropdown()}>
+                                    <DropdownMenu style={{ right : "0" }}>
+                                        <MenuItem>Demo Dropdown</MenuItem>
+                                    </DropdownMenu>
+                                </Show>
+                            </div>
                         </Row>
                     }
                 />
