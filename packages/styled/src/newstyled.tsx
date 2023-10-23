@@ -33,7 +33,6 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
     const shouldForwardProp = composeShouldForwardProps(tag, options, isReal)
     const defaultShouldForwardProp =
         shouldForwardProp || getDefaultShouldForwardProp(baseTag)
-    const shouldUseAs = !defaultShouldForwardProp('as')
 
     // Return creator function
     return function <Props>(...args: (object | ((props: Props & {theme: any}) => object))[]) {
@@ -70,14 +69,14 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
         }
 
 
-        type StyledProps = Props & { as?: string; class?: string }
+        type StyledProps = Props & { class?: string }
 
 
         // The Actual Component That User Will Use & It Will Emit HTML
         const Styled = (props : StyledProps) => {
 
             // figure out the tag to use
-            const finalTag = (shouldUseAs && props.as) || baseTag
+            const finalTag = baseTag
 
             // The actual work
             // serializing styles

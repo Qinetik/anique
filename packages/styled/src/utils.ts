@@ -120,7 +120,7 @@ export interface WithComponentFunction<Props extends object> {
 
 }
 
-export interface EmotionStyledComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { as?: string; class?: string }> {
+export interface EmotionStyledComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { class?: string }> {
     withComponent: WithComponentFunction<Props>
 }
 
