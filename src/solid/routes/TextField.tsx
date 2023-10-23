@@ -89,7 +89,7 @@ export function TextFieldPage() {
                 label={"Username"}
                 placeholder={"Type Here"}
             />
-            <p>Background</p>
+            <p>Styled</p>
             <TextField
                 leadingIcon={
                     <Icon>
@@ -101,9 +101,13 @@ export function TextFieldPage() {
                         <Menu />
                     </IconButton>
                 }
-                background={Anique.colors.primary}
                 label={"Username"}
                 placeholder={"Type Here"}
+                containerProps={{
+                    style : {
+                        background : Anique.colors.primary
+                    }
+                }}
             />
             <p>Disabled</p>
             <TextField
