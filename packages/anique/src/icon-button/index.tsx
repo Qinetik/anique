@@ -10,8 +10,8 @@ interface IconButtonProps {
 
 export const IconButton = styled("div")<IconButtonProps>`
 
-    width: ${p => 2 + 0.5 * (p.size || 0)}rem;
-    height: ${p => 2 + 0.5 * (p.size || 0)}rem;
+    width: ${p => 2 + 1 * (p.size || 0)}rem;
+    height: ${p => 2 + 1 * (p.size || 0)}rem;
     border-radius: 50%;
 
     ${p => p.disableAutoFill ? "" : `fill:${Anique.colors.onBg};`}
@@ -27,11 +27,11 @@ export const IconButton = styled("div")<IconButtonProps>`
     }
 
     &:hover {
-        background: ${Anique.colors.primary};
+        background: ${Anique.colors.bg300};
     }
 
     &:active {
-        background: ${Anique.colors.primary100};
+        background: ${Anique.colors.bg400};
     }
 
 `
