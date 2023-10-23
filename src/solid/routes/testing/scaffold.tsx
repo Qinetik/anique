@@ -1,5 +1,5 @@
 import {styled} from "@qinetik/emotion";
-import {createSignal} from "solid-js";
+import {createSignal, Show} from "solid-js";
 import {Anique, AppBar, DrawerItem, IconButton, LabeledCheckbox, Row, StaticDrawer} from "@qinetik/anique";
 import {Scaffold} from "@qinetik/anique/scaffold";
 import Menu from "../../icons/Menu";
@@ -55,11 +55,12 @@ export default function ScaffoldTestingPage() {
                     }
                 />
             )) : undefined}
-            drawerContent={hasLeftSidebar() ? () => <DemoStaticDrawer/> : undefined}
+            drawerContent={hasLeftSidebar() ? () => <DemoStaticDrawer mobile={false}/> : undefined}
             drawerWidth={"300px"}
             oppositeDrawerWidth={"300px"}
-            oppositeDrawerContent={hasRightSidebar() ? () => <DemoStaticDrawer/> : undefined}
+            oppositeDrawerContent={hasRightSidebar() ? () => <DemoStaticDrawer mobile={false}/> : undefined}
             showMobileDrawer={mobileDrawerOpen}
+            mobileDrawerContent={() => <DemoStaticDrawer mobile={true} />}
             onDismissMobileDrawer={() => setMobileDrawerOpen(false)}
         >
             {/*{!hasTopBar() ? (*/}
@@ -76,33 +77,32 @@ export default function ScaffoldTestingPage() {
     )
 }
 
-function DemoStaticDrawer() {
+function DemoStaticDrawer(props : { mobile : boolean }) {
     let content: string[] = []
-    for (let i = 1; i <= 500; i++) {
+    for (let i = 1; i <= 25; i++) {
         content = [...content, `Content ${i}`]
     }
     return (
         <StaticDrawer>
-            <DrawerItem>
-                First Something
-            </DrawerItem>
-            <DrawerItem>
-                Second Something
-            </DrawerItem>
-            <DrawerItem>
-                Third Something
-            </DrawerItem>
-            <DrawerItem>
-                Fourth Something
-            </DrawerItem>
-            {/*{content.map(e => <DrawerItem>{e}</DrawerItem>)}*/}
+            <Show when={props.mobile}>
+                <DrawerItem>
+                    Second Something
+                </DrawerItem>
+                <DrawerItem>
+                    Third Something
+                </DrawerItem>
+                <DrawerItem>
+                    Fourth Something
+                </DrawerItem>
+            </Show>
+            {content.map(e => <DrawerItem>{e}</DrawerItem>)}
         </StaticDrawer>
     )
 }
 
 function DemoFooter() {
     return (
-        <div style={{width: "100%", height: "200px", background: "yellow"}}>
+        <div style={{width: "100%", height: "200px" }}>
             This is my footer
         </div>
     )

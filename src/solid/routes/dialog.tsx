@@ -37,6 +37,7 @@ export default function DialogPage() {
             {is1stOpen() ? (
                 <Dialog
                     onCloseRequest={() => setIs1stOpen(false)}
+                    isVisible={is1stOpen}
                 >
                     <DialogContent>
                         This is a centered dialog

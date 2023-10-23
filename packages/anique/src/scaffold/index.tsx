@@ -13,7 +13,6 @@ const Root = styled("div")`
 const Sidebar = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
     width: ${p => p.drawerWidth};
     height: calc(100% - ${p => p.topBarHeight});
-    //background: skyblue;
     box-sizing: border-box;
     position: relative;
     z-index: 998;
@@ -23,6 +22,8 @@ const Sidebar = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
     ${Anique.breakpoints.up("md")} {
         display: block;
     }
+
+    //background: skyblue;
 
 `
 
@@ -51,23 +52,24 @@ const TopBar = styled("div")<{
     left: 0;
     top: 0;
     right: 0;
-    //background: blue;
     height: ${p => p.topBarHeight};
     z-index: 999;
+    //background: blue;
 `
 
 const ContentWrapper = styled("div")<{ topBarHeight: string }>`
     flex: 1;
-    //background: grey;
     overflow-y: auto;
     margin-top: ${p => p.topBarHeight};
     position: relative;
+    //background: grey;
 `
 
 const MobileSidebar = styled("div")<{ hideAboveBreakpoint?: string }>`
     position: absolute;
     top: 0;
     bottom: 0;
+
     ${p => p.hideAboveBreakpoint != null && p.hideAboveBreakpoint + `{
      display: none;
   }`}
@@ -128,10 +130,12 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
                 </Sidebar>
             </Show>
             <Show
-                when={mobileDrawerContent != null && props.showMobileDrawer != null && props.onDismissMobileDrawer != null}>
+                when={mobileDrawerContent != null && props.showMobileDrawer != null && props.onDismissMobileDrawer != null}
+            >
                 <Backdrop
                     isVisible={props.showMobileDrawer!!}
                     onClickOutside={props.onDismissMobileDrawer!!}
+                    style={{"z-index": 999}}
                     relative
                 >
                     <MobileSidebar
@@ -142,9 +146,9 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
                             drawerWidth={drawerWidth}
                             topBarHeight={topBarHeight}
                             style={{
-                                background : Anique.colors.bg100,
-                                "border-top-right-radius" : Anique.border.mdRadius,
-                                "border-bottom-right-radius" : Anique.border.mdRadius,
+                                background: Anique.colors.bg100,
+                                "border-top-right-radius": Anique.border.mdRadius,
+                                "border-bottom-right-radius": Anique.border.mdRadius,
                                 ...(isMobileOpposite ? ({right: 0}) : ({left: 0}))
                             }}
                         >

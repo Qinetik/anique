@@ -18,7 +18,7 @@ export function Dialog(props: DialogProps) {
     return (
         <Portal>
             <Backdrop
-                isVisible={props.isVisible || (() => true)}
+                isVisible={props.isVisible}
                 onClickOutside={props.onCloseRequest}
                 children={props.children}
                 flex={props.flex}
