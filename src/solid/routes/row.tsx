@@ -28,6 +28,16 @@ export default function RowPage() {
                     <Button size={4}>Fifth</Button>
                 </Row>
             </Card>
+            <h1>Wrap</h1>
+            <Card style={{ width : "240px"}}>
+                <Row style={{ width : "100%" }} gap={"0.2em"} wrap>
+                    <Button>Item #1</Button>
+                    <Button>Item #2</Button>
+                    <Button>Item #3</Button>
+                    <Button>Item #4</Button>
+                    <Button>Item #5</Button>
+                </Row>
+            </Card>
         </Column>
     )
 }

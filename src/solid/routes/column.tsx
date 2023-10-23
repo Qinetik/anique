@@ -27,6 +27,16 @@ export default function ColumnPage() {
                     <Button size={4}>Fifth</Button>
                 </Column>
             </Card>
+            <h1>Wrap</h1>
+            <Card>
+                <Column style={{ height : "160px" }} gap={"0.5em 0.75em"} wrap>
+                    <Button>First</Button>
+                    <Button>Second</Button>
+                    <Button>Third</Button>
+                    <Button>Fourth</Button>
+                    <Button>Fifth</Button>
+                </Column>
+            </Card>
         </Column>
     )
 }
