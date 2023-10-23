@@ -12,7 +12,7 @@ const Input = styled("input")`
     font-family: inherit;
     padding: 0.5em;
     box-sizing: border-box;
-    border: 2px solid ${Anique.colors.bg300};
+    border: 2px solid ${Anique.colors.bg200};
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
     background: ${Anique.colors.bg100};
