@@ -4,71 +4,71 @@ import {Anique, Breakpoint} from "../theme";
 import {Backdrop} from "../backdrop";
 
 const Root = styled("div")`
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  height: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
 `
 
 const Sidebar = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
-  width: ${p => p.drawerWidth};
-  height: calc(100% - ${p => p.topBarHeight});
-  //background: skyblue;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 998;
+    width: ${p => p.drawerWidth};
+    height: calc(100% - ${p => p.topBarHeight});
+    //background: skyblue;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 998;
 
-  display: none;
+    display: none;
 
-  ${Anique.breakpoints.up("md")} {
-    display: block;
-  }
+    ${Anique.breakpoints.up("md")} {
+        display: block;
+    }
 
 `
 
 const SidebarContent = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
-  width: ${p => p.drawerWidth};
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  box-sizing: border-box;
-  height: calc(100% - ${p => p.topBarHeight});
-  position: fixed;
-  top: ${p => p.topBarHeight};
-  bottom: 0;
-  //background: red;
+    width: ${p => p.drawerWidth};
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: calc(100% - ${p => p.topBarHeight});
+    position: fixed;
+    top: ${p => p.topBarHeight};
+    bottom: 0;
+    //background: red;
 `
 
 const Wrapper = styled("div")`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 `
 
 const TopBar = styled("div")<{
     topBarHeight: string
 }>`
-  left: 0;
-  top: 0;
-  right: 0;
-  //background: blue;
-  height: ${p => p.topBarHeight};
-  z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    //background: blue;
+    height: ${p => p.topBarHeight};
+    z-index: 999;
 `
 
 const ContentWrapper = styled("div")<{ topBarHeight: string }>`
-  flex: 1;
-  //background: grey;
-  overflow-y: auto;
-  margin-top: ${p => p.topBarHeight};
-  position: relative;
+    flex: 1;
+    //background: grey;
+    overflow-y: auto;
+    margin-top: ${p => p.topBarHeight};
+    position: relative;
 `
 
 const MobileSidebar = styled("div")<{ hideAboveBreakpoint?: string }>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  ${p => p.hideAboveBreakpoint != null && p.hideAboveBreakpoint + `{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    ${p => p.hideAboveBreakpoint != null && p.hideAboveBreakpoint + `{
      display: none;
   }`}
 `
@@ -141,7 +141,12 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
                         <SidebarContent
                             drawerWidth={drawerWidth}
                             topBarHeight={topBarHeight}
-                            style={isMobileOpposite ? ({right: 0}) : ({left: 0})}
+                            style={{
+                                background : Anique.colors.bg100,
+                                "border-top-right-radius" : Anique.border.mdRadius,
+                                "border-bottom-right-radius" : Anique.border.mdRadius,
+                                ...(isMobileOpposite ? ({right: 0}) : ({left: 0}))
+                            }}
                         >
                             {mobileDrawerContent!!()}
                         </SidebarContent>
