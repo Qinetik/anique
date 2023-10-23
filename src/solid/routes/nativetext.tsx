@@ -33,7 +33,7 @@ export default function NativeTextPage() {
             </Card>
             <h1>Links</h1>
             <Card>
-                <a href={"https://example.com"}>Here's my link</a>
+                <a href={"https://example.com"} target={"_blank"}>Here's my link</a>
             </Card>
         </Column>
 
