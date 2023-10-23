@@ -57,27 +57,31 @@ export function AlertDialog(props: AlertDialogProps) {
             onCloseRequest={props.onCloseRequest}
         >
             <AlertContentContainer gap={"1em"}>
-                <Row gap={"0.5em"} style={{ width : "100%" }}>
-                    <Show when={props.title != null}>
-                        <Show when={typeof props.title === "string"}>
-                            <h3 style={{ flex : 1, margin : 0 }}>{props.title}</h3>
+                <Show when={props.title != null}>
+                    <Row gap={"0.5em"} style={{ width : "100%" }}>
+                        <Show when={props.title != null}>
+                            <Show when={typeof props.title === "string"}>
+                                <h3 style={{ flex : 1, margin : 0 }}>{props.title}</h3>
+                            </Show>
+                            <Show when={typeof props.title !== "string"}>
+                                {props.title}
+                            </Show>
                         </Show>
-                        <Show when={typeof props.title !== "string"}>
-                            {props.title}
+                        <Show when={props.closeIcon == null ? true : props.closeIcon}>
+                            <IconButton style={{ "margin-left" : "auto" }} onClick={props.onCloseRequest} size={0.5}>
+                                <CloseIcon />
+                            </IconButton>
                         </Show>
-                    </Show>
-                    <Show when={props.closeIcon == null ? true : props.closeIcon}>
-                        <IconButton style={{ "margin-left" : "auto" }} onClick={props.onCloseRequest} size={0.5}>
-                            <CloseIcon />
-                        </IconButton>
-                    </Show>
-                </Row>
+                    </Row>
+                </Show>
                 <div>
                     {props.content}
                 </div>
-                <Row gap="0.5em" style={{ "align-self" : "flex-end" }}>
-                    {props.actions}
-                </Row>
+                <Show when={props.actions != null}>
+                    <Row gap="0.5em" style={{ "align-self" : "flex-end" }}>
+                        {props.actions}
+                    </Row>
+                </Show>
             </AlertContentContainer>
         </Dialog>
     )
