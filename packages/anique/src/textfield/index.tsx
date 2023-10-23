@@ -3,13 +3,15 @@ import {Anique} from "../theme/Theme";
 import {JSX, splitProps} from "solid-js";
 import {Row} from "../row";
 import {Column} from "../column";
-import {ThemeColors} from "../theme";
 
 const Input = styled("input")`
-    width: 12em;
+
+    width: 14em;
+    min-height : 2em;
     font-size: max(16px, 1em);
     font-family: inherit;
-    padding: 0.25em 0.5em;
+    padding: 0.5em;
+    box-sizing : border-box;
     border: 2px solid ${Anique.colors.bg300};
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
@@ -26,10 +28,7 @@ const Input = styled("input")`
     }
 `
 
-export const BaseTextField = styled(Input)`
-    line-height: 1;
-    height: 2rem;
-`
+export const BaseTextField = Input
 
 const TextFieldContainer = styled(Column)`
 
@@ -88,5 +87,5 @@ export function TextField(props: TextFieldProps) {
 
 export const TextArea = styled(Input.withComponent("textarea"))`
     resize: vertical;
-    height: 6rem;
+    height: 8rem;
 `
