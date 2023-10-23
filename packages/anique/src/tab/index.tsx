@@ -1,6 +1,6 @@
 import {styled} from "@qinetik/emotion";
-import {Anique} from "@qinetik/anique";
 import {JSX, ParentProps, splitProps} from "solid-js";
+import {Anique} from "../theme";
 
 // export interface TabRowProps {
 //

@@ -16,6 +16,7 @@ export function createComposableComponent<Props, PK extends string, PV extends s
 
     const Evaluator = (props : ParentProps<Omit<Props, keyof ComposableProps>>) => {
         let params = useContext(Context)
+        // @ts-ignore
         return component({ ...props, ...params })
     }
 
@@ -29,6 +30,7 @@ export function createComposableComponent<Props, PK extends string, PV extends s
         )
     }
 
+    // @ts-ignore
     let ComposableParametricFunctions : Record<keyof ComposableProps, (props : ParentProps) => JSXElement> = {}
 
     for(const key in parameters){
@@ -42,6 +44,7 @@ export function createComposableComponent<Props, PK extends string, PV extends s
         }
     }
 
+    // @ts-ignore
     return {
         Root : Root,
         ...ComposableParametricFunctions
