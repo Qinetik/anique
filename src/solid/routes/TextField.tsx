@@ -4,7 +4,7 @@ import {Headline} from "@qinetik/anique/headline";
 import Menu from "../icons/Menu";
 import { InformationBoxOutline } from "@qinetik/anique-icons";
 import {IconButton} from "@qinetik/anique/icon-button";
-import {Anique} from "@qinetik/anique";
+import {Anique, Icon} from "@qinetik/anique";
 
 export function TextFieldPage() {
     return (
@@ -18,6 +18,18 @@ export function TextFieldPage() {
             <TextArea
                 placeholder={"Note here"}
             />
+            <h3>Disabled</h3>
+            <Column gap={"0.5em"}>
+                <BaseTextField
+                    placeholder={"Username"}
+                    value={"Something i wrote here"}
+                    disabled
+                />
+                <TextArea
+                    placeholder={"Note here"}
+                    disabled
+                >Something I wrote here</TextArea>
+            </Column>
             <h1 style={{margin : "1em 0 0 0"}}>Labeled Text Field</h1>
             <p>Without Label & Icons</p>
             <TextField
@@ -31,9 +43,9 @@ export function TextFieldPage() {
             <p>With Leading Icon</p>
             <TextField
                 leadingIcon={
-                    <IconButton size={-1}>
+                    <Icon>
                         <InformationBoxOutline />
-                    </IconButton>
+                    </Icon>
                 }
                 label={"Username"}
                 placeholder={"Type Here"}
@@ -41,7 +53,7 @@ export function TextFieldPage() {
             <p>With Trailing Icon</p>
             <TextField
                 trailingIcon={
-                    <IconButton size={-1}>
+                    <IconButton>
                         <Menu />
                     </IconButton>
                 }
@@ -51,12 +63,12 @@ export function TextFieldPage() {
             <p>With Leading & Trailing Icons</p>
             <TextField
                 leadingIcon={
-                    <IconButton size={-1}>
+                    <Icon>
                         <InformationBoxOutline />
-                    </IconButton>
+                    </Icon>
                 }
                 trailingIcon={
-                    <IconButton size={-1}>
+                    <IconButton>
                         <Menu />
                     </IconButton>
                 }
@@ -65,12 +77,12 @@ export function TextFieldPage() {
             <p>With Label, Leading & Trailing Icons</p>
             <TextField
                 leadingIcon={
-                    <IconButton size={-1}>
+                    <Icon>
                         <InformationBoxOutline />
-                    </IconButton>
+                    </Icon>
                 }
                 trailingIcon={
-                    <IconButton size={-1}>
+                    <IconButton>
                         <Menu />
                     </IconButton>
                 }
@@ -80,23 +92,23 @@ export function TextFieldPage() {
             <p>Background</p>
             <TextField
                 leadingIcon={
-                    <IconButton size={-1}>
+                    <Icon>
                         <InformationBoxOutline />
-                    </IconButton>
+                    </Icon>
                 }
                 trailingIcon={
-                    <IconButton size={-1}>
+                    <IconButton>
                         <Menu />
                     </IconButton>
                 }
-                background={Anique.colors.bg300}
+                background={Anique.colors.primary}
                 label={"Username"}
                 placeholder={"Type Here"}
             />
             <p>Disabled</p>
             <TextField
                 trailingIcon={
-                    <IconButton size={-1}>
+                    <IconButton>
                         <Menu />
                     </IconButton>
                 }
@@ -107,27 +119,12 @@ export function TextFieldPage() {
             <p>With Normal Sized Icons</p>
             <TextField
                 leadingIcon={
-                    <IconButton>
+                    <Icon>
                         <InformationBoxOutline />
-                    </IconButton>
+                    </Icon>
                 }
                 trailingIcon={
                     <IconButton>
-                        <Menu />
-                    </IconButton>
-                }
-                label={"Username"}
-                placeholder={"Type Here"}
-            />
-            <p>With Large Sized Icons</p>
-            <TextField
-                leadingIcon={
-                    <IconButton size={2}>
-                        <InformationBoxOutline />
-                    </IconButton>
-                }
-                trailingIcon={
-                    <IconButton size={2}>
                         <Menu />
                     </IconButton>
                 }

@@ -3,12 +3,17 @@ import {Anique} from "../theme/Theme";
 import {Size} from "../theme/Size";
 
 export interface IconProps {
-    fill ?: string
-    size ?: Size
+    fill?: string
+    size?: Size
 }
 
 export const Icon = styled("div")<IconProps>`
-    fill: ${p=> p.fill || Anique.colors.onBg};
-    width: ${p => 0.5 + ((p.size || 1))}rem;
-    height: ${p => 0.5 + ((p.size || 1))}rem;
+    fill: ${p => p.fill || Anique.colors.onBg};
+    width: ${p => 1.5 + ((p.size || 0))}rem;
+    height: ${p => 1.5 + ((p.size || 0))}rem;
+
+    & > svg {
+        width: ${p => 1.5 + (p.size || 0) * 0.3}rem;
+        height: ${p => 1.5 + (p.size || 0) * 0.3}rem;
+    }
 `

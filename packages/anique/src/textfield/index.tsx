@@ -7,14 +7,15 @@ import {Column} from "../column";
 const Input = styled("input")`
 
     width: 14em;
-    min-height : 2em;
+    min-height: 2em;
     font-size: max(16px, 1em);
     font-family: inherit;
     padding: 0.5em;
-    box-sizing : border-box;
+    box-sizing: border-box;
     border: 2px solid ${Anique.colors.bg300};
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
+    background: ${Anique.colors.bg100};
 
     &:focus {
         border-color: ${Anique.colors.primary};
@@ -23,18 +24,25 @@ const Input = styled("input")`
     }
 
     &:disabled {
-        background-color: #eee;
-        cursor: not-allowed;
+        background: ${Anique.colors.bg300};
+        color: ${Anique.colors.bg500};
     }
+
 `
 
 export const BaseTextField = Input
 
 const TextFieldContainer = styled(Column)`
 
+    width: 14em;
     border: 2px solid ${Anique.colors.bg300};
+    box-sizing: border-box;
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
+    background: ${Anique.colors.bg100};
+
+    padding: 0.25em 0.5em;
+    position: relative;
 
     &:has(input:focus) {
         border-color: ${Anique.colors.primary};
@@ -42,41 +50,48 @@ const TextFieldContainer = styled(Column)`
         outline: 3px solid transparent;
     }
 
-    padding: 0.25em 0.5em;
-    position: relative;
+    &.disabled {
+        background: ${Anique.colors.bg500};
+    }
+
+    &.disabled .label {
+        color: ${Anique.colors.onBg500};
+    }
+
 `
 
 const UnstyledTextField = styled("input")`
     background: transparent;
     border: 0;
     outline: 0;
-    padding: 0.5em 0.5em;
+    padding: 0.5em 0.25em 0.5em 0.25em;
     font-family: ${Anique.font.secondary};
+    min-width : 10em;
+    flex : 1;
+    box-sizing : border-box;
 `
 
 const TextFieldLabel = styled("span")`
-    color : ${Anique.colors.onBg200};
-    font-size : 0.8rem;
-    margin-left : 0.25em;
+    color: ${Anique.colors.onBg200};
+    font-size: 0.8rem;
+    margin-left: 0.25em;
 `
 
 export interface TextFieldProps extends JSX.InputHTMLAttributes<HTMLInputElement> {
     leadingIcon?: any
     trailingIcon?: any
     label?: string
-    background ?: string
+    background?: string
 }
 
 export function TextField(props: TextFieldProps) {
-    const backgroundStyle = props.background || props.disabled == true ? ({
-        background : props.background || (Anique.colors.bg500)
+    const backgroundStyle = props.background ? ({
+        background: props.background
     }) : ({})
     return (
-        <TextFieldContainer style={{
-            ...backgroundStyle,
-        }}>
-            {props.label && <TextFieldLabel>{props.label}</TextFieldLabel>}
-            <Row>
+        <TextFieldContainer style={backgroundStyle} class={props.disabled ? "disabled" : undefined}>
+            {props.label && <TextFieldLabel class={"label"}>{props.label}</TextFieldLabel>}
+            <Row style={{ width : "100%", "align-items" : "center" }}>
                 {props.leadingIcon}
                 <UnstyledTextField {...splitProps(props, ["leadingIcon", "trailingIcon", "label", "background"])[1]}/>
                 {props.trailingIcon}
