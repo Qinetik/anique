@@ -1,5 +1,6 @@
 import {styled} from "@qinetik/emotion";
 import {JSX, splitProps} from "solid-js";
+import {Spacer} from "../utils";
 
 export interface AppBarProps extends JSX.HTMLAttributes<HTMLDivElement> {
     navIcon?: any
@@ -36,7 +37,7 @@ export function AppBar(props: AppBarProps) {
                 <AppBarNavIcon>
                     {props.navIcon}
                 </AppBarNavIcon>
-            ) : null}
+            ) : <Spacer width={"0.75em"} />}
             <AppBarTitle>
                 {props.title}
             </AppBarTitle>

@@ -29,21 +29,14 @@ export default function ScaffoldTestingPage() {
         <Scaffold
             topBar={hasTopBar() ? (() => (
                 <AppBar
-                    title={
-                        <Row gap={"1em"}>
-                            <IconButton onClick={() => setMobileDrawerOpen((e) => !e)}>
-                                <Menu/>
-                            </IconButton>
-                            Scaffold Demo
-                        </Row>
+                    navIcon={
+                        <IconButton onClick={() => setMobileDrawerOpen((e) => !e)}>
+                            <Menu/>
+                        </IconButton>
                     }
+                    title={"Scaffold Demo"}
                     actions={
                         <Row gap={"0.5em"}>
-                            {/*<LabeledCheckbox*/}
-                            {/*    label={"App Bar"}*/}
-                            {/*    isChecked={hasTopBar}*/}
-                            {/*    onChange={(e) => setHasTopBar(e)}*/}
-                            {/*/>*/}
                             <LabeledCheckbox
                                 label={"Left Sidebar"}
                                 isChecked={hasLeftSidebar}
@@ -97,6 +90,9 @@ function DemoStaticDrawer(props : { mobile : boolean }) {
     }
     return (
         <StaticDrawer>
+            <DrawerItem isActive={true}>
+                The Chosen One
+            </DrawerItem>
             <Show when={props.mobile}>
                 <DrawerItem>
                     Second Something

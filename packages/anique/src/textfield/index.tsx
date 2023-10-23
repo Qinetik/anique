@@ -35,7 +35,7 @@ export const BaseTextField = Input
 const TextFieldContainer = styled(Column)`
 
     width: 14em;
-    border: 2px solid ${Anique.colors.bg300};
+    border: 2px solid ${Anique.colors.bg100};
     box-sizing: border-box;
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
@@ -46,7 +46,7 @@ const TextFieldContainer = styled(Column)`
 
     &:has(input:focus) {
         border-color: ${Anique.colors.primary};
-        box-shadow: 0 0 0 2px ${Anique.colors.primary100};
+        box-shadow: 0 0 0 1px ${Anique.colors.primary100};
         outline: 3px solid transparent;
     }
 
@@ -66,9 +66,9 @@ const UnstyledTextField = styled("input")`
     outline: 0;
     padding: 0.5em 0.25em 0.5em 0.25em;
     font-family: ${Anique.font.secondary};
-    min-width : 10em;
-    flex : 1;
-    box-sizing : border-box;
+    min-width: 10em;
+    flex: 1;
+    box-sizing: border-box;
 `
 
 const TextFieldLabel = styled("span")`
@@ -81,7 +81,7 @@ export interface TextFieldProps extends JSX.InputHTMLAttributes<HTMLInputElement
     leadingIcon?: any
     trailingIcon?: any
     label?: string
-    containerProps ?: JSX.HTMLAttributes<HTMLDivElement>
+    containerProps?: JSX.HTMLAttributes<HTMLDivElement>
 }
 
 export function TextField(props: TextFieldProps) {
@@ -91,7 +91,7 @@ export function TextField(props: TextFieldProps) {
             class={props.disabled ? (props.class ? "disabled " + props.class : "disabled") : props.class}
         >
             {props.label && <TextFieldLabel class={"label"}>{props.label}</TextFieldLabel>}
-            <Row style={{ width : "100%", "align-items" : "center" }}>
+            <Row style={{width: "100%", "align-items": "center"}}>
                 {props.leadingIcon}
                 <UnstyledTextField {...splitProps(props, ["leadingIcon", "trailingIcon", "label"])[1]}/>
                 {props.trailingIcon}
