@@ -29,23 +29,23 @@ export default function ChipPage() {
                 <Row gap={"1em"}>
                     <Chip>
                         <IconButton size={-0.5}>
-                            <ChevronUp />
+                            <ChevronUp/>
                         </IconButton>
                         <span>My First Chip</span>
                     </Chip>
                     <Chip>
                         <span>My Last Chip</span>
-                        <IconButton size={-0.5} style={{ transform : "rotate(180deg)" }}>
-                            <ChevronUp />
+                        <IconButton size={-0.5} style={{transform: "rotate(180deg)"}}>
+                            <ChevronUp/>
                         </IconButton>
                     </Chip>
                     <Chip>
                         <IconButton size={-0.5}>
-                            <ChevronUp />
+                            <ChevronUp/>
                         </IconButton>
                         <span>My Last Chip</span>
-                        <IconButton size={-0.5} style={{ transform : "rotate(180deg)" }}>
-                            <ChevronUp />
+                        <IconButton size={-0.5} style={{transform: "rotate(180deg)"}}>
+                            <ChevronUp/>
                         </IconButton>
                     </Chip>
                 </Row>
@@ -64,11 +64,11 @@ export default function ChipPage() {
                     </ClickableChip>
                     <ClickableChip>
                         <IconButton size={-0.5}>
-                            <ChevronUp />
+                            <ChevronUp/>
                         </IconButton>
                         <span>My Last Chip</span>
-                        <IconButton size={-0.5} style={{ transform : "rotate(180deg)" }}>
-                            <ChevronUp />
+                        <IconButton size={-0.5} style={{transform: "rotate(180deg)"}}>
+                            <ChevronUp/>
                         </IconButton>
                     </ClickableChip>
                 </Row>

@@ -40,7 +40,4 @@ export const ClickableChip = styled(Chip)`
         };
     }
 
-    &.selected {
-        background: ${Anique.colors.primary}
-    }
 `
