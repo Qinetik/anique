@@ -1,1 +1,0 @@
-var a=(e=>(e.Dark="dark",e.Light="light",e))(a||{});const s=()=>window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";function c(e){const t=window.matchMedia("(prefers-color-scheme: dark)"),r=()=>{t.matches?e("dark"):e("light")};return t.addEventListener("change",r),()=>t.removeEventListener("change",r)}export{a as C,s as g,c as o};
