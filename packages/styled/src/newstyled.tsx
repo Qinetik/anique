@@ -1,18 +1,18 @@
-import {serializeStyles} from "@emotion/serialize";
-import {Component, createMemo, ErrorBoundary, mergeProps} from "solid-js";
+import {CSSInterpolation, serializeStyles} from "@emotion/serialize";
+import {Component, createMemo, mergeProps, useContext} from "solid-js";
 import {useTheme} from "./theme";
 import {
     composeShouldForwardProps,
     CreateStyledFunction,
     getDefaultShouldForwardProp,
-    isBrowser, isDevelopment,
-    StyledComponent,
+    isDevelopment,
     StyledElementType,
     StyledOptions
 } from "./utils";
-import {Dynamic, isServer} from "solid-js/web";
+import {Dynamic} from "solid-js/web";
 import hashFunc from "@emotion/hash"
-import {CacheMountChildren, EmotionCacheProvider} from "./cache";
+import {injectStyles} from "./injectStyle";
+import {AniqueStyledEngineContext, AniqueStylesInjectionStrategy} from "./engine";
 
 // TODO fix the type here
 // @ts-ignore
@@ -35,12 +35,12 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
         shouldForwardProp || getDefaultShouldForwardProp(baseTag)
 
     // Return creator function
-    return function <Props>(...args: (object | ((props: Props & {theme: any}) => object))[]) {
+    return function <Props>(...args: (object | ((props: Props & { theme: any }) => object))[]) {
 
         // Create Styles
         let styles: any[] = isReal && tag.__emotion_styles !== undefined
-                ? tag.__emotion_styles.slice(0)
-                : []
+            ? tag.__emotion_styles.slice(0)
+            : []
 
         if (identifierName !== undefined) {
             styles.push(`label:${identifierName};`)
@@ -73,64 +73,67 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
 
 
         // The Actual Component That User Will Use & It Will Emit HTML
-        const Styled = (props : StyledProps) => {
+        const Styled = (props: StyledProps) => {
 
-            // figure out the tag to use
-            const finalTag = baseTag
+                // figure out the tag to use
+                const finalTag = baseTag
 
-            // The actual work
-            // serializing styles
-            const serialized = createMemo(() => {
+                // The actual work
+                // serializing styles
+                const serialized = createMemo(() => {
 
-                let mergedProps: Record<string, any> = mergeProps(
-                    props,
-                    {
-                        get theme() {return useTheme()}
-                    }
-                )
-
-                return serializeStyles(
-                    styles,
-                    undefined,
-                    mergedProps
-                )
-
-            })
-
-            // new props
-            const newProps: Record<string, any> = props
-
-            const serStyles = serialized()
-            const hashName = hashFunc(serStyles.styles)
-            const name = "c" + hashName
-            const className = name
-
-            // returning the component
-            return (
-                <EmotionCacheProvider>
-                    <CacheMountChildren uniqueKey={hashName} >
-                        <style>{`.${name}{${serStyles.styles}}`}</style>
-                    </CacheMountChildren>
-                    <ErrorBoundary fallback={(e,reset) => {
-                        console.error("error making dynamic component in styled -> base " + isServer,e)
-                        return e + " isBrowser = " + isBrowser() + " tag = " + finalTag
-                    }}>
-                        <Dynamic
-                            component={finalTag}
-                            {...newProps}
-                            class={
-                                props.class ? `${className} ${props.class}` : className
+                    let mergedProps: Record<string, any> = mergeProps(
+                        props,
+                        {
+                            get theme() {
+                                return useTheme()
                             }
-                        />
-                    </ErrorBoundary>
-                </EmotionCacheProvider>
-            )
+                        }
+                    )
+
+                    return serializeStyles(
+                        styles,
+                        undefined,
+                        mergedProps
+                    )
+
+                })
+
+                // new props
+                const newProps: Record<string, any> = props
+
+                const serStyles = serialized()
+                const hashName = hashFunc(serStyles.styles)
+
+                const engine = useContext(AniqueStyledEngineContext)
+                const className = engine.classNamePattern(hashName)
+                const cssStyles: string = `.${className}{${serStyles.styles}}`
+                const ActualElement = (
+                    <Dynamic
+                        component={finalTag}
+                        {...newProps}
+                        class={
+                            props.class && props.class != "" ? `${className} ${props.class}` : className
+                        }
+                    />
+                )
+
+                switch (engine.injectionStrategy) {
+                    case AniqueStylesInjectionStrategy.Assets:
+                        injectStyles(cssStyles, hashName, engine.nonce)
+                        return ActualElement
+                    case AniqueStylesInjectionStrategy.Sibling:
+                        return (
+                            <>
+                                <style nonce={engine.nonce}>{cssStyles}</style>
+                                {ActualElement}
+                            </>
+                        )
+                }
+            }
 
 
-        }
-
-
-        // Returning the Created Styled Component To The User
+            // Returning the Created Styled Component To The User
         ;(Styled as any).__emotion_base = baseTag
         ;(Styled as any).__emotion_styles = styles
         ;(Styled as any).__emotion_forwardProp = shouldForwardProp

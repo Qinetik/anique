@@ -1,12 +1,12 @@
-import {createMemo} from "solid-js";
+import {createEffect, createMemo} from "solid-js";
 import {createThemeCSSVarsMappedStylesheet} from "./AniqueThemeCSSVarsMap";
 import {Anique, AniqueTheme} from "./Theme";
 import {Border} from "./Border";
 import {Font} from "./Font";
-import {Color, ResultColors} from "./Colors";
 import {DefaultThemeBreakpoints} from "./Breakpoint";
 import {AniqueAnimation} from "./Animation";
-import {mountedStyles} from "@qinetik/emotion";
+import {createGlobalStyle} from "@qinetik/emotion";
+import {getSystemColorScheme, onSystemColorSchemeChange} from "./ColorScheme";
 
 const CommonFont: Font = {
     primary: '"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
@@ -127,42 +127,80 @@ interface AniqueThemeMounterProps {
     containerCssSelector: string
 }
 
-export const AniqueGlobalStyling = mountedStyles`
+export const AniqueGlobalStyling = createGlobalStyle`
     :root * {
-        font-family : ${Anique.font.secondary};
+        font-family: ${Anique.font.secondary};
     }
+
     a {
-        color : #0060FE;
+        color: #0060FE;
     }
+
     a:hover {
-        color : #266bd9;
+        color: #266bd9;
     }
-    h1,h2,h3,h4,h5,h6 {
-        font-family : ${Anique.font.primary};
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: ${Anique.font.primary};
     }
+
     p {
-        line-height : 1.75rem;
-        letter-spacing : 0.05rem;
+        line-height: 1.75rem;
+        letter-spacing: 0.05rem;
     }
+
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-        background : ${Anique.colors.onBg500};
-        color : ${Anique.colors.bg100};
-        border-radius : ${Anique.border.smRadius};
-        padding : 1px 3px;
+        background: ${Anique.colors.onBg500};
+        color: ${Anique.colors.bg100};
+        border-radius: ${Anique.border.smRadius};
+        padding: 1px 3px;
     }
 `
 
 export function AniqueThemeDark(props: AniqueThemeMounterProps) {
     const darkStyleSheet = createMemo(() => createThemeCSSVarsMappedStylesheet(darkTheme))
-    return (
-        <style>{`${props.containerCssSelector}{${darkStyleSheet()}}`}</style>
-    )
+    const Inj = createGlobalStyle`${props.containerCssSelector} {
+        ${darkStyleSheet()}
+    }`
+    return <Inj/>
 }
 
 export function AniqueThemeLight(props: AniqueThemeMounterProps) {
     const darkStyleSheet = createMemo(() => createThemeCSSVarsMappedStylesheet(lightTheme))
+    const Inj = createGlobalStyle`${props.containerCssSelector} {
+        ${darkStyleSheet()}
+    }`
+    return <Inj/>
+}
+
+export function AniqueThemeAutoSetup() {
+    createEffect(() => {
+        const userScheme = localStorage.getItem("anique-theme-key")
+        if (userScheme == null) {
+            document.documentElement.className = getSystemColorScheme()
+            onSystemColorSchemeChange((scheme) => {
+                document.documentElement.className = scheme
+            })
+        } else {
+            document.documentElement.className = userScheme
+        }
+    })
+    const ColorSchemeStyling = createGlobalStyle`
+        :root.dark {
+            color-scheme: dark;
+        }
+
+        :root.light {
+            color-scheme: light;
+        }
+    `
     return (
-        <style>{`${props.containerCssSelector}{${darkStyleSheet()}}`}</style>
+        <>
+            <AniqueThemeLight containerCssSelector={".light"}/>
+            <AniqueThemeDark containerCssSelector={".dark"}/>
+            <AniqueGlobalStyling/>
+            <ColorSchemeStyling/>
+        </>
     )
 }

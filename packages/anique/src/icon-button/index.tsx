@@ -10,8 +10,8 @@ interface IconButtonProps {
 
 export const IconButton = styled("div")<IconButtonProps>`
 
-    width: ${p => 2 + 1 * (p.size || 0)}rem;
-    height: ${p => 2 + 1 * (p.size || 0)}rem;
+    width: ${p => 2 + (p.size || 0)}rem;
+    height: ${p => 2 + (p.size || 0)}rem;
     border-radius: 50%;
 
     ${p => p.disableAutoFill ? "" : `fill:${Anique.colors.onBg};`}

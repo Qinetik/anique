@@ -15,7 +15,7 @@ const SnackbarRoot = styled("div")`
     flex-direction: column;
     gap: 1em;
     position : fixed;
-    
+    z-index : 1001;
 `
 
 export function SnackbarHost(props: {

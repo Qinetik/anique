@@ -1,13 +1,12 @@
-import {createContext, createEffect, onCleanup, onMount, ParentProps, useContext} from "solid-js";
-import {isBrowser, isDevelopment} from "./utils";
+import {createContext, ParentProps, useContext} from "solid-js";
 
 const CACHE_NULL_NOT_PRESENT_ERR = "Emotion Cache should not be null, You haven't used Emotion Cache Provider As Parent of Cache Mount Children"
 
 interface CachedItemProperties {
-    hasMountedBefore : boolean
+    hasMountedBefore: boolean
 }
 
-function createCache() : Map<string, CachedItemProperties> {
+function createCache(): Map<string, CachedItemProperties> {
     return new Map()
 }
 
@@ -21,7 +20,7 @@ let EmotionCacheContext = /* #__PURE__ */ createContext(
     createCache()
 )
 
-export function EmotionCacheProvider(props : ParentProps) {
+export function EmotionCacheProvider(props: ParentProps) {
     let cache = useContext(EmotionCacheContext)
     if (cache === null) {
         // yes, we're potentially creating this on every render
@@ -43,7 +42,7 @@ export function EmotionCacheProvider(props : ParentProps) {
 
 // TODO Unimplemented
 
-export function CacheMountChildren(props : ParentProps<{ uniqueKey : string }>) {
+export function CacheMountChildren(props: ParentProps<{ uniqueKey: string }>) {
     // let cache = useContext(EmotionCacheContext)
     // if(cache == null){
     //     if(isDevelopment()){

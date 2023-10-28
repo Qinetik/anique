@@ -1,11 +1,15 @@
 // Reference https://github.dev/emotion-js/emotion/blob/26ded6109fcd8ca9875cc2ce4564fee678a3f3c5/packages/react/src/keyframes.js#L24
 import {CSSInterpolation, serializeStyles} from '@emotion/serialize'
-import {JSX} from "solid-js";
+import {createMemo, JSX, JSXElement, useContext} from "solid-js";
 import hashFunc from "@emotion/hash"
+import {AniqueStyledEngineContext} from "./engine";
+import {injectStyles} from "./injectStyle";
+import {useTheme} from "./theme";
 
-type KeyframesEle = (() => JSX.Element) & {
+export type KeyframesEle = ((() => JSXElement) & ({
     animationName: string
-}
+    toString: () => string
+}))
 
 function keyframes(
     template: TemplateStringsArray,
@@ -15,16 +19,26 @@ function keyframes(
 function keyframes(...args: Array<CSSInterpolation>): KeyframesEle
 
 function keyframes(...args: any[]): KeyframesEle {
-    const styles = serializeStyles(args)
-    const hash = hashFunc(styles.styles)
-    const name = "k" + hash
+
+    const engine = useContext(AniqueStyledEngineContext)
+    const serStyles = serializeStyles(args, undefined, {
+        get theme() {
+            return useTheme()
+        }
+    })
+    const hashName = hashFunc(serStyles.styles)
+    const kfName = engine.keyframesPattern(hashName)
+    const styles = `@keyframes ${kfName}{${serStyles.styles}}`
+
     const Styled = () => {
-        return (
-            <style>{`@keyframes ${name}{${styles.styles}}`}</style>
-        )
+        injectStyles(styles, hashName, engine.nonce)
+        return null
     }
-    Styled.animationName = name
+    (Styled as any).__evaluate = kfName
+    Styled.animationName = kfName
+    Styled.toString = () => kfName;
     return Styled
+
 }
 
 export {keyframes}

@@ -1,0 +1,11 @@
+// class name theme mode refers to the user interface light / dark
+
+.light .prism-theme {
+    @import "prism-themes/themes/prism-gruvbox-light";
+    white-space: pre-wrap;
+}
+
+.dark .prism-theme {
+    @import "prism-themes/themes/prism-one-dark";
+    white-space: pre-wrap;
+}

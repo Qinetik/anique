@@ -1,17 +1,16 @@
 import {styled} from "@qinetik/emotion";
-import {JSX, splitProps} from "solid-js";
+import {JSX, JSXElement, Match, Show, splitProps, Switch} from "solid-js";
 import {Spacer} from "../utils";
+import {Row} from "../row";
 
 export interface AppBarProps extends JSX.HTMLAttributes<HTMLDivElement> {
-    navIcon?: any
+    navIcon?: () => JSXElement
     title: any
     actions?: any
 }
 
-const AppBarContainer = styled('div')`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+const AppBarContainer = styled(Row)`
+  width : 100%;
   align-items: center;
   box-sizing: border-box;
   padding: 0 1em;
@@ -26,26 +25,20 @@ const AppBarTitle = styled("h3")`
   flex : 1;
 `
 
-const AppBarActions = styled("div")`
-
-`
-
 export function AppBar(props: AppBarProps) {
     return (
-        <AppBarContainer {...splitProps(props, ["navIcon", "title", "actions"])[1]}>
-            {props.navIcon != null ? (
-                <AppBarNavIcon>
-                    {props.navIcon}
+        <AppBarContainer {...splitProps(props, ["navIcon", "title", "actions", "children"])[1]}>
+            {props.navIcon ? (
+                <AppBarNavIcon style={{ "margin-right" : "1rem" }}>
+                    {props.navIcon()}
                 </AppBarNavIcon>
-            ) : <Spacer width={"0.75em"} />}
-            <AppBarTitle>
-                {props.title}
-            </AppBarTitle>
-            {props.actions != null ? (
-                <AppBarActions>
-                    {props.actions}
-                </AppBarActions>
-            ) : null}
+            ) : (
+                <Spacer width={"0.75em"} />
+            )}
+            <AppBarTitle>{props.title}</AppBarTitle>
+            <div>
+                {props.actions}
+            </div>
         </AppBarContainer>
     )
 }

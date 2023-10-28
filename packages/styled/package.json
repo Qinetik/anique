@@ -28,7 +28,7 @@
         "typescript": "^5.2.2"
     },
     "peerDependencies": {
-        "solid-js": "^1.7.11"
+        "solid-js": "^1.8.4"
     },
     "dependencies": {
         "@emotion/cache": "^11.11.0",

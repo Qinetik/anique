@@ -13,4 +13,5 @@ export function AutoSystemColorScheme() {
             document.documentElement.className = userScheme
         }
     })
+    return null
 }

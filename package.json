@@ -3,7 +3,7 @@
     "type": "module",
     "version": "1.0.0",
     "scripts": {
-        "dev": "astro dev",
+        "dev": "solid-start dev --host",
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
@@ -14,16 +14,22 @@
         "packages/*"
     ],
     "dependencies": {
-        "@astrojs/mdx": "^1.1.0",
-        "@astrojs/solid-js": "^3.0.1",
         "@qinetik/anique": "workspace:^",
         "@qinetik/emotion": "workspace:^",
-        "astro": "^3.1.4",
-        "solid-highlight": "^0.1.12",
-        "solid-js": "^1.4.3"
+        "@solidjs/meta": "^0.28.5",
+        "@solidjs/router": "^0.8.3",
+        "prism-themes": "^1.9.0",
+        "prismjs": "^1.29.0",
+        "solid-js": "^1.8.4"
     },
     "devDependencies": {
         "@rollup/plugin-multi-entry": "^6.0.0",
-        "gh-pages": "^6.0.0"
+        "@types/prismjs": "^1.26.2",
+        "gh-pages": "^6.0.0",
+        "sass": "^1.69.5",
+        "solid-start": "^0.3.8",
+        "solid-start-node": "^0.3.8",
+        "syncpack": "^11.2.1",
+        "vite": "^4.5.0"
     }
 }
