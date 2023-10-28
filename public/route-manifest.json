@@ -1,0 +1,1383 @@
+{
+  "/*404": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/_...404_-bbd13fea.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/_...404_-bbd13fea.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      }
+    ]
+  },
+  "/components/Scaffold": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/Scaffold-0d3df9e0.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/Scaffold-0d3df9e0.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/Select": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/Select-91533401.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/Select-91533401.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/Snackbar": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/Snackbar-ff728c8b.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/Snackbar-ff728c8b.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/PositionSelection-4ebda68b.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/accordion": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/accordion-91aaee01.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/accordion-91aaee01.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/alert": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/alert-d5ec62c0.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/alert-d5ec62c0.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/appbar": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/appbar-bb0375d2.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/appbar-bb0375d2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      }
+    ]
+  },
+  "/components/button": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/button-16e7c1da.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/button-16e7c1da.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/card": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/card-d5a00556.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/card-d5a00556.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/checkbox": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/checkbox-135aed82.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/checkbox-135aed82.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/chip": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/chip-97318624.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/chip-97318624.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/column": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/column-1d36d8d4.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/column-1d36d8d4.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/dialog": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/dialog-e0f7fb84.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/dialog-e0f7fb84.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/PositionSelection-4ebda68b.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/drawer": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/drawer-6b09979e.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/drawer-6b09979e.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/dropdown": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/dropdown-74cf9f86.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/dropdown-74cf9f86.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/fab": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/fab-2c07c822.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/fab-2c07c822.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      }
+    ]
+  },
+  "/components/headline": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/headline-e1d14eae.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/headline-e1d14eae.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/icon-button": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/icon-button-a025ca72.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/icon-button-a025ca72.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      }
+    ]
+  },
+  "/components/icon": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/icon-0a5f2dfb.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/icon-0a5f2dfb.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/native-select": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/native-select-57719b8a.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/native-select-57719b8a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/radio": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/radio-3bd12900.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/radio-3bd12900.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/row": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/row-94e6e0ae.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/row-94e6e0ae.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/scrollbar": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/scrollbar-c7907f61.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/scrollbar-c7907f61.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/slider": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/slider-c540bfd2.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/slider-c540bfd2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/spinner": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/spinner-25881ae5.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/spinner-25881ae5.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/switch": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/switch-47558090.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/switch-47558090.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/table": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/table-bf16c592.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/table-bf16c592.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/tabs": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/tabs-94c2aaec.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/tabs-94c2aaec.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/text": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/text-a1b2900c.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/text-a1b2900c.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/components/textfield": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/textfield-e718a58e.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/textfield-e718a58e.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/index-6ccb3f24.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/index-6ccb3f24.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Size-fe6876e6.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/css-c936b45f.js"
+      }
+    ]
+  },
+  "/setup": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/setup-f09f5b07.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/setup-f09f5b07.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/testing/composable": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/composable-e4706a84.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/composable-e4706a84.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/testing/scaffold": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/scaffold-d21c254a.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/scaffold-d21c254a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/testing/test_styled": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/test_styled-3172e9d7.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/test_styled-3172e9d7.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/css-c936b45f.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      }
+    ]
+  },
+  "/theming/": {
+    "type": "route",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/index-f3d65d0e.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/index-f3d65d0e.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/DocContainer-5b19c5b9.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-1c89625a.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/index-984971c2.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/Menu-648d47f1.js"
+      },
+      {
+        "type": "script",
+        "href": "/anique/assets/createGlobalStyle-7321c738.js"
+      },
+      {
+        "type": "style",
+        "href": "/anique/assets/index-1d475d61.css"
+      }
+    ]
+  },
+  "entry-client": {
+    "type": "entry",
+    "script": {
+      "type": "script",
+      "href": "/anique/assets/entry-client-43dc9895.js"
+    },
+    "assets": [
+      {
+        "type": "script",
+        "href": "/anique/assets/entry-client-43dc9895.js"
+      }
+    ]
+  },
+  "index.html": {
+    "type": "entry",
+    "assets": []
+  }
+}
