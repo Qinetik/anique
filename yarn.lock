@@ -2942,6 +2942,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"console-clear@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "console-clear@npm:1.1.1"
+  checksum: 3cdf152667034a0a213fa4265201c2a99a4c97854fc66fad4cf0caaef2b7215eee2b8f387cd3e385075109ea9b67e0a600f0c78371fc055e11993a5490a2511a
+  languageName: node
+  linkType: hard
+
 "console-control-strings@npm:^1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
@@ -3620,6 +3627,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-port@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "get-port@npm:3.2.0"
+  checksum: 31f530326569683ac4b7452eb7573c40e9dbe52aec14d80745c35475261e6389160da153d5b8ae911150b4ce99003472b30c69ba5be0cedeaa7865b95542d168
+  languageName: node
+  linkType: hard
+
 "get-port@npm:^6.1.2":
   version: 6.1.2
   resolution: "get-port@npm:6.1.2"
@@ -4163,10 +4177,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kleur@npm:^4.1.4":
+  version: 4.1.5
+  resolution: "kleur@npm:4.1.5"
+  checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
+  languageName: node
+  linkType: hard
+
+"local-access@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "local-access@npm:1.1.0"
+  checksum: 697ac5ec815d01d7feec9f6a15f918411827ebf789b4f64e215c292811dffc091678b9a493bb901a63b19f48754eef02f1641c730b2607b2137002b3bf3cf472
   languageName: node
   linkType: hard
 
@@ -4949,6 +4977,7 @@ __metadata:
     solid-js: ^1.8.4
     solid-start: ^0.3.8
     solid-start-node: ^0.3.8
+    solid-start-static: ^0.3.8
     syncpack: ^11.2.1
     vite: ^4.5.0
   languageName: unknown
@@ -5267,7 +5296,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sade@npm:^1.8.1":
+"sade@npm:^1.6.0, sade@npm:^1.8.1":
   version: 1.8.1
   resolution: "sade@npm:1.8.1"
   dependencies:
@@ -5307,6 +5336,13 @@ __metadata:
   bin:
     sass: sass.js
   checksum: c66f4f02882e7aa7aa49703824dadbb5a174dcd05e3cd96f17f73687889aab6027d078b518e2c04b594dfd89b2f574824bf935c7aee46c770aa6be9aafcc49f2
+  languageName: node
+  linkType: hard
+
+"semiver@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "semiver@npm:1.1.0"
+  checksum: 87e78c4fca6e082fed8905266341524b952a6d917397ca7e4feba469459e4165015fb25c0cd5b214f30ac4588e227e7c5b56ce91fd053893738d8a44a761ddb3
   languageName: node
   linkType: hard
 
@@ -5383,7 +5419,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sirv@npm:^2.0.3":
+"sirv-cli@npm:2.0.2":
+  version: 2.0.2
+  resolution: "sirv-cli@npm:2.0.2"
+  dependencies:
+    console-clear: ^1.1.0
+    get-port: ^3.2.0
+    kleur: ^4.1.4
+    local-access: ^1.0.1
+    sade: ^1.6.0
+    semiver: ^1.0.0
+    sirv: ^2.0.0
+    tinydate: ^1.0.0
+  bin:
+    sirv: bin.js
+  checksum: 76042c03372b4098bd949809526ff28ee1dbafb5fd288d540bd684c74ffd733a03e5359fb933fe7aa8a5ae077880661a64fe8869a4900e71392f1a946ecce36f
+  languageName: node
+  linkType: hard
+
+"sirv@npm:^2.0.0, sirv@npm:^2.0.3":
   version: 2.0.3
   resolution: "sirv@npm:2.0.3"
   dependencies:
@@ -5466,6 +5520,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"solid-ssr@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "solid-ssr@npm:1.7.2"
+  checksum: 40e14cc010103a558c996248b96b16e90e99690e3f7a7a8b5dce0ce64d9418f795801dfe558980a1499ee81bece5708355f6f726c7b90d315abd2eded934c2a4
+  languageName: node
+  linkType: hard
+
 "solid-start-node@npm:^0.3.8":
   version: 0.3.8
   resolution: "solid-start-node@npm:0.3.8"
@@ -5482,6 +5543,23 @@ __metadata:
     solid-start: "*"
     vite: "*"
   checksum: 9f6b110fbd3982ab7213ab6a3bfabbbc5df55ea062fbd2c4321141b3b737dbe0d989475f5fe5acc8d8f0c83911f7d74fba57c7f0eba74183af2b11a1c37946e3
+  languageName: node
+  linkType: hard
+
+"solid-start-static@npm:^0.3.8":
+  version: 0.3.8
+  resolution: "solid-start-static@npm:0.3.8"
+  dependencies:
+    "@rollup/plugin-commonjs": ^24.1.0
+    "@rollup/plugin-json": ^6.0.0
+    "@rollup/plugin-node-resolve": ^15.1.0
+    rollup: ^3.26.2
+    sirv-cli: 2.0.2
+    solid-ssr: ^1.7.2
+  peerDependencies:
+    solid-start: "*"
+    vite: "*"
+  checksum: 137c067ddf5cc02901cbce07f96229ffe4c423e97a28dcdd57edc6840c5e09cbee4b23ed8527f34f677806f00b42bd64c3731a2954825073525db5e6cd040fa0
   languageName: node
   linkType: hard
 
@@ -5766,6 +5844,13 @@ __metadata:
   version: 0.1.0
   resolution: "tightrope@npm:0.1.0"
   checksum: 9ca3d65db2b2554cf9e49325ef18d18ea9b6cd3a14f5136675da009be26cca3592faee8e99dc52c9125670778e7bfdc9ca39915b2dda1693b5186098ffb07179
+  languageName: node
+  linkType: hard
+
+"tinydate@npm:^1.0.0":
+  version: 1.3.0
+  resolution: "tinydate@npm:1.3.0"
+  checksum: 43574835768e19b1b566aae9f018a363c86e40bec5355f331d9dbf18a901ca4b737a9b863ed5e8f95ef07a0cac87d2c2ae68efd19b8b5eb693b78376cb419283
   languageName: node
   linkType: hard
 

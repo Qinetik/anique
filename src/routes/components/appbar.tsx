@@ -22,7 +22,7 @@ export default function AppBarPage() {
                 <Card style={{width: "100%"}}>
                     <AppBar
                         title={"Demo"}
-                        navIcon={(
+                        navIcon={() => (
                             <Icon>
                                 <Menu/>
                             </Icon>
@@ -33,7 +33,7 @@ export default function AppBarPage() {
                 <Card style={{width: "100%"}}>
                     <AppBar
                         title={"Demo"}
-                        navIcon={(
+                        navIcon={() => (
                             <IconButton>
                                 <Menu/>
                             </IconButton>
@@ -44,7 +44,7 @@ export default function AppBarPage() {
                 <Card style={{width: "100%"}}>
                     <AppBar
                         title={"Demo"}
-                        navIcon={(
+                        navIcon={() => (
                             <IconButton>
                                 <Menu/>
                             </IconButton>
@@ -68,7 +68,7 @@ export default function AppBarPage() {
                 <Card style={{width: "100%"}}>
                     <AppBar
                         title={"Demo"}
-                        navIcon={(
+                        navIcon={() => (
                             <IconButton>
                                 <Menu/>
                             </IconButton>

@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "solid-start dev --host",
         "start": "astro dev",
-        "build": "astro build",
+        "build": "solid-start build",
         "preview": "astro preview",
         "astro": "astro",
         "deploy": "node ./scripts/deploy.js"
@@ -29,6 +29,7 @@
         "sass": "^1.69.5",
         "solid-start": "^0.3.8",
         "solid-start-node": "^0.3.8",
+        "solid-start-static": "^0.3.8",
         "syncpack": "^11.2.1",
         "vite": "^4.5.0"
     }
