@@ -1,6 +1,8 @@
 import {styled} from "@qinetik/emotion";
 
-export const Spacer = styled("div")<{
+export const Spacer = styled("div", {
+    shouldForwardProp : (prop) => prop != "width" && prop != "height"
+})<{
     width?: string
     height?: string
 }>`

@@ -10,7 +10,9 @@ const Root = styled("div")`
     height: 100%;
 `
 
-const Sidebar = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
+const Sidebar = styled("div", {
+    shouldForwardProp : (prop) => prop != "drawerWidth" && prop != "topBarHeight"
+})<{ drawerWidth: string, topBarHeight: string }>`
     width: ${p => p.drawerWidth};
     height: calc(100% - ${p => p.topBarHeight});
     box-sizing: border-box;
@@ -27,7 +29,9 @@ const Sidebar = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
 
 `
 
-const SidebarContent = styled("div")<{ drawerWidth: string, topBarHeight: string }>`
+const SidebarContent = styled("div", {
+    shouldForwardProp : (prop) => prop != "drawerWidth" && prop != "topBarHeight"
+})<{ drawerWidth: string, topBarHeight: string }>`
     width: ${p => p.drawerWidth};
     display: flex;
     flex-direction: column;
@@ -46,7 +50,9 @@ const Wrapper = styled("div")`
     flex: 1;
 `
 
-const TopBar = styled("div")<{
+const TopBar = styled("div", {
+    shouldForwardProp : (prop) => prop != "topBarHeight"
+})<{
     topBarHeight: string
 }>`
     left: 0;
@@ -57,7 +63,9 @@ const TopBar = styled("div")<{
     //background: blue;
 `
 
-const ContentWrapper = styled("div")<{ topBarHeight: string }>`
+const ContentWrapper = styled("div", {
+    shouldForwardProp : (prop) => prop != "topBarHeight"
+})<{ topBarHeight: string }>`
     flex: 1;
     overflow-y: auto;
     margin-top: ${p => p.topBarHeight};
@@ -65,7 +73,9 @@ const ContentWrapper = styled("div")<{ topBarHeight: string }>`
     //background: grey;
 `
 
-const MobileSidebar = styled("div")<{ hideAboveBreakpoint?: string }>`
+const MobileSidebar = styled("div", {
+    shouldForwardProp : (prop) => prop != "hideAboveBreakpoint"
+})<{ hideAboveBreakpoint?: string }>`
     position: absolute;
     top: 0;
     bottom: 0;

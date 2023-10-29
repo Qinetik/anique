@@ -1,7 +1,6 @@
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
 import {Size} from "../theme/Size";
-import {JSX} from "solid-js";
 
 export interface FabProps {
     size ?: Size
@@ -23,13 +22,17 @@ const FabBase = styled("div")<FabProps>`
     }
 `
 
-export const Fab = styled(FabBase)<FabProps>`
+export const Fab = styled(FabBase, {
+    shouldForwardProp : (prop) => prop != "size"
+})<FabProps>`
     width: ${p=> 3 + (p.size || 0)}em;
     height: ${p=> 3 + (p.size || 0)}em;
     border-radius: 50%;
 `
 
-export const ExtendedFab = styled(FabBase)<FabProps>`
+export const ExtendedFab = styled(FabBase, {
+    shouldForwardProp : (prop) => prop != "size"
+})<FabProps>`
     gap: 0.4em;
     box-sizing: border-box;
     padding: ${p=> (p.size || 0)}em ${p=> 1 + ((p.size || 0) * 0.5)}em;

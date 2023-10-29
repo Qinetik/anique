@@ -7,14 +7,21 @@ export default function SwitchPage() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <DocContainer>
-            <Column>
+            <Column gap={"1em"}>
                 <Headline>ToggleSwitch</Headline>
                 <Card>
                     <ToggleSwitch
-                        checked={true}
+                        checked={isChecked()}
                         onChange={(e) => {
                             setIsChecked(e.currentTarget.checked)
                         }}
+                    />
+                </Card>
+                <h2>Disabled</h2>
+                <Card>
+                    <ToggleSwitch
+                        disabled
+                        checked={isChecked()}
                     />
                 </Card>
             </Column>

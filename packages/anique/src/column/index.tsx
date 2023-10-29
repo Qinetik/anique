@@ -2,11 +2,12 @@ import {styled} from "@qinetik/emotion";
 
 export interface ColumnProps {
     gap?: string
-    children?: any
     wrap ?: true
 }
 
-export const Column = styled("div")<ColumnProps>`
+export const Column = styled("div", {
+    shouldForwardProp : (prop) => prop != "gap" && prop != "wrap"
+})<ColumnProps>`
     display: flex;
     flex-direction: column;
     align-items: start;

@@ -1,4 +1,4 @@
-import {CSSInterpolation, serializeStyles} from "@emotion/serialize";
+import {serializeStyles} from "@emotion/serialize";
 import {Component, createMemo, mergeProps, useContext} from "solid-js";
 import {useTheme} from "./theme";
 import {
@@ -100,7 +100,25 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                 })
 
                 // new props
-                const newProps: Record<string, any> = props
+                let newProps: Record<string, any> = props
+
+                const finalShouldForwardProp =
+                    shouldForwardProp === undefined
+                        ? getDefaultShouldForwardProp(finalTag)
+                        : defaultShouldForwardProp
+
+                for (let key in props) {
+                    if (!finalShouldForwardProp(key)) {
+                        try {
+                            delete newProps[key]
+                        } catch (e){
+                            newProps = withRemovedKey(newProps, key)
+                            // console.log("Check", shouldForwardProp, finalShouldForwardProp, newProps, key)
+                            // console.error(e)
+                        }
+                        // newProps[key] = (props as any)[key]
+                    }
+                }
 
                 const serStyles = serialized()
                 const hashName = hashFunc(serStyles.styles)
@@ -134,9 +152,9 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
 
 
             // Returning the Created Styled Component To The User
-        ;(Styled as any).__emotion_base = baseTag
-        ;(Styled as any).__emotion_styles = styles
-        ;(Styled as any).__emotion_forwardProp = shouldForwardProp
+        Styled.__emotion_base = baseTag;
+        Styled.__emotion_styles = styles;
+        Styled.__emotion_forwardProp = shouldForwardProp;
 
         Object.defineProperty(Styled, 'toString', {
             value() {
@@ -148,10 +166,10 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                 }
                 return `.${targetClassName}`
             },
-        })
+        });
 
         // Allow creating a duplicate component with a different tag
-        ;(Styled as any).withComponent = (
+        Styled.withComponent = (
             nextTag: StyledElementType<Props>,
             nextOptions?: StyledOptions
         ) => {
@@ -183,3 +201,14 @@ const ILLEGAL_ESCAPE_SEQUENCE_ERROR = `You have illegal escape sequence in your 
 Because you write your CSS inside a JavaScript string you actually have to do double escaping, so for example "content: '\\00d7';" should become "content: '\\\\00d7';".
 You can read more about this here:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences`
+
+
+function withRemovedKey(Object : Record<string, any>, key : string) : Record<string, any> {
+    let outputObject : Record<string, any> = {}
+    for (let inKey in Object){
+        if(key != inKey){
+            outputObject[inKey] = Object[inKey]
+        }
+    }
+    return outputObject
+}

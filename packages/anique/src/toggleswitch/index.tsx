@@ -48,6 +48,10 @@ const SwitchRoot = styled("label")`
         transition: .4s;
     }
 
+    &[data-disabled] .slider:before {
+        background-color: ${Anique.colors.onBg400};
+    }
+
     & input:checked + .slider {
         background-color: ${Anique.colors.primary};
     }
@@ -76,7 +80,7 @@ const SwitchRoot = styled("label")`
 
 export function ToggleSwitch(props: ToggleSwitchProps) {
     return (
-        <SwitchRoot class="switch">
+        <SwitchRoot class="switch" data-disabled={props.disabled}>
             <input type="checkbox" {...props}/>
             <span class="slider round"></span>
         </SwitchRoot>

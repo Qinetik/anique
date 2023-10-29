@@ -6,7 +6,9 @@ export interface RowProps {
     wrap ?: true
 }
 
-export const Row = styled("div")<RowProps>`
+export const Row = styled("div", {
+    shouldForwardProp : (prop) => prop != "gap" && prop != "wrap" && prop != "alignment"
+})<RowProps>`
     display: flex;
     flex-direction: row;
     align-items: center;

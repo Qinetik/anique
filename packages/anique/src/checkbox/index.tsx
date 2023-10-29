@@ -11,7 +11,9 @@ export interface CheckboxProps {
     size?: Size
 }
 
-export const Checkbox = styled("input")<CheckboxProps>`
+export const Checkbox = styled("input", {
+    shouldForwardProp : (prop) => prop != "size"
+})<CheckboxProps>`
   /* Add if not using autoprefixer */
   -webkit-appearance: none;
   /* Remove most all native input styles */

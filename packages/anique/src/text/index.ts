@@ -3,7 +3,9 @@ import {OnBgColors} from "../theme/Colors";
 import {Anique} from "../theme/Theme";
 import {JSX} from "solid-js";
 
-export const Text = styled("span")<{
+export const Text = styled("span", {
+    shouldForwardProp : (prop) => prop != "color"
+})<{
     color?: keyof OnBgColors
 }>`
   font-family: ${Anique.font.secondary};

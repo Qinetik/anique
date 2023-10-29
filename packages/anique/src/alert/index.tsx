@@ -23,7 +23,9 @@ function color(type ?: AlertType): string {
     return Anique.colors["on" + (type || "s")[0].toUpperCase() + ((type || "success").substring(1))]
 }
 
-export const AlertRoot = styled("div")<AlertProps>`
+export const AlertRoot = styled("div", {
+    shouldForwardProp : (prop) => prop != "type"
+})<AlertProps>`
     padding: 1em;
     background: ${p => Anique.colors[(p.type || "success")]};
     border-radius: ${Anique.border.mdRadius};

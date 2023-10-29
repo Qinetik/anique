@@ -8,7 +8,9 @@ interface IconButtonProps {
     size?: Size | number
 }
 
-export const IconButton = styled("div")<IconButtonProps>`
+export const IconButton = styled("div", {
+    shouldForwardProp : (prop) => !["size", "disableAutoFill"].includes(prop)
+})<IconButtonProps>`
 
     width: ${p => 2 + (p.size || 0)}rem;
     height: ${p => 2 + (p.size || 0)}rem;

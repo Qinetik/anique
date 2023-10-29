@@ -10,7 +10,9 @@ export interface RadioProps {
     size?: Size
 }
 
-export const Radio = styled("input")<RadioProps>`
+export const Radio = styled("input", {
+    shouldForwardProp : (prop) => prop != "size"
+})<RadioProps>`
 
     /* Add if not using autoprefixer */
     -webkit-appearance: none;

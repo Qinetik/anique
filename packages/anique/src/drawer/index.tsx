@@ -15,7 +15,9 @@ export interface DrawerItemProps {
     isActive?: boolean
 }
 
-export const DrawerItem = styled("div")<DrawerItemProps>`
+export const DrawerItem = styled("div", {
+    shouldForwardProp : (prop) => prop != "isActive"
+})<DrawerItemProps>`
     width: 100%;
     box-sizing: border-box;
     padding: 0.6em 0.5em 0.6em 1em;
@@ -34,13 +36,14 @@ const StyledSectionText = styled("h4")`
     box-sizing: border-box;
     display: inline-block;
     padding: 0.6em 0.5em 0.6em 1em;
-    margin: 1em 0 0.25em 0;
+    margin: 0.25em 0 0.25em 0;
     font-family: ${Anique.font.primary};
+    color : ${Anique.colors.onBg200};
 `
 
 export const DrawerSectionItem = styled((props: { title: string }) => {
     return (
-        <StyledSectionText color={"onBg100"} children={props.title} {...splitProps(props, ["title"])[1]}/>
+        <StyledSectionText children={props.title} {...splitProps(props, ["title"])[1]}/>
     )
 })`
 `

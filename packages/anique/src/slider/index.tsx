@@ -6,7 +6,9 @@ export interface SliderProps {
     size?: Size
 }
 
-export const Slider = styled("input")<SliderProps>`
+export const Slider = styled("input", {
+    shouldForwardProp : (prop) => prop != "size"
+})<SliderProps>`
 
     -webkit-appearance: none !important;
     width : 14em;

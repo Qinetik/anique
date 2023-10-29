@@ -75,7 +75,7 @@ export function Accordion(props: AccordionProps) {
 
     return (
         <AccordionRoot
-            {...splitProps(props, ["title", "children", "class"])[1]}
+            {...splitProps(props, ["title", "children", "class", "defaultExpanded"])[1]}
             class={gtClassName()}
         >
             <AccordionTitle

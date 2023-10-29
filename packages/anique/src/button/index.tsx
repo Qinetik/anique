@@ -3,7 +3,9 @@ import {Anique} from "../theme/Theme";
 import {Size} from "../theme/Size";
 import {JSX} from "solid-js";
 
-const ButtonBase = styled("button")<{
+const ButtonBase = styled("button", {
+    shouldForwardProp : (prop) => prop != "size"
+})<{
     size ?: Size
 }>`
 
@@ -19,6 +21,7 @@ const ButtonBase = styled("button")<{
 
     &:disabled {
         background : ${Anique.colors.bg500};
+        cursor : default;
     }
     
     &:hover:not(&:disabled) {
