@@ -1,11 +1,11 @@
 import {styled} from "@qinetik/emotion";
-import {Accessor, createSignal, JSX, Setter, splitProps} from "solid-js";
+import {Accessor, createSignal, JSX, JSXElement, ParentProps, Setter, splitProps} from "solid-js";
 import {Icon} from "../icon";
 import {Anique} from "../theme";
 import { ChevronUp } from "@qinetik/anique-icons";
 
 export interface AccordionProps extends JSX.HTMLAttributes<HTMLDivElement> {
-    title: any
+    title : any
     children?: any
     expanded?: Accessor<boolean>
     setExpanded?: Setter<boolean>
@@ -86,5 +86,39 @@ export function Accordion(props: AccordionProps) {
             </AccordionTitle>
             <AccordionContent>{props.children}</AccordionContent>
         </AccordionRoot>
+    )
+}
+
+interface ExpandableProps {
+    timeMillis ?: number
+}
+
+export const ExpandableRoot = styled("div", {
+    shouldForwardProp : (prop) => prop != "timeMillis"
+})<ExpandableProps>`
+
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows ${p=> p.timeMillis || 500}ms;
+    
+    box-sizing: border-box;
+    border-radius: ${Anique.border.smRadius};
+    
+    & .content {
+      overflow : hidden;  
+    }
+    
+    &.expanded {
+        grid-template-rows: min-content 1fr;
+    }
+
+`
+
+export function Expandable(props : ParentProps<JSX.HTMLAttributes<HTMLDivElement> & ExpandableProps & { exposed ?: JSXElement}>) {
+    return (
+        <ExpandableRoot {...splitProps(props, ["exposed", "children"])[1]}>
+            <div class={"exposed"}>{props.exposed}</div>
+            <div class="content">{props.children}</div>
+        </ExpandableRoot>
     )
 }

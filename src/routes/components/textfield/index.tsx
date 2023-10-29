@@ -1,11 +1,14 @@
-import {TextArea, BaseTextField, TextField} from "@qinetik/anique/textfield";
+import {BaseTextField, TextArea, TextField} from "@qinetik/anique/textfield";
 import {Column} from "@qinetik/anique/column";
 import {Headline} from "@qinetik/anique/headline";
 import {InformationBoxOutline} from "@qinetik/anique-icons";
 import {IconButton} from "@qinetik/anique/icon-button";
 import {Anique, Icon} from "@qinetik/anique";
-import {DocContainer} from "../../components/common/layout/DocContainer";
-import Menu from "../../solid/icons/Menu";
+import Menu from "../../../solid/icons/Menu";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
+import BasicTextFieldExample from "./examples/BasicTextFieldExample";
+import {ComponentExample} from "../../../solid/components/ComponentExample";
+import BasicTextAreaExample from "./examples/BasicTextAreaExample";
 
 export default function TextFieldPage() {
     return (
@@ -13,13 +16,9 @@ export default function TextFieldPage() {
             <Column>
                 <Headline>TextField</Headline>
                 <h1>Basic Text Field</h1>
-                <BaseTextField
-                    placeholder={"Username"}
-                />
+                <ComponentExample component={BasicTextFieldExample} />
                 <h1>Text Area</h1>
-                <TextArea
-                    placeholder={"Note here"}
-                />
+                <ComponentExample component={BasicTextAreaExample} />
                 <h3>Disabled</h3>
                 <Column gap={"0.5em"}>
                     <BaseTextField

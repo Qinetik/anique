@@ -7,10 +7,6 @@ export default defineConfig(() => {
     return {
         base: "/anique",
         plugins: [
-            solid({
-                adapter: staticAdapter(),
-                ssr: true
-            }),
             {
                 name: "examples",
                 enforce: "pre",
@@ -19,7 +15,8 @@ export default defineConfig(() => {
                         const exportDefaultRegex = /export\s+default\s+function\s+(\w+)/;
                         const matches = exportDefaultRegex.exec(code);
 
-                        if (exportDefaultRegex) {
+                        if (exportDefaultRegex && matches) {
+                            console.log("matches", matches)
                             const [, functionName] = matches;
                             const originalCode = code
                                 .split(/\r?\n/)
@@ -36,6 +33,10 @@ export default defineConfig(() => {
                     }
                 },
             },
+            solid({
+                adapter: staticAdapter(),
+                ssr: true
+            })
         ],
         resolve: {
             alias: {
