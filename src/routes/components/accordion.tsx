@@ -1,4 +1,4 @@
-import {Alert, Column, Headline} from "@qinetik/anique";
+import {Alert, AlertType, Column, Headline} from "@qinetik/anique";
 import {Accordion} from "@qinetik/anique/accordion";
 import {DocContainer} from "../../components/common/layout/DocContainer";
 

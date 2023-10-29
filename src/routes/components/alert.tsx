@@ -1,5 +1,5 @@
 import {Column} from "@qinetik/anique/column";
-import {Alert, AlertRoot, AlertType} from "@qinetik/anique/alert";
+import {Alert, AlertType} from "@qinetik/anique/alert";
 import {Headline} from "@qinetik/anique/headline";
 import {Row} from "@qinetik/anique/row";
 import {Icon} from "@qinetik/anique/icon";
@@ -22,6 +22,9 @@ export default function AlertPage() {
                     </Alert>
                     <Alert type={AlertType.Success}>
                         This is a success alert - check it out!
+                    </Alert>
+                    <Alert type={AlertType.Success}>
+                        This is the default success alert - check it out!
                     </Alert>
                 </Column>
                 {/*<h1>Alert Root w/o Icon</h1>*/}

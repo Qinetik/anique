@@ -1,11 +1,8 @@
-import {styled} from "@qinetik/emotion";
+import {css} from "@qinetik/emotion";
 import {Anique} from "../theme/Theme";
-import {Row} from "../row";
-import {Icon} from "../icon";
-import { CheckCircleOutline } from "@qinetik/anique-icons";
-import { AlertIcon } from "@qinetik/anique-icons";
-import { InformationBoxOutline } from "@qinetik/anique-icons";
+import {AlertIcon, CheckCircleOutline, InformationBoxOutline} from "@qinetik/anique-icons";
 import {JSX, ParentProps, splitProps} from "solid-js";
+import {Icon} from "../icon";
 
 export enum AlertType {
     Info = "info",
@@ -23,18 +20,19 @@ function color(type ?: AlertType): string {
     return Anique.colors["on" + (type || "s")[0].toUpperCase() + ((type || "success").substring(1))]
 }
 
-export const AlertRoot = styled("div", {
-    shouldForwardProp : (prop) => prop != "type"
-})<AlertProps>`
-    padding: 1em;
-    background: ${p => Anique.colors[(p.type || "success")]};
-    border-radius: ${Anique.border.mdRadius};
-    color: ${p => color(p.type)};
+export const AlertCss = (p: AlertProps & { color: string }) => css`
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+  background: ${Anique.colors[(p.type || "success")]};
+  border-radius: ${Anique.border.mdRadius};
+  color: ${p.color};
 
-    & * {
-        color: ${p => color(p.type)};
-        fill: ${p => color(p.type)};
-    }
+  & * {
+    color: ${p.color};
+    fill: ${p.color};
+  }
 `
 
 function icon(type ?: AlertType) {
@@ -50,15 +48,14 @@ function icon(type ?: AlertType) {
 }
 
 export function Alert(props: ParentProps<AlertProps> & JSX.HTMLAttributes<HTMLDivElement>) {
-    const AlertIcon = icon(props.type)
+    const ItsIcon = icon(props.type)
+    const Injection = AlertCss({color: color(props.type), type: props.type})
     return (
-        <AlertRoot type={props.type} {...splitProps(props, ["type", "children"])[1]}>
-            <Row gap={"1em"}>
-                <Icon>
-                    <AlertIcon />
-                </Icon>
-                {props.children}
-            </Row>
-        </AlertRoot>
+        <div class={Injection() + (props.class ? (" " + props.class) : "")} {...splitProps(props, ["children"])[1]}>
+            <Icon>
+                <ItsIcon/>
+            </Icon>
+            {props.children}
+        </div>
     )
 }
