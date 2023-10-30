@@ -26,7 +26,7 @@ const DocContainerStyles = createGlobalStyle`
     }
 
     .container {
-        padding: 0 4rem;
+        padding: 0 4rem 3rem 4rem;
     }
 
     .bar-content-row {

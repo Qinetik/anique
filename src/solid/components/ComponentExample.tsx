@@ -9,12 +9,12 @@ import {CopyIcon} from "../icons/CopyIcon";
 import {CodeIcon} from "../icons/CodeIcon";
 import {TextureIcon} from "../icons/TextureIcon";
 
-export function ComponentExample(props: { component: Component }) {
+export function ComponentExample(props: { component: Component, codeVisible ?: boolean }) {
 
     const code = (props.component as any).code
 
     const snackbars = createSnackbars()
-    const [viewCode, setViewCode] = createSignal(false)
+    const [viewCode, setViewCode] = createSignal(props.codeVisible || false)
     const [hasBackground, setHasBackground] = createSignal(true)
 
     return (

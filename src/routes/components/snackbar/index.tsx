@@ -3,8 +3,10 @@ import {createSignal} from "solid-js";
 import {Position} from "@qinetik/anique/utils";
 import {Portal} from "solid-js/web";
 import {createSnackbars, SnackbarHost} from "@qinetik/anique/snackbar";
-import {PositionSelector} from "../../solid/components/PositionSelection";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import SnackbarExample from "./examples/SnackbarExample";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
+import {PositionSelector} from "../../../solid/components/PositionSelection";
+import {ComponentExample} from "../../../solid/components/ComponentExample";
 
 export default function SnackbarPage() {
 
@@ -34,6 +36,7 @@ export default function SnackbarPage() {
                             snackbars.showAlert(text, AlertType.Info, 3000)
                         }}
                     >Create Snackbar</Button>
+                    <ComponentExample component={SnackbarExample} codeVisible={true} />
                 </Column>
                 <Portal>
                     <SnackbarHost

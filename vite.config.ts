@@ -16,7 +16,6 @@ export default defineConfig(() => {
                         const matches = exportDefaultRegex.exec(code);
 
                         if (exportDefaultRegex && matches) {
-                            console.log("matches", matches)
                             const [, functionName] = matches;
                             const originalCode = code
                                 .split(/\r?\n/)
