@@ -6,7 +6,7 @@ import {JSX, splitProps} from "solid-js";
 
 export interface SpinnerProps extends JSX.SvgSVGAttributes<SVGSVGElement> {
     color?: keyof OnBgColors | keyof ResultColors | keyof BrandColors
-    size?: Size
+    size?: Size | number
 }
 
 export const SpinnerAnimation = keyframes`
@@ -26,7 +26,7 @@ export const Spinner = (props: SpinnerProps) => {
     const pixelSize = 32 + ((props.size || 0) * 8)
     return (
         <>
-            <SpinnerAnimation />
+            <SpinnerAnimation/>
             <AniqueStyledSpinner
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
