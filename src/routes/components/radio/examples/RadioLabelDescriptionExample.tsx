@@ -5,7 +5,7 @@ import {LabeledRadio} from "@qinetik/anique/radio";
 export default function RadioLabelDescriptionExample() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
-        <Row gap={"2em"}>
+        <Row gap={"1em"}>
             <LabeledRadio
                 isChecked={isChecked}
                 onChange={setIsChecked}
