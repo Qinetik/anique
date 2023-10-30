@@ -54,8 +54,8 @@ export default function SelectPage() {
                 <ComponentExample component={MultipleCreateableExample} hasBackground={false}/>
                 <h2>Disabled Options</h2>
                 <ComponentExample component={DisabledOptionsExample} hasBackground={false}/>
-                <h2>Grouping</h2>
-                <ComponentExample component={GroupingExample} hasBackground={false}/>
+                {/*<h2>Grouping</h2>*/}
+                {/*<ComponentExample component={GroupingExample} hasBackground={false}/>*/}
                 <h2>Auto Scroll</h2>
                 <ComponentExample component={AutoScrollExample} hasBackground={false}/>
                 <h2>Kitchen Sink</h2>

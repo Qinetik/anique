@@ -4,8 +4,8 @@ import {Anique, AppBar, DrawerItem, IconButton, LabeledCheckbox, MenuItem, Row, 
 import {Scaffold} from "@qinetik/anique/scaffold";
 import {MoreVertIcon} from "@qinetik/anique-icons";
 import {DropdownMenu} from "@qinetik/anique/dropdown";
-import Menu from "../../solid/icons/Menu";
 import {AniqueThemeAutoSetup} from "@qinetik/anique/theme";
+import Menu from "../../../../solid/icons/Menu";
 
 const MobileIconButton = styled(IconButton)`
     ${Anique.breakpoints.up("md")} {
@@ -13,8 +13,15 @@ const MobileIconButton = styled(IconButton)`
     }
 `
 
+function DemoFooter() {
+    return (
+        <div style={{width: "100%", height: "200px"}}>
+            This is my footer
+        </div>
+    )
+}
 
-export default function ScaffoldTestingPage() {
+export default function ScaffoldExample() {
 
     const [mobileDrawerOpen, setMobileDrawerOpen] = createSignal(false)
     let content: string[] = []
@@ -111,13 +118,5 @@ function DemoStaticDrawer(props: { mobile: boolean }) {
             </Show>
             {content.map(e => <DrawerItem>{e}</DrawerItem>)}
         </StaticDrawer>
-    )
-}
-
-function DemoFooter() {
-    return (
-        <div style={{width: "100%", height: "200px"}}>
-            This is my footer
-        </div>
     )
 }

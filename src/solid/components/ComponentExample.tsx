@@ -13,6 +13,7 @@ interface ComponentExampleProps {
     component: Component,
     codeVisible?: boolean,
     hasBackground?: boolean
+    codeOnly ?: boolean
 }
 
 export function ComponentExample(props: ComponentExampleProps) {
@@ -39,7 +40,7 @@ export function ComponentExample(props: ComponentExampleProps) {
                     class={viewCode() ? "expanded" : undefined}
                     exposed={
                         <Column gap={"1em"}>
-                            <props.component/>
+                            {(props.codeOnly == null || !props.codeOnly) && <props.component/>}
                             <Row style={{"align-self": "flex-end"}} gap={"0.5em"}>
                                 <IconButton
                                     onClick={() => setHasBackground((e) => !e)}
