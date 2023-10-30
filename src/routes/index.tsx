@@ -24,13 +24,21 @@ export default function Home() {
                     <li>Lovely User Experience & Lightening Speed</li>
                 </UL>
 
+                <h2 style={{ margin : 0 }}>Used By</h2>
+
+                <UL>
+                    <li>All our websites / apps in Qinetik are written using Anique</li>
+                    <UL>
+                        <li>Qinetik's Website <a href={"https://qinetik.org"} target={"_blank"}>https://qinetik.org</a></li>
+                        <li>Project Management Solution <a href={"https://todo.qinetik.org"} target={"_blank"}>https://todo.qinetik.org</a></li>
+                    </UL>
+                </UL>
+
                 <h2>Roadmap</h2>
 
                 <Roadmap />
 
             </Column>
-
-            <div style={{ "margin-bottom" : "2em" }}/>
 
         </DocContainer>
     )
