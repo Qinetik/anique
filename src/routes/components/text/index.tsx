@@ -1,8 +1,11 @@
-import {Card} from "@qinetik/anique/card";
 import {Column} from "@qinetik/anique/column";
 import {Headline} from "@qinetik/anique/headline";
 import {Size} from "@qinetik/anique/theme/Size";
 import {DocContainer} from "../../../components/common/layout/DocContainer";
+import {ComponentExample} from "../../../solid/components/ComponentExample";
+import HeadingsExample from "./examples/HeadingExample";
+import ParagraphExample from "./examples/ParagraphExample";
+import LinksExample from "./examples/LinksExample";
 
 export default function NativeTextPage() {
     return (
@@ -15,29 +18,11 @@ export default function NativeTextPage() {
                     However you do need to import the global styles for these components on the page once.
                 </p>
                 <h1>Headings</h1>
-                <Card>
-                    <h1>The quick brown fox jumps over the lazy dog</h1>
-                    <h2>The quick brown fox jumps over the lazy dog</h2>
-                    <h3>The quick brown fox jumps over the lazy dog</h3>
-                    <h4>The quick brown fox jumps over the lazy dog</h4>
-                    <h5>The quick brown fox jumps over the lazy dog</h5>
-                    <h6>The quick brown fox jumps over the lazy dog</h6>
-                </Card>
+                <ComponentExample component={HeadingsExample}/>
                 <h1>Paragraph</h1>
-                <Card>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </Card>
+                <ComponentExample component={ParagraphExample}/>
                 <h1>Links</h1>
-                <Card>
-                    <a href={"https://example.com"} target={"_blank"}>Here's my link</a>
-                </Card>
+                <ComponentExample component={LinksExample}/>
             </Column>
         </DocContainer>
     )
