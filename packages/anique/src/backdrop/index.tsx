@@ -93,6 +93,7 @@ export function BackdropContent(props: BackdropContentProps) {
             onMouseUp={(e) => {
                 const isUpOutside = isEventOutside(e)
                 if (isDownOutside && isUpOutside) {
+                    e.stopImmediatePropagation()
                     props.onClickOutside()
                 }
                 // if(isUpOutside && !isDownOutside) {
