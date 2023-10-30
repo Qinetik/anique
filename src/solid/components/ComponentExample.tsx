@@ -31,7 +31,9 @@ export function ComponentExample(props: ComponentExampleProps) {
                 position={() => Position.BottomRight}
             />
             <Card
-                style={{background: hasBackground() ? Anique.colors.bg200 : "transparent"}}
+                style={{
+                    background: hasBackground() ? Anique.colors.bg200 : "transparent"
+                }}
             >
                 <Expandable
                     class={viewCode() ? "expanded" : undefined}
