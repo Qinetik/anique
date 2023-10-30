@@ -9,13 +9,19 @@ import {CopyIcon} from "../icons/CopyIcon";
 import {CodeIcon} from "../icons/CodeIcon";
 import {TextureIcon} from "../icons/TextureIcon";
 
-export function ComponentExample(props: { component: Component, codeVisible ?: boolean }) {
+interface ComponentExampleProps {
+    component: Component,
+    codeVisible?: boolean,
+    hasBackground?: boolean
+}
+
+export function ComponentExample(props: ComponentExampleProps) {
 
     const code = (props.component as any).code
 
     const snackbars = createSnackbars()
     const [viewCode, setViewCode] = createSignal(props.codeVisible || false)
-    const [hasBackground, setHasBackground] = createSignal(true)
+    const [hasBackground, setHasBackground] = createSignal(props.hasBackground ?? true)
 
     return (
         <Column gap={"0.5em"}>

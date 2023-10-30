@@ -1,61 +1,56 @@
-import {styled} from "@qinetik/emotion";
+import {css, styled} from "@qinetik/emotion";
 import {Accessor, createSignal, JSX, JSXElement, ParentProps, Setter, splitProps} from "solid-js";
 import {Icon} from "../icon";
 import {Anique} from "../theme";
-import { ChevronUp } from "@qinetik/anique-icons";
+import {ChevronUp} from "@qinetik/anique-icons";
 
 export interface AccordionProps extends JSX.HTMLAttributes<HTMLDivElement> {
-    title : any
+    title: any
     children?: any
     expanded?: Accessor<boolean>
     setExpanded?: Setter<boolean>
     defaultExpanded?: boolean
-    showIcon ?: boolean
+    showIcon?: boolean
 }
 
-const AccordionRoot = styled("div")`
+const AccordionRoot = css`
 
     display: grid;
     grid-template-rows: min-content 0fr;
     transition: grid-template-rows 500ms;
-    
+
     background: ${Anique.colors.bg200};
     padding: 1.25em;
-    gap : 0.5em;
+    gap: 0.5em;
     box-sizing: border-box;
     border-radius: ${Anique.border.smRadius};
 
     &.expanded {
         grid-template-rows: min-content 1fr;
     }
-    
+
     & .icon {
-        transition : rotate 500ms;
+        transition: rotate 500ms;
     }
-    
+
     &.expanded .icon {
-        rotate : 180deg;
+        rotate: 180deg;
     }
-    
+
 `
 
-const AccordionTitle = styled("div")`
+const AccordionTitle = css`
     font-size: 1.2em;
     font-weight: bold;
     user-select: none;
     cursor: pointer;
-    display:flex;
+    display: flex;
     flex-direction: row;
-    align-items:center;
-    
-    & > :first-of-type {
-          flex : 1;
-    }
-    
-`
+    align-items: center;
 
-const AccordionContent = styled("div")`
-  overflow: hidden;
+    & > :first-of-type {
+        flex: 1;
+    }
 `
 
 export function Accordion(props: AccordionProps) {
@@ -71,50 +66,51 @@ export function Accordion(props: AccordionProps) {
         setExpanded = signal[1]
     }
 
-    const gtClassName = () => (props.class ? (props.class + (expanded() ? " expanded" : "")) : (expanded() ? "expanded" : undefined))
-
     return (
-        <AccordionRoot
+        <div
             {...splitProps(props, ["title", "children", "class", "defaultExpanded"])[1]}
-            class={gtClassName()}
+            class={AccordionRoot() + (expanded() ? " expanded" : "") + (props.class ? " " + props.class : "")}
         >
-            <AccordionTitle
+            <div
                 onClick={() => setExpanded(!expanded())}
+                class={AccordionTitle()}
             >
                 <div>{props.title}</div>
-                {(props.showIcon ?? true) && <Icon class={"icon"}><ChevronUp /></Icon>}
-            </AccordionTitle>
-            <AccordionContent>{props.children}</AccordionContent>
-        </AccordionRoot>
+                {(props.showIcon ?? true) && <Icon class={"icon"}><ChevronUp/></Icon>}
+            </div>
+            <div style={{overflow: "hidden"}}>{props.children}</div>
+        </div>
     )
 }
 
 interface ExpandableProps {
-    timeMillis ?: number
+    timeMillis?: number
 }
 
 export const ExpandableRoot = styled("div", {
-    shouldForwardProp : (prop) => prop != "timeMillis"
+    shouldForwardProp: (prop) => prop != "timeMillis"
 })<ExpandableProps>`
 
     display: grid;
     grid-template-rows: min-content 0fr;
-    transition: grid-template-rows ${p=> p.timeMillis || 500}ms;
-    
+    transition: grid-template-rows ${p => p.timeMillis || 500}ms;
+
     box-sizing: border-box;
     border-radius: ${Anique.border.smRadius};
-    
+
     & .content {
-      overflow : hidden;  
+        overflow: hidden;
     }
-    
+
     &.expanded {
         grid-template-rows: min-content 1fr;
     }
 
 `
 
-export function Expandable(props : ParentProps<JSX.HTMLAttributes<HTMLDivElement> & ExpandableProps & { exposed ?: JSXElement}>) {
+export function Expandable(props: ParentProps<JSX.HTMLAttributes<HTMLDivElement> & ExpandableProps & {
+    exposed?: JSXElement
+}>) {
     return (
         <ExpandableRoot {...splitProps(props, ["exposed", "children"])[1]}>
             <div class={"exposed"}>{props.exposed}</div>
