@@ -3,7 +3,7 @@ import {Size} from "@qinetik/anique/theme";
 import {Row} from "@qinetik/anique/row";
 import Menu from "../../../../solid/icons/Menu";
 
-export function BasicIconButtonExample() {
+export default function BasicIconButtonExample() {
     return (
         <Row gap={"2em"}>
             <IconButton size={Size.Small}>

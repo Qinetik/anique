@@ -1,10 +1,10 @@
 import {Column} from "@qinetik/anique/column";
-import {BasicRadioExample} from "./examples/BasicRadioExample";
-import {SizeVariationsExample} from "./examples/SizeVariationsExample";
-import {RadioWithLabelAndDescription} from "./examples/RadioWithLabelAndDescription";
-import {DisabledRadioExample} from "./examples/DisabledRadioExample";
 import {DocContainer} from "../../../components/common/layout/DocContainer";
 import {ComponentExample} from "../../../solid/components/ComponentExample";
+import BasicRadioExample from "./examples/BasicRadioExample";
+import SizeVariationsExample from "./examples/SizeVariationsExample";
+import RadioLabelDescriptionExample from "./examples/RadioLabelDescriptionExample";
+import DisabledRadioExample from "./examples/DisabledRadioExample";
 
 export default function RadioPage() {
     return (
@@ -15,7 +15,7 @@ export default function RadioPage() {
                 <h1>Size Variations</h1>
                 <ComponentExample component={SizeVariationsExample}/>
                 <h1>Radio with Label & Description</h1>
-                <ComponentExample component={RadioWithLabelAndDescription}/>
+                <ComponentExample component={RadioLabelDescriptionExample}/>
                 <h1>Disabled Radio</h1>
                 <ComponentExample component={DisabledRadioExample}/>
             </Column>

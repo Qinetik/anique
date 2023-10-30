@@ -37,39 +37,46 @@ export function ComponentExample(props: ComponentExampleProps) {
             >
                 <Expandable
                     class={viewCode() ? "expanded" : undefined}
-                    exposed={<props.component/>}
+                    exposed={
+                        <Column gap={"1em"}>
+                            <props.component/>
+                            <Row style={{"align-self": "flex-end"}} gap={"0.5em"}>
+                                <IconButton
+                                    onClick={() => setHasBackground((e) => !e)}
+                                    style={hasBackground() ? {
+                                        background: Anique.colors.bg100
+                                    } : undefined}
+                                >
+                                    <TextureIcon/>
+                                </IconButton>
+                                <IconButton
+                                    onClick={() => {
+                                        copyTextToClipboard(code).then(e => {
+                                            if (e) {
+                                                snackbars.showAlert("Code has been copied", AlertType.Success)
+                                            } else {
+                                                snackbars.showAlert("Code couldn't be copied", AlertType.Error)
+                                            }
+                                        })
+                                    }}
+                                >
+                                    <CopyIcon/>
+                                </IconButton>
+                                <IconButton
+                                    onClick={() => setViewCode((e) => !e)}
+                                    style={viewCode() ? {
+                                        background: Anique.colors.bg100
+                                    } : undefined}
+                                >
+                                    <CodeIcon/>
+                                </IconButton>
+                            </Row>
+                        </Column>
+                    }
                 >
                     <div style={{"margin-top": "0.5em"}}><DisplayCode value={code || "error loading code"}/></div>
                 </Expandable>
             </Card>
-            <Row style={{"align-self": "flex-end"}} gap={"0.5em"}>
-                <IconButton
-                    onClick={() => setHasBackground((e) => !e)}
-                >
-                    <TextureIcon/>
-                </IconButton>
-                <IconButton
-                    onClick={() => {
-                        copyTextToClipboard(code).then(e => {
-                            if (e) {
-                                snackbars.showAlert("Code has been copied", AlertType.Success)
-                            } else {
-                                snackbars.showAlert("Code couldn't be copied", AlertType.Error)
-                            }
-                        })
-                    }}
-                >
-                    <CopyIcon/>
-                </IconButton>
-                <IconButton
-                    onClick={() => setViewCode((e) => !e)}
-                    style={viewCode() ? {
-                        background: Anique.colors.bg100
-                    } : undefined}
-                >
-                    <CodeIcon/>
-                </IconButton>
-            </Row>
         </Column>
     )
 }

@@ -1,12 +1,9 @@
-import {Card} from "@qinetik/anique/card";
 import {Radio} from "@qinetik/anique/radio";
 
-export function BasicRadioExample() {
+export default function BasicRadioExample() {
     return (
-        <Card>
-            <Radio
-                type={"radio"}
-            />
-        </Card>
+        <Radio
+            type={"radio"}
+        />
     )
 }

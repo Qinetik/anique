@@ -1,7 +1,7 @@
 import {Column} from "@qinetik/anique/column";
 import {ComponentExample} from "../../../solid/components/ComponentExample";
-import {BasicIconButtonExample} from "./examples/BasicIconButtonExample";
 import {DocContainer} from "../../../components/common/layout/DocContainer";
+import BasicIconButtonExample from "./examples/BasicIconButtonExample";
 
 export default function IconButtonPage() {
     return (
