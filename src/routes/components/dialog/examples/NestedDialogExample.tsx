@@ -30,9 +30,9 @@ export default function NestedDialogExample() {
                 onCloseRequest={() => setIs1stOpen(false)}
                 isVisible={is1stOpen}
 
-                // By default, Dialog tracks its direct children dialog and avoids closing if there are open dialogs inside it
+                // By default, Dialog tracks its direct children dialog and avoids closing if there are open dialogs inside it,
                 // You can control this using doNotTrackChildren which prevents this behavior and debugLog provides helpful logs in console
-                // If you are not going to use nested dialogs, pass false to stop tracking children, which might help performance some
+                // If you are not going to use nested dialogs, pass false to stop tracking children, which might improve performance
 
                 // doNotTrackChildren={true}
                 // debugLog={true}
@@ -54,7 +54,7 @@ export default function NestedDialogExample() {
 
             </Dialog>
 
-            {/* Nested dialog that is not inside the parent dialog */}
+            {/* Nested dialog that is outside the parent dialog */}
             <Dialog
                 onCloseRequest={() => setIs2ndOpen(false)}
                 isVisible={is2ndOpen}

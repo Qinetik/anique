@@ -11,9 +11,12 @@ import {Anique} from "../theme";
 // The public api of dialog context type
 export interface DialogContextTypePublic {
 
+    // id of the dialog, This is given by the user
+    id?: string
+
     // children are the direct child dialogs opened inside the current dialog
     // they must be visible and open for them to be counted
-    children: () => number
+    children: () => DialogContextTypePublic[]
 
 }
 
@@ -28,15 +31,22 @@ interface DialogContextType extends DialogContextTypePublic {
 }
 
 export interface DialogProps extends BackdropContentPositionProps {
+    // children of this dialog
     children?: any
+    // isVisible state or a function
     isVisible?: Accessor<boolean>
+    // dialog requests you to close by setting state to false, because someone clicked outside
     onCloseRequest: (context: DialogContextTypePublic) => void
+    // to use as id in context, If you want to control in parent onCloseRequest
+    id?: string
+    // Disable Tracking children which makes dialog only close if all child dialogs of this dialog has closed
     doNotTrackChildren?: boolean
-    debugLog ?: boolean
+    // enable logging of how many children dialogs and when they are born and die
+    debugLog?: boolean
 }
 
 const defaultContextValue: DialogContextType = {
-    children: () => 0,
+    children: () => [],
     onBorn: () => 0,
     onDied: () => 0
 }
@@ -51,28 +61,29 @@ export function Dialog(props: DialogProps) {
         let parentContext = useContext(DialogContext)
         let contextMap: DialogContextType[] = []
         contextValue = {
-            children: () => contextMap.length,
+            id: props.id,
+            children: () => contextMap,
             onBorn: (childContext) => {
                 contextMap = [...contextMap, childContext]
-                if(props.debugLog) console.log("[DialogDebugEvent:ChildBorn] TotalChildren", contextMap.length)
+                if (props.debugLog) console.log("[DialogDebugEvent:ChildBorn] TotalChildren", contextMap.length)
             },
             onDied: (childContext) => {
                 contextMap = contextMap.filter((e) => e !== childContext)
-                if(props.debugLog) console.log("[DialogDebugEvent:ChildDied] TotalChildren", contextMap.length)
+                if (props.debugLog) console.log("[DialogDebugEvent:ChildDied] TotalChildren", contextMap.length)
             }
         }
         createEffect(() => {
             if (props.isVisible == null || props.isVisible()) {
                 parentContext.onBorn(contextValue)
-                if(props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Born (Effect:Visibility)")
+                if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Born (Effect:Visibility)")
             } else {
                 parentContext.onDied(contextValue)
-                if(props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Effect:Visibility)")
+                if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Effect:Visibility)")
             }
         }, props.isVisible == null || props.isVisible())
         onCleanup(() => {
             parentContext.onDied(contextValue)
-            if(props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Cleanup)")
+            if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Cleanup)")
         })
     } else {
         contextValue = defaultContextValue
@@ -84,10 +95,10 @@ export function Dialog(props: DialogProps) {
                 <Backdrop
                     isVisible={props.isVisible}
                     onClickOutside={props.doNotTrackChildren ? (() => props.onCloseRequest(contextValue)) : (() => {
-                        if(contextValue.children() == 0) {
+                        if (contextValue.children().length == 0) {
                             props.onCloseRequest(contextValue)
                         } else {
-                            if(props.debugLog) console.log("[DialogDebugEvent:ClickedOutside] Avoided Dismiss")
+                            if (props.debugLog) console.log("[DialogDebugEvent:ClickedOutside] Avoided Dismiss")
                         }
                     })}
                     children={props.children}
