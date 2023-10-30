@@ -2,21 +2,15 @@ import {Card, Column, Headline} from "@qinetik/anique";
 import {ClickableCard} from "@qinetik/anique/card";
 
 import {DocContainer} from "../../../components/common/layout/DocContainer";
+import {ComponentExample} from "../../../solid/components/ComponentExample";
+import CardExamples from "./examples/CardExamples";
 
 export default function CardPage() {
     return (
         <DocContainer>
             <Column>
                 <Headline>Card</Headline>
-                <p>You have seen this component so much on this website already</p>
-                <h1>Basic Card</h1>
-                <Card>
-                    Here's my basic card, It gets nothing but children
-                </Card>
-                <h1>Clickable Card</h1>
-                <ClickableCard>
-                    This makes the card clickable
-                </ClickableCard>
+                <ComponentExample component={CardExamples} hasBackground={false} />
             </Column>
         </DocContainer>
     )
