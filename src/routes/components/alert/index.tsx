@@ -3,7 +3,7 @@ import {Alert, AlertType} from "@qinetik/anique/alert";
 import {Headline} from "@qinetik/anique/headline";
 import {Row} from "@qinetik/anique/row";
 import {Icon} from "@qinetik/anique/icon";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 export default function AlertPage() {
     return (

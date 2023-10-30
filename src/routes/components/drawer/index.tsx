@@ -4,7 +4,7 @@ import {Card} from "@qinetik/anique/card";
 import {DrawerItem, DrawerSectionItem, StaticDrawer} from "@qinetik/anique/drawer";
 import {styled} from "@qinetik/emotion";
 import {Anique} from "@qinetik/anique/theme/Theme";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 const StyledDrawer = styled(StaticDrawer)`
     border : 1px solid ${Anique.colors.bg200};

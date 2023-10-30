@@ -1,6 +1,6 @@
 import {Column, Headline} from "@qinetik/anique";
 import {Table} from "@qinetik/anique/table";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 export default function TablePage() {
     return (

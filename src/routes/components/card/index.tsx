@@ -1,6 +1,7 @@
 import {Card, Column, Headline} from "@qinetik/anique";
 import {ClickableCard} from "@qinetik/anique/card";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 export default function CardPage() {
     return (

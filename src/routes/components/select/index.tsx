@@ -5,7 +5,7 @@ import {createSignal, createUniqueId, For} from "solid-js";
 import {Card} from "@qinetik/anique/card";
 import {Button} from "@qinetik/anique/button";
 import {Row} from "@qinetik/anique/row";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 const ReactiveExample = () => {
     const optionSets = {

@@ -1,5 +1,6 @@
 import {Column, Headline} from "@qinetik/anique";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 export default function ScaffoldPage() {
     const base = "/anique"

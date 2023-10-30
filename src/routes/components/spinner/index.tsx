@@ -4,7 +4,7 @@ import {Column} from "@qinetik/anique/column";
 import {Row} from "@qinetik/anique/row";
 import {Anique} from "@qinetik/anique/theme/Theme";
 import {Size} from "@qinetik/anique/theme/Size";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 
 export default function SpinnerPage() {
     return (

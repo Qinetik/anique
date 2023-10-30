@@ -1,7 +1,7 @@
 import {Icon} from "@qinetik/anique/icon";
-import {DocContainer} from "../../components/common/layout/DocContainer";
+import {DocContainer} from "../../../components/common/layout/DocContainer";
 import {Accordion, Anique, Card, Column, Headline, Row} from "@qinetik/anique";
-import Menu from "../../solid/icons/Menu";
+import Menu from "../../../solid/icons/Menu";
 
 export default function IconPage() {
     return (
