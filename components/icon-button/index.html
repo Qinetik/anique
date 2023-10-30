@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="en" class="dark " ><head ><title data-sm="0-0-0-0-0-0-0-0-0-0-0-0">Anique | SolidJS</title><meta data-sm="0-0-0-0-0-0-0-0-0-0-1-0" charset="utf-8"/><meta data-sm="0-0-0-0-0-0-0-0-0-0-2-0" name="viewport" content="width=device-width, initial-scale=1"/><link rel="modulepreload" href="/anique/assets/index-04ebb00b.js"><link rel="modulepreload" href="/anique/assets/entry-client-2fda6d46.js"><link rel="modulepreload" href="/anique/assets/index-e7aa7392.js"><link rel="modulepreload" href="/anique/assets/index-bb5a5d3d.js"><link rel="modulepreload" href="/anique/assets/ComponentExample-4b7a40fe.js"><link rel="modulepreload" href="/anique/assets/index-50dde1b3.js"><link rel="modulepreload" href="/anique/assets/Theme-c9d85115.js"><link rel="modulepreload" href="/anique/assets/index-d65ca23f.js"><link rel="modulepreload" href="/anique/assets/css-a2b805a8.js"><link rel="modulepreload" href="/anique/assets/index-880dcc90.js"><link rel="modulepreload" href="/anique/assets/UL-a265d12a.js"><link rel="modulepreload" href="/anique/assets/index-7a2b10b5.js"><link rel="modulepreload" href="/anique/assets/index-8c496293.js"><link rel="modulepreload" href="/anique/assets/index-31fb525c.js"><link rel="modulepreload" href="/anique/assets/index-a88f9566.js"><link rel="modulepreload" href="/anique/assets/index-7a43a4af.js"><link rel="modulepreload" href="/anique/assets/index-f62fd80e.js"><link rel="modulepreload" href="/anique/assets/index-d1f62f4a.js"><link rel="modulepreload" href="/anique/assets/index-710de314.js"><link rel="modulepreload" href="/anique/assets/index-b47d8711.js"><link rel="modulepreload" href="/anique/assets/index-78db38af.js"><link rel="modulepreload" href="/anique/assets/index-57b39e9e.js"><link rel="modulepreload" href="/anique/assets/index-04a91ab9.js"><link rel="modulepreload" href="/anique/assets/keyframes-489867ef.js"><link rel="modulepreload" href="/anique/assets/index-f6060dd8.js"><link rel="modulepreload" href="/anique/assets/index-11ea25b9.js"><link rel="modulepreload" href="/anique/assets/index-d7a2bb4c.js"><link rel="modulepreload" href="/anique/assets/index-927437be.js"><link rel="modulepreload" href="/anique/assets/DisplayCode-7a66622d.js"><link rel="stylesheet" href="/anique/assets/DisplayCode-1d475d61.css"><link rel="modulepreload" href="/anique/assets/DocContainer-0b194602.js"><link rel="modulepreload" href="/anique/assets/Menu-f2088714.js"><link rel="modulepreload" href="/anique/assets/AniqueThemes-083b991a.js"><link rel="modulepreload" href="/anique/assets/createGlobalStyle-954222f7.js"><link rel="modulepreload" href="/anique/assets/BasicIconButtonExample-1cbf83c8.js"><link rel="modulepreload" href="/anique/assets/Size-fe6876e6.js"><style data-server-style="13q4tv">
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .light .display-in-dark {
+        display: none !important;
+    }
+
+    .dark .display-in-light {
+        display: none !important;
+    }
+</style><style data-server-style="77ljej">.light {
+        --a0:0.25em;
+--a1:0.5em;
+--a2:0.75em;
+--a3:"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+--a4:"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+--a5:cubic-bezier(0.25, 0.1, 0.25, 1);
+--a6:cubic-bezier(0.05, 0.95, 0.35, 1.05);
+--a7:cubic-bezier(0.05, 0.05, 0, 1);
+--a8:cubic-bezier(0.95, 0, 0.95, 0.25);
+--a9:#84e19a;
+--b0:#0a2911;
+--b1:#f9d36c;
+--b2:#312402;
+--b3:#fc6969;
+--b4:#4b0202;
+--b5:#82b3e3;
+--b6:#001833;
+--b7:rgb(23,207,185);
+--b8:rgb(18,161,144);
+--b9:rgb(15,138,123);
+--c0:rgb(13,115,103);
+--c1:rgb(10,92,82);
+--c2:rgb(8,69,62);
+--c3:rgb(59,130,246);
+--c4:rgb(26,110,244);
+--c5:rgb(11,92,224);
+--c6:rgb(9,78,190);
+--c7:rgb(7,64,156);
+--c8:rgb(6,50,122);
+--c9:rgb(246,246,247);
+--d0:rgb(225,225,229);
+--d1:rgb(204,204,209);
+--d2:rgb(182,182,190);
+--d3:rgb(160,160,171);
+--d4:rgb(139,139,152);
+--d5:rgb(0,0,0);
+--d6:rgb(23,23,23);
+--d7:rgb(46,46,46);
+--d8:rgb(69,69,69);
+--d9:rgb(92,92,92);
+--e0:rgb(115,115,115);
+--e1:rgba(0, 0, 0, 0.5);
+    }</style><style data-server-style="ldx4qt">.dark {
+        --a0:0.25em;
+--a1:0.5em;
+--a2:0.75em;
+--a3:"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+--a4:"Untitled Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+--a5:cubic-bezier(0.25, 0.1, 0.25, 1);
+--a6:cubic-bezier(0.05, 0.95, 0.35, 1.05);
+--a7:cubic-bezier(0.05, 0.05, 0, 1);
+--a8:cubic-bezier(0.95, 0, 0.95, 0.25);
+--a9:#145222;
+--b0:#adebbb;
+--b1:#624904;
+--b2:#fbe29d;
+--b3:#640202;
+--b4:#fdb4b4;
+--b5:#133353;
+--b6:#99c9ff;
+--b7:#119c8c;
+--b8:#14b8a5;
+--b9:#17d3bd;
+--c0:#23e7d0;
+--c1:#3fe9d5;
+--c2:#5aeddc;
+--c3:rgb(59,130,246);
+--c4:rgb(89,150,247);
+--c5:rgb(119,168,249);
+--c6:rgb(148,187,250);
+--c7:rgb(177,206,251);
+--c8:rgb(206,224,253);
+--c9:#121212;
+--d0:#1e1e1e;
+--d1:#2c2c2c;
+--d2:#3a3a3a;
+--d3:#464646;
+--d4:#525252;
+--d5:rgb(255,255,255);
+--d6:rgb(237,237,237);
+--d7:rgb(219,219,219);
+--d8:rgb(201,201,201);
+--d9:rgb(184,184,184);
+--e0:rgb(166,166,166);
+--e1:rgba(15, 23, 42, 1);
+    }</style><style data-server-style="1er4muv">
+    :root * {
+        font-family: var(--a4);
+    }
+
+    a {
+        color: #0060FE;
+    }
+
+    a:hover {
+        color: #266bd9;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--a3);
+    }
+
+    p {
+        line-height: 1.75rem;
+        letter-spacing: 0.05rem;
+    }
+
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        background: var(--e0);
+        color: var(--d0);
+        border-radius: var(--a0);
+        padding: 1px 3px;
+    }
+</style><style data-server-style="pak1uv">
+        :root.dark {
+            color-scheme: dark;
+        }
+
+        :root.light {
+            color-scheme: light;
+        }
+    </style><style data-server-style="hubwok">
+
+    .content-container {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-items: start;
+        align-items: center;
+        flex: 1;
+        box-sizing: border-box;
+    }
+
+    .container {
+        padding: 0 4rem 3rem 4rem;
+    }
+
+    .bar-content-row {
+        display: table;
+    }
+
+    .static-drawer {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .static-drawer a {
+        text-decoration: none;
+    }
+
+</style><style data-server-style="1h61f3">.c1h61f3{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.6em 0.5em 0.6em 1em;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: var(--a4);
+    color: var(--d5);
+
+    
+    &:hover {
+        background: var(--b7);
+    }
+}</style><style data-server-style="1qj8w5r">.c1qj8w5r{
+    text-decoration: none;
+}</style><style data-server-style="1hfea66">.c1hfea66{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.6em 0.5em 0.6em 1em;
+    margin: 0.25em 0 0.25em 0;
+    font-family: var(--a3);
+    color : var(--d7);
+}</style><style data-server-style="1e2fy0l">.c1e2fy0l{
+}</style><style data-server-style="fok0pk">.cfok0pk{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 280px;
+    box-sizing: border-box;
+    padding: 1.5em;
+}</style><style data-server-style="1bvat9u">.c1bvat9u{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    height: calc(100% - 56px);
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    //background: red;
+}</style><style data-server-style="9t904h">.c9t904h{
+    width: 300px;
+    height: calc(100% - 56px);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 998;
+
+    display: none;
+
+    @media (min-width:900px) {
+        display: block;
+    }
+
+    //background: skyblue;
+
+}</style><style data-server-style="1b4a3go">.c1b4a3go{
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    fill:var(--d5);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &:hover {
+        background: var(--d2);
+    }
+
+    &:active {
+        background: var(--d3);
+    }
+
+}</style><style data-server-style="kepzzb">.ckepzzb{
+  margin-right: 1rem;
+}</style><style data-server-style="1v0datl">.c1v0datl{
+  flex : 1;
+}</style><style data-server-style="468qss">.c468qss{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:1em;
+    
+}</style><style data-server-style="osbrp6">.cosbrp6{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+    
+
+  width : 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1em;
+  height: 4em;
+}</style><style data-server-style="1qtqh5u">.c1qtqh5u{
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 56px;
+    z-index: 999;
+    //background: blue;
+}</style><style data-server-style="j04hpc">.cj04hpc{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position : fixed;
+    z-index : 1001;
+}</style><style data-server-style="rucwdi">.crucwdi{
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    fill:var(--d5);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    &:hover {
+        background: var(--d2);
+    }
+
+    &:active {
+        background: var(--d3);
+    }
+
+}</style><style data-server-style="18dpclt">.c18dpclt{
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    fill:var(--d5);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    &:hover {
+        background: var(--d2);
+    }
+
+    &:active {
+        background: var(--d3);
+    }
+
+}</style><style data-server-style="1cg7qvh">.c1cg7qvh{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:2em;
+    
+}</style><style data-server-style="4tlpqp">.c4tlpqp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap:0.5em;
+    
+}</style><style data-server-style="1i1muuz">.c1i1muuz{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1em;
+    
+}</style><style data-server-style="dpxs4m">.cdpxs4m{
+    border-radius: var(--a1);
+    background: var(--d1);
+    box-sizing: border-box;
+    padding: 1em;
+}</style><style data-server-style="14c62lv">.c14c62lv{
+
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows 500ms;
+
+    box-sizing: border-box;
+    border-radius: var(--a0);
+
+    & .content {
+        overflow: hidden;
+    }
+
+    &.expanded {
+        grid-template-rows: min-content 1fr;
+    }
+
+}</style><style data-server-style="5mfqmw">.c5mfqmw{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:0.5em;
+    
+}</style><style data-server-style="9nbwv9">.c9nbwv9{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    
+}</style><style data-server-style="9ayxb2">.c9ayxb2{
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 56px;
+    position: relative;
+    //background: grey;
+}</style><style data-server-style="o3goy6">.co3goy6{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}</style><style data-server-style="8mhvwh">.c8mhvwh{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    
+}</style><style data-server-style="1lmwdbf">.c1lmwdbf{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index : 1000;
+
+    &:after {
+        content: "";
+        background: var(--c9);
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+}</style><style data-server-style="4i1wx">.c4i1wx{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+}</style></head><body ><!--!$e0-0-0-0-0-0-0-0-0-1-0-0-0--><main data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-0"><!--$--><!--/--><!--$--><!--/--><!--$--><!--/--><!--$--><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-0" class="c4i1wx "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-0" class="c9t904h "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-0" style="left:0" class="c1bvat9u "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-0" class="cfok0pk static-drawer " ><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-1-0-0-0" href="/anique/" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-1-0-0-1-0-0" class="c1h61f3 ">Home</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-2-0-0-0" href="/anique/setup" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-2-0-0-1-0-0" class="c1h61f3 ">Setup</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-3-0-0-0" href="/anique/theming" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-3-0-0-1-0-0" class="c1h61f3 ">Theming</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-4-0-0-0-0" class="c1hfea66 c1e2fy0l ">Input</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-5-0-0-0" href="/anique/components/textfield" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-5-0-0-1-0-0" class="c1h61f3 ">TextField</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-6-0-0-0" href="/anique/components/fab" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-6-0-0-1-0-0" class="c1h61f3 ">Floating Action Button</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-7-0-0-0" href="/anique/components/button" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-7-0-0-1-0-0" class="c1h61f3 ">Button</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-8-0-0-0" href="/anique/components/snackbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-8-0-0-1-0-0" class="c1h61f3 ">Snackbar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-9-0-0-0" href="/anique/components/icon-button" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-9-0-0-1-0-0" class="c1h61f3 ">IconButton</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-10-0-0-0" href="/anique/components/chip" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-10-0-0-1-0-0" class="c1h61f3 ">Chip</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-11-0-0-0" href="/anique/components/accordion" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-11-0-0-1-0-0" class="c1h61f3 ">Accordion</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-12-0-0-0" href="/anique/components/dropdown" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-12-0-0-1-0-0" class="c1h61f3 ">Dropdown</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-13-0-0-0" href="/anique/components/switch" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-13-0-0-1-0-0" class="c1h61f3 ">ToggleSwitch</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-14-0-0-0" href="/anique/components/checkbox" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-14-0-0-1-0-0" class="c1h61f3 ">Checkbox</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-15-0-0-0" href="/anique/components/radio" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-15-0-0-1-0-0" class="c1h61f3 ">Radio</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-16-0-0-0" href="/anique/components/slider" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-16-0-0-1-0-0" class="c1h61f3 ">Slider</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-17-0-0-0" href="/anique/components/native-select" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-17-0-0-1-0-0" class="c1h61f3 ">Native Select</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-18-0-0-0" href="/anique/components/select" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-18-0-0-1-0-0" class="c1h61f3 ">Select</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-19-0-0-0-0" class="c1hfea66 c1e2fy0l ">Layout</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-20-0-0-0" href="/anique/components/scaffold" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-20-0-0-1-0-0" class="c1h61f3 ">Scaffold</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-21-0-0-0" href="/anique/components/scrollbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-21-0-0-1-0-0" class="c1h61f3 ">Scrollbar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-22-0-0-0" href="/anique/components/column" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-22-0-0-1-0-0" class="c1h61f3 ">Column</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-23-0-0-0" href="/anique/components/row" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-23-0-0-1-0-0" class="c1h61f3 ">Row</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-24-0-0-0" href="/anique/components/dialog" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-24-0-0-1-0-0" class="c1h61f3 ">Dialog</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-25-0-0-0" href="/anique/components/appbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-25-0-0-1-0-0" class="c1h61f3 ">AppBar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-26-0-0-0" href="/anique/components/tabs" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-26-0-0-1-0-0" class="c1h61f3 ">Tabs</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-27-0-0-0" href="/anique/components/drawer" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-27-0-0-1-0-0" class="c1h61f3 ">Drawer</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-28-0-0-0-0" class="c1hfea66 c1e2fy0l ">Text</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-29-0-0-0" href="/anique/components/text" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-29-0-0-1-0-0" class="c1h61f3 ">Native Text</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-30-0-0-0" href="/anique/components/headline" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-30-0-0-1-0-0" class="c1h61f3 ">Headline</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-31-0-0-0-0" class="c1hfea66 c1e2fy0l ">Data</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-32-0-0-0" href="/anique/components/table" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-32-0-0-1-0-0" class="c1h61f3 ">Table</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-33-0-0-0-0" class="c1hfea66 c1e2fy0l ">Display</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-34-0-0-0" href="/anique/components/card" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-34-0-0-1-0-0" class="c1h61f3 ">Card</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-35-0-0-0" href="/anique/components/icon" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-35-0-0-1-0-0" class="c1h61f3 ">Icon</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-36-0-0-0-0" class="c1hfea66 c1e2fy0l ">Feedback</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-37-0-0-0" href="/anique/components/alert" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-37-0-0-1-0-0" class="c1h61f3 ">Alert</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-38-0-0-0" href="/anique/components/spinner" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-1-0-0-1-0-1-0-0-38-0-0-1-0-0" class="c1h61f3 ">Spinner</div></a></div></div></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-0" class="co3goy6 "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-0" style="position:fixed" class="c1qtqh5u "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-0" style="background:var(--c9)" class="cosbrp6 "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-1-0-0" style="margin-right:1rem" class="ckepzzb "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-1-0-1-0-0" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-1-0-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div></div><h3 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-2-0-0" class="c1v0datl ">Anique</h3><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-3"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-0" class="c468qss "><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-1-0-0" target="_blank" href="https://github.com/qinetik/anique" class="c1b4a3go display-in-dark " ><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-1-0-1-0" width="24" height="24" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"></path></svg></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-2-0-0" target="_blank" href="https://github.com/qinetik/anique" class="c1b4a3go display-in-light " ><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-2-0-1-0" width="24" height="24" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-3-0-0-0" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-1-0-0-1-0-0-0-4-0-3-0-0-1-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 60 60"><path id="theme-light-dark" d="M18.272,3a18.556,18.556,0,0,0,.089,31.716A16.081,16.081,0,0,1,2,18.856,16.069,16.069,0,0,1,18.272,3M52.5,7.323l4.231,4.123L10.669,56.338,6.438,52.215,52.5,7.323M34.219,14.329,29.84,11.648l-4.26,2.883,1.243-4.9L22.71,6.573l5.178-.346L29.6,1.47l1.982,4.7,5.118.086L32.71,9.514l1.509,4.815M24.456,24.738l-3.432-2.1L17.71,24.882l1.006-3.806-3.225-2.393,4.024-.259L20.846,14.7l1.509,3.662,4.024.086-3.107,2.508,1.183,3.777M52.3,36.155A16.069,16.069,0,0,1,36.024,52.013a16.519,16.519,0,0,1-9.645-3.085L49.13,26.756a15.555,15.555,0,0,1,3.166,9.4M39.278,55.127l8.2-3.316-.71,9.659-7.485-6.343m12.811-7.785,3.4-7.987L62,46.679l-9.911.663m3.4-14.3-3.373-8.015L62,25.718l-6.509,7.323M24.574,51.811l8.2,3.316-7.485,6.314Z" transform="translate(-2 -1.47)"></path></svg></div></div></div></div></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-0" class="c9ayxb2 "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-1" class="content-container"><div class="container"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-0" class="c9nbwv9 "><h1 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-1">IconButton</h1><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-0" class="c5mfqmw "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-1-0-0-0" style="right:1em;bottom:1em" class="cj04hpc "></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-0" style="background:var(--d1)" class="cdpxs4m "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-0" class="c14c62lv " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-1" class="exposed"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-0" class="c1i1muuz "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-0" class="c1cg7qvh "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-1-0-0" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-2-0-0" class="crucwdi "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-2-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-3-0-0" class="c18dpclt "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-1-0-0-3-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg></div></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-0" style="align-self:flex-end" class="c4tlpqp "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-1-0-0" style="background:var(--d0)" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-1-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>texture-box</title><path d="M20 2H4C2.9 2 2 2.9 2 4V20C2 21.11 2.9 22 4 22H20C21.11 22 22 21.11 22 20V4C22 2.9 21.11 2 20 2M4 6L6 4H10.9L4 10.9V6M4 13.7L13.7 4H18.6L4 18.6V13.7M20 18L18 20H13.1L20 13.1V18M20 10.3L10.3 20H5.4L20 5.4V10.3Z"></path></svg></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-2-0-0" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-2-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>content-copy</title><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-3-0-0" style="" class="c1b4a3go "><svg data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-2-0-2-0-3-0-1-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>xml</title><path d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z"></path></svg></div></div></div></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-3" class="content"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-4" style="margin-top:0.5em"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-5-0" class="prism-dark-theme prism-theme"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-2-0-2-0-2-0-2-0-0-2-0-1-0-0-5-1-0-0" class="cdpxs4m "><span class="token keyword">import</span> <span class="token punctuation">{</span>IconButton<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@qinetik/anique/icon-button"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Size<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@qinetik/anique/theme"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>Row<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@qinetik/anique/row"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Menu <span class="token keyword">from</span> <span class="token string">"../../../../solid/icons/Menu"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">BasicIconButtonExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Row</span></span> <span class="token attr-name">gap</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token string">"2em"</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">IconButton</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Size<span class="token punctuation">.</span>Small<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span></span><span class="token punctuation">/></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">IconButton</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">IconButton</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Size<span class="token punctuation">.</span>Medium<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span></span><span class="token punctuation">/></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">IconButton</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">IconButton</span></span> <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Size<span class="token punctuation">.</span>Large<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span></span><span class="token punctuation">/></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">IconButton</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Row</span></span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></div></div></div></div></div></div></div></div></div></div></div></div><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-0" style="display:none;z-index:999" class="c1lmwdbf "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-0" style="width:100%;height:100%;position:relative"><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-0" style="left:0" class="c8mhvwh "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-0" style="background:var(--d0);border-top-right-radius:var(--a1);border-bottom-right-radius:var(--a1);left:0" class="c1bvat9u "><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-0" class="cfok0pk static-drawer " ><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-1-0-0-0" href="/anique/" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-1-0-0-1-0-0" class="c1h61f3 ">Home</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-2-0-0-0" href="/anique/setup" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-2-0-0-1-0-0" class="c1h61f3 ">Setup</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-3-0-0-0" href="/anique/theming" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-3-0-0-1-0-0" class="c1h61f3 ">Theming</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-4-0-0-0-0" class="c1hfea66 c1e2fy0l ">Input</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-5-0-0-0" href="/anique/components/textfield" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-5-0-0-1-0-0" class="c1h61f3 ">TextField</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-6-0-0-0" href="/anique/components/fab" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-6-0-0-1-0-0" class="c1h61f3 ">Floating Action Button</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-7-0-0-0" href="/anique/components/button" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-7-0-0-1-0-0" class="c1h61f3 ">Button</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-8-0-0-0" href="/anique/components/snackbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-8-0-0-1-0-0" class="c1h61f3 ">Snackbar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-9-0-0-0" href="/anique/components/icon-button" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-9-0-0-1-0-0" class="c1h61f3 ">IconButton</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-10-0-0-0" href="/anique/components/chip" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-10-0-0-1-0-0" class="c1h61f3 ">Chip</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-11-0-0-0" href="/anique/components/accordion" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-11-0-0-1-0-0" class="c1h61f3 ">Accordion</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-12-0-0-0" href="/anique/components/dropdown" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-12-0-0-1-0-0" class="c1h61f3 ">Dropdown</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-13-0-0-0" href="/anique/components/switch" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-13-0-0-1-0-0" class="c1h61f3 ">ToggleSwitch</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-14-0-0-0" href="/anique/components/checkbox" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-14-0-0-1-0-0" class="c1h61f3 ">Checkbox</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-15-0-0-0" href="/anique/components/radio" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-15-0-0-1-0-0" class="c1h61f3 ">Radio</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-16-0-0-0" href="/anique/components/slider" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-16-0-0-1-0-0" class="c1h61f3 ">Slider</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-17-0-0-0" href="/anique/components/native-select" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-17-0-0-1-0-0" class="c1h61f3 ">Native Select</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-18-0-0-0" href="/anique/components/select" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-18-0-0-1-0-0" class="c1h61f3 ">Select</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-19-0-0-0-0" class="c1hfea66 c1e2fy0l ">Layout</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-20-0-0-0" href="/anique/components/scaffold" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-20-0-0-1-0-0" class="c1h61f3 ">Scaffold</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-21-0-0-0" href="/anique/components/scrollbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-21-0-0-1-0-0" class="c1h61f3 ">Scrollbar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-22-0-0-0" href="/anique/components/column" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-22-0-0-1-0-0" class="c1h61f3 ">Column</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-23-0-0-0" href="/anique/components/row" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-23-0-0-1-0-0" class="c1h61f3 ">Row</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-24-0-0-0" href="/anique/components/dialog" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-24-0-0-1-0-0" class="c1h61f3 ">Dialog</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-25-0-0-0" href="/anique/components/appbar" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-25-0-0-1-0-0" class="c1h61f3 ">AppBar</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-26-0-0-0" href="/anique/components/tabs" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-26-0-0-1-0-0" class="c1h61f3 ">Tabs</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-27-0-0-0" href="/anique/components/drawer" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-27-0-0-1-0-0" class="c1h61f3 ">Drawer</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-28-0-0-0-0" class="c1hfea66 c1e2fy0l ">Text</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-29-0-0-0" href="/anique/components/text" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-29-0-0-1-0-0" class="c1h61f3 ">Native Text</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-30-0-0-0" href="/anique/components/headline" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-30-0-0-1-0-0" class="c1h61f3 ">Headline</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-31-0-0-0-0" class="c1hfea66 c1e2fy0l ">Data</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-32-0-0-0" href="/anique/components/table" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-32-0-0-1-0-0" class="c1h61f3 ">Table</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-33-0-0-0-0" class="c1hfea66 c1e2fy0l ">Display</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-34-0-0-0" href="/anique/components/card" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-34-0-0-1-0-0" class="c1h61f3 ">Card</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-35-0-0-0" href="/anique/components/icon" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-35-0-0-1-0-0" class="c1h61f3 ">Icon</div></a><h4 data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-36-0-0-0-0" class="c1hfea66 c1e2fy0l ">Feedback</h4><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-37-0-0-0" href="/anique/components/alert" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-37-0-0-1-0-0" class="c1h61f3 ">Alert</div></a><a data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-38-0-0-0" href="/anique/components/spinner" class="c1qj8w5r " ><div data-hk="0-0-0-0-0-0-0-0-0-1-0-0-0-0-0-1-0-0-0-4-0-0-4-0-0-0-0-1-1-0-1-0-1-0-0-38-0-0-1-0-0" class="c1h61f3 ">Spinner</div></a></div></div></div></div></div></div><!--/--></main><!--!$/e0-0-0-0-0-0-0-0-0-1-0-0-0--><script>window._$HY||(e=>{let t=e=>e&&e.hasAttribute&&(e.hasAttribute("data-hk")?e:t(e.host&&e.host.nodeType?e.host:e.parentNode));["click", "input"].forEach((o=>document.addEventListener(o,(o=>{let a=o.composedPath&&o.composedPath()[0]||o.target,s=t(a);s&&!e.completed.has(s)&&e.events.push([s,o])}))))})(_$HY={events:[],completed:new WeakSet,r:{},fe(){}});self._$=self._$||{P:function(s,f,p){return(p=new Promise(function(a,b){s=a,f=b})).s=s,p.f=f,p},uP:function(p){delete p.s;delete p.f},Ps:function(p,d){p.s(d),p.status="success",p.value=d,this.uP(p)},Pf:function(p,d){p.f(d),p.status="failure",p.value=d,this.uP(p)},uS:function(s){delete s.c},Se:function(s,t,d,c){switch(c=s.c,t){case 0:return c.enqueue(d);case 1:return(this.uS(s),c.error(d));case 2:return(this.uS(s),c.close())}},S:function(s,c){return(s=new ReadableStream({start:function(x){c=x}})).c=c,s}}</script><!--xs--><script type="module" async src="/anique/assets/entry-client-2fda6d46.js"></script></body></html>
