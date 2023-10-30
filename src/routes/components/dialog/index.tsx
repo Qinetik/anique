@@ -4,6 +4,7 @@ import {ComponentExample} from "../../../solid/components/ComponentExample";
 import PositionedDialogExample from "./examples/PositionedDialogExample";
 import CenteredDialogExample from "./examples/CenteredDialogExample";
 import AlertDialogExamples from "./examples/AlertDialogExamples";
+import NestedDialogExample from "./examples/NestedDialogExample";
 
 
 export default function DialogPage() {
@@ -17,6 +18,8 @@ export default function DialogPage() {
                 <ComponentExample component={PositionedDialogExample}/>
                 <h1>Alert Dialog Examples</h1>
                 <ComponentExample component={AlertDialogExamples}/>
+                <h1>Nested Dialog Example</h1>
+                <ComponentExample component={NestedDialogExample}/>
             </Column>
         </DocContainer>
     )
