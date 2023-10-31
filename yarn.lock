@@ -1988,6 +1988,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@qinetik/mdi@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@qinetik/mdi@npm:1.0.1"
+  checksum: 6575e6afbe4c7d612d55116fa37477cfa32abdb114deb858663a4917816a521761cee131e320a123821d0ed126d11523db946b6ded018201c20f30b489f24506
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^6.0.4":
   version: 6.0.4
   resolution: "@rollup/plugin-babel@npm:6.0.4"
@@ -4966,6 +4973,7 @@ __metadata:
   dependencies:
     "@qinetik/anique": "workspace:^"
     "@qinetik/emotion": "workspace:^"
+    "@qinetik/mdi": ^1.0.1
     "@rollup/plugin-multi-entry": ^6.0.0
     "@solidjs/meta": ^0.28.5
     "@solidjs/router": ^0.8.3

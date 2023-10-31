@@ -92,6 +92,9 @@ function SideDrawer() {
             <AnchorDrawerItem href={base + "/theming"} current={path}>
                 Theming
             </AnchorDrawerItem>
+            <AnchorDrawerItem href={base + "/icons"} current={path}>
+                Icons
+            </AnchorDrawerItem>
 
             <DrawerSectionItem title={"Input"}/>
             <AnchorDrawerItem href={`${base}/components/textfield`} current={path}>

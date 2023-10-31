@@ -16,6 +16,7 @@
     "dependencies": {
         "@qinetik/anique": "workspace:^",
         "@qinetik/emotion": "workspace:^",
+        "@qinetik/mdi": "^1.0.1",
         "@solidjs/meta": "^0.28.5",
         "@solidjs/router": "^0.8.3",
         "prism-themes": "^1.9.0",
