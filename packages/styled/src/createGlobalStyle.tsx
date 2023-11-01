@@ -42,7 +42,7 @@ function createGlobalStyle(...args: Array<any>): GlobalStylesComponent {
         const serStyles = serialized()
         const hashName = hashFunc(serStyles.styles)
         const styles = serStyles.styles
-        injectStyles(styles, hashName, engine.nonce)
+        injectStyles(() => styles, () => hashName, engine.nonce)
         return null
     }
 }

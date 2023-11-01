@@ -31,7 +31,7 @@ function keyframes(...args: any[]): KeyframesEle {
     const styles = `@keyframes ${kfName}{${serStyles.styles}}`
 
     const Styled = () => {
-        injectStyles(styles, hashName, engine.nonce)
+        injectStyles(() => styles, () => hashName, engine.nonce)
         return null
     }
     (Styled as any).__evaluate = kfName

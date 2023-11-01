@@ -35,7 +35,7 @@ function css(
     const className = engine.classNamePattern(hashName)
     const styles = `.${className}{${serStyles.styles}}`
     const Invoker = () => {
-        injectStyles(styles, hashName, engine.nonce)
+        injectStyles(() => styles, () => hashName, engine.nonce)
         return className
     }
     Invoker.toString = () => `.${className}`

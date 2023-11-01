@@ -10,6 +10,10 @@ const InterpolatingComponent = styled('div')(({value}) => ({
   backgroundColor: value ? 'red' : 'blue',
 }));
 
+const DotSyntax = styled.main`
+  color : gray;
+`
+
 describe('styled', () => {
   it('works with single style property', () => {
     const {element} = render(() => <Component />, {});
@@ -81,6 +85,11 @@ describe('styled', () => {
       const {element} = render(() => <ExtendingComponent value={true} />, {});
       expect(window.getComputedStyle(element)['background-color']).toEqual('blue');
     });
+
+    it("dot syntax works", () => {
+      const {element} = render(() => <DotSyntax>Test</DotSyntax>);
+      expect(window.getComputedStyle(element)['color']).toEqual('gray');
+    })
 
     it('does not do unnecessary rerenders of children', () => {
       const ExtendingComponent = styled(Component)({
