@@ -52,8 +52,10 @@ export interface AniqueStyledEngineConfiguration {
 
 }
 
-export const AniqueStyledEngineContext = createContext<AniqueStyledEngineConfiguration>({
+export const DefaultAniqueStyledEngineContext: AniqueStyledEngineConfiguration = {
     classNamePattern: (hash: string) => "c" + hash,
     keyframesPattern: (hash: string) => "k" + hash,
     injectionStrategy: AniqueStylesInjectionStrategy.Assets
-})
+}
+
+export const AniqueStyledEngineContext = createContext<AniqueStyledEngineConfiguration>(DefaultAniqueStyledEngineContext)

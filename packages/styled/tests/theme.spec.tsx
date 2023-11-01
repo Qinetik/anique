@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { styled, ThemeProvider, useTheme } from '../src/index';
+import {styled, ThemeProvider, useTheme} from '../src/index';
 import { render } from './helper';
 
 describe('useTheme', () => {

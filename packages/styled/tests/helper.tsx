@@ -6,7 +6,7 @@ interface Options {
 }
 
 interface Result {
-  element: Element,
+  element: JSX.Element,
   cleanup: () => void
 }
 

@@ -1,15 +1,18 @@
 import {createDeferred, createRenderEffect, JSXElement, onCleanup, useContext} from "solid-js";
 import {isServer, useAssets} from "solid-js/web";
 import {AniqueStyledEngineContext} from "./engine";
+import {logDebug} from "./newstyled";
 
 const stylesCache = new Map<string, boolean>()
 
 let bundlesRemaining = 0
 
-export function injectStyles(stylesString: string, uniqueHash: string, nonce: string | undefined) {
+export function injectStyles(getStylesString: () => string, getUniqueHash: () => string, nonce: string | undefined) {
 
     if (isServer) {
         createRenderEffect(() => {
+            const uniqueHash = getUniqueHash()
+            const stylesString = getStylesString()
             bundlesRemaining++
             // console.log("Render Effect Called", bundlesRemaining)
             if (stylesCache.size == 0) {
@@ -37,6 +40,9 @@ export function injectStyles(stylesString: string, uniqueHash: string, nonce: st
     } else {
         let styleEle: HTMLStyleElement | null
         createRenderEffect<{ element: HTMLStyleElement | null }>((prev) => {
+
+            const uniqueHash = getUniqueHash()
+            const stylesString = getStylesString()
 
             styleEle = document.head.querySelector<HTMLStyleElement>(`[data-style-id="${uniqueHash}"]`)
 

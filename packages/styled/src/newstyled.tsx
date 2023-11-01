@@ -14,6 +14,12 @@ import hashFunc from "@emotion/hash"
 import {injectStyles} from "./injectStyle";
 import {AniqueStyledEngineContext, AniqueStylesInjectionStrategy} from "./engine";
 
+export let logDebug = false
+
+export function enableDebugLogging(enable ?: boolean) {
+    logDebug = enable == null || enable
+}
+
 // TODO fix the type here
 // @ts-ignore
 export const createNewStyled: CreateStyledFunction = (tag: any, options?: StyledOptions) => {
@@ -91,11 +97,19 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                         }
                     )
 
-                    return serializeStyles(
+                    const serialized = serializeStyles(
                         styles,
                         undefined,
                         mergedProps
                     )
+
+                    return {
+
+                        hashName : hashFunc(serialized.styles),
+
+                        styles : serialized.styles
+
+                    }
 
                 })
 
@@ -120,30 +134,32 @@ export const createNewStyled: CreateStyledFunction = (tag: any, options?: Styled
                     }
                 }
 
-                const serStyles = serialized()
-                const hashName = hashFunc(serStyles.styles)
-
                 const engine = useContext(AniqueStyledEngineContext)
-                const className = engine.classNamePattern(hashName)
-                const cssStyles: string = `.${className}{${serStyles.styles}}`
+
+                const className = () => engine.classNamePattern(serialized().hashName)
+                const cssStyles = () => {
+                    const s = serialized();
+                    return `.${engine.classNamePattern(s.hashName)}{${s.styles}}`
+                }
+
                 const ActualElement = (
                     <Dynamic
                         component={finalTag}
                         {...newProps}
                         class={
-                            props.class && props.class != "" ? `${className} ${props.class}` : className
+                            props.class && props.class != "" ? `${className()} ${props.class}` : className()
                         }
                     />
                 )
 
                 switch (engine.injectionStrategy) {
                     case AniqueStylesInjectionStrategy.Assets:
-                        injectStyles(cssStyles, hashName, engine.nonce)
+                        injectStyles(cssStyles, () => serialized().hashName, engine.nonce)
                         return ActualElement
                     case AniqueStylesInjectionStrategy.Sibling:
                         return (
                             <>
-                                <style nonce={engine.nonce}>{cssStyles}</style>
+                                <style nonce={engine.nonce}>{cssStyles()}</style>
                                 {ActualElement}
                             </>
                         )

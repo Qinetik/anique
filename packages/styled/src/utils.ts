@@ -126,7 +126,15 @@ export interface EmotionStyledComponent<Props extends object, InnerProps extends
 
 export type StyledOtherComponent<Props extends object, InnerProps extends object> = EmotionStyledComponent<Props, InnerProps>
 
-export interface CreateStyledFunction {
-  <T extends keyof JSX.IntrinsicElements>(tag: T, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
+// This is type of function that is returned when styled("div") is called
+// where T is any element like div
+type CallableStyledFunction<T extends keyof JSX.IntrinsicElements> = <Props extends object>(...args: Interpolations<Props>) => EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
+
+type CreateStyledFunctionTagsAccess = {
+    [T in keyof JSX.IntrinsicElements]: CallableStyledFunction<T>;
+};
+
+export interface CreateStyledFunction extends CreateStyledFunctionTagsAccess {
+  <T extends keyof JSX.IntrinsicElements>(tag: T, options?: StyledOptions): CallableStyledFunction<T>
     <InnerProps extends object>(tag: Component<InnerProps>, options?: StyledOptions): <Props extends object>(...args: Interpolations<Props>) => EmotionStyledComponent<Props, InnerProps>
 }
