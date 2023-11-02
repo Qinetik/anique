@@ -1,0 +1,1 @@
+import{A as c,a as m,u as i,m as l,i as u}from"./index-94caafb4.js";import{u as y}from"./entry-client-3af6d313.js";function h(...o){const t=y(c),n=m(o,void 0,{get theme(){return i()}}),a=l(n.styles),e=t.classNamePattern(a),r=`.${e}{${n.styles}}`,s=()=>(u(()=>r,()=>a,t.nonce),e);return s.toString=()=>`.${e}`,s.__evaluate=`.${e}`,s.className=e,s}export{h as c};
