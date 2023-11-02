@@ -1,6 +1,6 @@
 {
     "name": "@qinetik/anique",
-    "version": "1.0.34",
+    "version": "1.0.35",
     "description": "SolidJS UI Component library",
     "repository": "git@github.com:qinetik/anique.git",
     "files": [
