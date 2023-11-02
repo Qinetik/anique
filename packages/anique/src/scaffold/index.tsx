@@ -2,6 +2,7 @@ import {styled} from "@qinetik/emotion";
 import {Accessor, JSX, ParentProps, Show} from "solid-js";
 import {Anique, Breakpoint} from "../theme";
 import {Backdrop} from "../backdrop";
+import {AniqueZIndex} from "../utils/zIndexMap";
 
 const Root = styled("div")`
     display: flex;
@@ -17,7 +18,7 @@ const Sidebar = styled("div", {
     height: calc(100% - ${p => p.topBarHeight});
     box-sizing: border-box;
     position: relative;
-    z-index: 998;
+    z-index: ${AniqueZIndex.FixedSidebar};
 
     display: none;
 
@@ -41,6 +42,7 @@ const SidebarContent = styled("div", {
     position: fixed;
     top: ${p => p.topBarHeight};
     bottom: 0;
+    z-index : ${AniqueZIndex.FixedSidebar};
     //background: red;
 `
 
@@ -59,7 +61,8 @@ const TopBar = styled("div", {
     top: 0;
     right: 0;
     height: ${p => p.topBarHeight};
-    z-index: 999;
+    position : fixed;
+    z-index: ${AniqueZIndex.FixedTopBar};
     //background: blue;
 `
 
@@ -124,7 +127,7 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
             </Show>
             <Wrapper>
                 <Show when={props.topBar != null}>
-                    <TopBar style={{position: "fixed"}} topBarHeight={topBarHeight}>
+                    <TopBar topBarHeight={topBarHeight}>
                         {props.topBar!!()}
                     </TopBar>
                 </Show>
@@ -145,7 +148,7 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
                 <Backdrop
                     isVisible={props.showMobileDrawer!!}
                     onClickOutside={props.onDismissMobileDrawer!!}
-                    style={{"z-index": 999}}
+                    style={{"z-index": AniqueZIndex.MobileDrawer}}
                     relative
                 >
                     <MobileSidebar

@@ -2,6 +2,7 @@ import {Accessor, createSignal, For, JSX, Setter, Signal} from "solid-js";
 import {styled} from "@qinetik/emotion";
 import {generateSmallUUID, Position, relativePositionStyle} from "../utils";
 import {Alert, AlertType} from "../alert";
+import {AniqueZIndex} from "../utils/zIndexMap";
 
 export type Snackbar = {
     id : string
@@ -15,7 +16,7 @@ const SnackbarRoot = styled("div")`
     flex-direction: column;
     gap: 1em;
     position : fixed;
-    z-index : 1001;
+    z-index : ${AniqueZIndex.Snackbar};
 `
 
 export function SnackbarHost(props: {

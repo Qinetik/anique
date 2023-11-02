@@ -63,7 +63,7 @@ export default function ScaffoldExample() {
                                         <MoreVertIcon/>
                                     </IconButton>
                                     <Show when={dropdown()}>
-                                        <DropdownMenu style={{right: "0"}}>
+                                        <DropdownMenu style={{right: "0"}} onCloseRequest={() => setDropdown(false)}>
                                             <MenuItem>Demo Dropdown</MenuItem>
                                         </DropdownMenu>
                                     </Show>

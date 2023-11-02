@@ -31,7 +31,7 @@ const BackdropContainer = styled("div")`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index : 1000;
+    z-index: 1000;
 
     &:after {
         content: "";
@@ -47,28 +47,54 @@ const BackdropContainer = styled("div")`
 
 `
 
+export function mergeStylesAndVisibility(style ?: JSX.CSSProperties | string, isVisible ?: Accessor<boolean>) {
+    return isVisible == null ? style : (
+        typeof style === "undefined" ? (
+            isVisible() ? "display:block;" : "display:none;"
+        ) : typeof style === "string" ? (
+            (isVisible() ? "display:block;" : "display:none;") + style
+        ) : (
+            {
+                display: isVisible() ? "block" : "none",
+                ...style
+            }
+        )
+    )
+}
+
 export function BackdropRoot(props: BackdropRootProps) {
     return (
         <BackdropContainer
-            style={props.isVisible == null ? props.style : (
-                typeof props.style === "undefined" ? (
-                    props.isVisible() ? "display:block;" : "display:none;"
-                ) : typeof props.style === "string" ? (
-                    (props.isVisible() ? "display:block;" : "display:none;") + props.style
-                ) : (
-                    {
-                        display: props.isVisible() ? "block" : "none",
-                        ...props.style
-                    }
-                )
-            )}
+            style={mergeStylesAndVisibility(props.style, props.isVisible)}
             {...splitProps(props, ["isVisible", "style"])[1]}
         />
     )
 }
 
-function isEventOutside(e: MouseEvent & { currentTarget: HTMLElement, target: Element }) {
+type ElementEvent = MouseEvent & { currentTarget: HTMLElement, target: Element }
+
+function isEventOutside(e: ElementEvent) {
     return e.currentTarget === e.target || !e.currentTarget.contains(e.target);
+}
+
+export function onClickOutsideProp(onClickOutside: () => void) {
+    let isDownOutside: boolean = false
+    return {
+        onMouseDown: (e : ElementEvent) => {
+            isDownOutside = isEventOutside(e)
+        },
+        onMouseUp: (e : ElementEvent) => {
+            const isUpOutside = isEventOutside(e)
+            if (isDownOutside && isUpOutside) {
+                e.stopImmediatePropagation()
+                onClickOutside()
+            }
+            // if(isUpOutside && !isDownOutside) {
+            // console.log("Avoided dialog on click outside because the mousedown target is not inside")
+            // }
+            isDownOutside = false
+        }
+    }
 }
 
 export function BackdropContent(props: BackdropContentProps) {
@@ -82,25 +108,10 @@ export function BackdropContent(props: BackdropContentProps) {
         position: "relative"
     }) : ({}))
 
-    let isDownOutside: boolean = false
-
     return (
         <div
+            {...onClickOutsideProp(props.onClickOutside)}
             children={props.children}
-            onMouseDown={(e) => {
-                isDownOutside = isEventOutside(e)
-            }}
-            onMouseUp={(e) => {
-                const isUpOutside = isEventOutside(e)
-                if (isDownOutside && isUpOutside) {
-                    e.stopImmediatePropagation()
-                    props.onClickOutside()
-                }
-                // if(isUpOutside && !isDownOutside) {
-                // console.log("Avoided dialog on click outside because the mousedown target is not inside")
-                // }
-                isDownOutside = false
-            }}
             style={{
                 width: "100%",
                 height: "100%",
