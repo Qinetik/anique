@@ -174,8 +174,26 @@ export function AniqueThemeLight(props: AniqueThemeMounterProps) {
     return <Inj/>
 }
 
-export function saveThemeIntoLocalStorage(themeValue: "light" | "dark") {
-    localStorage.setItem("anique-theme-key", themeValue)
+const DefaultThemeKey = "anique-theme-key"
+
+/**
+ * Saves the theme into local storage
+ * It removes the theme key from storage if its equal to user's system theme, Since that's the default unless you aren't going to depend on user's system theme
+ *
+ * @param themeValue the theme value to save
+ * @param removeIfSystem if the theme value is equal to system's color scheme, it removes the previously stored, so to shift to default, pass false to avoid
+ * @param localStorageKey override the local storage key by default 'anique-theme-key'
+ */
+export function saveThemeIntoLocalStorage(themeValue: "light" | "dark", removeIfSystem ?: boolean, localStorageKey ?: string) {
+    if(removeIfSystem == null || removeIfSystem) {
+        if(themeValue == getSystemColorScheme()) {
+            localStorage.removeItem(localStorageKey || DefaultThemeKey)
+        } else {
+            localStorage.setItem(localStorageKey || DefaultThemeKey, themeValue)
+        }
+    } else {
+        localStorage.setItem(localStorageKey || DefaultThemeKey, themeValue)
+    }
 }
 
 interface AniqueThemeAutoSetupProps {
@@ -196,16 +214,16 @@ interface AniqueThemeAutoSetupProps {
  */
 export function AniqueThemeAutoSetup(props: AniqueThemeAutoSetupProps) {
     createEffect(() => {
-        const userScheme = localStorage.getItem(props.localStorageKey || "anique-theme-key")
+        const userScheme = localStorage.getItem(props.localStorageKey || DefaultThemeKey)
         if (userScheme == null) {
             document.documentElement.className = getSystemColorScheme()
+            if (props.trackSystemTheme == null || props.trackSystemTheme) {
+                onSystemColorSchemeChange((scheme) => {
+                    document.documentElement.className = scheme
+                })
+            }
         } else {
             document.documentElement.className = userScheme
-        }
-        if (props.trackSystemTheme == null || !props.trackSystemTheme) {
-            onSystemColorSchemeChange((scheme) => {
-                document.documentElement.className = scheme
-            })
         }
     })
     const ColorSchemeStyling = createGlobalStyle`
