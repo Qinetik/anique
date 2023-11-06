@@ -31,17 +31,11 @@ const StyledImg = styled("img")`
 `
 
 function IconCard(props: { icon: string }) {
-    const iconDashedName = props.icon.substring(0, props.icon.lastIndexOf("Icon")).replace(/[A-Z]/g, (match, offset) => (offset > 0 ? '-' : '') + match.toLowerCase())
-    let container: HTMLDivElement | undefined
     return (
-        <IconCardRoot ref={container}>
+        <IconCardRoot>
             <StyledImg
                 loading="lazy"
-                src={`https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/${iconDashedName}.svg`}
-                alt={iconDashedName}
-                onError={() => {
-                    if (container) container.style.display = "none"
-                }}
+                src={`https://qinetik.github.io/mdi-svg/svg/${props.icon}.svg`}
             />
             <small>{props.icon}</small>
         </IconCardRoot>
