@@ -7,12 +7,18 @@ export default function IconFillSizeExample() {
         <Row>
             <Icon
                 fill={Anique.colors.success}
-                size={2}
+                size={0}
             >
                 <Menu/>
             </Icon>
             <Icon
                 fill={Anique.colors.error}
+                size={1}
+            >
+                <Menu/>
+            </Icon>
+            <Icon
+                fill={Anique.colors.warning}
                 size={2}
             >
                 <Menu/>

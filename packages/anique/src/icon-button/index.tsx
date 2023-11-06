@@ -12,10 +12,13 @@ export const IconButton = styled("div", {
     shouldForwardProp : (prop) => !["size", "disableAutoFill"].includes(prop)
 })<IconButtonProps>`
 
-    width: ${p => 2 + (p.size || 0)}rem;
-    height: ${p => 2 + (p.size || 0)}rem;
+    width: ${p => 2.5 + (p.size || 0)}em;
+    height: ${p => 2.5 + (p.size || 0)}em;
     border-radius: 50%;
 
+    padding : 0.5em;
+    box-sizing : border-box;
+    
     ${p => p.disableAutoFill ? "" : `fill:${Anique.colors.onBg};`}
     cursor: pointer;
 
@@ -24,8 +27,8 @@ export const IconButton = styled("div", {
     align-items: center;
 
     & > * {
-        width: ${p => 1.5 + (p.size || 0) * 0.3}rem;
-        height: ${p => 1.5 + (p.size || 0) * 0.3}rem;
+        width: ${p => 1.5 + (p.size || 0) * 0.3}em;
+        height: ${p => 1.5 + (p.size || 0) * 0.3}em;
     }
 
     &:hover {
