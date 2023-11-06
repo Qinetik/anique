@@ -4,8 +4,7 @@ import {createSignal, Show} from "solid-js";
 import JellyfishIcon from "@qinetik/mdi/JellyfishIcon";
 import SnakeIcon from "@qinetik/mdi/SnakeIcon";
 import CatIcon from "@qinetik/mdi/CatIcon";
-
-const TabLink = Tab.withComponent("a")
+import {UnstyledLink} from "@qinetik/anique/utils";
 
 export default function TabIconsExample() {
 
@@ -18,10 +17,15 @@ export default function TabIconsExample() {
                     <CatIcon/>
                     <span>Cats</span>
                 </Tab>
-                <TabLink isSelected={selected() === 1} onClick={(e) => setSelected(1)} href={"#"}>
-                    <SnakeIcon/>
-                    <span>Snakes</span>
-                </TabLink>
+                <UnstyledLink href={"#"}>
+                    <Tab
+                        isSelected={selected() === 1}
+                        onClick={() => setSelected(1)}
+                    >
+                        <SnakeIcon/>
+                        <span>Snakes</span>
+                    </Tab>
+                </UnstyledLink>
                 <Tab isSelected={selected() === 2} onClick={() => setSelected(2)}>
                     <JellyfishIcon/>
                     <span>Jellyfish</span>

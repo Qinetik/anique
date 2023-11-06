@@ -41,14 +41,12 @@ export type StyledOptions = {
   target?: string
 }
 
-type UnionOverrideKeys<T, U> = Omit<T, keyof U> & U;
-
 export interface WithComponentFunction<Props extends object> {
 
     <T extends keyof JSX.IntrinsicElements>(
         nextTag: T,
         nextOptions?: StyledOptions
-    ) : StyledComponent<UnionOverrideKeys<Props, JSX.IntrinsicElements[T]>>
+    ) : EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
 
     <NextElementProps extends object>(
         nextTag: StyledElementType<NextElementProps>,

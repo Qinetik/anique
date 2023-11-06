@@ -1,4 +1,4 @@
-import {styled} from "@qinetik/emotion";
+import {css, styled} from "@qinetik/emotion";
 import {JSX, splitProps} from "solid-js";
 import {Anique} from "../theme";
 
@@ -19,7 +19,7 @@ export interface TabProps extends JSX.HTMLAttributes<HTMLDivElement> {
     isSelected?: boolean
 }
 
-const TabRoot = styled("div")`
+const TabRoot = css`
 
     display: flex;
     gap: 0.5em;
@@ -27,7 +27,7 @@ const TabRoot = styled("div")`
     align-items: center;
     border-bottom: 3px solid transparent;
     box-sizing: border-box;
-    padding: 0.75em 2em;
+    padding: 0.75em 1.5em;
     cursor: pointer;
 
     transition: border-bottom 0.3s ease, color 0.3s ease;
@@ -39,11 +39,11 @@ const TabRoot = styled("div")`
 
 `
 
-function TabContainer(props: TabProps & JSX.HTMLAttributes<HTMLDivElement>) {
-    return <div
-        {...splitProps(props, ["isSelected"])[1]}
-        class={(props.isSelected ? "selected" : "") + (props.class ? " " + props.class : "")}
-    />
+export function Tab(props: TabProps & JSX.HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div
+            {...splitProps(props, ["isSelected"])[1]}
+            class={TabRoot() + (props.isSelected ? " selected" : "") + (props.class ? " " + props.class : "")}
+        />
+    )
 }
-
-export const Tab = TabRoot.withComponent(TabContainer)
