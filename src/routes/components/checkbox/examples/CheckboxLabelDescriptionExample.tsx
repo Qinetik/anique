@@ -3,7 +3,7 @@ import {Card} from "@qinetik/anique/card";
 import {Row} from "@qinetik/anique/row";
 import {LabeledCheckbox} from "@qinetik/anique/checkbox";
 
-export function CheckboxWithLabelDescription() {
+export default function CheckboxLabelDescriptionExample() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>

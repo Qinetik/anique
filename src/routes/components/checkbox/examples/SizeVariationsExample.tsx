@@ -4,7 +4,7 @@ import {Row} from "@qinetik/anique/row";
 import {LabeledCheckbox} from "@qinetik/anique/checkbox";
 import {Size} from "@qinetik/anique/theme";
 
-export function SizeVariationsExample() {
+export default function SizeVariationsExample() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>

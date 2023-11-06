@@ -2,7 +2,7 @@ import {createSignal} from "solid-js";
 import {Card} from "@qinetik/anique/card";
 import {LabeledCheckbox} from "@qinetik/anique/checkbox";
 
-export function DisabledCheckboxExample() {
+export default function DisabledCheckboxExample() {
     const [isChecked, setIsChecked] = createSignal(false)
     return (
         <Card>
