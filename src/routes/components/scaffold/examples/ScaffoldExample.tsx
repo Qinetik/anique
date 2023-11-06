@@ -4,8 +4,9 @@ import {Anique, AppBar, DrawerItem, IconButton, LabeledCheckbox, MenuItem, Row, 
 import {Scaffold} from "@qinetik/anique/scaffold";
 import {MoreVertIcon} from "@qinetik/anique-icons";
 import {DropdownMenu} from "@qinetik/anique/dropdown";
-import {AniqueThemeAutoSetup} from "@qinetik/anique/theme";
+import {AniqueThemeAutoSetup, ColorScheme, saveThemeIntoLocalStorage} from "@qinetik/anique/theme";
 import Menu from "../../../../solid/icons/Menu";
+import LightDarkIcon from "../../../../solid/icons/LightDarkIcon";
 
 const MobileIconButton = styled(IconButton)`
     ${Anique.breakpoints.up("md")} {
@@ -58,6 +59,7 @@ export default function ScaffoldExample() {
                                     isChecked={hasRightSidebar}
                                     onChange={(e) => setHasRightSidebar(e)}
                                 />
+                                <ThemeSwitcher />
                                 <div style={{position: "relative"}}>
                                     <IconButton onClick={() => setDropdown((e) => !e)}>
                                         <MoreVertIcon/>
@@ -118,5 +120,25 @@ function DemoStaticDrawer(props: { mobile: boolean }) {
             </Show>
             {content.map(e => <DrawerItem>{e}</DrawerItem>)}
         </StaticDrawer>
+    )
+}
+
+function ThemeSwitcher() {
+    return (
+        <IconButton
+            onClick={() => {
+                const prev = document.documentElement.className
+                let next: ColorScheme
+                if (prev == ColorScheme.Light) {
+                    next = ColorScheme.Dark
+                } else {
+                    next = ColorScheme.Light
+                }
+                document.documentElement.className = next
+                saveThemeIntoLocalStorage(next)
+            }}
+        >
+            <LightDarkIcon/>
+        </IconButton>
     )
 }

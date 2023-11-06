@@ -37,8 +37,22 @@ export default function ThemingPage() {
 <AniqueThemeLight containerCssSelector={".light"} />
 <AniqueThemeDark containerCssSelector={".dark"} />
 
+// Apply color scheme like with this
+// This will change scrollbars on the page to have dark / light theme as well
+const ColorSchemeStyles = css\`
+    :root.dark {
+        color-scheme: dark;
+    }
+    
+    :root.light {
+        color-scheme: light;
+    }
+\`
+
 // You should use .light or .dark class name on html element like this
 <html class={"light"}>
+<head>
+    <ColorSchemeStyles />
 `
                     }/>
 
@@ -46,7 +60,9 @@ export default function ThemingPage() {
 
                 <span>When user wants to update the theme, You should just update the class of the <code>html</code> element</span>
 
-                <DisplayCode value={`document.documentElement.className = 'light' // or dark`}/>
+                <DisplayCode value={`document.documentElement.className = 'light' // or dark
+saveThemeIntoLocalStorage('light') // imported from @qinetik/anique/theme, uses key 'anique-theme-key'
+`}/>
 
                 <h1>Styling</h1>
 
@@ -159,6 +175,32 @@ to {
                     }
                 />
 
+                <h3>Hydration Error</h3>
+
+                <span>
+                    Hydration error can occur if you use component like this
+                </span>
+
+                <DisplayCode value={`const MyComp = <StyledCompo />
+return (
+   <div>
+     {MyComp}
+   </div>
+)
+`} />
+
+                <span>
+                    To fix this you must invoke it as a function
+                </span>
+
+                <DisplayCode value={`const MyComp = () => <StyledCompo />
+return (
+   <div>
+     <MyComp />
+   </div>
+)
+`} />
+
 
                 <h3>A note for Astro</h3>
 
@@ -171,8 +213,6 @@ to {
                     You must either not use SSR or override StyledEngineContext
                     Configuration <code>AniqueStyledEngineContext</code>, And use injectionStrategy of Sibling for it to work
                 </span>
-
-
 
             </Column>
         </DocContainer>

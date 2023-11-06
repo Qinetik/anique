@@ -2,12 +2,12 @@ import {ColorScheme, getSystemColorScheme} from "@qinetik/anique/theme/ColorSche
 import {Size} from "@qinetik/anique/theme/Size";
 import LightDarkIcon from "../icons/LightDarkIcon";
 import {IconButton} from "@qinetik/anique/icon-button";
+import {saveThemeIntoLocalStorage} from "@qinetik/anique/theme";
 
 export function ThemeSwitcher() {
     return (
         <IconButton
             onClick={() => {
-                const system = getSystemColorScheme()
                 const prev = document.documentElement.className
                 let next: ColorScheme
                 if (prev == ColorScheme.Light) {
@@ -15,12 +15,8 @@ export function ThemeSwitcher() {
                 } else {
                     next = ColorScheme.Light
                 }
-                if(next == system){
-                    localStorage.removeItem("theme-key")
-                } else {
-                    localStorage.setItem("theme-key", next)
-                }
                 document.documentElement.className = next
+                saveThemeIntoLocalStorage(next)
             }}
         >
             <LightDarkIcon/>

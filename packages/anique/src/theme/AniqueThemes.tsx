@@ -174,16 +174,38 @@ export function AniqueThemeLight(props: AniqueThemeMounterProps) {
     return <Inj/>
 }
 
-export function AniqueThemeAutoSetup() {
+export function saveThemeIntoLocalStorage(themeValue: "light" | "dark") {
+    localStorage.setItem("anique-theme-key", themeValue)
+}
+
+interface AniqueThemeAutoSetupProps {
+
+    // the local storage key to retrieve the color scheme (light or dark), so it can be applied
+    // by default uses 'anique-theme-key'
+    localStorageKey?: string
+
+    // track system theme, by default true, if system theme changes, It changes too
+    trackSystemTheme?: boolean
+
+}
+
+/**
+ * It gets the color scheme (light or dark) from localStorage, then applies it to document
+ * If there's no saved theme value in localStorage, It uses system color scheme
+ * It also tracks the system color scheme and applies it when it changes
+ */
+export function AniqueThemeAutoSetup(props: AniqueThemeAutoSetupProps) {
     createEffect(() => {
-        const userScheme = localStorage.getItem("anique-theme-key")
+        const userScheme = localStorage.getItem(props.localStorageKey || "anique-theme-key")
         if (userScheme == null) {
             document.documentElement.className = getSystemColorScheme()
+        } else {
+            document.documentElement.className = userScheme
+        }
+        if (props.trackSystemTheme == null || !props.trackSystemTheme) {
             onSystemColorSchemeChange((scheme) => {
                 document.documentElement.className = scheme
             })
-        } else {
-            document.documentElement.className = userScheme
         }
     })
     const ColorSchemeStyling = createGlobalStyle`
