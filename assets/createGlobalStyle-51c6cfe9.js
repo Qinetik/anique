@@ -1,0 +1,1 @@
+import{A as l,a as o,m as u,i,u as c}from"./index-326c8233.js";import{u as m,f}from"./entry-client-e7f04580.js";function y(t){let e=[];for(const s of t)s.__evaluate!=null?e.push(s.__evaluate):e.push(s);return e}function S(...t){return()=>{const e=m(l),n=f(()=>o(y(t),void 0,{get theme(){return c()}}))(),r=u(n.styles),a=n.styles;return i(()=>a,()=>r,e.nonce),null}}export{S as c};
