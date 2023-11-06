@@ -1,5 +1,5 @@
 import {styled} from "@qinetik/emotion";
-import {JSX, ParentProps, splitProps} from "solid-js";
+import {JSX, splitProps} from "solid-js";
 import {Anique} from "../theme";
 
 // export interface TabRowProps {
@@ -39,12 +39,11 @@ const TabRoot = styled("div")`
 
 `
 
-export function Tab(props: ParentProps<TabProps>) {
-    return (
-        <TabRoot
-            class={props.isSelected ? "selected" : undefined}
-            children={props.children}
-            {...splitProps(props, ["isSelected", "children"])[1]}
-        />
-    )
+function TabContainer(props: TabProps & JSX.HTMLAttributes<HTMLDivElement>) {
+    return <div
+        {...splitProps(props, ["isSelected"])[1]}
+        class={(props.isSelected ? "selected" : "") + (props.class ? " " + props.class : "")}
+    />
 }
+
+export const Tab = TabRoot.withComponent(TabContainer)

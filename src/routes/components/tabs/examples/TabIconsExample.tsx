@@ -1,0 +1,43 @@
+import {Column} from "@qinetik/anique";
+import {Tab, TabRow} from "@qinetik/anique/tab";
+import {createSignal, Show} from "solid-js";
+import JellyfishIcon from "@qinetik/mdi/JellyfishIcon";
+import SnakeIcon from "@qinetik/mdi/SnakeIcon";
+import CatIcon from "@qinetik/mdi/CatIcon";
+
+const TabLink = Tab.withComponent("a")
+
+export default function TabIconsExample() {
+
+    const [selected, setSelected] = createSignal(0)
+
+    return (
+        <Column>
+            <TabRow>
+                <Tab isSelected={selected() === 0} onClick={() => setSelected(0)}>
+                    <CatIcon/>
+                    <span>Cats</span>
+                </Tab>
+                <TabLink isSelected={selected() === 1} onClick={(e) => setSelected(1)} href={"#"}>
+                    <SnakeIcon/>
+                    <span>Snakes</span>
+                </TabLink>
+                <Tab isSelected={selected() === 2} onClick={() => setSelected(2)}>
+                    <JellyfishIcon/>
+                    <span>Jellyfish</span>
+                </Tab>
+            </TabRow>
+            <span>
+                <Show when={selected() == 0}>
+                    Content for first
+                </Show>
+                <Show when={selected() == 1}>
+                    Content for second
+                </Show>
+                <Show when={selected() == 2}>
+                    Content for third
+                </Show>
+            </span>
+        </Column>
+    )
+}

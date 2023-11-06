@@ -41,16 +41,29 @@ export type StyledOptions = {
   target?: string
 }
 
-export type StyledComponent<Props> = Component<Props> & {
-  defaultProps: any
-  toString: () => string
-  withComponent: (
-    nextTag: StyledElementType<Props>,
-    nextOptions?: StyledOptions
-  ) => StyledComponent<Props>
+type UnionOverrideKeys<T, U> = Omit<T, keyof U> & U;
+
+export interface WithComponentFunction<Props extends object> {
+
+    <T extends keyof JSX.IntrinsicElements>(
+        nextTag: T,
+        nextOptions?: StyledOptions
+    ) : StyledComponent<UnionOverrideKeys<Props, JSX.IntrinsicElements[T]>>
+
+    <NextElementProps extends object>(
+        nextTag: StyledElementType<NextElementProps>,
+        nextOptions?: StyledOptions
+    ) : StyledComponent<NextElementProps>
+
 }
 
-export type PrivateStyledComponent<Props> = StyledComponent<Props> & {
+export type StyledComponent<Props extends object> = Component<Props> & {
+  defaultProps: any
+  toString: () => string
+  withComponent: WithComponentFunction<Props>
+}
+
+export type PrivateStyledComponent<Props extends object> = StyledComponent<Props> & {
   __emotion_real: StyledComponent<Props>
   __emotion_base: any
   __emotion_styles: any
@@ -105,20 +118,6 @@ export type CreateStyled = {
 }
 
 // The following code is inspired by create-emotion-styled
-
-export interface WithComponentFunction<Props extends object> {
-
-    <T extends keyof JSX.IntrinsicElements>(
-        nextTag: T,
-        nextOptions?: StyledOptions
-    ) : EmotionStyledComponent<Props, JSX.IntrinsicElements[T]>
-
-    <NextElementProps>(
-        nextTag: StyledElementType<NextElementProps>,
-        nextOptions?: StyledOptions
-    ) : StyledComponent<NextElementProps>
-
-}
 
 export interface EmotionStyledComponent<Props extends object, InnerProps extends object> extends Component<Props & InnerProps & { class?: string }> {
     withComponent: WithComponentFunction<Props>
