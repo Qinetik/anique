@@ -1,4 +1,4 @@
-import {Component, createSignal} from "solid-js";
+import {Component, createSignal, JSX} from "solid-js";
 import {AlertType, Anique, Card, createSnackbars, Position, Row, SnackbarHost} from "@qinetik/anique";
 import {Column} from "@qinetik/anique/column";
 import {Expandable} from "@qinetik/anique/accordion";
@@ -13,7 +13,8 @@ interface ComponentExampleProps {
     component: Component,
     codeVisible?: boolean,
     hasBackground?: boolean
-    codeOnly ?: boolean
+    codeOnly?: boolean
+    cardStyles?: JSX.CSSProperties
 }
 
 export function ComponentExample(props: ComponentExampleProps) {
@@ -33,7 +34,8 @@ export function ComponentExample(props: ComponentExampleProps) {
             />
             <Card
                 style={{
-                    background: hasBackground() ? Anique.colors.bg200 : "transparent"
+                    background: hasBackground() ? Anique.colors.bg200 : "transparent",
+                    ...(props.cardStyles || {})
                 }}
             >
                 <Expandable

@@ -104,6 +104,8 @@ export interface ScaffoldProps {
     onDismissMobileDrawer?: () => void
     hideMobileDrawerAbove?: Breakpoint
 
+    containerProps ?: JSX.HTMLAttributes<HTMLDivElement>
+
 }
 
 export function Scaffold(props: ParentProps<ScaffoldProps>) {
@@ -117,7 +119,7 @@ export function Scaffold(props: ParentProps<ScaffoldProps>) {
     const topBarHeight = props.topBar != null ? (props.topBarHeight || "56px") : "0px"
 
     return (
-        <Root>
+        <Root {...(props.containerProps || {})}>
             <Show when={props.drawerContent != null && (props.showMountedDrawer == null || props.showMountedDrawer)}>
                 <Sidebar drawerWidth={drawerWidth} topBarHeight={topBarHeight}>
                     <SidebarContent drawerWidth={drawerWidth} topBarHeight={topBarHeight} style={{left: 0}}>
