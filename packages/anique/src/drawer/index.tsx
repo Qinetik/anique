@@ -25,10 +25,17 @@ export const DrawerItem = styled("div", {
     cursor: pointer;
     font-family: ${Anique.font.secondary};
     color: ${Anique.colors.onBg};
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    gap : 1em;
+    text-decoration : none;
 
     ${p => p.isActive && "background : " + Anique.colors.bg200 + ";"}
     &:hover {
         background: ${Anique.colors.primary};
+        color: ${Anique.colors.onBg};
+        text-decoration : none;
     }
 `
 

@@ -10,7 +10,7 @@ export default function DrawerPage() {
             <Column>
                 <Headline>Drawer</Headline>
                 <h1>StaticDrawer</h1>
-                <ComponentExample component={BasicDrawerExample}/>
+                <ComponentExample component={BasicDrawerExample} hasBackground={false}/>
             </Column>
         </DocContainer>
     )
