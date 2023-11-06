@@ -2298,10 +2298,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@qinetik/mdi@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@qinetik/mdi@npm:1.0.1"
-  checksum: 6575e6afbe4c7d612d55116fa37477cfa32abdb114deb858663a4917816a521761cee131e320a123821d0ed126d11523db946b6ded018201c20f30b489f24506
+"@qinetik/mdi@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@qinetik/mdi@npm:1.0.4"
+  peerDependencies:
+    solid-js: ^1.0.0
+  checksum: 784824411bb704587d8ec00449856929c86a541145bb84f73e5cfe1de4c284ac7b1a7015dd4fdfadcadf414963f20ccb43f60037306e12c025dad045d9acb298
   languageName: node
   linkType: hard
 
@@ -6749,7 +6751,7 @@ __metadata:
   dependencies:
     "@qinetik/anique": "workspace:^"
     "@qinetik/emotion": "workspace:^"
-    "@qinetik/mdi": ^1.0.1
+    "@qinetik/mdi": ^1.0.4
     "@rollup/plugin-multi-entry": ^6.0.0
     "@solidjs/meta": ^0.28.5
     "@solidjs/router": ^0.8.3
