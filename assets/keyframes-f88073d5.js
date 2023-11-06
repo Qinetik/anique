@@ -1,1 +1,0 @@
-import{A as m,a as i,u,m as l,i as y}from"./index-326c8233.js";import{u as c}from"./entry-client-e7f04580.js";function k(...r){const s=c(m),n=i(r,void 0,{get theme(){return u()}}),a=l(n.styles),e=s.keyframesPattern(a),o=`@keyframes ${e}{${n.styles}}`,t=()=>(y(()=>o,()=>a,s.nonce),null);return t.__evaluate=e,t.animationName=e,t.toString=()=>e,t}export{k};
