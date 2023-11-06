@@ -1,32 +1,37 @@
 import {styled} from "@qinetik/emotion";
 import {Anique} from "../theme";
+import {JSX} from "solid-js";
 
-export const MenuItem = styled("div")`
+const MenuItemRoot = (props: JSX.HTMLAttributes<HTMLDivElement>) => (
+    <div {...props} class={"anique-menu-item" + (props.class ? " " + props.class : "")}/>
+)
 
-  padding: 0.75em 1em;
-  background: ${Anique.colors.bg200};
+export const MenuItem = styled(MenuItemRoot)`
 
-  cursor: pointer;
-  user-select: none;
+    padding: 0.75em 1em;
+    background: ${Anique.colors.bg200};
 
-  transition: background 0.2s ease-in;
+    cursor: pointer;
+    user-select: none;
 
-  &:hover {
-    background: ${Anique.colors.bg300};
-  }
+    transition: background 0.2s ease-in;
 
-  &:active {
-    background: ${Anique.colors.bg500};
-  }
+    &:hover {
+        background: ${Anique.colors.bg300};
+    }
 
-  &:first-of-type {
-    border-top-left-radius: ${Anique.border.smRadius};
-    border-top-right-radius: ${Anique.border.smRadius};
-  }
+    &:active {
+        background: ${Anique.colors.bg500};
+    }
 
-  &:last-of-type {
-    border-bottom-left-radius: ${Anique.border.smRadius};
-    border-bottom-right-radius: ${Anique.border.smRadius};
-  }
+    &:first-of-type {
+        border-top-left-radius: ${Anique.border.smRadius};
+        border-top-right-radius: ${Anique.border.smRadius};
+    }
+
+    &:last-of-type {
+        border-bottom-left-radius: ${Anique.border.smRadius};
+        border-bottom-right-radius: ${Anique.border.smRadius};
+    }
 
 `
