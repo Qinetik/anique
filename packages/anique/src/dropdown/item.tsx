@@ -16,6 +16,11 @@ export const MenuItem = styled(MenuItemRoot)`
 
     transition: background 0.2s ease-in;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 0.5em;
+
     &:hover {
         background: ${Anique.colors.bg300};
     }

@@ -1,6 +1,8 @@
 import {Button} from "@qinetik/anique";
 import {createSignal} from "solid-js";
 import {DropdownMenu, MenuItem} from "@qinetik/anique/dropdown";
+import BadgeIcon from "@qinetik/mdi/BadgeIcon";
+import ShareAllIcon from "@qinetik/mdi/ShareAllIcon";
 
 export default function DropdownExample() {
     const [open, setOpen] = createSignal(false)
@@ -11,7 +13,11 @@ export default function DropdownExample() {
             <DropdownMenu onCloseRequest={() => setOpen(false)} isVisible={open}>
                 <MenuItem onClick={() => setOpen(false)}>Hello World</MenuItem>
                 <MenuItem onClick={() => setOpen(false)}>First Item</MenuItem>
-                <MenuItem onClick={() => setOpen(false)}>Second Item</MenuItem>
+                <MenuItem onClick={() => setOpen(false)}>
+                    <ShareAllIcon />
+                    <span style={{ flex : 1 }}>Second Item</span>
+                    <BadgeIcon />
+                </MenuItem>
                 <MenuItem>Doesn't Close</MenuItem>
             </DropdownMenu>
             {/*</Show>*/}
