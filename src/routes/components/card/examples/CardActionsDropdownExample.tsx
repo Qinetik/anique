@@ -20,37 +20,42 @@ export default function CardActionsDropdownExample() {
         }
     }
 
+    let isMenuClosing = false
+
     return (
-        <ClickableCard onClick={() => alert("You clicked on the card")}>
+        <ClickableCard onClick={() => {
+            if(!isMenuClosing) {
+                // console.log("user clicked on the card")
+                alert("You clicked on the card")
+            } else {
+                // console.log("clicked on the menu close button")
+                isMenuClosing = false
+            }
+        }}>
             <Column gap={"0.5em"}>
                 <Row style={{width: "100%"}}>
                     <h3 style={{margin: 0, flex: 1}}>Card Title</h3>
                     open dropdown -&gt;
                     <div style={{position: 'relative'}}>
-                        <IconButton onClick={(e) => {
-                            setOpen(true)
-                            e.stopImmediatePropagation()
-                        }}>
+                        <IconButton onClick={onClickDePropagation(() => setOpen(true))}>
                             <MoreVertIcon/>
                         </IconButton>
                         <DropdownMenu
-                            onCloseRequest={() => setOpen(false)}
-                            isVisible={open}
-                            style={{
-                                right: 0
-                            }}
-                        >
-                            <MenuItem onClick={(e) => {
+                            onCloseRequest={() => {
                                 setOpen(false)
-                                e.stopImmediatePropagation()
-                            }}>Hello World</MenuItem>
-                            <MenuItem onClick={(e) => e.stopImmediatePropagation()}>Doesn't Close</MenuItem>
+                                isMenuClosing = true
+                            }}
+                            isVisible={open}
+                            style={{ right: 0 }}
+                        >
+                            <MenuItem onClick={onClickDePropagation(() => setOpen(false))}>Hello World</MenuItem>
+                            <MenuItem onClick={onClickDePropagation(() => {})}>Doesn't Close</MenuItem>
                         </DropdownMenu>
                     </div>
                 </Row>
                 <p style={{margin: 0}}>
-                    Vite HMR doesn't work with this dropdown in Card Actions, so you need to refresh the page after
-                    making a change
+                    For dropdown to have a clickable parent it needs to set a flag to let the parent element know it has handled the event
+                    stopImmediatePropagation doesn't work because dropdown portals an element into body
                 </p>
                 <Row style={{width: "100%"}}>
                     <IconButton onClick={onClickDePropagation(() => {})}>
