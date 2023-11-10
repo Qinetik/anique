@@ -4,6 +4,7 @@ import {ComponentExample} from "../../../solid/components/ComponentExample";
 import HoverableDropdownExample from "./examples/HoverableDropdownExample";
 import DropdownExample from "./examples/DropdownExample";
 import DropdownDialogExample from "./examples/DropdownDialogExample";
+import CardActionsDropdownExample from "./examples/CardActionsDropdownExample";
 
 export default function DropdownPage() {
     return (
@@ -14,6 +15,7 @@ export default function DropdownPage() {
                     <ComponentExample component={HoverableDropdownExample}/>
                     <ComponentExample component={DropdownExample}/>
                     <ComponentExample component={DropdownDialogExample} />
+                    <ComponentExample component={CardActionsDropdownExample} cardStyles={{ padding : 0}} hasBackground={false}/>
                 </Column>
             </Column>
         </DocContainer>

@@ -19,7 +19,7 @@ export default function DropdownDialogExample() {
                             isVisible={open}
                         >
                             <MenuItem onClick={() => setOpen(false)}>Hello World</MenuItem>
-                            <MenuItem onClick={() => setOpen(false)}>Doesn't Close</MenuItem>
+                            <MenuItem onClick={() => {}}>Doesn't Close</MenuItem>
                         </DropdownMenu>
                     </div>
                 }

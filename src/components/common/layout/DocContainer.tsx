@@ -159,11 +159,16 @@ function SideDrawer() {
             <AnchorDrawerItem href={base + "/components/appbar"} current={path}>
                 AppBar
             </AnchorDrawerItem>
+
+            <DrawerSectionItem title={"Navigation"} />
+            <AnchorDrawerItem href={base + "/components/drawer"} current={path}>
+                Drawer
+            </AnchorDrawerItem>
             <AnchorDrawerItem href={base + "/components/tabs"} current={path}>
                 Tabs
             </AnchorDrawerItem>
-            <AnchorDrawerItem href={base + "/components/drawer"} current={path}>
-                Drawer
+            <AnchorDrawerItem href={base + "/components/pagination"} current={path}>
+                Pagination
             </AnchorDrawerItem>
 
             <DrawerSectionItem title={"Text"}/>
