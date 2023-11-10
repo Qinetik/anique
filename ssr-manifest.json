@@ -1,67 +1,67 @@
 {
   "\u0000D:/Programming/Web/Libraries/anique-solid/node_modules/prismjs/prism.js?commonjs-module": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "\u0000commonjsHelpers.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "\u0000vite/preload-helper": [
   ],
   "node_modules/@emotion/hash/dist/emotion-hash.esm.js": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "node_modules/@emotion/memoize/dist/emotion-memoize.esm.js": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "node_modules/@emotion/serialize/dist/emotion-serialize.browser.esm.js": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "node_modules/@emotion/unitless/dist/emotion-unitless.esm.js": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "node_modules/@qinetik/mdi/AddIcon.js": [
-    "/anique/assets/BasicIconExample-eaf3054d.js"
+    "/anique/assets/BasicIconExample-cbd487f0.js"
   ],
   "node_modules/@qinetik/mdi/ArchiveAddIcon.js": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "node_modules/@qinetik/mdi/ArchiveOutlineIcon.js": [
-    "/anique/assets/BasicDrawerExample-5d78f8cd.js"
+    "/anique/assets/BasicDrawerExample-45c2d7be.js"
   ],
   "node_modules/@qinetik/mdi/BadgeIcon.js": [
-    "/anique/assets/BadgeIcon-ce72a83d.js"
+    "/anique/assets/BadgeIcon-df147b1a.js"
   ],
   "node_modules/@qinetik/mdi/CatIcon.js": [
-    "/anique/assets/TabIconsExample-a6d83059.js"
+    "/anique/assets/TabIconsExample-0d1cd6a5.js"
   ],
   "node_modules/@qinetik/mdi/DeleteOutlineIcon.js": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "node_modules/@qinetik/mdi/JellyfishIcon.js": [
-    "/anique/assets/TabIconsExample-a6d83059.js"
+    "/anique/assets/TabIconsExample-0d1cd6a5.js"
   ],
   "node_modules/@qinetik/mdi/LabelOutlineIcon.js": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "node_modules/@qinetik/mdi/PinIcon.js": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "node_modules/@qinetik/mdi/ShareAllIcon.js": [
-    "/anique/assets/DropdownExample-94448c5e.js"
+    "/anique/assets/DropdownExample-5adadb6c.js"
   ],
   "node_modules/@qinetik/mdi/ShareOutlineIcon.js": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "node_modules/@qinetik/mdi/SnakeIcon.js": [
-    "/anique/assets/TabIconsExample-a6d83059.js"
+    "/anique/assets/TabIconsExample-0d1cd6a5.js"
   ],
   "node_modules/@qinetik/mdi/TrashCanIcon.js": [
-    "/anique/assets/BasicDrawerExample-5d78f8cd.js"
+    "/anique/assets/BasicDrawerExample-45c2d7be.js"
   ],
   "node_modules/@solidjs/meta/dist/index.jsx": [
   ],
@@ -76,23 +76,23 @@
   "node_modules/@solidjs/router/dist/utils.js": [
   ],
   "node_modules/prismjs/components/prism-bash.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "node_modules/prismjs/components/prism-jsx.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "node_modules/prismjs/components/prism-markup.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "node_modules/prismjs/components/prism-tsx.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "node_modules/prismjs/prism.js": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "node_modules/solid-js/dist/solid.js": [
@@ -106,7 +106,7 @@
   "node_modules/solid-start/error-boundary/ErrorBoundary.tsx": [
   ],
   "node_modules/solid-start/islands/useLocation.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "node_modules/solid-start/root/Document.tsx": [
   ],
@@ -121,127 +121,127 @@
   "node_modules/solid-start/server/types.tsx": [
   ],
   "packages/anique-icons/dist/index.js": [
-    "/anique/assets/index-923cd83d.js"
+    "/anique/assets/index-a3de9b85.js"
   ],
   "packages/anique/src/accordion/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/alert/index.tsx": [
-    "/anique/assets/index-923cd83d.js"
+    "/anique/assets/index-a3de9b85.js"
   ],
   "packages/anique/src/appbar/index.tsx": [
-    "/anique/assets/index-222b9f4a.js"
+    "/anique/assets/index-738815bd.js"
   ],
   "packages/anique/src/backdrop/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/button/index.tsx": [
-    "/anique/assets/index-66667bdf.js"
+    "/anique/assets/index-ebcf5fc7.js"
   ],
   "packages/anique/src/card/index.tsx": [
-    "/anique/assets/index-eeee74a7.js"
+    "/anique/assets/index-a21d93e6.js"
   ],
   "packages/anique/src/checkbox/index.tsx": [
-    "/anique/assets/index-eeee74a7.js"
+    "/anique/assets/index-a21d93e6.js"
   ],
   "packages/anique/src/chip/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/column/index.tsx": [
-    "/anique/assets/index-c98928aa.js"
+    "/anique/assets/index-eba976b2.js"
   ],
   "packages/anique/src/dialog/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/drawer/index.tsx": [
-    "/anique/assets/index-6082ff86.js"
+    "/anique/assets/index-58fbaa55.js"
   ],
   "packages/anique/src/dropdown/hoverable.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/dropdown/item.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/dropdown/menu.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/fab/index.tsx": [
-    "/anique/assets/index-8335c2a4.js"
+    "/anique/assets/index-a7e4fca9.js"
   ],
   "packages/anique/src/headline/index.tsx": [
-    "/anique/assets/index-b1181c6a.js"
+    "/anique/assets/index-9ecd4929.js"
   ],
   "packages/anique/src/icon-button/index.tsx": [
-    "/anique/assets/index-6856f9e6.js"
+    "/anique/assets/index-a4a13cad.js"
   ],
   "packages/anique/src/icon/index.tsx": [
-    "/anique/assets/index-ebb683f1.js"
+    "/anique/assets/index-906196f8.js"
   ],
   "packages/anique/src/native-select/index.tsx": [
-    "/anique/assets/index-abcb63f9.js"
+    "/anique/assets/index-2e5e112a.js"
   ],
   "packages/anique/src/pagination/index.tsx": [
-    "/anique/assets/index-12602de8.js"
+    "/anique/assets/index-498a4fb2.js"
   ],
   "packages/anique/src/radio/index.tsx": [
-    "/anique/assets/index-1b661b3f.js"
+    "/anique/assets/index-cf2526ba.js"
   ],
   "packages/anique/src/row/index.tsx": [
-    "/anique/assets/index-0ebd6ae5.js"
+    "/anique/assets/index-5056258d.js"
   ],
   "packages/anique/src/scaffold/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/scrollbar/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/select/create-async-options.ts": [
-    "/anique/assets/AsyncFetchExample-cc5865ae.js"
+    "/anique/assets/AsyncFetchExample-06ae8659.js"
   ],
   "packages/anique/src/select/create-options.tsx": [
-    "/anique/assets/create-options-c814fb9e.js"
+    "/anique/assets/create-options-d8dfef17.js"
   ],
   "packages/anique/src/select/create-select.ts": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/select/fuzzy.tsx": [
-    "/anique/assets/create-options-c814fb9e.js"
+    "/anique/assets/create-options-d8dfef17.js"
   ],
   "packages/anique/src/select/select.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/slider/index.tsx": [
-    "/anique/assets/index-f5fca8e5.js"
+    "/anique/assets/index-519a8c4a.js"
   ],
   "packages/anique/src/snackbar/index.tsx": [
-    "/anique/assets/index-01205ea4.js"
+    "/anique/assets/index-eaf0e709.js"
   ],
   "packages/anique/src/spinner/index.tsx": [
-    "/anique/assets/index-0b681d21.js"
+    "/anique/assets/index-87410e23.js"
   ],
   "packages/anique/src/tab/index.tsx": [
-    "/anique/assets/index-22b1ace7.js"
+    "/anique/assets/index-fb0f364b.js"
   ],
   "packages/anique/src/table/index.tsx": [
-    "/anique/assets/index-05974638.js"
+    "/anique/assets/index-7e475d78.js"
   ],
   "packages/anique/src/text/index.ts": [
-    "/anique/assets/index-2a05b8f3.js"
+    "/anique/assets/index-2434b60c.js"
   ],
   "packages/anique/src/textfield/index.tsx": [
-    "/anique/assets/index-aae78141.js"
+    "/anique/assets/index-756cf6ab.js"
   ],
   "packages/anique/src/theme/AniqueThemeCSSVarsMap.ts": [
     "/anique/assets/Theme-c9d85115.js"
   ],
   "packages/anique/src/theme/AniqueThemes.tsx": [
-    "/anique/assets/LightDarkIcon-b0e03a7d.js"
+    "/anique/assets/LightDarkIcon-e977e7ca.js"
   ],
   "packages/anique/src/theme/Breakpoint.ts": [
     "/anique/assets/Theme-c9d85115.js"
   ],
   "packages/anique/src/theme/ColorScheme.ts": [
-    "/anique/assets/LightDarkIcon-b0e03a7d.js"
+    "/anique/assets/LightDarkIcon-e977e7ca.js"
   ],
   "packages/anique/src/theme/Size.ts": [
     "/anique/assets/Size-fe6876e6.js"
@@ -250,492 +250,495 @@
     "/anique/assets/Theme-c9d85115.js"
   ],
   "packages/anique/src/toggleswitch/index.tsx": [
-    "/anique/assets/index-6a98188b.js"
+    "/anique/assets/index-47d93bee.js"
   ],
   "packages/anique/src/utils/Composable.tsx": [
-    "/anique/assets/composable-5321fcaf.js"
+    "/anique/assets/composable-a4509edd.js"
   ],
   "packages/anique/src/utils/Paragraph.tsx": [
-    "/anique/assets/UnstyledLink-0663e860.js"
+    "/anique/assets/UnstyledLink-08d09b7e.js"
   ],
   "packages/anique/src/utils/Spacer.ts": [
-    "/anique/assets/UnstyledLink-0663e860.js"
+    "/anique/assets/UnstyledLink-08d09b7e.js"
   ],
   "packages/anique/src/utils/UL.tsx": [
-    "/anique/assets/UnstyledLink-0663e860.js"
+    "/anique/assets/UnstyledLink-08d09b7e.js"
   ],
   "packages/anique/src/utils/UUID.ts": [
-    "/anique/assets/index-01205ea4.js"
+    "/anique/assets/index-eaf0e709.js"
   ],
   "packages/anique/src/utils/UnstyledLink.ts": [
-    "/anique/assets/UnstyledLink-0663e860.js"
+    "/anique/assets/UnstyledLink-08d09b7e.js"
   ],
   "packages/anique/src/utils/centered.tsx": [
-    "/anique/assets/UnstyledLink-0663e860.js"
+    "/anique/assets/UnstyledLink-08d09b7e.js"
   ],
   "packages/anique/src/utils/position.ts": [
-    "/anique/assets/index-01205ea4.js"
+    "/anique/assets/index-eaf0e709.js"
   ],
   "packages/anique/src/utils/zIndexMap.ts": [
-    "/anique/assets/index-01205ea4.js"
+    "/anique/assets/index-eaf0e709.js"
   ],
   "packages/styled/src/createGlobalStyle.tsx": [
-    "/anique/assets/createGlobalStyle-5fc4339d.js"
+    "/anique/assets/createGlobalStyle-758c7b5a.js"
   ],
   "packages/styled/src/css.ts": [
-    "/anique/assets/css-c6273b18.js"
+    "/anique/assets/css-6ecff688.js"
   ],
   "packages/styled/src/engine.ts": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/index.ts": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/injectStyle.tsx": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/keyframes.tsx": [
-    "/anique/assets/keyframes-2d272afe.js"
+    "/anique/assets/keyframes-f5879c2d.js"
   ],
   "packages/styled/src/newstyled.tsx": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/tags.ts": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/theme.tsx": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "packages/styled/src/utils.ts": [
-    "/anique/assets/index-108c4257.js"
+    "/anique/assets/index-5be97176.js"
   ],
   "src/components/common/GlobalStyles.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/components/common/code/DisplayCode.tsx": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "src/components/common/code/style.scss": [
-    "/anique/assets/DisplayCode-f1406b41.js",
+    "/anique/assets/DisplayCode-52ee7ce6.js",
     "/anique/assets/DisplayCode-1d475d61.css"
   ],
   "src/components/common/layout/DocContainer.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/components/main/Roadmap.tsx": [
-    "/anique/assets/index-ce587107.js"
+    "/anique/assets/index-8fde6b43.js"
   ],
   "src/entry-client.tsx": [
   ],
   "src/root.tsx": [
   ],
   "src/routes/[...404].tsx": [
-    "/anique/assets/_...404_-01cf32a8.js"
+    "/anique/assets/_...404_-24dd82b5.js"
   ],
   "src/routes/api/icons.tsx": [
     "/anique/assets/icons-f7c7121a.js"
   ],
   "src/routes/components/accordion/examples/BasicAccordionExample.tsx": [
-    "/anique/assets/BasicAccordionExample-138b087d.js"
+    "/anique/assets/BasicAccordionExample-582cd832.js"
   ],
   "src/routes/components/accordion/examples/ControlledAccordionExample.tsx": [
-    "/anique/assets/ControlledAccordionExample-060227a5.js"
+    "/anique/assets/ControlledAccordionExample-d963882a.js"
   ],
   "src/routes/components/accordion/index.tsx": [
-    "/anique/assets/index-351c4384.js"
+    "/anique/assets/index-10e6313f.js"
   ],
   "src/routes/components/alert/examples/AlertExamples.tsx": [
-    "/anique/assets/AlertExamples-9e5ea277.js"
+    "/anique/assets/AlertExamples-a773c70a.js"
   ],
   "src/routes/components/alert/index.tsx": [
-    "/anique/assets/index-cb864bc2.js"
+    "/anique/assets/index-dbbff73e.js"
   ],
   "src/routes/components/appbar/examples/AppBarWithActionsExample.tsx": [
-    "/anique/assets/AppBarWithActionsExample-2d6a2a0b.js"
+    "/anique/assets/AppBarWithActionsExample-0be000db.js"
   ],
   "src/routes/components/appbar/examples/AppBarWithIconButtonExample.tsx": [
-    "/anique/assets/AppBarWithIconButtonExample-2c746a08.js"
+    "/anique/assets/AppBarWithIconButtonExample-b4f5656a.js"
   ],
   "src/routes/components/appbar/examples/AppBarWithIconExample.tsx": [
-    "/anique/assets/AppBarWithIconExample-075b500a.js"
+    "/anique/assets/AppBarWithIconExample-b9c2cc37.js"
   ],
   "src/routes/components/appbar/examples/BasicAppBarExample.tsx": [
-    "/anique/assets/BasicAppBarExample-613efacb.js"
+    "/anique/assets/BasicAppBarExample-abe2f270.js"
   ],
   "src/routes/components/appbar/examples/StyledAppBarExample.tsx": [
-    "/anique/assets/StyledAppBarExample-1393ab55.js"
+    "/anique/assets/StyledAppBarExample-45d61fe8.js"
   ],
   "src/routes/components/appbar/index.tsx": [
-    "/anique/assets/index-9d7b0f52.js"
+    "/anique/assets/index-fd99db2a.js"
   ],
   "src/routes/components/button/examples/BasicButtonExample.tsx": [
-    "/anique/assets/BasicButtonExample-967c34be.js"
+    "/anique/assets/BasicButtonExample-843e1e64.js"
   ],
   "src/routes/components/button/examples/ButtonVariationsExample.tsx": [
-    "/anique/assets/ButtonVariationsExample-abf2d031.js"
+    "/anique/assets/ButtonVariationsExample-78ffd40b.js"
   ],
   "src/routes/components/button/examples/DisabledButtonExample.tsx": [
-    "/anique/assets/DisabledButtonExample-24a66120.js"
+    "/anique/assets/DisabledButtonExample-6bfddf73.js"
   ],
   "src/routes/components/button/index.tsx": [
-    "/anique/assets/index-5d5931c5.js"
+    "/anique/assets/index-8fcac11c.js"
   ],
   "src/routes/components/card/examples/CardExamples.tsx": [
-    "/anique/assets/CardExamples-01c6077c.js"
+    "/anique/assets/CardExamples-689b0e31.js"
   ],
   "src/routes/components/card/index.tsx": [
-    "/anique/assets/index-efcab5e4.js"
+    "/anique/assets/index-b1ccd806.js"
   ],
   "src/routes/components/checkbox/examples/BasicCheckboxExample.tsx": [
-    "/anique/assets/BasicCheckboxExample-c169470f.js"
+    "/anique/assets/BasicCheckboxExample-bc245a7b.js"
   ],
   "src/routes/components/checkbox/examples/CheckboxLabelDescriptionExample.tsx": [
-    "/anique/assets/CheckboxLabelDescriptionExample-9038aab6.js"
+    "/anique/assets/CheckboxLabelDescriptionExample-c9929e66.js"
   ],
   "src/routes/components/checkbox/examples/DisabledCheckboxExample.tsx": [
-    "/anique/assets/DisabledCheckboxExample-dc0fd35e.js"
+    "/anique/assets/DisabledCheckboxExample-ae71fcec.js"
   ],
   "src/routes/components/checkbox/examples/SizeVariationsExample.tsx": [
-    "/anique/assets/SizeVariationsExample-2da88689.js"
+    "/anique/assets/SizeVariationsExample-2ed6b9c5.js"
   ],
   "src/routes/components/checkbox/index.tsx": [
-    "/anique/assets/index-0c89555b.js"
+    "/anique/assets/index-ac91be9d.js"
   ],
   "src/routes/components/chip/examples/BasicChipExample.tsx": [
-    "/anique/assets/BasicChipExample-e716000d.js"
+    "/anique/assets/BasicChipExample-9b2f12a5.js"
   ],
   "src/routes/components/chip/examples/ChipColorVariationsExample.tsx": [
-    "/anique/assets/ChipColorVariationsExample-1dc11bb7.js"
+    "/anique/assets/ChipColorVariationsExample-e4e801df.js"
   ],
   "src/routes/components/chip/examples/ChipWithIconsExample.tsx": [
-    "/anique/assets/ChipWithIconsExample-66e5934b.js"
+    "/anique/assets/ChipWithIconsExample-e3ad0f16.js"
   ],
   "src/routes/components/chip/examples/ClickableChipExample.tsx": [
-    "/anique/assets/ClickableChipExample-8944d67e.js"
+    "/anique/assets/ClickableChipExample-c2a1109c.js"
   ],
   "src/routes/components/chip/index.tsx": [
-    "/anique/assets/index-fad34979.js"
+    "/anique/assets/index-4067a4fa.js"
   ],
   "src/routes/components/column/examples/ColDiffSizedExample.tsx": [
-    "/anique/assets/ColDiffSizedExample-c3517f45.js"
+    "/anique/assets/ColDiffSizedExample-4b1ca5b0.js"
   ],
   "src/routes/components/column/examples/ColSameSizedExample.tsx": [
-    "/anique/assets/ColSameSizedExample-747bba4c.js"
+    "/anique/assets/ColSameSizedExample-bb227d82.js"
   ],
   "src/routes/components/column/examples/ColWrapExample.tsx": [
-    "/anique/assets/ColWrapExample-3e6613e0.js"
+    "/anique/assets/ColWrapExample-c6608072.js"
   ],
   "src/routes/components/column/index.tsx": [
-    "/anique/assets/index-70a2bed9.js"
+    "/anique/assets/index-39935b9e.js"
   ],
   "src/routes/components/dialog/examples/AlertDialogExamples.tsx": [
-    "/anique/assets/AlertDialogExamples-b796103f.js"
+    "/anique/assets/AlertDialogExamples-1b809027.js"
   ],
   "src/routes/components/dialog/examples/CenteredDialogExample.tsx": [
-    "/anique/assets/CenteredDialogExample-f6b1caea.js"
+    "/anique/assets/CenteredDialogExample-82e9b5b6.js"
   ],
   "src/routes/components/dialog/examples/NestedDialogExample.tsx": [
-    "/anique/assets/NestedDialogExample-057a0b67.js"
+    "/anique/assets/NestedDialogExample-7de3b863.js"
   ],
   "src/routes/components/dialog/examples/PositionedDialogExample.tsx": [
-    "/anique/assets/PositionedDialogExample-618700f5.js"
+    "/anique/assets/PositionedDialogExample-96eca344.js"
   ],
   "src/routes/components/dialog/index.tsx": [
-    "/anique/assets/index-f2f4cb41.js"
+    "/anique/assets/index-0f1979b3.js"
   ],
   "src/routes/components/drawer/examples/BasicDrawerExample.tsx": [
-    "/anique/assets/BasicDrawerExample-5d78f8cd.js"
+    "/anique/assets/BasicDrawerExample-45c2d7be.js"
   ],
   "src/routes/components/drawer/index.tsx": [
-    "/anique/assets/index-175d266d.js"
+    "/anique/assets/index-c2ce6977.js"
   ],
   "src/routes/components/dropdown/examples/CardActionsDropdownExample.tsx": [
-    "/anique/assets/CardActionsDropdownExample-6a9cca77.js"
+    "/anique/assets/CardActionsDropdownExample-7a1eb106.js"
   ],
   "src/routes/components/dropdown/examples/DropdownDialogExample.tsx": [
-    "/anique/assets/DropdownDialogExample-0ed15495.js"
+    "/anique/assets/DropdownDialogExample-66bcc9db.js"
   ],
   "src/routes/components/dropdown/examples/DropdownExample.tsx": [
-    "/anique/assets/DropdownExample-94448c5e.js"
+    "/anique/assets/DropdownExample-5adadb6c.js"
   ],
   "src/routes/components/dropdown/examples/HoverableDropdownExample.tsx": [
-    "/anique/assets/HoverableDropdownExample-57d36fd2.js"
+    "/anique/assets/HoverableDropdownExample-d3d9146a.js"
   ],
   "src/routes/components/dropdown/index.tsx": [
-    "/anique/assets/index-feadb8de.js"
+    "/anique/assets/index-35a52b6d.js"
   ],
   "src/routes/components/fab/examples/ExtendedFabExample.tsx": [
-    "/anique/assets/ExtendedFabExample-f6c231ac.js"
+    "/anique/assets/ExtendedFabExample-7bbc29bb.js"
   ],
   "src/routes/components/fab/examples/FabExample.tsx": [
-    "/anique/assets/FabExample-cfbb559c.js"
+    "/anique/assets/FabExample-9697e82b.js"
   ],
   "src/routes/components/fab/index.tsx": [
-    "/anique/assets/index-386cb7db.js"
+    "/anique/assets/index-b7bb0480.js"
   ],
   "src/routes/components/headline/examples/HeadlineExample.tsx": [
-    "/anique/assets/HeadlineExample-73db4eb2.js"
+    "/anique/assets/HeadlineExample-85e79b2b.js"
   ],
   "src/routes/components/headline/index.tsx": [
-    "/anique/assets/index-483f0e3a.js"
+    "/anique/assets/index-fea13e69.js"
   ],
   "src/routes/components/icon-button/examples/BasicIconButtonExample.tsx": [
-    "/anique/assets/BasicIconButtonExample-c33e399a.js"
+    "/anique/assets/BasicIconButtonExample-585a46c7.js"
   ],
   "src/routes/components/icon-button/index.tsx": [
-    "/anique/assets/index-c0331864.js"
+    "/anique/assets/index-fcae03fa.js"
   ],
   "src/routes/components/icon/examples/BasicIconExample.tsx": [
-    "/anique/assets/BasicIconExample-eaf3054d.js"
+    "/anique/assets/BasicIconExample-cbd487f0.js"
   ],
   "src/routes/components/icon/examples/IconFillSizeExample.tsx": [
-    "/anique/assets/IconFillSizeExample-df629eff.js"
+    "/anique/assets/IconFillSizeExample-4717dbc1.js"
   ],
   "src/routes/components/icon/index.tsx": [
-    "/anique/assets/index-3dbaba28.js"
+    "/anique/assets/index-40f8b616.js"
   ],
   "src/routes/components/native-select/examples/BasicNSelectExample.tsx": [
-    "/anique/assets/BasicNSelectExample-5a5c62af.js"
+    "/anique/assets/BasicNSelectExample-79f7392c.js"
   ],
   "src/routes/components/native-select/examples/DisabledNSelectExample.tsx": [
-    "/anique/assets/DisabledNSelectExample-0b6b9ee8.js"
+    "/anique/assets/DisabledNSelectExample-a80c9257.js"
   ],
   "src/routes/components/native-select/examples/MultipleNSelectExample.tsx": [
-    "/anique/assets/MultipleNSelectExample-d7656c85.js"
+    "/anique/assets/MultipleNSelectExample-b0372f3e.js"
   ],
   "src/routes/components/native-select/index.tsx": [
-    "/anique/assets/index-a834da2d.js"
+    "/anique/assets/index-d1fd7430.js"
   ],
   "src/routes/components/pagination/examples/BasicPaginationExample.tsx": [
-    "/anique/assets/BasicPaginationExample-8e008b2e.js"
+    "/anique/assets/BasicPaginationExample-2c827c82.js"
+  ],
+  "src/routes/components/pagination/examples/ComposablePaginationExample.tsx": [
+    "/anique/assets/ComposablePaginationExample-d764674f.js"
   ],
   "src/routes/components/pagination/index.tsx": [
-    "/anique/assets/index-2f9bb821.js"
+    "/anique/assets/index-be05fd8c.js"
   ],
   "src/routes/components/radio/examples/BasicRadioExample.tsx": [
-    "/anique/assets/BasicRadioExample-de8f0a64.js"
+    "/anique/assets/BasicRadioExample-6223af7a.js"
   ],
   "src/routes/components/radio/examples/DisabledRadioExample.tsx": [
-    "/anique/assets/DisabledRadioExample-22220075.js"
+    "/anique/assets/DisabledRadioExample-918b5d31.js"
   ],
   "src/routes/components/radio/examples/RadioLabelDescriptionExample.tsx": [
-    "/anique/assets/RadioLabelDescriptionExample-6e34343b.js"
+    "/anique/assets/RadioLabelDescriptionExample-5fa1ae99.js"
   ],
   "src/routes/components/radio/examples/SizeVariationsExample.tsx": [
-    "/anique/assets/SizeVariationsExample-fac56656.js"
+    "/anique/assets/SizeVariationsExample-692acf75.js"
   ],
   "src/routes/components/radio/index.tsx": [
-    "/anique/assets/index-7592b671.js"
+    "/anique/assets/index-3c4a3d9a.js"
   ],
   "src/routes/components/row/examples/RowDiffSizedExample.tsx": [
-    "/anique/assets/RowDiffSizedExample-f941ad50.js"
+    "/anique/assets/RowDiffSizedExample-05d5451b.js"
   ],
   "src/routes/components/row/examples/RowSameSizedExample.tsx": [
-    "/anique/assets/RowSameSizedExample-1994f90c.js"
+    "/anique/assets/RowSameSizedExample-94f6a6a9.js"
   ],
   "src/routes/components/row/examples/RowWrapSizedExample.tsx": [
-    "/anique/assets/RowWrapSizedExample-727dc5fa.js"
+    "/anique/assets/RowWrapSizedExample-c0c6033b.js"
   ],
   "src/routes/components/row/index.tsx": [
-    "/anique/assets/index-36a23712.js"
+    "/anique/assets/index-21cd8af9.js"
   ],
   "src/routes/components/scaffold/examples/ScaffoldExample.tsx": [
-    "/anique/assets/ScaffoldExample-16f68bf5.js"
+    "/anique/assets/ScaffoldExample-7f3cf616.js"
   ],
   "src/routes/components/scaffold/index.tsx": [
-    "/anique/assets/index-e72045d8.js"
+    "/anique/assets/index-de90da72.js"
   ],
   "src/routes/components/scrollbar/examples/ScrollbarAreaExample.tsx": [
-    "/anique/assets/ScrollbarAreaExample-1df8e9fb.js"
+    "/anique/assets/ScrollbarAreaExample-dcb2b7f0.js"
   ],
   "src/routes/components/scrollbar/index.tsx": [
-    "/anique/assets/index-e017ae05.js"
+    "/anique/assets/index-aef7ea83.js"
   ],
   "src/routes/components/select/examples/AsyncFetchExample.tsx": [
-    "/anique/assets/AsyncFetchExample-cc5865ae.js"
+    "/anique/assets/AsyncFetchExample-06ae8659.js"
   ],
   "src/routes/components/select/examples/AutoScrollExample.tsx": [
-    "/anique/assets/AutoScrollExample-07e9b35a.js"
+    "/anique/assets/AutoScrollExample-49f64f38.js"
   ],
   "src/routes/components/select/examples/CreateableExample.tsx": [
-    "/anique/assets/CreateableExample-9c28e53b.js"
+    "/anique/assets/CreateableExample-21a9e9d4.js"
   ],
   "src/routes/components/select/examples/CreateableObjectsExample.tsx": [
-    "/anique/assets/CreateableObjectsExample-b51bee8a.js"
+    "/anique/assets/CreateableObjectsExample-b60bc5ea.js"
   ],
   "src/routes/components/select/examples/DisabledOptionsExample.tsx": [
-    "/anique/assets/DisabledOptionsExample-eb900fcb.js"
+    "/anique/assets/DisabledOptionsExample-0f396688.js"
   ],
   "src/routes/components/select/examples/DisabledSelectExample.tsx": [
-    "/anique/assets/DisabledSelectExample-472162df.js"
+    "/anique/assets/DisabledSelectExample-413b7f4c.js"
   ],
   "src/routes/components/select/examples/FilterableExample.tsx": [
-    "/anique/assets/FilterableExample-017edcca.js"
+    "/anique/assets/FilterableExample-f3c9e096.js"
   ],
   "src/routes/components/select/examples/FilterableObjectsExample.tsx": [
-    "/anique/assets/FilterableObjectsExample-d5c68c15.js"
+    "/anique/assets/FilterableObjectsExample-e4b7cdd3.js"
   ],
   "src/routes/components/select/examples/FormatExample.tsx": [
-    "/anique/assets/FormatExample-d2dfedf8.js"
+    "/anique/assets/FormatExample-0b34c321.js"
   ],
   "src/routes/components/select/examples/GroupingExample.tsx": [
-    "/anique/assets/GroupingExample-56bd0ae6.js"
+    "/anique/assets/GroupingExample-8a07cfa7.js"
   ],
   "src/routes/components/select/examples/KitchenSinkExample.tsx": [
-    "/anique/assets/KitchenSinkExample-bf80b1e1.js"
+    "/anique/assets/KitchenSinkExample-cefd0cab.js"
   ],
   "src/routes/components/select/examples/MultipleCreateableExample.tsx": [
-    "/anique/assets/MultipleCreateableExample-57adaa2e.js"
+    "/anique/assets/MultipleCreateableExample-d938907e.js"
   ],
   "src/routes/components/select/examples/MultipleExample.tsx": [
-    "/anique/assets/MultipleExample-91efaf68.js"
+    "/anique/assets/MultipleExample-2c1f034d.js"
   ],
   "src/routes/components/select/examples/MultipleFilterableExample.tsx": [
-    "/anique/assets/MultipleFilterableExample-827b1420.js"
+    "/anique/assets/MultipleFilterableExample-c966b23b.js"
   ],
   "src/routes/components/select/examples/ReactiveExample.tsx": [
-    "/anique/assets/ReactiveExample-ab547d67.js"
+    "/anique/assets/ReactiveExample-dc5cfdab.js"
   ],
   "src/routes/components/select/examples/ResetExample.tsx": [
-    "/anique/assets/ResetExample-dbfe76dd.js"
+    "/anique/assets/ResetExample-10407318.js"
   ],
   "src/routes/components/select/examples/StaticExample.tsx": [
-    "/anique/assets/StaticExample-b41e445b.js"
+    "/anique/assets/StaticExample-53e947ad.js"
   ],
   "src/routes/components/select/index.tsx": [
-    "/anique/assets/index-3be8b163.js"
+    "/anique/assets/index-b2ea8a4b.js"
   ],
   "src/routes/components/slider/examples/BasicSliderExample.tsx": [
-    "/anique/assets/BasicSliderExample-31f9fbcf.js"
+    "/anique/assets/BasicSliderExample-346f8422.js"
   ],
   "src/routes/components/slider/examples/SliderVariationsExample.tsx": [
-    "/anique/assets/SliderVariationsExample-0ac840da.js"
+    "/anique/assets/SliderVariationsExample-745ea782.js"
   ],
   "src/routes/components/slider/index.tsx": [
-    "/anique/assets/index-672f0886.js"
+    "/anique/assets/index-087000e4.js"
   ],
   "src/routes/components/snackbar/examples/SnackbarExample.tsx": [
-    "/anique/assets/SnackbarExample-d9e70ce1.js"
+    "/anique/assets/SnackbarExample-0b8ecdae.js"
   ],
   "src/routes/components/snackbar/index.tsx": [
-    "/anique/assets/index-2863bd26.js"
+    "/anique/assets/index-6fd7a0cd.js"
   ],
   "src/routes/components/spinner/examples/SpinnerColorExamples.tsx": [
-    "/anique/assets/SpinnerColorExamples-c5904c46.js"
+    "/anique/assets/SpinnerColorExamples-f967163e.js"
   ],
   "src/routes/components/spinner/examples/SpinnerSizeExamples.tsx": [
-    "/anique/assets/SpinnerSizeExamples-377d626b.js"
+    "/anique/assets/SpinnerSizeExamples-f000286c.js"
   ],
   "src/routes/components/spinner/index.tsx": [
-    "/anique/assets/index-ab1b52c0.js"
+    "/anique/assets/index-5e2b3698.js"
   ],
   "src/routes/components/switch/examples/BasicSwitchExample.tsx": [
-    "/anique/assets/BasicSwitchExample-ed013817.js"
+    "/anique/assets/BasicSwitchExample-17d81ea7.js"
   ],
   "src/routes/components/switch/examples/DisabledSwitchExample.tsx": [
-    "/anique/assets/DisabledSwitchExample-2c83d8b7.js"
+    "/anique/assets/DisabledSwitchExample-3e70f724.js"
   ],
   "src/routes/components/switch/index.tsx": [
-    "/anique/assets/index-613aa9bd.js"
+    "/anique/assets/index-9a1e2d86.js"
   ],
   "src/routes/components/table/examples/BasicTableExample.tsx": [
-    "/anique/assets/BasicTableExample-01900eed.js"
+    "/anique/assets/BasicTableExample-61e3d4ce.js"
   ],
   "src/routes/components/table/index.tsx": [
-    "/anique/assets/index-459e2fb0.js"
+    "/anique/assets/index-14fec9d3.js"
   ],
   "src/routes/components/tabs/examples/BasicTabsExample.tsx": [
-    "/anique/assets/BasicTabsExample-da29e64e.js"
+    "/anique/assets/BasicTabsExample-10ebcf12.js"
   ],
   "src/routes/components/tabs/examples/TabIconsExample.tsx": [
-    "/anique/assets/TabIconsExample-a6d83059.js"
+    "/anique/assets/TabIconsExample-0d1cd6a5.js"
   ],
   "src/routes/components/tabs/index.tsx": [
-    "/anique/assets/index-3eca9695.js"
+    "/anique/assets/index-f83a57fd.js"
   ],
   "src/routes/components/text/examples/HeadingExample.tsx": [
-    "/anique/assets/HeadingExample-7359566c.js"
+    "/anique/assets/HeadingExample-4adc085f.js"
   ],
   "src/routes/components/text/examples/LinksExample.tsx": [
-    "/anique/assets/LinksExample-042e90da.js"
+    "/anique/assets/LinksExample-100c2396.js"
   ],
   "src/routes/components/text/examples/ParagraphExample.tsx": [
-    "/anique/assets/ParagraphExample-188c34cb.js"
+    "/anique/assets/ParagraphExample-19e6dd2e.js"
   ],
   "src/routes/components/text/index.tsx": [
-    "/anique/assets/index-12b8ce95.js"
+    "/anique/assets/index-0cb19329.js"
   ],
   "src/routes/components/textfield/examples/BasicTextAreaExample.tsx": [
-    "/anique/assets/BasicTextAreaExample-ef74f298.js"
+    "/anique/assets/BasicTextAreaExample-9537ea04.js"
   ],
   "src/routes/components/textfield/examples/BasicTextFieldExample.tsx": [
-    "/anique/assets/BasicTextFieldExample-0d3ae71e.js"
+    "/anique/assets/BasicTextFieldExample-03806fad.js"
   ],
   "src/routes/components/textfield/examples/DisabledFieldAreaExample.tsx": [
-    "/anique/assets/DisabledFieldAreaExample-0f40ebba.js"
+    "/anique/assets/DisabledFieldAreaExample-a4862695.js"
   ],
   "src/routes/components/textfield/examples/TextFieldFullIconsExample.tsx": [
-    "/anique/assets/TextFieldFullIconsExample-d71cd228.js"
+    "/anique/assets/TextFieldFullIconsExample-e7e007ce.js"
   ],
   "src/routes/components/textfield/index.tsx": [
-    "/anique/assets/index-9e5828cb.js"
+    "/anique/assets/index-a60c35bd.js"
   ],
   "src/routes/icons.tsx": [
-    "/anique/assets/icons-a0e1c904.js"
+    "/anique/assets/icons-4498758c.js"
   ],
   "src/routes/index.tsx": [
-    "/anique/assets/index-ce587107.js"
+    "/anique/assets/index-8fde6b43.js"
   ],
   "src/routes/internal/z-index.tsx": [
-    "/anique/assets/z-index-fdb4e1ba.js"
+    "/anique/assets/z-index-80fd5a1d.js"
   ],
   "src/routes/setup.tsx": [
-    "/anique/assets/setup-2f83dc16.js"
+    "/anique/assets/setup-e4cc738a.js"
   ],
   "src/routes/testing/composable.tsx": [
-    "/anique/assets/composable-5321fcaf.js"
+    "/anique/assets/composable-a4509edd.js"
   ],
   "src/routes/testing/test_styled.tsx": [
-    "/anique/assets/test_styled-861b85ad.js"
+    "/anique/assets/test_styled-6979c922.js"
   ],
   "src/routes/theming/index.tsx": [
-    "/anique/assets/index-810762f2.js"
+    "/anique/assets/index-c29d40db.js"
   ],
   "src/solid/components/AnchorDrawerItem.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/solid/components/AppBar.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/solid/components/ComponentExample.tsx": [
-    "/anique/assets/ComponentExample-f464ecfa.js"
+    "/anique/assets/ComponentExample-1151e64c.js"
   ],
   "src/solid/components/PositionSelection.tsx": [
-    "/anique/assets/PositionSelection-a009f874.js"
+    "/anique/assets/PositionSelection-a0a23ed6.js"
   ],
   "src/solid/components/ThemeSwitcher.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/solid/icons/CodeIcon.tsx": [
-    "/anique/assets/ComponentExample-f464ecfa.js"
+    "/anique/assets/ComponentExample-1151e64c.js"
   ],
   "src/solid/icons/CopyIcon.tsx": [
-    "/anique/assets/ComponentExample-f464ecfa.js"
+    "/anique/assets/ComponentExample-1151e64c.js"
   ],
   "src/solid/icons/GithubIcons.tsx": [
-    "/anique/assets/DocContainer-f585f3cc.js"
+    "/anique/assets/DocContainer-de2b6cce.js"
   ],
   "src/solid/icons/LightDarkIcon.tsx": [
-    "/anique/assets/LightDarkIcon-b0e03a7d.js"
+    "/anique/assets/LightDarkIcon-e977e7ca.js"
   ],
   "src/solid/icons/Menu.tsx": [
-    "/anique/assets/Menu-802480fc.js"
+    "/anique/assets/Menu-abd2039e.js"
   ],
   "src/solid/icons/TextureIcon.tsx": [
-    "/anique/assets/ComponentExample-f464ecfa.js"
+    "/anique/assets/ComponentExample-1151e64c.js"
   ],
   "src/solid/utils/clipboard.ts": [
-    "/anique/assets/ComponentExample-f464ecfa.js"
+    "/anique/assets/ComponentExample-1151e64c.js"
   ]
 }
