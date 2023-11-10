@@ -10,6 +10,7 @@ export interface PaginationProps {
     total: number,
     /**
      * number of items per page, default : 1
+     * This would divide the total number of pages
      */
     perPage?: number,
     /**
@@ -23,7 +24,7 @@ export interface PaginationProps {
     linkProps?: (page: number) => JSX.IntrinsicElements["a"],
 }
 
-const PaginationAnchor = styled.a`
+export const PaginationAnchor = styled.a`
 
     width: 2.75em;
     height: 2.75em;
@@ -48,16 +49,16 @@ const PaginationAnchor = styled.a`
 
 `
 
-const PaginationRoot = styled(Row)`
+export const PaginationRoot = styled(Row)`
     flex-wrap: wrap;
     gap: 0.5em;
 `
 
-interface PaginationLinksProps extends Pick<PaginationProps, "total" | "perPage"> {
+export interface PaginationLinksProps extends Pick<PaginationProps, "total" | "perPage"> {
     children: (item: number, index: Accessor<number>) => JSXElement
 }
 
-function PaginationLinks(props: PaginationLinksProps) {
+export function PaginationLinks(props: PaginationLinksProps) {
     return (
         <For each={Array.from(Array(Math.ceil(props.total / (props.perPage || 1))).keys(), item => item + 1)}>
             {props.children}
