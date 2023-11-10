@@ -1,6 +1,7 @@
 import {styled} from "@qinetik/emotion";
-import {Accessor, JSX, ParentProps, splitProps} from "solid-js";
+import {Accessor, createEffect, JSX, onCleanup, onMount, ParentProps, splitProps} from "solid-js";
 import {Anique} from "../theme/Theme";
+import {isServer} from "solid-js/web";
 
 type BackdropVisibilityProp = {
     isVisible?: Accessor<boolean>
@@ -80,10 +81,10 @@ function isEventOutside(e: ElementEvent) {
 export function onClickOutsideProp(onClickOutside: () => void) {
     let isDownOutside: boolean = false
     return {
-        onMouseDown: (e : ElementEvent) => {
+        onMouseDown: (e: ElementEvent) => {
             isDownOutside = isEventOutside(e)
         },
-        onMouseUp: (e : ElementEvent) => {
+        onMouseUp: (e: ElementEvent) => {
             const isUpOutside = isEventOutside(e)
             if (isDownOutside && isUpOutside) {
                 e.stopImmediatePropagation()
@@ -94,6 +95,91 @@ export function onClickOutsideProp(onClickOutside: () => void) {
             // }
             isDownOutside = false
         }
+    }
+}
+
+type ClickOutsideEventType = 'click' | 'mousedown' | 'mouseup' | 'touchstart' | 'touchend' | 'pointerdown' | 'pointerup'
+
+function createClickOutside(
+    ref: () => HTMLElement | undefined,
+    onClickAway: (event: MouseEvent | PointerEvent | TouchEvent) => void,
+): [(event: MouseEvent | PointerEvent | TouchEvent) => void, () => Document] {
+
+    const getDoc = () => (ref() && ref()!.ownerDocument) || document
+
+    function onEvent(event: MouseEvent | PointerEvent | TouchEvent) {
+        const nodeRef = ref()
+        const doc = getDoc()
+        if (nodeRef) {
+            let insideDOM;
+            if (event.composedPath) {
+                insideDOM = event.composedPath().indexOf(nodeRef) > -1;
+            } else {
+                insideDOM =
+                    !doc.documentElement.contains(
+                        // @ts-expect-error returns `false` as intended when not dispatched from a Node
+                        event.target,
+                    ) ||
+                    nodeRef.contains(
+                        // @ts-expect-error returns `false` as intended when not dispatched from a Node
+                        event.target,
+                    );
+            }
+
+            if (!insideDOM) {
+                onClickAway(event);
+            }
+        }
+    }
+
+    return [onEvent, getDoc]
+
+}
+
+function useClickOutsideLifecycle(
+    ref: () => HTMLElement | undefined,
+    onClickAway: (event: MouseEvent | PointerEvent | TouchEvent) => void,
+    eventType ?: ClickOutsideEventType
+) {
+    if (!isServer) {
+        const [clickOutside, getDoc] = createClickOutside(ref, onClickAway)
+        onMount(() => {
+            getDoc().addEventListener(eventType || "click", clickOutside)
+        })
+        onCleanup(() => {
+            getDoc().removeEventListener(eventType || "click", clickOutside)
+        })
+    }
+}
+
+function useClickOutsideEffect(
+    ref: () => HTMLElement | undefined,
+    onClickAway: (event: MouseEvent | PointerEvent | TouchEvent) => void,
+    apply: Accessor<boolean>,
+    eventType ?: ClickOutsideEventType
+) {
+    if (!isServer) {
+        const [clickOutside, getDoc] = createClickOutside(ref, onClickAway)
+        createEffect(() => {
+            if (apply()) {
+                getDoc().addEventListener(eventType || "click", clickOutside)
+            } else {
+                getDoc().removeEventListener(eventType || "click", clickOutside)
+            }
+        })
+    }
+}
+
+export function useClickOutside(
+    ref: () => HTMLElement | undefined,
+    onClickAway: (event: MouseEvent | PointerEvent | TouchEvent) => void,
+    apply: Accessor<boolean> | undefined,
+    eventType ?: ClickOutsideEventType
+) {
+    if (apply) {
+        useClickOutsideEffect(ref, onClickAway, apply, eventType)
+    } else {
+        useClickOutsideLifecycle(ref, onClickAway, eventType)
     }
 }
 

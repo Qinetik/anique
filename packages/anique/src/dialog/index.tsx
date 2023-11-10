@@ -39,7 +39,10 @@ export interface DialogProps extends BackdropContentPositionProps {
     onCloseRequest: (context: DialogContextTypePublic) => void
     // to use as id in context, If you want to control in parent onCloseRequest
     id?: string
-    // Disable Tracking children which makes dialog only close if all child dialogs of this dialog has closed
+    /**
+     * Disable Tracking children which caused dialog to only close if all child dialogs of this dialog has closed
+     * @deprecated
+     */
     doNotTrackChildren?: boolean
     // enable logging of how many children dialogs and when they are born and die
     debugLog?: boolean
@@ -53,54 +56,53 @@ const defaultContextValue: DialogContextType = {
 
 const DialogContext = createContext<DialogContextType>(defaultContextValue)
 
+export function useDialogContext(isVisible?: Accessor<boolean>, id ?: string, debugLog ?: boolean) : DialogContextType {
+    let contextMap: DialogContextType[] = []
+    const contextValue : DialogContextType = {
+        id: id,
+        children: () => contextMap,
+        onBorn: (childContext) => {
+            contextMap = [...contextMap, childContext]
+            if (debugLog) console.log("[DialogDebugEvent:ChildBorn] TotalChildren", contextMap.length)
+        },
+        onDied: (childContext) => {
+            contextMap = contextMap.filter((e) => e !== childContext)
+            if (debugLog) console.log("[DialogDebugEvent:ChildDied] TotalChildren", contextMap.length)
+        }
+    }
+    let parentContext = useContext(DialogContext)
+    createEffect(() => {
+        if (isVisible == null || isVisible()) {
+            parentContext.onBorn(contextValue)
+            if (debugLog) console.log("[DialogDebugEvent:NotifiedParent] Born (Effect:Visibility)")
+        } else {
+            parentContext.onDied(contextValue)
+            if (debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Effect:Visibility)")
+        }
+    })
+    onCleanup(() => {
+        parentContext.onDied(contextValue)
+        if (debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Cleanup)")
+    })
+    return contextValue
+}
+
 export function Dialog(props: DialogProps) {
 
-    let contextValue: DialogContextType
-
-    if (props.doNotTrackChildren == null || !props.doNotTrackChildren) {
-        let parentContext = useContext(DialogContext)
-        let contextMap: DialogContextType[] = []
-        contextValue = {
-            id: props.id,
-            children: () => contextMap,
-            onBorn: (childContext) => {
-                contextMap = [...contextMap, childContext]
-                if (props.debugLog) console.log("[DialogDebugEvent:ChildBorn] TotalChildren", contextMap.length)
-            },
-            onDied: (childContext) => {
-                contextMap = contextMap.filter((e) => e !== childContext)
-                if (props.debugLog) console.log("[DialogDebugEvent:ChildDied] TotalChildren", contextMap.length)
-            }
-        }
-        createEffect(() => {
-            if (props.isVisible == null || props.isVisible()) {
-                parentContext.onBorn(contextValue)
-                if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Born (Effect:Visibility)")
-            } else {
-                parentContext.onDied(contextValue)
-                if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Effect:Visibility)")
-            }
-        }, props.isVisible == null || props.isVisible())
-        onCleanup(() => {
-            parentContext.onDied(contextValue)
-            if (props.debugLog) console.log("[DialogDebugEvent:NotifiedParent] Died (Cleanup)")
-        })
-    } else {
-        contextValue = defaultContextValue
-    }
+    const contextValue = useDialogContext(props.isVisible, props.id, props.debugLog)
 
     return (
         <Portal>
             <DialogContext.Provider value={contextValue}>
                 <Backdrop
                     isVisible={props.isVisible}
-                    onClickOutside={props.doNotTrackChildren ? (() => props.onCloseRequest(contextValue)) : (() => {
+                    onClickOutside={() => {
                         if (contextValue.children().length == 0) {
                             props.onCloseRequest(contextValue)
                         } else {
                             if (props.debugLog) console.log("[DialogDebugEvent:ClickedOutside] Avoided Dismiss")
                         }
-                    })}
+                    }}
                     children={props.children}
                     flex={props.flex}
                     relative={props.relative}
